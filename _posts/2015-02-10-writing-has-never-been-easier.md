@@ -114,9 +114,9 @@ Most of the time, I write my articles in **[IA Writer][ia]**, and when they are 
 
 Here’s a sneak peek of how **[IA Writer][ia]** looks like:
 
-<a href="/images/ulyssess.png"><img src="/images/ulyssess_sm.png" title="It is *delightful* to write with Ulysses." class="centered"></a>
+<a href="/images/ia-writer-lg.png"><img src="/images/ia-writer-sm.png" title="It is *delightful* to write with IA Writer." class="centered"></a>
 
-Writing in **IA Writer** is a delightful experience. And when you augment that experience with the smoothness of a quality mechanical keyboard, you’ll never want to stop writing.
+Writing in **IA Writer** is a delightful experience. And when you augment that experience with the *smoothness* of a quality mechanical keyboard, you’ll never want to stop writing.
 
 > **Aside**
 >
