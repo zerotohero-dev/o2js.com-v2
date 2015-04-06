@@ -136,7 +136,7 @@ Here’s how it looks like:
 
 <a href="/images/c9-large.png"><img src="/images/c9-sm.png" title="Cloud9 IDE is hands down the BEST online IDE around." class="centered"></a>
 
-Setting your own SSH workspace in **Cloud9** is pretty straighforward. [**Cloud9** documentation has a step-by-step instruction on how to do it][c9-ssh].
+Setting your own SSH workspace in **Cloud9** is pretty straightforward. [**Cloud9** documentation has a step-by-step instruction on how to do it][c9-ssh].
 
 After setting up my **SSH workspace**, the next thing I did was to create a sample **[Jekyll][jekyll]** website. [You can view the source code at **GitHub**][o2js-com-v2-git].
 
