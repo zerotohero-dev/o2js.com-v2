@@ -375,7 +375,7 @@ Until next time…
 [c9-ssh]: https://docs.c9.io/v1.0/docs/running-your-own-ssh-workspace
 [o2js-com-v2-git]: https://github.com/v0lkan/o2js.com-v2
 [crx-refresh]: https://chrome.google.com/webstore/detail/super-auto-refresh/kkhjakkgopekjlempoplnjclgedabddk?hl=en
-[git-snap]: https://github.com/v0lkan/o2js.com-v2/tree/851e179e0bbf7a6577f221bc9c4ee9bdda94cd57
+[git-snap]: https://github.com/v0lkan/o2js.com-v2/tree/9a338741493f9188437096343fa8ba3b08a80678
 [smart-quote]: http://www.fastcodesign.com/3018353/be-smart-dont-use-dumb-quote-marks
 [hypens-and-dashes]: http://practicaltypography.com/hyphens-and-dashes.html
 [responsive-typography]: https://ia.net/know-how/responsive-typography-the-basics
