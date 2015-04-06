@@ -186,9 +186,9 @@
 
 <p>Let’s start with <strong>Cloud9</strong>:</p>
 
-<h2 id="creating-an-ssh-workspace">Creating an SSH Workspace</h2>
+<h2 id="creating-an-ssh-workspace">Creating an <strong>SSH Workspace</strong></h2>
 
-<p>One nice feature of <strong><a href="https://c9.io/">Cloud9</a></strong> is <strong>SSL Workspaces</strong>. <strong>SSL Workspaces</strong> let you edit the files on your server using a browser-based integrated development environment. Here’s how it looks like:</p>
+<p>One nice feature of <strong><a href="https://c9.io/">Cloud9</a></strong> is <strong>SSH Workspaces</strong>. <strong>SSL Workspaces</strong> let you edit the files on your server using a browser-based integrated development environment. Here’s how it looks like:</p>
 
 <p><a href="/images/c9-large.png"><img src="/images/c9-sm.png" title="Cloud9 IDE is hands down the BEST online IDE around." class="centered" /></a></p>
 
@@ -196,7 +196,11 @@
 
 <p>After setting up my <strong>SSH workspace</strong>, the next thing I did was to create a sample <strong><a href="http://jekyllrb.com/" title="Not your daddy’s static site generator.">Jekyll</a></strong> website.</p>
 
-<h2 id="setting-up-jekyll">Setting Up Jekyll</h2>
+<blockquote>
+  <p><a href="https://github.com/v0lkan/o2js.com-v2">You can view the source code at <strong>GitHub</strong></a>.</p>
+</blockquote>
+
+<h2 id="setting-up-jekyll">Setting Up <strong>Jekyll</strong></h2>
 
 <p><a href="http://jekyllrb.com/"><img src="/images/jekyll.png" title="Jekyll" class="centered" /></a></p>
 
@@ -212,90 +216,169 @@
   <p>For the uber-nerds out there: You can install <strong>Ruby</strong> via <strong><a href="https://github.com/sstephenson/rbenv" title="A better way to install ruby.">rbenv</a></strong> too. <a href="https://github.com/sstephenson/rbenv/wiki/Why-rbenv%3F" title="Why rbenv?">And there are good reasons to do so</a>.</p>
 </blockquote>
 
-<p>Then getting up and running with <strong>Jekyll</strong> takes mere seconds:</p>
+<p>Once <strong><a href="http://jekyllrb.com/" title="Not your daddy’s static site generator.">Jekyll</a></strong> is properly set up, the only thing you have to do to write a blog post is to create a markdown file under <strong>_posts</strong> folder:</p>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">gem install jekyll<span class="p">;</span>
-<span class="nb">cd</span> ~/PROJECTS<span class="p">;</span>
-mkdir PROJECTS/blog<span class="p">;</span>
-<span class="nb">cd</span> ~/PROJECTS/blog<span class="p">;</span>
-jekyll init my-blog<span class="p">;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">ls _posts/
+2015-02-10-writing-has-never-been-easier.md</code></pre></div>
 
-<p>And voila! You have a static website running.</p>
+<p>Since this is a new blog installation, and I’m writing a singl blog post here, we have only one file in the directory. Here’s the cotent of the file:</p>
 
-<p>If you haven’t changed any default settings, you can visit it by navigating to <em>http://localhost:4000</em>.</p>
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="nn">---</span>
+<span class="l-Scalar-Plain">layout</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">post</span>
+<span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Writing Has Never Been Easier</span>
+<span class="l-Scalar-Plain">excerpt</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Until recently, I was using a custom generator for o2js.com…</span>
+<span class="l-Scalar-Plain">categories</span><span class="p-Indicator">:</span>
+<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">productivity</span>
+<span class="l-Scalar-Plain">tags</span><span class="p-Indicator">:</span>
+<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">writing</span>
+<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">blogging</span>
+<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">jekyll</span>
+<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">workflow</span>
+<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">writing</span>
+<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">creativity</span>
+<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">reinvention</span>
+<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">reflow</span>
+<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">gtd</span>
+<span class="nn">---</span>
+
+<span class="l-Scalar-Plain">… Body of the article goes here …</span></code></pre></div>
 
 <blockquote>
-  <p>I won’t explain how to set up <strong>Jekyll</strong> as it is <a href="http://jekyllrb.com/docs/home/" title="Jekyll Documentation">explained really well on their website</a>. — Just follow the examples there and you’ll be a <strong>Jekyll</strong> master in no time.</p>
+  <p>I won’t explain how to set up a <strong>Jekyll</strong> website in detail, as it is <a href="http://jekyllrb.com/docs/home/" title="Jekyll Documentation">explained really well on their website</a>. — Just follow the examples there and you’ll be a <strong>Jekyll</strong> master in no time.</p>
 </blockquote>
 
-<p>After setting up <strong>Jekyll</strong>, running the following helped me preview my blog locally:</p>
+<p>Currently my new <strong>Jekyll</strong> sites stays under <strong>/var/www/SRC</strong>.</p>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># you need root access for port 80.</span>
-sudo jekyll serve --port 80<span class="p">;</span></code></pre></div>
+<p>I know, it’s not the most ideal place to put source code into, yet it does the job <strong>;)</strong>.</p>
 
-<p>I also defined a staging URL on my <strong>/etc/hosts</strong> file for convenience:</p>
+<blockquote>
+  <p>For the security freak out there thinking that the source folder is accessible via internet: Well, yes; <a href="https://github.com/v0lkan/o2js.com-v2">and the code is open source anyway</a>, so it’s not a big deal. — And even if it is, we can always restrict access to that folder via <strong>nginx.conf</strong>.</p>
+</blockquote>
 
-<div class="highlight"><pre><code class="language-text" data-lang="text"># /etc/hosts
-127.0.0.1       staging.o2js.com</code></pre></div>
+<p>While we’re at that, here’s how things are currently mapped in <strong>nginx.conf</strong> for reference:</p>
 
-<p>And here’s how <strong>staging.o2js.com</strong> looks like:</p>
+<div class="highlight"><pre><code class="language-nginx" data-lang="nginx"><span class="k">server</span> <span class="p">{</span>
+    <span class="kn">access_log</span> <span class="no">off</span><span class="p">;</span>
+    <span class="kn">error_log</span> <span class="no">off</span><span class="p">;</span>
+    <span class="kn">listen</span> <span class="mi">80</span><span class="p">;</span>
+    <span class="kn">listen</span> <span class="s">[::]:80</span><span class="p">;</span>
+    <span class="kn">server_name</span> <span class="s">*.o2js.com</span><span class="p">;</span>
+    <span class="kn">rewrite</span> <span class="s">^</span> <span class="nv">$scheme://o2js.com</span> <span class="s">permanent</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">server</span> <span class="p">{</span>
+    <span class="kn">access_log</span> <span class="no">off</span><span class="p">;</span>
+    <span class="kn">error_log</span> <span class="no">off</span><span class="p">;</span>
 
-<p><img src="/img/inception.png" title="A screenshot of this blog, inside itself ;)" style="margin:0 auto;display:block;" /></p>
+    <span class="kn">listen</span> <span class="mi">80</span> <span class="s">default_server</span><span class="p">;</span>
+    <span class="kn">listen</span> <span class="s">[::]:80</span> <span class="s">default_server</span><span class="p">;</span>
 
-<p>As you see, I am testing this new approach as I am writing this blog post.</p>
+    <span class="kn">root</span> <span class="s">/var/www</span><span class="p">;</span>
 
-<p>A nice recursion <strong>:)</strong>.</p>
+    <span class="kn">index</span> <span class="s">index.html</span><span class="p">;</span>
 
-<p>Another thing is, whenever I save an article and refresh the browser, the web page gets <strong>automagically</strong> updated too.</p>
+    <span class="kn">server_name</span> <span class="s">localhost</span><span class="p">;</span>
 
-<p>The question is: “can we make it better?” As it turns out that: “we sure can.”.</p>
+    <span class="kn">expires</span> <span class="mi">3m</span><span class="p">;</span>
+    <span class="kn">error_page</span> <span class="mi">404</span> <span class="p">=</span> <span class="s">@errorpage</span><span class="p">;</span>
 
-<h2 id="automating-the-blog-publishing-workflow">Automating the Blog Publishing Workflow</h2>
+    <span class="kn">location</span> <span class="s">/</span> <span class="p">{</span>
+        <span class="kn">try_files</span> <span class="nv">$uri</span> <span class="nv">$uri/</span> <span class="p">=</span> <span class="mi">404</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kn">location</span> <span class="s">@errorpage</span> <span class="p">{</span>
+        <span class="c1"># &quot;permanent&quot; is an HTTP 301 Redirect</span>
+        <span class="kn">rewrite</span> <span class="s">.*</span> <span class="s">/kaboom</span> <span class="s">permanent</span><span class="p">;</span>
+    <span class="p">}</span>
 
-<p>// TODO: write here.</p>
+    <span class="kn">rewrite</span> <span class="s">^/kaboom</span>$ <span class="s">/404.html</span> <span class="s">break</span><span class="p">;</span>
 
-<p>We will use <strong><a href="http://livereload.com/" title="A happy land where browsers don’t need a refresh button.">LiveReload</a></strong> to further automate this workflow:</p>
+    <span class="c1"># DO NOT ignore this; otherwise the default webroot will kaboom!</span>
+    <span class="kn">rewrite</span> <span class="s">^/</span>$ <span class="s">/index.html</span> <span class="s">break</span><span class="p">;</span>
+    <span class="kn">rewrite</span> <span class="s">^/index</span>$ <span class="s">/</span> <span class="s">permanent</span><span class="p">;</span>
 
-<h2 id="configuring-livereload">Configuring LiveReload</h2>
+    <span class="kn">rewrite</span> <span class="s">^([^.]+)/</span>$ <span class="nv">$1</span> <span class="s">permanent</span><span class="p">;</span>
+    <span class="kn">rewrite</span> <span class="s">^([^.]+)</span>$ <span class="nv">$1.html</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
 
-<p><a href="http://livereload.com/"><img src="/img/livereload.png" title="Live Reload" style="margin:0 auto;display:block;" /></a></p>
+<h2 id="installing-jekyll">Installing <strong>Jekyll</strong></h2>
 
-<p>Configuring <strong><a href="http://livereload.com/" title="A happy land where browsers don’t need a refresh button.">LiveReload</a></strong> is easy:</p>
+<p>Installing <strong><a href="http://jekyllrb.com/" title="Not your daddy’s static site generator.">Jekyll</a></strong> on Debian-based systems is really easy:</p>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">sudo gem install jekyll<span class="p">;</span></code></pre></div>
+
+<p>That’s it.</p>
+
+<h2 id="publishing-articles">Publishing Articles</h2>
+
+<p>Now let’s publish the articles:</p>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">jekyll build --config _config.yml<span class="p">;</span>
+rsync -a _site/ /var/www<span class="p">;</span></code></pre></div>
+
+<p>And voila! The blog post that I’ve just edited is live.</p>
+
+<h2 id="automating-the-publish-flow">Automating the Publish Flow</h2>
+
+<p>To automate things further I’ve created a little script:</p>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// /var/www/SRC/o2js.com-v2/bin/</span>
+<span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">chokidar</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;chokidar&#39;</span><span class="p">),</span>
+    <span class="nx">spawn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;child_process&#39;</span><span class="p">).</span><span class="nx">spawn</span><span class="p">,</span>
+    <span class="nx">lock</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+<span class="nx">chokidar</span><span class="p">.</span><span class="nx">watch</span><span class="p">(</span><span class="s1">&#39;/var/www/SRC/&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">ignored</span><span class="o">:</span> <span class="sr">/[\/\\]\.|node_modules/</span><span class="p">})</span>
+    <span class="c1">// on(&#39;all&#39;)</span>
+    <span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;change&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">path</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">process</span><span class="p">;</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">lock</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;acquiring lock&#39;</span><span class="p">);</span>
+
+            <span class="nx">lock</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+
+            <span class="nx">process</span> <span class="o">=</span> <span class="nx">spawn</span><span class="p">(</span><span class="s1">&#39;sh&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;./publish.sh&#39;</span><span class="p">]);</span>
+
+            <span class="nx">process</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;close&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">code</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;child process exited with code &#39;</span> <span class="o">+</span> <span class="nx">code</span><span class="p">);</span>
+                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;releasing lock&#39;</span><span class="p">);</span>
+
+                <span class="nx">lock</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+            <span class="p">});</span>
+        <span class="p">}</span>
+    <span class="p">});</span></code></pre></div>
+
+<p>Where <strong>./publish.sh</strong> is:</p>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="err">#</span><span class="o">!</span> <span class="err">/bin/bash</span>
+<span class="nx">cd</span> <span class="p">..;</span>
+<span class="nx">jekyll</span> <span class="nx">build</span> <span class="o">--</span><span class="nx">config</span> <span class="nx">_config</span><span class="p">.</span><span class="nx">yml</span><span class="p">;</span>
+<span class="nx">rsync</span> <span class="o">-</span><span class="nx">a</span> <span class="nx">_site</span><span class="o">/</span> <span class="err">/var/www</span></code></pre></div>
+
+<p>So when I run…</p>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nb">cd</span> /var/www/SRC/o2js.com-v2/bin/<span class="p">;</span>
+node index.js<span class="p">;</span></code></pre></div>
+
+<p>… any change that I make under the <strong>SRC</strong> folder will publish and sync the documents with the live website.</p>
+
+<p>I even use <a href="https://chrome.google.com/webstore/detail/super-auto-refresh/kkhjakkgopekjlempoplnjclgedabddk?hl=en">a nice little chrome extension</a> to auto refresh the web page.</p>
+
+<p>Here’s my current blogging environment:</p>
 
 <ul>
-  <li>You just drop the folder that you want to watch into the <strong>LiveReload</strong> window.</li>
-  <li>And also <a href="http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-" title="LiveReload extensions FTW!">install a browser extension</a> to let your browser communicate with the <strong>LiveReload</strong> process.</li>
+  <li>A <a href="https://c9.io/">web-based IDE</a>;</li>
+  <li>And a browser side-by-side.</li>
 </ul>
 
-<p>After following these steps, as soon as you update and save your markdown, the browser page will refresh to reload the most recent content, which is a great time saver.</p>
+<p><a href="/images/inception-lg.png"><img src="/images/inception-sm.png" title="A screenshot of this blog, inside itself ;)" class="centered" /></a></p>
 
-<p><a href="/img/side_by_side.png"><img src="/img/side_by_side_sm.png" title="Writing and previewing the content in real time, side by side" style="margin:0 auto;display:block;" /></a></p>
+<p>I am testing this new approach as I am writing this blog post, and it works really well!</p>
 
-<blockquote>
-  <p>Here you see a <em>side-by-side</em> layout of the markdown editor and the rendered end result. — Whenever I save the file, the browser refreshes to show me the latest preview.</p>
-</blockquote>
-
-<p>And we can make it <strong>even better</strong> by adding some <strong>automation</strong>:</p>
-
-<h2 id="automating-the-publish-flow">Automating the “Publish” Flow</h2>
-
-<p>One useful feature of <strong><a href="http://livereload.com/" title="A happy land where browsers don’t need a refresh button.">LiveReload</a></strong> is that you can also run scripts whenever <strong>LiveReload</strong> detects a change in your assets.</p>
-
-<p>So I put the following script to the blog’s <strong>bin</strong> folder:</p>
-
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># sync.sh</span>
-rsync -av ./<span class="se">\_</span>site/2015 root@o2js.com:/root/PROJECTS/o2js.com<span class="p">;</span>
-rsync -av ./<span class="se">\_</span>site/img root@o2js.com:/root/PROJECTS/o2js.com<span class="p">;</span></code></pre></div>
-
-<blockquote>
-  <p>That’s good enough for this migration period. — I will add more to this script later on.</p>
-</blockquote>
-
-<p>The next step is registering the above script to <strong>LiveReload</strong>:</p>
-
-<p><img src="/img/register_livereload.png" title="Live Reload" style="margin:0 auto;display:block;" /></p>
-
-<p>So whenever I save my local blog <strong>markdown</strong>, I also publish it to the Internet immediately.</p>
+<ul>
+  <li>The page is refreshing as I continue writing and saving;</li>
+  <li>And I don’t have to worry about publishing my blog, because it’s being auto-published at every single change I make to it.</li>
+</ul>
 
 <h2 id="everything-is-streamlined">Everything is Streamlined!</h2>
 

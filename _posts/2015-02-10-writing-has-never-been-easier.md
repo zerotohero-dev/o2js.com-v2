@@ -112,9 +112,9 @@ Aside from the keyboard and the editor I will use **[Jekyll][jekyll]** and  **[C
 
 Let’s start with **Cloud9**:
 
-## Creating an SSH Workspace
+## Creating an **SSH Workspace**
 
-One nice feature of **[Cloud9][c9]** is **SSL Workspaces**. **SSL Workspaces** let you edit the files on your server using a browser-based integrated development environment. Here’s how it looks like:
+One nice feature of **[Cloud9][c9]** is **SSH Workspaces**. **SSL Workspaces** let you edit the files on your server using a browser-based integrated development environment. Here’s how it looks like:
 
 <a href="/images/c9-large.png"><img src="/images/c9-sm.png" title="Cloud9 IDE is hands down the BEST online IDE around." class="centered"></a>
 
@@ -122,7 +122,9 @@ Setting your own SSH workspace in **Cloud9** is pretty straighforward. [**Cloud9
 
 After setting up my **SSH workspace**, the next thing I did was to create a sample **[Jekyll][jekyll]** website.
 
-## Setting Up Jekyll
+> [You can view the source code at **GitHub**][o2js-com-v2-git].
+
+## Setting Up **Jekyll**
 
 <a href="http://jekyllrb.com/"><img src="/images/jekyll.png" title="Jekyll" class="centered"></a>
 
@@ -134,90 +136,177 @@ To use **Jekyll**, you will need to have **[Ruby][ruby]** installed. If you don�
 
 > For the uber-nerds out there: You can install **Ruby** via **[rbenv][rbenv]** too. [And there are good reasons to do so][why-rbenv].
 
-Then getting up and running with **Jekyll** takes mere seconds:
+Once **[Jekyll][jekyll]** is properly set up, the only thing you have to do to write a blog post is to create a markdown file under **_posts** folder:
 
 {% highlight sh %}
-gem install jekyll;
-cd ~/PROJECTS;
-mkdir PROJECTS/blog;
-cd ~/PROJECTS/blog;
-jekyll init my-blog;
+ls _posts/
+2015-02-10-writing-has-never-been-easier.md
 {% endhighlight %}
 
-And voila! You have a static website running.
+Since this is a new blog installation, and I’m writing a singl blog post here, we have only one file in the directory. Here’s the cotent of the file:
 
-If you haven’t changed any default settings, you can visit it by navigating to *http://localhost:4000*.
+{% highlight yaml %}
+---
+layout: post
+title: Writing Has Never Been Easier
+excerpt: Until recently, I was using a custom generator for o2js.com…
+categories:
+- productivity
+tags:
+- writing
+- blogging
+- jekyll
+- workflow
+- writing
+- creativity
+- reinvention
+- reflow
+- gtd
+---
 
-> I won’t explain how to set up **Jekyll** as it is [explained really well on their website][jekyll-docs]. — Just follow the examples there and you’ll be a **Jekyll** master in no time.
+… Body of the article goes here …
+{% endhighlight %}
 
-After setting up **Jekyll**, running the following helped me preview my blog locally:
+> I won’t explain how to set up a **Jekyll** website in detail, as it is [explained really well on their website][jekyll-docs]. — Just follow the examples there and you’ll be a **Jekyll** master in no time.
+
+Currently my new **Jekyll** sites stays under **/var/www/SRC**.
+
+I know, it’s not the most ideal place to put source code into, yet it does the job **;)**.
+
+> For the security freak out there thinking that the source folder is accessible via internet: Well, yes; [and the code is open source anyway][o2js-com-v2-git], so it’s not a big deal. — And even if it is, we can always restrict access to that folder via **nginx.conf**.
+
+While we’re at that, here’s how things are currently mapped in **nginx.conf** for reference:
+
+{% highlight nginx %}
+server {
+    access_log off;
+    error_log off;
+    listen 80;
+    listen [::]:80;
+    server_name *.o2js.com;
+    rewrite ^ $scheme://o2js.com permanent;
+}
+server {
+    access_log off;
+    error_log off;
+
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    root /var/www;
+
+    index index.html;
+
+    server_name localhost;
+
+    expires 3m;
+    error_page 404 = @errorpage;
+
+    location / {
+        try_files $uri $uri/ = 404;
+    }
+    location @errorpage {
+        # "permanent" is an HTTP 301 Redirect
+        rewrite .* /kaboom permanent;
+    }
+
+    rewrite ^/kaboom$ /404.html break;
+
+    # DO NOT ignore this; otherwise the default webroot will kaboom!
+    rewrite ^/$ /index.html break;
+    rewrite ^/index$ / permanent;
+
+    rewrite ^([^.]+)/$ $1 permanent;
+    rewrite ^([^.]+)$ $1.html;
+}
+{% endhighlight %}
+
+## Installing **Jekyll**
+
+Installing **[Jekyll][jekyll]** on Debian-based systems is really easy:
 
 {% highlight sh %}
-# you need root access for port 80.
-sudo jekyll serve --port 80;
+sudo gem install jekyll;
 {% endhighlight %}
 
-I also defined a staging URL on my **/etc/hosts** file for convenience:
+That’s it.
 
-{% highlight text %}
-# /etc/hosts
-127.0.0.1       staging.o2js.com
-{% endhighlight %}
+## Publishing Articles
 
-And here’s how **staging.o2js.com** looks like:
-
-<img src="/img/inception.png" title="A screenshot of this blog, inside itself ;)" style="margin:0 auto;display:block;">
-
-As you see, I am testing this new approach as I am writing this blog post.
-
-A nice recursion **:)**.
-
-Another thing is, whenever I save an article and refresh the browser, the web page gets **automagically** updated too.
-
-The question is: “can we make it better?” As it turns out that: “we sure can.”.
-
-## Automating the Blog Publishing Workflow
-
-// TODO: write here.
-
-We will use **[LiveReload][livereload]** to further automate this workflow:
-
-## Configuring LiveReload
-
-<a href="http://livereload.com/"><img src="/img/livereload.png" title="Live Reload" style="margin:0 auto;display:block;"></a>
-
-Configuring **[LiveReload][livereload]** is easy:
-
-* You just drop the folder that you want to watch into the **LiveReload** window.
-* And also [install a browser extension][livereload-ext] to let your browser communicate with the **LiveReload** process.
-
-After following these steps, as soon as you update and save your markdown, the browser page will refresh to reload the most recent content, which is a great time saver.
-
-<a href="/img/side_by_side.png"><img src="/img/side_by_side_sm.png" title="Writing and previewing the content in real time, side by side" style="margin:0 auto;display:block;"></a>
-
-> Here you see a *side-by-side* layout of the markdown editor and the rendered end result. — Whenever I save the file, the browser refreshes to show me the latest preview.
-
-And we can make it **even better** by adding some **automation**:
-
-## Automating the “Publish” Flow
-
-One useful feature of **[LiveReload][livereload]** is that you can also run scripts whenever **LiveReload** detects a change in your assets.
-
-So I put the following script to the blog’s **bin** folder:
+Now let’s publish the articles:
 
 {% highlight sh %}
-# sync.sh
-rsync -av ./\_site/2015 root@o2js.com:/root/PROJECTS/o2js.com;
-rsync -av ./\_site/img root@o2js.com:/root/PROJECTS/o2js.com;
+jekyll build --config _config.yml;
+rsync -a _site/ /var/www;
 {% endhighlight %}
 
-> That’s good enough for this migration period. — I will add more to this script later on.
+And voila! The blog post that I’ve just edited is live.
 
-The next step is registering the above script to **LiveReload**:
+## Automating the Publish Flow
 
-<img src="/img/register_livereload.png" title="Live Reload" style="margin:0 auto;display:block;">
+To automate things further I’ve created a little script:
 
-So whenever I save my local blog **markdown**, I also publish it to the Internet immediately.
+{% highlight js %}
+// /var/www/SRC/o2js.com-v2/bin/
+'use strict';
+
+var chokidar = require('chokidar'),
+    spawn = require('child_process').spawn,
+    lock = false;
+
+chokidar.watch('/var/www/SRC/', {ignored: /[\/\\]\.|node_modules/})
+    // on('all')
+    .on('change', function(event, path) {
+        var process;
+
+        if (!lock) {
+            console.log('acquiring lock');
+
+            lock = true;
+
+            process = spawn('sh', ['./publish.sh']);
+
+            process.on('close', function (code) {
+                console.log('child process exited with code ' + code);
+                console.log('releasing lock');
+
+                lock = false;
+            });
+        }
+    });
+{% endhighlight %}
+
+Where **./publish.sh** is:
+
+{% highlight js %}
+#! /bin/bash
+cd ..;
+jekyll build --config _config.yml;
+rsync -a _site/ /var/www
+{% endhighlight %}
+
+So when I run…
+
+{% highlight sh %}
+cd /var/www/SRC/o2js.com-v2/bin/;
+node index.js;
+{% endhighlight %}
+
+… any change that I make under the **SRC** folder will publish and sync the documents with the live website.
+
+I even use [a nice little chrome extension][crx-refresh] to auto refresh the web page.
+
+Here’s my current blogging environment:
+
+* A [web-based IDE][c9];
+* And a browser side-by-side.
+
+<a href="/images/inception-lg.png"><img src="/images/inception-sm.png" title="A screenshot of this blog, inside itself ;)" class="centered"></a>
+
+I am testing this new approach as I am writing this blog post, and it works really well!
+
+* The page is refreshing as I continue writing and saving;
+* And I don’t have to worry about publishing my blog, because it’s being auto-published at every single change I make to it.
 
 ## Everything is Streamlined!
 
@@ -267,3 +356,5 @@ Until next time…
 [chisel]: http://blog.geekli.st/post/111932989787/grab-your-chisel-and-start-pounding-a-guest
 [c9]: https://c9.io/
 [c9-ssh]: https://docs.c9.io/v1.0/docs/running-your-own-ssh-workspace
+[o2js-com-v2-git]: https://github.com/v0lkan/o2js.com-v2
+[crx-refresh]: https://chrome.google.com/webstore/detail/super-auto-refresh/kkhjakkgopekjlempoplnjclgedabddk?hl=en

@@ -5,8 +5,8 @@
     <description>o2.js; a coherent solution to your JavaScript dilemma.</description>
     <link>http://o2js.com/</link>
     <atom:link href="http://o2js.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 06 Apr 2015 04:42:00 +0000</pubDate>
-    <lastBuildDate>Mon, 06 Apr 2015 04:42:00 +0000</lastBuildDate>
+    <pubDate>Mon, 06 Apr 2015 06:41:58 +0000</pubDate>
+    <lastBuildDate>Mon, 06 Apr 2015 06:41:58 +0000</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -123,9 +123,9 @@
 
 &lt;p&gt;Let’s start with &lt;strong&gt;Cloud9&lt;/strong&gt;:&lt;/p&gt;
 
-&lt;h2 id=&quot;creating-an-ssh-workspace&quot;&gt;Creating an SSH Workspace&lt;/h2&gt;
+&lt;h2 id=&quot;creating-an-ssh-workspace&quot;&gt;Creating an &lt;strong&gt;SSH Workspace&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;One nice feature of &lt;strong&gt;&lt;a href=&quot;https://c9.io/&quot;&gt;Cloud9&lt;/a&gt;&lt;/strong&gt; is &lt;strong&gt;SSL Workspaces&lt;/strong&gt;. &lt;strong&gt;SSL Workspaces&lt;/strong&gt; let you edit the files on your server using a browser-based integrated development environment. Here’s how it looks like:&lt;/p&gt;
+&lt;p&gt;One nice feature of &lt;strong&gt;&lt;a href=&quot;https://c9.io/&quot;&gt;Cloud9&lt;/a&gt;&lt;/strong&gt; is &lt;strong&gt;SSH Workspaces&lt;/strong&gt;. &lt;strong&gt;SSL Workspaces&lt;/strong&gt; let you edit the files on your server using a browser-based integrated development environment. Here’s how it looks like:&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;/images/c9-large.png&quot;&gt;&lt;img src=&quot;/images/c9-sm.png&quot; title=&quot;Cloud9 IDE is hands down the BEST online IDE around.&quot; class=&quot;centered&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -133,7 +133,11 @@
 
 &lt;p&gt;After setting up my &lt;strong&gt;SSH workspace&lt;/strong&gt;, the next thing I did was to create a sample &lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Not your daddy’s static site generator.&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt; website.&lt;/p&gt;
 
-&lt;h2 id=&quot;setting-up-jekyll&quot;&gt;Setting Up Jekyll&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://github.com/v0lkan/o2js.com-v2&quot;&gt;You can view the source code at &lt;strong&gt;GitHub&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;setting-up-jekyll&quot;&gt;Setting Up &lt;strong&gt;Jekyll&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://jekyllrb.com/&quot;&gt;&lt;img src=&quot;/images/jekyll.png&quot; title=&quot;Jekyll&quot; class=&quot;centered&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -149,90 +153,169 @@
   &lt;p&gt;For the uber-nerds out there: You can install &lt;strong&gt;Ruby&lt;/strong&gt; via &lt;strong&gt;&lt;a href=&quot;https://github.com/sstephenson/rbenv&quot; title=&quot;A better way to install ruby.&quot;&gt;rbenv&lt;/a&gt;&lt;/strong&gt; too. &lt;a href=&quot;https://github.com/sstephenson/rbenv/wiki/Why-rbenv%3F&quot; title=&quot;Why rbenv?&quot;&gt;And there are good reasons to do so&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Then getting up and running with &lt;strong&gt;Jekyll&lt;/strong&gt; takes mere seconds:&lt;/p&gt;
+&lt;p&gt;Once &lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Not your daddy’s static site generator.&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt; is properly set up, the only thing you have to do to write a blog post is to create a markdown file under &lt;strong&gt;_posts&lt;/strong&gt; folder:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;gem install jekyll&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/PROJECTS&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-mkdir PROJECTS/blog&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/PROJECTS/blog&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-jekyll init my-blog&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;ls _posts/
+2015-02-10-writing-has-never-been-easier.md&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;And voila! You have a static website running.&lt;/p&gt;
+&lt;p&gt;Since this is a new blog installation, and I’m writing a singl blog post here, we have only one file in the directory. Here’s the cotent of the file:&lt;/p&gt;
 
-&lt;p&gt;If you haven’t changed any default settings, you can visit it by navigating to &lt;em&gt;http://localhost:4000&lt;/em&gt;.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;l-Scalar-Plain&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;post&lt;/span&gt;
+&lt;span class=&quot;l-Scalar-Plain&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;Writing Has Never Been Easier&lt;/span&gt;
+&lt;span class=&quot;l-Scalar-Plain&quot;&gt;excerpt&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;Until recently, I was using a custom generator for o2js.com…&lt;/span&gt;
+&lt;span class=&quot;l-Scalar-Plain&quot;&gt;categories&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;productivity&lt;/span&gt;
+&lt;span class=&quot;l-Scalar-Plain&quot;&gt;tags&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;writing&lt;/span&gt;
+&lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;blogging&lt;/span&gt;
+&lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;jekyll&lt;/span&gt;
+&lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;workflow&lt;/span&gt;
+&lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;writing&lt;/span&gt;
+&lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;creativity&lt;/span&gt;
+&lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;reinvention&lt;/span&gt;
+&lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;reflow&lt;/span&gt;
+&lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;gtd&lt;/span&gt;
+&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+
+&lt;span class=&quot;l-Scalar-Plain&quot;&gt;… Body of the article goes here …&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;I won’t explain how to set up &lt;strong&gt;Jekyll&lt;/strong&gt; as it is &lt;a href=&quot;http://jekyllrb.com/docs/home/&quot; title=&quot;Jekyll Documentation&quot;&gt;explained really well on their website&lt;/a&gt;. — Just follow the examples there and you’ll be a &lt;strong&gt;Jekyll&lt;/strong&gt; master in no time.&lt;/p&gt;
+  &lt;p&gt;I won’t explain how to set up a &lt;strong&gt;Jekyll&lt;/strong&gt; website in detail, as it is &lt;a href=&quot;http://jekyllrb.com/docs/home/&quot; title=&quot;Jekyll Documentation&quot;&gt;explained really well on their website&lt;/a&gt;. — Just follow the examples there and you’ll be a &lt;strong&gt;Jekyll&lt;/strong&gt; master in no time.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;After setting up &lt;strong&gt;Jekyll&lt;/strong&gt;, running the following helped me preview my blog locally:&lt;/p&gt;
+&lt;p&gt;Currently my new &lt;strong&gt;Jekyll&lt;/strong&gt; sites stays under &lt;strong&gt;/var/www/SRC&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;# you need root access for port 80.&lt;/span&gt;
-sudo jekyll serve --port 80&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;I know, it’s not the most ideal place to put source code into, yet it does the job &lt;strong&gt;;)&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;I also defined a staging URL on my &lt;strong&gt;/etc/hosts&lt;/strong&gt; file for convenience:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;For the security freak out there thinking that the source folder is accessible via internet: Well, yes; &lt;a href=&quot;https://github.com/v0lkan/o2js.com-v2&quot;&gt;and the code is open source anyway&lt;/a&gt;, so it’s not a big deal. — And even if it is, we can always restrict access to that folder via &lt;strong&gt;nginx.conf&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;# /etc/hosts
-127.0.0.1       staging.o2js.com&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;While we’re at that, here’s how things are currently mapped in &lt;strong&gt;nginx.conf&lt;/strong&gt; for reference:&lt;/p&gt;
 
-&lt;p&gt;And here’s how &lt;strong&gt;staging.o2js.com&lt;/strong&gt; looks like:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-nginx&quot; data-lang=&quot;nginx&quot;&gt;&lt;span class=&quot;k&quot;&gt;server&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kn&quot;&gt;access_log&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;off&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kn&quot;&gt;error_log&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;off&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kn&quot;&gt;listen&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kn&quot;&gt;listen&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;[::]:80&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kn&quot;&gt;server_name&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;*.o2js.com&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kn&quot;&gt;rewrite&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;^&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$scheme://o2js.com&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;permanent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;server&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kn&quot;&gt;access_log&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;off&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kn&quot;&gt;error_log&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;off&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/inception.png&quot; title=&quot;A screenshot of this blog, inside itself ;)&quot; style=&quot;margin:0 auto;display:block;&quot; /&gt;&lt;/p&gt;
+    &lt;span class=&quot;kn&quot;&gt;listen&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;default_server&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kn&quot;&gt;listen&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;[::]:80&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;default_server&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
-&lt;p&gt;As you see, I am testing this new approach as I am writing this blog post.&lt;/p&gt;
+    &lt;span class=&quot;kn&quot;&gt;root&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/var/www&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
-&lt;p&gt;A nice recursion &lt;strong&gt;:)&lt;/strong&gt;.&lt;/p&gt;
+    &lt;span class=&quot;kn&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;index.html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
-&lt;p&gt;Another thing is, whenever I save an article and refresh the browser, the web page gets &lt;strong&gt;automagically&lt;/strong&gt; updated too.&lt;/p&gt;
+    &lt;span class=&quot;kn&quot;&gt;server_name&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;localhost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
-&lt;p&gt;The question is: “can we make it better?” As it turns out that: “we sure can.”.&lt;/p&gt;
+    &lt;span class=&quot;kn&quot;&gt;expires&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kn&quot;&gt;error_page&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;404&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;@errorpage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
-&lt;h2 id=&quot;automating-the-blog-publishing-workflow&quot;&gt;Automating the Blog Publishing Workflow&lt;/h2&gt;
+    &lt;span class=&quot;kn&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kn&quot;&gt;try_files&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$uri&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$uri/&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;404&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;kn&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;@errorpage&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;# &amp;quot;permanent&amp;quot; is an HTTP 301 Redirect&lt;/span&gt;
+        &lt;span class=&quot;kn&quot;&gt;rewrite&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;.*&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/kaboom&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;permanent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
-&lt;p&gt;// TODO: write here.&lt;/p&gt;
+    &lt;span class=&quot;kn&quot;&gt;rewrite&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;^/kaboom&lt;/span&gt;$ &lt;span class=&quot;s&quot;&gt;/404.html&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
-&lt;p&gt;We will use &lt;strong&gt;&lt;a href=&quot;http://livereload.com/&quot; title=&quot;A happy land where browsers don’t need a refresh button.&quot;&gt;LiveReload&lt;/a&gt;&lt;/strong&gt; to further automate this workflow:&lt;/p&gt;
+    &lt;span class=&quot;c1&quot;&gt;# DO NOT ignore this; otherwise the default webroot will kaboom!&lt;/span&gt;
+    &lt;span class=&quot;kn&quot;&gt;rewrite&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;^/&lt;/span&gt;$ &lt;span class=&quot;s&quot;&gt;/index.html&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kn&quot;&gt;rewrite&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;^/index&lt;/span&gt;$ &lt;span class=&quot;s&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;permanent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
-&lt;h2 id=&quot;configuring-livereload&quot;&gt;Configuring LiveReload&lt;/h2&gt;
+    &lt;span class=&quot;kn&quot;&gt;rewrite&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;^([^.]+)/&lt;/span&gt;$ &lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;permanent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kn&quot;&gt;rewrite&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;^([^.]+)&lt;/span&gt;$ &lt;span class=&quot;nv&quot;&gt;$1.html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://livereload.com/&quot;&gt;&lt;img src=&quot;/img/livereload.png&quot; title=&quot;Live Reload&quot; style=&quot;margin:0 auto;display:block;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;installing-jekyll&quot;&gt;Installing &lt;strong&gt;Jekyll&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;Configuring &lt;strong&gt;&lt;a href=&quot;http://livereload.com/&quot; title=&quot;A happy land where browsers don’t need a refresh button.&quot;&gt;LiveReload&lt;/a&gt;&lt;/strong&gt; is easy:&lt;/p&gt;
+&lt;p&gt;Installing &lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Not your daddy’s static site generator.&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt; on Debian-based systems is really easy:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;sudo gem install jekyll&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;That’s it.&lt;/p&gt;
+
+&lt;h2 id=&quot;publishing-articles&quot;&gt;Publishing Articles&lt;/h2&gt;
+
+&lt;p&gt;Now let’s publish the articles:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;jekyll build --config _config.yml&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+rsync -a _site/ /var/www&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;And voila! The blog post that I’ve just edited is live.&lt;/p&gt;
+
+&lt;h2 id=&quot;automating-the-publish-flow&quot;&gt;Automating the Publish Flow&lt;/h2&gt;
+
+&lt;p&gt;To automate things further I’ve created a little script:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// /var/www/SRC/o2js.com-v2/bin/&lt;/span&gt;
+&lt;span class=&quot;s1&quot;&gt;&amp;#39;use strict&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;chokidar&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;chokidar&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;spawn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;child_process&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;spawn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;lock&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;chokidar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;watch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;/var/www/SRC/&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ignored&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/[\/\\]\.|node_modules/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// on(&amp;#39;all&amp;#39;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;change&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;acquiring lock&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+            &lt;span class=&quot;nx&quot;&gt;lock&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+            &lt;span class=&quot;nx&quot;&gt;process&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;spawn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;sh&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;./publish.sh&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+
+            &lt;span class=&quot;nx&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;close&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;child process exited with code &amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;releasing lock&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+                &lt;span class=&quot;nx&quot;&gt;lock&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Where &lt;strong&gt;./publish.sh&lt;/strong&gt; is:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;/bin/bash&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;..;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;jekyll&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;build&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;config&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;_config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;yml&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;rsync&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;_site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;/var/www&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;So when I run…&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /var/www/SRC/o2js.com-v2/bin/&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+node index.js&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;… any change that I make under the &lt;strong&gt;SRC&lt;/strong&gt; folder will publish and sync the documents with the live website.&lt;/p&gt;
+
+&lt;p&gt;I even use &lt;a href=&quot;https://chrome.google.com/webstore/detail/super-auto-refresh/kkhjakkgopekjlempoplnjclgedabddk?hl=en&quot;&gt;a nice little chrome extension&lt;/a&gt; to auto refresh the web page.&lt;/p&gt;
+
+&lt;p&gt;Here’s my current blogging environment:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;You just drop the folder that you want to watch into the &lt;strong&gt;LiveReload&lt;/strong&gt; window.&lt;/li&gt;
-  &lt;li&gt;And also &lt;a href=&quot;http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-&quot; title=&quot;LiveReload extensions FTW!&quot;&gt;install a browser extension&lt;/a&gt; to let your browser communicate with the &lt;strong&gt;LiveReload&lt;/strong&gt; process.&lt;/li&gt;
+  &lt;li&gt;A &lt;a href=&quot;https://c9.io/&quot;&gt;web-based IDE&lt;/a&gt;;&lt;/li&gt;
+  &lt;li&gt;And a browser side-by-side.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;After following these steps, as soon as you update and save your markdown, the browser page will refresh to reload the most recent content, which is a great time saver.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/images/inception-lg.png&quot;&gt;&lt;img src=&quot;/images/inception-sm.png&quot; title=&quot;A screenshot of this blog, inside itself ;)&quot; class=&quot;centered&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;/img/side_by_side.png&quot;&gt;&lt;img src=&quot;/img/side_by_side_sm.png&quot; title=&quot;Writing and previewing the content in real time, side by side&quot; style=&quot;margin:0 auto;display:block;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I am testing this new approach as I am writing this blog post, and it works really well!&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;Here you see a &lt;em&gt;side-by-side&lt;/em&gt; layout of the markdown editor and the rendered end result. — Whenever I save the file, the browser refreshes to show me the latest preview.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;And we can make it &lt;strong&gt;even better&lt;/strong&gt; by adding some &lt;strong&gt;automation&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;h2 id=&quot;automating-the-publish-flow&quot;&gt;Automating the “Publish” Flow&lt;/h2&gt;
-
-&lt;p&gt;One useful feature of &lt;strong&gt;&lt;a href=&quot;http://livereload.com/&quot; title=&quot;A happy land where browsers don’t need a refresh button.&quot;&gt;LiveReload&lt;/a&gt;&lt;/strong&gt; is that you can also run scripts whenever &lt;strong&gt;LiveReload&lt;/strong&gt; detects a change in your assets.&lt;/p&gt;
-
-&lt;p&gt;So I put the following script to the blog’s &lt;strong&gt;bin&lt;/strong&gt; folder:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;# sync.sh&lt;/span&gt;
-rsync -av ./&lt;span class=&quot;se&quot;&gt;\_&lt;/span&gt;site/2015 root@o2js.com:/root/PROJECTS/o2js.com&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-rsync -av ./&lt;span class=&quot;se&quot;&gt;\_&lt;/span&gt;site/img root@o2js.com:/root/PROJECTS/o2js.com&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;That’s good enough for this migration period. — I will add more to this script later on.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The next step is registering the above script to &lt;strong&gt;LiveReload&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/register_livereload.png&quot; title=&quot;Live Reload&quot; style=&quot;margin:0 auto;display:block;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;So whenever I save my local blog &lt;strong&gt;markdown&lt;/strong&gt;, I also publish it to the Internet immediately.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The page is refreshing as I continue writing and saving;&lt;/li&gt;
+  &lt;li&gt;And I don’t have to worry about publishing my blog, because it’s being auto-published at every single change I make to it.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;everything-is-streamlined&quot;&gt;Everything is Streamlined!&lt;/h2&gt;
 
