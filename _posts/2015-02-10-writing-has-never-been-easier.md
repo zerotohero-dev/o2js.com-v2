@@ -341,7 +341,7 @@ You can see the source code of this blog, as the time of this writing, [at this 
 
 ## Conclusion
 
-That was a quick overview of my *newer* and *better* blog publishing workflow.
+That was a quick overview of my **newer** and **better** blog publishing workflow.
 
 I really made my life easier.
 
