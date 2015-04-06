@@ -347,6 +347,9 @@ I really made my life easier.
 
 Hope you find that useful too.
 
+> Oh, btw, I started using **flexbox** too.<br>
+> Since all major browsers support it, I have no excuse not to use it.
+
 Until next time…
 
 **May the source be with you**!

@@ -5,8 +5,8 @@
     <description>o2.js; a coherent solution to your JavaScript dilemma.</description>
     <link>http://o2js.com/</link>
     <atom:link href="http://o2js.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 06 Apr 2015 08:18:00 +0000</pubDate>
-    <lastBuildDate>Mon, 06 Apr 2015 08:18:00 +0000</lastBuildDate>
+    <pubDate>Mon, 06 Apr 2015 08:25:58 +0000</pubDate>
+    <lastBuildDate>Mon, 06 Apr 2015 08:25:58 +0000</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -359,6 +359,11 @@ node index.js&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre
 &lt;p&gt;I really made my life easier.&lt;/p&gt;
 
 &lt;p&gt;Hope you find that useful too.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Oh, btw, I started using &lt;strong&gt;flexbox&lt;/strong&gt; too.&lt;br /&gt;
+Since all major browsers support it, I have no excuse not to use it.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;Until next time…&lt;/p&gt;
 
