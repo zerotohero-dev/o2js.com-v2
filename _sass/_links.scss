@@ -1,0 +1,11 @@
+a {
+    @extend .link;
+}
+
+a:hover {
+    @extend .link_hover;
+}
+
+a:visited {
+    @extend .link_visited;
+}

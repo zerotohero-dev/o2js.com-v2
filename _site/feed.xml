@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>o2.js – A Coherent Solution to Your JavaScript Dilemma</title>
+    <description>o2.js; a coherent solution to your JavaScript dilemma.</description>
+    <link>http://o2js.com/</link>
+    <atom:link href="http://o2js.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 06 Apr 2015 04:42:00 +0000</pubDate>
+    <lastBuildDate>Mon, 06 Apr 2015 04:42:00 +0000</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Writing Has Never Been Easier</title>
+        <description>&lt;p&gt;&lt;a href=&quot;/images/flowing_time.jpg&quot;&gt;&lt;img src=&quot;/images/flowing_time_sm.jpeg&quot; title=&quot;Time… It’s all that matters.&quot; class=&quot;centered&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Until recently, I was using &lt;a href=&quot;https://github.com/v0lkan/o2js.com/tree/e91edd205580bdce95dc7e36a0adc46a06dab2ed&quot; title=&quot;A custom generator that uses MongoDB, and node.js — just to create a static website.&quot;&gt;a custom generator&lt;/a&gt; for &lt;strong&gt;&lt;a href=&quot;http://o2js.com/&quot;&gt;o2js.com&lt;/a&gt;&lt;/strong&gt;, and it was doing its job pretty well.&lt;/p&gt;
+
+  &lt;p&gt;There was a tiny problem, however:&lt;/p&gt;
+
+  &lt;p&gt;My workflow was too &lt;strong&gt;complicated&lt;/strong&gt;, to say the least:&lt;/p&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;&lt;strong&gt;(1)&lt;/strong&gt; I had to &lt;code&gt;ssh&lt;/code&gt; and start a remote server;&lt;/li&gt;
+    &lt;li&gt;Login that server’s website;&lt;/li&gt;
+    &lt;li&gt;Write my article(s);&lt;/li&gt;
+    &lt;li&gt;Stop the remote server;&lt;/li&gt;
+    &lt;li&gt;Run a &lt;em&gt;publish script&lt;/em&gt; on the server;&lt;/li&gt;
+    &lt;li&gt;Check the live published page;&lt;/li&gt;
+    &lt;li&gt;If I need to update the article, fix a typo etc., then &lt;strong&gt;GOTO (1)&lt;/strong&gt;.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;When any of my articles got closer and closer to their final state, they went through this &lt;em&gt;vicious cycle&lt;/em&gt; over and over again. — It was like a never-ending nightmare:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;There was always “one last thing” to be rewritten, “one last typo” to be fixed; and it meant to start the above sequence… as if it would never end.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I don’t know you, and I feel like the above flow is &lt;strong&gt;exhaustive&lt;/strong&gt;!&lt;/p&gt;
+
+&lt;p&gt;…&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.wikiwand.com/en/Writer%27s_block&quot; title=&quot;“Writer’s block” is just one of the many problems a writer has to deal with.&quot;&gt;&lt;strong&gt;Writing&lt;/strong&gt;, in and of itself, is hard enough&lt;/a&gt;, there’s no need to make it kind of like a torture.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Writing should be fun&lt;/strong&gt;. And to make it fun, I’d prefer to…&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Open my favorite &lt;strong&gt;&lt;a href=&quot;http://daringfireball.net/projects/markdown/syntax&quot; title=&quot;Markdown ain’t no WYSIWG — It helps you focus on the content rather than formatting and design.&quot;&gt;markdown&lt;/a&gt;&lt;/strong&gt; editor;&lt;/li&gt;
+  &lt;li&gt;Have a &lt;strong&gt;preview&lt;/strong&gt; of the end result (&lt;em&gt;i.e., the blog&lt;/em&gt;) post as I type;&lt;/li&gt;
+  &lt;li&gt;And never bother publishing because the entire publish cycle is &lt;strong&gt;automated&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Writing has to be as &lt;strong&gt;hassle-free&lt;/strong&gt;, as &lt;strong&gt;seamless&lt;/strong&gt;, and as &lt;strong&gt;frictionless&lt;/strong&gt; as possible.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;to-reinvent-or-not-thats-the-problem&quot;&gt;To Reinvent or Not… That’s the Problem&lt;/h2&gt;
+
+&lt;p&gt;Since my existing setup was far from actualizing this dream, I decided to come up with a new workflow.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.geekli.st/post/111932989787/grab-your-chisel-and-start-pounding-a-guest&quot;&gt;I’m an avid believer of “&lt;strong&gt;wheel reinvention&lt;/strong&gt;”&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Reinventing the wheel teaches you &lt;strong&gt;a lot&lt;/strong&gt;!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Hacking&lt;/strong&gt;, &lt;strong&gt;tweaking&lt;/strong&gt;, and &lt;strong&gt;replicating&lt;/strong&gt; existing solutions helps you see relationships between various components that you thought never existed. This insight helps you come up with &lt;strong&gt;newer&lt;/strong&gt; and &lt;strong&gt;better&lt;/strong&gt; outcomes. This, actually, is &lt;em&gt;&lt;a href=&quot;http://www.wikiwand.com/en/Creativity&quot; title=&quot;Creativity — Wikipedia&quot;&gt;the very definition of creativity&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;reinventing-the-blogging-workflow&quot;&gt;Reinventing the Blogging Workflow&lt;/h2&gt;
+
+&lt;p&gt;So the question is not whether to reinvent.&lt;/p&gt;
+
+&lt;p&gt;The question is:&lt;/p&gt;
+
+&lt;p&gt;“Is the &lt;strong&gt;&lt;a href=&quot;http://www.wikiwand.com/en/Opportunity_cost&quot; title=&quot;Opportunity Cost — Wikipedia&quot;&gt;opportunity cost of the time I spend&lt;/a&gt;&lt;/strong&gt; reinventing a static blog engine worth it?”&lt;/p&gt;
+
+&lt;p&gt;Or, in other words: “Is there a more &lt;strong&gt;productive&lt;/strong&gt; way to occupy my time?”&lt;/p&gt;
+
+&lt;p&gt;Answering this question — and other similar questions — helped me to see what I was missing:&lt;/p&gt;
+
+&lt;p&gt;Instead of patching my hacky static content generator, I had to &lt;strong&gt;reinvent my workflow&lt;/strong&gt; from the bottom up.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;In my current setup, I just keep on writing. And everything is synchronized. — It’s &lt;strong&gt;magical&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Curious?&lt;/p&gt;
+
+&lt;h2 id=&quot;before-we-begin&quot;&gt;Before We Begin…&lt;/h2&gt;
+
+&lt;p&gt;In this article, I’ll be describing a &lt;strong&gt;Mac-specific&lt;/strong&gt; setup because it’s the environment that I’m currently working on.&lt;/p&gt;
+
+&lt;p&gt;There &lt;em&gt;might&lt;/em&gt; be Windows and Linux equivalents of the tools that I’ll mention below, and I have not used any of them. — I’m sure you can use a similar workflow to automate your writing process in any of those environments, too.&lt;/p&gt;
+
+&lt;p&gt;Also, please note that &lt;strong&gt;some&lt;/strong&gt; of the applications that I will share here are &lt;strong&gt;not&lt;/strong&gt; free. I don’t have any affiliation with the links I provide here. It’s just that I regularly use them and I believe they are totally worth their price tags. — &lt;em&gt;YMMV&lt;/em&gt;, of course.&lt;/p&gt;
+
+&lt;h2 id=&quot;keyboard-matters&quot;&gt;&lt;strong&gt;Keyboard&lt;/strong&gt; Matters&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If writing has become a part of your life, then typing on a &lt;strong&gt;great keyboard&lt;/strong&gt; and using a &lt;strong&gt;decent text editor&lt;/strong&gt; is the least favor you can do to yourself.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.daskeyboard.com/&quot;&gt;&lt;img src=&quot;/images/das_keyboard.jpg&quot; title=&quot;Das Keyboard&quot; class=&quot;centered&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I know, I know… &lt;strong&gt;&lt;a href=&quot;http://www.daskeyboard.com/&quot; title=&quot;One of the best.&quot;&gt;Das Keyboard&lt;/a&gt;&lt;/strong&gt; is not the prettiest-looking keyboard in the world; yet its &lt;strong&gt;&lt;a href=&quot;http://www.keyboardco.com/blog/index.php/2012/12/an-introduction-to-cherry-mx-mechanical-switches/&quot; title=&quot;An introduction to Cherry MX mechanical switches.&quot;&gt;tactile feedback&lt;/a&gt;&lt;/strong&gt; is one of a kind. — Writing on it is a joy… So much that I constantly find myself making up excuses to write more &lt;strong&gt;;)&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;editor-matters-too&quot;&gt;&lt;strong&gt;Editor&lt;/strong&gt; Matters Too&lt;/h2&gt;
+
+&lt;p&gt;As per the &lt;strong&gt;editor&lt;/strong&gt; part, I have tried many of them; and I finally settled with &lt;strong&gt;&lt;a href=&quot;https://ia.net/writer/mac&quot; title=&quot;A quintessential writing machine for Mac&quot;&gt;IA Writer&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;IA Writer&lt;/strong&gt; enables me to focus while I am writing. Moreover, it does not alter the markdown I write. Hadn’t messed with my markdown, &lt;a href=&quot;http://www.ulyssesapp.com/&quot; title=&quot;Ulysses makes writing fun and productive.&quot;&gt;Ulysses&lt;/a&gt; would have been another alternative.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Although &lt;a href=&quot;http://www.ulyssesapp.com/&quot; title=&quot;Ulysses makes writing fun and productive.&quot;&gt;Ulysses&lt;/a&gt; provides a bunch of utilities that makes &lt;strong&gt;markdown&lt;/strong&gt; editing faster, the amount of control you lose is &lt;strong&gt;not worth it&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Most of the time, I write my articles in &lt;strong&gt;&lt;a href=&quot;https://ia.net/writer/mac&quot; title=&quot;A quintessential writing machine for Mac&quot;&gt;IA Writer&lt;/a&gt;&lt;/strong&gt;, and when they are close to their final state, I paste them to my &lt;strong&gt;&lt;a href=&quot;https://c9.io/&quot;&gt;Cloud9 IDE&lt;/a&gt;&lt;/strong&gt; (&lt;em&gt;more on that later&lt;/em&gt;).&lt;/p&gt;
+
+&lt;p&gt;Here’s a sneak peek of how &lt;strong&gt;&lt;a href=&quot;https://ia.net/writer/mac&quot; title=&quot;A quintessential writing machine for Mac&quot;&gt;IA Writer&lt;/a&gt;&lt;/strong&gt; looks like:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/ulyssess.png&quot;&gt;&lt;img src=&quot;/images/ulyssess_sm.png&quot; title=&quot;It is *delightful* to write with Ulysses.&quot; class=&quot;centered&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Aside from the keyboard and the editor I will use &lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Not your daddy’s static site generator.&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt; and  &lt;strong&gt;&lt;a href=&quot;https://c9.io/&quot;&gt;Cloud9 IDE&lt;/a&gt;&lt;/strong&gt; to automate things.&lt;/p&gt;
+
+&lt;p&gt;Let’s start with &lt;strong&gt;Cloud9&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;h2 id=&quot;creating-an-ssh-workspace&quot;&gt;Creating an SSH Workspace&lt;/h2&gt;
+
+&lt;p&gt;One nice feature of &lt;strong&gt;&lt;a href=&quot;https://c9.io/&quot;&gt;Cloud9&lt;/a&gt;&lt;/strong&gt; is &lt;strong&gt;SSL Workspaces&lt;/strong&gt;. &lt;strong&gt;SSL Workspaces&lt;/strong&gt; let you edit the files on your server using a browser-based integrated development environment. Here’s how it looks like:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/c9-large.png&quot;&gt;&lt;img src=&quot;/images/c9-sm.png&quot; title=&quot;Cloud9 IDE is hands down the BEST online IDE around.&quot; class=&quot;centered&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Setting your own SSH workspace in &lt;strong&gt;Cloud9&lt;/strong&gt; is pretty straighforward. &lt;a href=&quot;https://docs.c9.io/v1.0/docs/running-your-own-ssh-workspace&quot;&gt;&lt;strong&gt;Cloud9&lt;/strong&gt; documentation has a step-by-step instruction on how to do it&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;After setting up my &lt;strong&gt;SSH workspace&lt;/strong&gt;, the next thing I did was to create a sample &lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Not your daddy’s static site generator.&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt; website.&lt;/p&gt;
+
+&lt;h2 id=&quot;setting-up-jekyll&quot;&gt;Setting Up Jekyll&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://jekyllrb.com/&quot;&gt;&lt;img src=&quot;/images/jekyll.png&quot; title=&quot;Jekyll&quot; class=&quot;centered&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Not your daddy’s static site generator.&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt; is a tool that helps generating static web content a breeze.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Not your daddy’s static site generator.&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt; is especially a great fit for blogs: &lt;strong&gt;Blogs are first class citizens&lt;/strong&gt; in &lt;strong&gt;Jekyll&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;To use &lt;strong&gt;Jekyll&lt;/strong&gt;, you will need to have &lt;strong&gt;&lt;a href=&quot;https://www.ruby-lang.org/en/downloads/&quot; title=&quot;Download Ruby&quot;&gt;Ruby&lt;/a&gt;&lt;/strong&gt; installed. If you don’t have &lt;strong&gt;Ruby&lt;/strong&gt; on your system, &lt;a href=&quot;https://www.ruby-lang.org/en/downloads/&quot; title=&quot;Download Ruby&quot;&gt;go ahead, and install the most recent one from rubylang.org&lt;/a&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;For the uber-nerds out there: You can install &lt;strong&gt;Ruby&lt;/strong&gt; via &lt;strong&gt;&lt;a href=&quot;https://github.com/sstephenson/rbenv&quot; title=&quot;A better way to install ruby.&quot;&gt;rbenv&lt;/a&gt;&lt;/strong&gt; too. &lt;a href=&quot;https://github.com/sstephenson/rbenv/wiki/Why-rbenv%3F&quot; title=&quot;Why rbenv?&quot;&gt;And there are good reasons to do so&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Then getting up and running with &lt;strong&gt;Jekyll&lt;/strong&gt; takes mere seconds:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;gem install jekyll&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/PROJECTS&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+mkdir PROJECTS/blog&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/PROJECTS/blog&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+jekyll init my-blog&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;And voila! You have a static website running.&lt;/p&gt;
+
+&lt;p&gt;If you haven’t changed any default settings, you can visit it by navigating to &lt;em&gt;http://localhost:4000&lt;/em&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;I won’t explain how to set up &lt;strong&gt;Jekyll&lt;/strong&gt; as it is &lt;a href=&quot;http://jekyllrb.com/docs/home/&quot; title=&quot;Jekyll Documentation&quot;&gt;explained really well on their website&lt;/a&gt;. — Just follow the examples there and you’ll be a &lt;strong&gt;Jekyll&lt;/strong&gt; master in no time.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;After setting up &lt;strong&gt;Jekyll&lt;/strong&gt;, running the following helped me preview my blog locally:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;# you need root access for port 80.&lt;/span&gt;
+sudo jekyll serve --port 80&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I also defined a staging URL on my &lt;strong&gt;/etc/hosts&lt;/strong&gt; file for convenience:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;# /etc/hosts
+127.0.0.1       staging.o2js.com&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;And here’s how &lt;strong&gt;staging.o2js.com&lt;/strong&gt; looks like:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/inception.png&quot; title=&quot;A screenshot of this blog, inside itself ;)&quot; style=&quot;margin:0 auto;display:block;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As you see, I am testing this new approach as I am writing this blog post.&lt;/p&gt;
+
+&lt;p&gt;A nice recursion &lt;strong&gt;:)&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Another thing is, whenever I save an article and refresh the browser, the web page gets &lt;strong&gt;automagically&lt;/strong&gt; updated too.&lt;/p&gt;
+
+&lt;p&gt;The question is: “can we make it better?” As it turns out that: “we sure can.”.&lt;/p&gt;
+
+&lt;h2 id=&quot;automating-the-blog-publishing-workflow&quot;&gt;Automating the Blog Publishing Workflow&lt;/h2&gt;
+
+&lt;p&gt;// TODO: write here.&lt;/p&gt;
+
+&lt;p&gt;We will use &lt;strong&gt;&lt;a href=&quot;http://livereload.com/&quot; title=&quot;A happy land where browsers don’t need a refresh button.&quot;&gt;LiveReload&lt;/a&gt;&lt;/strong&gt; to further automate this workflow:&lt;/p&gt;
+
+&lt;h2 id=&quot;configuring-livereload&quot;&gt;Configuring LiveReload&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://livereload.com/&quot;&gt;&lt;img src=&quot;/img/livereload.png&quot; title=&quot;Live Reload&quot; style=&quot;margin:0 auto;display:block;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Configuring &lt;strong&gt;&lt;a href=&quot;http://livereload.com/&quot; title=&quot;A happy land where browsers don’t need a refresh button.&quot;&gt;LiveReload&lt;/a&gt;&lt;/strong&gt; is easy:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;You just drop the folder that you want to watch into the &lt;strong&gt;LiveReload&lt;/strong&gt; window.&lt;/li&gt;
+  &lt;li&gt;And also &lt;a href=&quot;http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-&quot; title=&quot;LiveReload extensions FTW!&quot;&gt;install a browser extension&lt;/a&gt; to let your browser communicate with the &lt;strong&gt;LiveReload&lt;/strong&gt; process.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;After following these steps, as soon as you update and save your markdown, the browser page will refresh to reload the most recent content, which is a great time saver.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/img/side_by_side.png&quot;&gt;&lt;img src=&quot;/img/side_by_side_sm.png&quot; title=&quot;Writing and previewing the content in real time, side by side&quot; style=&quot;margin:0 auto;display:block;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Here you see a &lt;em&gt;side-by-side&lt;/em&gt; layout of the markdown editor and the rendered end result. — Whenever I save the file, the browser refreshes to show me the latest preview.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;And we can make it &lt;strong&gt;even better&lt;/strong&gt; by adding some &lt;strong&gt;automation&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;h2 id=&quot;automating-the-publish-flow&quot;&gt;Automating the “Publish” Flow&lt;/h2&gt;
+
+&lt;p&gt;One useful feature of &lt;strong&gt;&lt;a href=&quot;http://livereload.com/&quot; title=&quot;A happy land where browsers don’t need a refresh button.&quot;&gt;LiveReload&lt;/a&gt;&lt;/strong&gt; is that you can also run scripts whenever &lt;strong&gt;LiveReload&lt;/strong&gt; detects a change in your assets.&lt;/p&gt;
+
+&lt;p&gt;So I put the following script to the blog’s &lt;strong&gt;bin&lt;/strong&gt; folder:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;# sync.sh&lt;/span&gt;
+rsync -av ./&lt;span class=&quot;se&quot;&gt;\_&lt;/span&gt;site/2015 root@o2js.com:/root/PROJECTS/o2js.com&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+rsync -av ./&lt;span class=&quot;se&quot;&gt;\_&lt;/span&gt;site/img root@o2js.com:/root/PROJECTS/o2js.com&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;That’s good enough for this migration period. — I will add more to this script later on.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The next step is registering the above script to &lt;strong&gt;LiveReload&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/register_livereload.png&quot; title=&quot;Live Reload&quot; style=&quot;margin:0 auto;display:block;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So whenever I save my local blog &lt;strong&gt;markdown&lt;/strong&gt;, I also publish it to the Internet immediately.&lt;/p&gt;
+
+&lt;h2 id=&quot;everything-is-streamlined&quot;&gt;Everything is Streamlined!&lt;/h2&gt;
+
+&lt;p&gt;Now I don’t have an excuse not to write:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Writing is as easy as firing up an editor, and… well… actually writing &lt;strong&gt;:)&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;next-up&quot;&gt;Next Up&lt;/h2&gt;
+
+&lt;p&gt;I will gradually move the entire &lt;strong&gt;&lt;a href=&quot;http://o2js.com/&quot; title=&quot;o2.js — A coherent solution to your JavaScript dilemma.&quot;&gt;o2js.com&lt;/a&gt;&lt;/strong&gt; over here, and I’ll also improve this current theme.&lt;/p&gt;
+
+&lt;p&gt;As the time of this writing, this page blog does not have an &lt;strong&gt;rss feed&lt;/strong&gt;, or an &lt;strong&gt;archive section&lt;/strong&gt;, or &lt;strong&gt;categories&lt;/strong&gt;, or &lt;strong&gt;tags&lt;/strong&gt;. — Heck, it does not even have a &lt;strong&gt;header&lt;/strong&gt;, a &lt;strong&gt;footer&lt;/strong&gt;, or a &lt;strong&gt;side navigation&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;And it is easy to integrate them, as &lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Not your daddy’s static site generator.&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt; supports all these (&lt;em&gt;and more&lt;/em&gt;). — I will be &lt;em&gt;gradually&lt;/em&gt; implementing those features in the future.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;That was a quick overview of my &lt;em&gt;newer&lt;/em&gt; and &lt;em&gt;better&lt;/em&gt; blog publishing workflow.&lt;/p&gt;
+
+&lt;p&gt;I really made my life easier.&lt;/p&gt;
+
+&lt;p&gt;Hope you find that useful too.&lt;/p&gt;
+
+&lt;p&gt;Until next time…&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;May the source be with you&lt;/strong&gt;!&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 10 Feb 2015 00:00:00 +0000</pubDate>
+        <link>http://o2js.com/productivity/2015/02/10/writing-has-never-been-easier</link>
+        <guid isPermaLink="true">http://o2js.com/productivity/2015/02/10/writing-has-never-been-easier</guid>
+        
+        <category>writing</category>
+        
+        <category>blogging</category>
+        
+        <category>jekyll</category>
+        
+        <category>workflow</category>
+        
+        <category>writing</category>
+        
+        <category>creativity</category>
+        
+        <category>reinvention</category>
+        
+        <category>reflow</category>
+        
+        <category>gtd</category>
+        
+        
+        <category>productivity</category>
+        
+      </item>
+    
+  </channel>
+</rss>

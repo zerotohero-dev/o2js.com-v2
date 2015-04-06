@@ -1,0 +1,10 @@
+# Site settings
+title: o2.js – A Coherent Solution to Your JavaScript Dilemma
+email: volkan@o2js.com
+description: o2.js; a coherent solution to your JavaScript dilemma.
+baseurl: ""
+url: "http://o2js.com"
+fontCss: "//cloud.webtype.com/css/7aac64b3-a02e-43cb-9465-10369d68dd33.css"
+
+# Build settings
+markdown: kramdown

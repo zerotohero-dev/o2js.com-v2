@@ -1,0 +1,123 @@
+body {
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    font-weight: $base-font-weight;
+    color: $text-color;
+    background-color: $background-color;
+    -webkit-text-size-adjust: 100%;
+}
+
+h1, h2 {
+    font-family: $title-font-family;
+    margin-top: 0.6em;
+}
+
+h1 {text-align: center;}
+
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+.vertical-rhythm {
+    margin-bottom: $spacing-unit / 2;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+ul, ol {
+    margin-left: $spacing-unit;
+}
+
+li {
+    > ul,
+    > ol {
+        margin-bottom: 0;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: $base-font-weight;
+}
+
+
+
+.byline {
+    text-align: right;
+    font-size: $tiny-font-size;
+
+    a {
+        font-weight: bold;
+    }
+}
+
+article {
+    margin: $article-margin;
+}
+
+blockquote {
+    border: none;
+    border-radius: 0;
+
+    font-size: $small-font-size;
+    border-left: $quote-border;
+    margin: $base-line-height 0;
+    background: none;
+
+    padding-left: $spacing-unit / 2;
+
+    font-style: italic;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+pre,
+code {
+    @extend .code-border;
+
+    background: $code-background;
+    font-size: $tiny-font-size;
+    font-family: $monotype-font-family;
+}
+
+code {
+    padding: $code-padding;
+}
+
+pre {
+    padding: $code-block-padding;
+    overflow-x: scroll;
+
+    > code {
+        border: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+pre {
+    transition: $code-block-transition;
+
+    margin: $code-block-margin;
+    background: $code-background;
+
+    @extend .code-block-border;
+
+    code {
+        background: transparent;
+    }
+
+    &:hover {
+        transition: $code-block-transition;
+
+        margin: $code-block-margin-hover;
+        background: $code-block-background-hover;
+
+        @extend .shadow-bottom;
+        @extend .code-block-border-hover;
+    }
+}

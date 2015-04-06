@@ -1,0 +1,27 @@
+.main-wrap {
+    @extend .flexible;
+}
+
+.page-content {
+    @extend .flex-item;
+    @extend .flex-article;
+
+    margin-top: $margin-from-top;
+}
+
+.aside-content {
+    @extend .flex-item;
+    @extend .flex-aside;
+}
+
+.site-header {
+    @extend .flex-header;
+}
+
+.main-wrap {
+    @extend .flex-column;
+}
+
+.page-content, .aside-content {
+    @extend .flex-override-basis;
+}

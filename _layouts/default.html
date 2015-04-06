@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+<body>
+    {% include header.html %}
+
+    <div class="main-wrap">
+        <div class="aside-content">
+            <h1><a href="http://volkan.io/">Volkan Özçelik</a></h1>
+
+            <p><strong>Chase Me</strong></p>
+
+            <ul>
+            <li>Technical Lead @ <a href="http://cisco.com/">Cisco</a></li>
+            <li><a href="https://twitter.com/linkibol">@linkibol</a></li>
+            <li><a href="https://github.com/v0lkan">github.com/v0lkan</a></li>
+            <li><a href="https://speakerdeck.com/volkan">speakerdeck.com/volkan</a></li>
+            <li><a href="https://linkedin.com/in/volkanozcelik">linkedin.com/in/volkanozcelik</a></li>
+            </ul>
+
+            <!--p><strong>o2.js</strong></p-->
+            <!--ul -- hidden until ready -->
+            <!--li><a href="https://github.com/o2js">Read the Source, Luke</a></li-->
+            <!--/ul-->
+
+            <p class="interviewz" style="text-align:center;">
+                Psttt&hellip;
+                Wanna ace that interview?<br>
+                Then you have some reading to do:<br>
+                <a href="http://o2js.com/interview-questions"
+                title="JavaScript Interview Questions">»» Get the Only Reference
+                on <strong>JavaScript Engineering Interviews</strong>
+                You Will <em>Ever</em> Need, Now!
+                «</a>
+            </p>
+        </div>
+
+        <div class="page-content">
+            <div class="wrapper">
+            {{ content }}
+            </div>
+        </div>
+    </div>
+
+    {% include footer.html %}
+</body>
+</html>

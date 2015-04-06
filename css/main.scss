@@ -1,0 +1,203 @@
+---
+# Main sass file
+---
+@charset "utf-8";
+
+// Typography
+
+$base-font-family: "Georgia Pro", "Book Antiqua", Georgia, "Times New Roman", times, sans-serif;
+$title-font-family: "MVB Calliope", "Georgia Pro", Georgia, "Times New Roman", Times, serif;
+$monotype-font-family: "Input Mono Cond", "Lucida Console", Menlo, Monaco, "Courier New", Courier, mono, monospace;
+$heading-font-family: "Franklin ITC Cond Med", "Input Mono Cond", "Lucida Console", Menlo, Monaco, "Courier New", Courier, mono, monospace;
+$base-font-size: 18px;
+$medium-font-size: $base-font-size * 0.95;
+$small-font-size: $base-font-size * 0.875;
+$tiny-font-size: $base-font-size * 0.722;
+$base-font-weight: 300;
+$base-margin: 1em;
+$base-padding: 1em;
+
+$margin-from-top: 1em;
+
+$wide-li-margin: 0 1em 0.5em 2.6em;
+
+$base-line-height: 1.5em;
+$spacing-unit:  30px;
+
+$text-color: #000;
+$background-color: #fdfdfd;
+
+$grey-color: rgba(56,56,56,0.5);
+
+$dashed-border: 2px #ccc dashed;
+
+// Layout
+
+$content-width: 800px;
+$on-palm: 600px;
+$on-laptop: 800px;
+
+// Extras
+
+$article-margin: 2em;
+$quote-border: 4px solid #ccc;
+$code-padding: 1px 5px;
+$code-block-padding: 1em;
+$code-block-margin: 2em;
+$code-block-margin-hover: 2em 0;
+$code-block-background-hover: #fff;
+$code-background: #FFF9D6;
+$code-block-transition: margin 0.6s, background 1s, border 1.2s;
+
+// Mixables
+
+.centered {
+    margin: 0 auto;
+    display: block;
+}
+
+.code-border {
+    border: 1px solid #FFEA70;
+    border-radius: 3px;
+}
+
+.code-block-border {
+    border-top: 1px #FFEA70 solid;
+    border-right: 2px #FFEA70 solid;
+    border-bottom: 2px #FFEA70 solid;
+    border-left: 1px #FFEA70 solid;
+    border-radius: 3px;
+}
+
+.code-block-border-hover {
+    border-top: 1px #cccccc solid;
+    border-right: 2px #bebebe solid;
+    border-bottom: 2px #bebebe solid;
+    border-left: 1px #cccccc solid;
+}
+
+.shadow-bottom {
+    -webkit-box-shadow: 0px 10px 15px -10px rgba(0,0,0,0.36);
+    -moz-box-shadow: 0px 10px 15px -10px rgba(0,0,0,0.36);
+    -ms-box-shadow: 0px 10px 15px -10px rgba(0,0,0,0.36);
+    -o-box-shadow: 0px 10px 15px -10px rgba(0,0,0,0.36);
+    box-shadow: 0px 10px 15px -10px rgba(0,0,0,0.36);
+}
+
+.flexible {
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-direction: row;
+    flex-direction: row;
+
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    -webkit-justify-content: center;
+    justify-content: center;
+
+    -webkit-align-content: flex-start;
+    align-content: flex-start;
+
+    -webkit-align-items: stretch;
+    align-items: stretch;
+}
+
+.flex-item {
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+}
+
+.flex-article {
+    -webkit-flex-basis: 750px;
+    flex-basis: 750px;
+    max-width: 750px;
+
+    order: 1;
+    -webkit-order: 1;
+}
+
+.flex-aside {
+    order: 2;
+    -webkit-order: 2;
+
+    -webkit-flex-basis: 350px;
+    flex-basis: 350px;
+
+    max-width:400px;
+}
+
+.flex-header {
+    padding: 0.5em;
+    text-align: center;
+    border-bottom:1px #dadada solid;
+}
+
+.link {
+    border-bottom: 2px solid #FFE026;
+    text-decoration: none;
+    color: #000;
+}
+
+.link_hover {
+    border-bottom: 2px solid #FFE026;
+    background: #FFE026;
+    text-decoration: none;
+    color: #000;
+}
+
+.link_visited {
+    color: #000;
+}
+
+@media (max-width: $content-width) {
+    .flex-column {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        align-items: center;
+        -webkit-align-items: center;
+    }
+
+    .flex-override-basis {
+        flex-basis: auto !important;
+        -webkit-flex-basis: auto !important;
+    }
+}
+
+// Mixins
+
+@mixin base-heading() {
+    h2, h3, h4, h5, h6 {
+        color: #BA3925;
+        padding-top: 0.5em;
+        font-family: $heading-font-family;
+    }
+
+    h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
+        color: #000;
+    }
+}
+
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+    "reset",
+    "base",
+    "layout",
+    "post",
+    "aside",
+    "home",
+    "header",
+    "links",
+    "headings",
+    "highlight"
+;

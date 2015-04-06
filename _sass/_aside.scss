@@ -1,0 +1,33 @@
+.aside-content {
+    margin-top: $margin-from-top;
+
+    h1 {
+        margin: $base-margin;
+        margin-bottom: 0;
+        text-align: left;
+    }
+
+    p {
+        margin: $base-margin;
+        margin-left: 2 * $base-margin;
+    }
+
+    ul li {
+        margin: $wide-li-margin;
+    }
+
+    .interviewz {
+        border-top: $dashed-border;
+        padding: $base-padding;
+
+        margin-top: $base-margin * 2.6;
+
+        a {
+            text-align:center;
+            text-decoration:underline;
+            border-bottom:0;
+            display:block;
+            margin-top: $base-margin;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.home {
+    text-align: center;
+    margin-bottom: $spacing-unit;
+
+    @include base-heading();
+
+    .post-list {
+        margin-left: 0;
+        list-style: none;
+
+        > li {
+            margin-bottom: $spacing-unit;
+
+            h3 {
+                font-family: $title-font-family;
+            }
+
+            span {
+                font-family: $heading-font-family;
+                font-size: $base-font-size;
+                font-style:italic;
+            }
+        }
+    }
+
+    h2, h3 {
+        text-align: center;
+    }
+}
+
+.site-header {
+    .post-meta {
+        color: $text-color;
+        font-family: $heading-font-family;
+    }
+}
