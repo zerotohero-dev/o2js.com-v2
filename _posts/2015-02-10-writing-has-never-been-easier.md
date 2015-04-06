@@ -78,17 +78,11 @@ Instead of patching my hacky static content generator, I had to **reinvent my wo
 
 Curious?
 
-## Before We Begin…
-
-In this article, I’ll be describing a **Mac-specific** setup because it’s the environment that I’m currently working on.
-
-There *might* be Windows and Linux equivalents of the tools that I’ll mention below, and I have not used any of them. — I’m sure you can use a similar workflow to automate your writing process in any of those environments, too.
-
-Also, please note that **some** of the applications that I will share here are **not** free. I don’t have any affiliation with the links I provide here. It’s just that I regularly use them and I believe they are totally worth their price tags. — *YMMV*, of course.
+Let’s start with the keyboard first because if you write “a lot”, then you should also invest in a decent keyboard.
 
 ## **Keyboard** Matters
 
-> If writing has become a part of your life, then typing on a **great keyboard** and using a **decent text editor** is the least favor you can do to yourself.
+> If writing has become a part of your life, then typing on a **great keyboard** and using a **decent distraction-free editor** is the least favor you can do to yourself.
 
 <a href="http://www.daskeyboard.com/"><img src="/images/das_keyboard.jpg" title="Das Keyboard" class="centered"></a>
 
@@ -97,6 +91,20 @@ I know, I know… **[Das Keyboard][das]** is not the prettiest-looking keyboard 
 ## **Editor** Matters Too
 
 As per the **editor** part, I have tried many of them; and I finally settled with **[IA Writer][ia]**.
+
+The main reason I use **IA Writer** is because of thier approach to **typography**. And when I say **typograpy** I don’t mean their support for [smart quotes][smart-quote] or [proper typographic dashes][hypens-and-dashes].
+
+They, of course, support those things; and that’s just the tip of the iceberg.
+
+### **IA Writer** and Typography
+
+**[IA Writer][ia]**’s attention to proper typography, [scale and rhytm][scale-and-rhytm] shows that [the IA writer team embrace **all aspects** of **responsive** *typography* in every possible detail of their product][responsive-typography].
+
+Why is this such a big deal? Because **typography matters**. — At least it matters to me. And I know there are **lucky** people out there who can live without caring about **typography** too much **:)**.
+
+> Mentally stable individuals do not take notice of proper typographic punctuation. I’m not one of them. — For example, when I encounter a street sign reading `John's Place` instead of `John’s Place`, I throw a tantrum.
+
+### **IA Writer** and Focus
 
 **IA Writer** enables me to focus while I am writing. Moreover, it does not alter the markdown I write. Hadn’t messed with my markdown, [Ulysses][ulysses] would have been another alternative.
 
@@ -108,21 +116,29 @@ Here’s a sneak peek of how **[IA Writer][ia]** looks like:
 
 <a href="/images/ulyssess.png"><img src="/images/ulyssess_sm.png" title="It is *delightful* to write with Ulysses." class="centered"></a>
 
-Aside from the keyboard and the editor I will use **[Jekyll][jekyll]** and  **[Cloud9 IDE][c9]** to automate things.
+Writing in **IA Writer** is a delightful experience. And when you augment that experience with the smoothness of a quality mechanical keyboard, you’ll never want to stop writing.
+
+> **Aside**
+>
+> For the interested, **Jekyll** [also supports typographic substitutions][kramdown-options]. Yet I prefer to see “proper” typography in my **markdown** instead.
+
+…
+
+In addition to the keyboard and the editor, I will use **[Jekyll][jekyll]** and  **[Cloud9 IDE][c9]** to automate things, as we’ll soon see.
 
 Let’s start with **Cloud9**:
 
 ## Creating an **SSH Workspace**
 
-One nice feature of **[Cloud9][c9]** is **SSH Workspaces**. **SSL Workspaces** let you edit the files on your server using a browser-based integrated development environment. Here’s how it looks like:
+One nice feature of **[Cloud9][c9]** is **SSH Workspaces**. **SSL Workspaces** let you edit the files on your server using a browser-based integrated development environment.
+
+Here’s how it looks like:
 
 <a href="/images/c9-large.png"><img src="/images/c9-sm.png" title="Cloud9 IDE is hands down the BEST online IDE around." class="centered"></a>
 
 Setting your own SSH workspace in **Cloud9** is pretty straighforward. [**Cloud9** documentation has a step-by-step instruction on how to do it][c9-ssh].
 
-After setting up my **SSH workspace**, the next thing I did was to create a sample **[Jekyll][jekyll]** website.
-
-> [You can view the source code at **GitHub**][o2js-com-v2-git].
+After setting up my **SSH workspace**, the next thing I did was to create a sample **[Jekyll][jekyll]** website. [You can view the source code at **GitHub**][o2js-com-v2-git].
 
 ## Setting Up **Jekyll**
 
@@ -233,7 +249,7 @@ That’s it.
 
 ## Publishing Articles
 
-Now let’s publish the articles:
+Now let’s publish stuff:
 
 {% highlight sh %}
 jekyll build --config _config.yml;
@@ -299,10 +315,10 @@ I even use [a nice little chrome extension][crx-refresh] to auto refresh the web
 
 Here’s my current blogging environment:
 
-* A [web-based IDE][c9];
-* And a browser side-by-side.
-
 <a href="/images/inception-lg.png"><img src="/images/inception-sm.png" title="A screenshot of this blog, inside itself ;)" class="centered"></a>
+
+* That’s a [web-based IDE][c9];
+* And a browser side-by-side.
 
 I am testing this new approach as I am writing this blog post, and it works really well!
 
@@ -317,11 +333,7 @@ Now I don’t have an excuse not to write:
 
 ## Next Up
 
-I will gradually move the entire **[o2js.com][o2js]** over here, and I’ll also improve this current theme.
-
-As the time of this writing, this page blog does not have an **rss feed**, or an **archive section**, or **categories**, or **tags**. — Heck, it does not even have a **header**, a **footer**, or a **side navigation**.
-
-And it is easy to integrate them, as **[Jekyll][jekyll]** supports all these (*and more*). — I will be *gradually* implementing those features in the future.
+I will gradually move the entire **[o2js.com][o2js]** over here, and I’ll also improve this current theme, while keeping a focus on **simplicity** and **clarity**.
 
 ## Read the Source, Luke
 
@@ -364,3 +376,8 @@ Until next time…
 [o2js-com-v2-git]: https://github.com/v0lkan/o2js.com-v2
 [crx-refresh]: https://chrome.google.com/webstore/detail/super-auto-refresh/kkhjakkgopekjlempoplnjclgedabddk?hl=en
 [git-snap]: https://github.com/v0lkan/o2js.com-v2/tree/851e179e0bbf7a6577f221bc9c4ee9bdda94cd57
+[smart-quote]: http://www.fastcodesign.com/3018353/be-smart-dont-use-dumb-quote-marks
+[hypens-and-dashes]: http://practicaltypography.com/hyphens-and-dashes.html
+[responsive-typography]: https://ia.net/know-how/responsive-typography-the-basics
+[scale-and-rhytm]: http://lamb.cc/typograph/
+[kramdown-options]: http://kramdown.gettalong.org/rdoc/Kramdown/Options.html

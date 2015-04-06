@@ -148,18 +148,12 @@
 
 <p>Curious?</p>
 
-<h2 id="before-we-begin">Before We Begin…</h2>
-
-<p>In this article, I’ll be describing a <strong>Mac-specific</strong> setup because it’s the environment that I’m currently working on.</p>
-
-<p>There <em>might</em> be Windows and Linux equivalents of the tools that I’ll mention below, and I have not used any of them. — I’m sure you can use a similar workflow to automate your writing process in any of those environments, too.</p>
-
-<p>Also, please note that <strong>some</strong> of the applications that I will share here are <strong>not</strong> free. I don’t have any affiliation with the links I provide here. It’s just that I regularly use them and I believe they are totally worth their price tags. — <em>YMMV</em>, of course.</p>
+<p>Let’s start with the keyboard first because if you write “a lot”, then you should also invest in a decent keyboard.</p>
 
 <h2 id="keyboard-matters"><strong>Keyboard</strong> Matters</h2>
 
 <blockquote>
-  <p>If writing has become a part of your life, then typing on a <strong>great keyboard</strong> and using a <strong>decent text editor</strong> is the least favor you can do to yourself.</p>
+  <p>If writing has become a part of your life, then typing on a <strong>great keyboard</strong> and using a <strong>decent distraction-free editor</strong> is the least favor you can do to yourself.</p>
 </blockquote>
 
 <p><a href="http://www.daskeyboard.com/"><img src="/images/das_keyboard.jpg" title="Das Keyboard" class="centered" /></a></p>
@@ -169,6 +163,22 @@
 <h2 id="editor-matters-too"><strong>Editor</strong> Matters Too</h2>
 
 <p>As per the <strong>editor</strong> part, I have tried many of them; and I finally settled with <strong><a href="https://ia.net/writer/mac" title="A quintessential writing machine for Mac">IA Writer</a></strong>.</p>
+
+<p>The main reason I use <strong>IA Writer</strong> is because of thier approach to <strong>typography</strong>. And when I say <strong>typograpy</strong> I don’t mean their support for <a href="http://www.fastcodesign.com/3018353/be-smart-dont-use-dumb-quote-marks">smart quotes</a> or <a href="http://practicaltypography.com/hyphens-and-dashes.html">proper typographic dashes</a>.</p>
+
+<p>They, of course, support those things; and that’s just the tip of the iceberg.</p>
+
+<h3 id="ia-writer-and-typography"><strong>IA Writer</strong> and Typography</h3>
+
+<p><strong><a href="https://ia.net/writer/mac" title="A quintessential writing machine for Mac">IA Writer</a></strong>’s attention to proper typography, <a href="http://lamb.cc/typograph/">scale and rhytm</a> shows that <a href="https://ia.net/know-how/responsive-typography-the-basics">the IA writer team embrace <strong>all aspects</strong> of <strong>responsive</strong> <em>typography</em> in every possible detail of their product</a>.</p>
+
+<p>Why is this such a big deal? Because <strong>typography matters</strong>. — At least it matters to me. And I know there are <strong>lucky</strong> people out there who can live without caring about <strong>typography</strong> too much <strong>:)</strong>.</p>
+
+<blockquote>
+  <p>Mentally stable individuals do not take notice of proper typographic punctuation. I’m not one of them. — For example, when I encounter a street sign reading <code>John's Place</code> instead of <code>John’s Place</code>, I throw a tantrum.</p>
+</blockquote>
+
+<h3 id="ia-writer-and-focus"><strong>IA Writer</strong> and Focus</h3>
 
 <p><strong>IA Writer</strong> enables me to focus while I am writing. Moreover, it does not alter the markdown I write. Hadn’t messed with my markdown, <a href="http://www.ulyssesapp.com/" title="Ulysses makes writing fun and productive.">Ulysses</a> would have been another alternative.</p>
 
@@ -182,23 +192,31 @@
 
 <p><a href="/images/ulyssess.png"><img src="/images/ulyssess_sm.png" title="It is *delightful* to write with Ulysses." class="centered" /></a></p>
 
-<p>Aside from the keyboard and the editor I will use <strong><a href="http://jekyllrb.com/" title="Not your daddy’s static site generator.">Jekyll</a></strong> and  <strong><a href="https://c9.io/">Cloud9 IDE</a></strong> to automate things.</p>
+<p>Writing in <strong>IA Writer</strong> is a delightful experience. And when you augment that experience with the smoothness of a quality mechanical keyboard, you’ll never want to stop writing.</p>
+
+<blockquote>
+  <p><strong>Aside</strong></p>
+
+  <p>For the interested, <strong>Jekyll</strong> <a href="http://kramdown.gettalong.org/rdoc/Kramdown/Options.html">also supports typographic substitutions</a>. Yet I prefer to see “proper” typography in my <strong>markdown</strong> instead.</p>
+</blockquote>
+
+<p>…</p>
+
+<p>In addition to the keyboard and the editor, I will use <strong><a href="http://jekyllrb.com/" title="Not your daddy’s static site generator.">Jekyll</a></strong> and  <strong><a href="https://c9.io/">Cloud9 IDE</a></strong> to automate things, as we’ll soon see.</p>
 
 <p>Let’s start with <strong>Cloud9</strong>:</p>
 
 <h2 id="creating-an-ssh-workspace">Creating an <strong>SSH Workspace</strong></h2>
 
-<p>One nice feature of <strong><a href="https://c9.io/">Cloud9</a></strong> is <strong>SSH Workspaces</strong>. <strong>SSL Workspaces</strong> let you edit the files on your server using a browser-based integrated development environment. Here’s how it looks like:</p>
+<p>One nice feature of <strong><a href="https://c9.io/">Cloud9</a></strong> is <strong>SSH Workspaces</strong>. <strong>SSL Workspaces</strong> let you edit the files on your server using a browser-based integrated development environment.</p>
+
+<p>Here’s how it looks like:</p>
 
 <p><a href="/images/c9-large.png"><img src="/images/c9-sm.png" title="Cloud9 IDE is hands down the BEST online IDE around." class="centered" /></a></p>
 
 <p>Setting your own SSH workspace in <strong>Cloud9</strong> is pretty straighforward. <a href="https://docs.c9.io/v1.0/docs/running-your-own-ssh-workspace"><strong>Cloud9</strong> documentation has a step-by-step instruction on how to do it</a>.</p>
 
-<p>After setting up my <strong>SSH workspace</strong>, the next thing I did was to create a sample <strong><a href="http://jekyllrb.com/" title="Not your daddy’s static site generator.">Jekyll</a></strong> website.</p>
-
-<blockquote>
-  <p><a href="https://github.com/v0lkan/o2js.com-v2">You can view the source code at <strong>GitHub</strong></a>.</p>
-</blockquote>
+<p>After setting up my <strong>SSH workspace</strong>, the next thing I did was to create a sample <strong><a href="http://jekyllrb.com/" title="Not your daddy’s static site generator.">Jekyll</a></strong> website. <a href="https://github.com/v0lkan/o2js.com-v2">You can view the source code at <strong>GitHub</strong></a>.</p>
 
 <h2 id="setting-up-jekyll">Setting Up <strong>Jekyll</strong></h2>
 
@@ -309,7 +327,7 @@
 
 <h2 id="publishing-articles">Publishing Articles</h2>
 
-<p>Now let’s publish the articles:</p>
+<p>Now let’s publish stuff:</p>
 
 <div class="highlight"><pre><code class="language-sh" data-lang="sh">jekyll build --config _config.yml<span class="p">;</span>
 rsync -a _site/ /var/www<span class="p">;</span></code></pre></div>
@@ -367,12 +385,12 @@ node index.js<span class="p">;</span></code></pre></div>
 
 <p>Here’s my current blogging environment:</p>
 
+<p><a href="/images/inception-lg.png"><img src="/images/inception-sm.png" title="A screenshot of this blog, inside itself ;)" class="centered" /></a></p>
+
 <ul>
-  <li>A <a href="https://c9.io/">web-based IDE</a>;</li>
+  <li>That’s a <a href="https://c9.io/">web-based IDE</a>;</li>
   <li>And a browser side-by-side.</li>
 </ul>
-
-<p><a href="/images/inception-lg.png"><img src="/images/inception-sm.png" title="A screenshot of this blog, inside itself ;)" class="centered" /></a></p>
 
 <p>I am testing this new approach as I am writing this blog post, and it works really well!</p>
 
@@ -391,11 +409,7 @@ node index.js<span class="p">;</span></code></pre></div>
 
 <h2 id="next-up">Next Up</h2>
 
-<p>I will gradually move the entire <strong><a href="http://o2js.com/" title="o2.js — A coherent solution to your JavaScript dilemma.">o2js.com</a></strong> over here, and I’ll also improve this current theme.</p>
-
-<p>As the time of this writing, this page blog does not have an <strong>rss feed</strong>, or an <strong>archive section</strong>, or <strong>categories</strong>, or <strong>tags</strong>. — Heck, it does not even have a <strong>header</strong>, a <strong>footer</strong>, or a <strong>side navigation</strong>.</p>
-
-<p>And it is easy to integrate them, as <strong><a href="http://jekyllrb.com/" title="Not your daddy’s static site generator.">Jekyll</a></strong> supports all these (<em>and more</em>). — I will be <em>gradually</em> implementing those features in the future.</p>
+<p>I will gradually move the entire <strong><a href="http://o2js.com/" title="o2.js — A coherent solution to your JavaScript dilemma.">o2js.com</a></strong> over here, and I’ll also improve this current theme, while keeping a focus on <strong>simplicity</strong> and <strong>clarity</strong>.</p>
 
 <h2 id="read-the-source-luke">Read the Source, Luke</h2>
 
