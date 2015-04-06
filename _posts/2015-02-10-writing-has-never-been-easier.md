@@ -247,7 +247,8 @@ And voila! The blog post that I’ve just edited is live.
 To automate things further I’ve created a little script:
 
 {% highlight js %}
-// /var/www/SRC/o2js.com-v2/bin/
+// /var/www/SRC/o2js.com-v2/bin/index.js
+
 'use strict';
 
 var chokidar = require('chokidar'),
@@ -322,6 +323,10 @@ As the time of this writing, this page blog does not have an **rss feed**, or an
 
 And it is easy to integrate them, as **[Jekyll][jekyll]** supports all these (*and more*). — I will be *gradually* implementing those features in the future.
 
+## Read the Source, Luke
+
+You can see the source code of this blog, as the time of this writing, [at this **GitHub** history snapshopt][git-snap].
+
 ## Conclusion
 
 That was a quick overview of my *newer* and *better* blog publishing workflow.
@@ -358,3 +363,4 @@ Until next time…
 [c9-ssh]: https://docs.c9.io/v1.0/docs/running-your-own-ssh-workspace
 [o2js-com-v2-git]: https://github.com/v0lkan/o2js.com-v2
 [crx-refresh]: https://chrome.google.com/webstore/detail/super-auto-refresh/kkhjakkgopekjlempoplnjclgedabddk?hl=en
+[git-snap]: https://github.com/v0lkan/o2js.com-v2/tree/851e179e0bbf7a6577f221bc9c4ee9bdda94cd57

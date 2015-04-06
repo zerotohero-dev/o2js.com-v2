@@ -320,7 +320,8 @@ rsync -a _site/ /var/www<span class="p">;</span></code></pre></div>
 
 <p>To automate things further I’ve created a little script:</p>
 
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// /var/www/SRC/o2js.com-v2/bin/</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// /var/www/SRC/o2js.com-v2/bin/index.js</span>
+
 <span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
 
 <span class="kd">var</span> <span class="nx">chokidar</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;chokidar&#39;</span><span class="p">),</span>
@@ -395,6 +396,10 @@ node index.js<span class="p">;</span></code></pre></div>
 <p>As the time of this writing, this page blog does not have an <strong>rss feed</strong>, or an <strong>archive section</strong>, or <strong>categories</strong>, or <strong>tags</strong>. — Heck, it does not even have a <strong>header</strong>, a <strong>footer</strong>, or a <strong>side navigation</strong>.</p>
 
 <p>And it is easy to integrate them, as <strong><a href="http://jekyllrb.com/" title="Not your daddy’s static site generator.">Jekyll</a></strong> supports all these (<em>and more</em>). — I will be <em>gradually</em> implementing those features in the future.</p>
+
+<h2 id="read-the-source-luke">Read the Source, Luke</h2>
+
+<p>You can see the source code of this blog, as the time of this writing, <a href="https://github.com/v0lkan/o2js.com-v2/tree/851e179e0bbf7a6577f221bc9c4ee9bdda94cd57">at this <strong>GitHub</strong> history snapshopt</a>.</p>
 
 <h2 id="conclusion">Conclusion</h2>
 
