@@ -13,18 +13,6 @@ layout: default
     <strong>technology</strong>, <strong>hacking</strong>, <strong>geekery</strong>,
     “the” <strong>cloud</strong>, and <strong>productivity</strong>.</p>
 
-    <blockquote style="text-align:left;">
-        <p><strong>Note</strong>:</p>
-
-        <p>I’ll be gradually converting the articles in the existing site, and moving them here.</p>
-
-        <p>The list below is by no means complete.</p>
-
-        <p><a href="http://o2js.com/">browse the old site for the articles that I have not converted yet</a>.</p>
-
-        <p>I know, it’s messy <strong>:)</strong> </strong>— Thank you for your patience.</p>
-    </blockquote>
-
     <h2>Articles</h2>
 
     <ul class="post-list">
@@ -33,9 +21,21 @@ layout: default
         <h3>
         <a href="{{ post.url | prepend: site.baseurl | replace:'.html',''}}"
             >{{ post.title }}</a>
-                <span> ({{ post.date | date: "%b %-d, %Y" }})</span>
+                <span> ({{ post.updated | date: "%b %-d, %Y" }})</span>
         </h3>
         </li>
     {% endfor %}
     </ul>
+
+    <blockquote style="text-align:left;">
+        <p><strong>Note</strong>:</p>
+
+        <p>I’ll be gradually converting the articles in the existing site, and moving them here.</p>
+
+        <p>The list below is by no means complete.</p>
+
+        <p><a href="http://o2js.com/v1">browse the old site for the articles that I have not converted yet</a>.</p>
+
+        <p>I know, it’s messy <strong>:)</strong> </strong>— Thank you for your patience.</p>
+    </blockquote>
 </div>

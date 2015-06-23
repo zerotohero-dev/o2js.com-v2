@@ -47,6 +47,8 @@ h1, h2, h3, h4, h5, h6 {
 .byline {
     text-align: right;
     font-size: $tiny-font-size;
+    border-bottom: 2px #ccc dashed;
+    padding-bottom: 2em;
 
     a {
         font-weight: bold;
@@ -90,7 +92,7 @@ code {
 
 pre {
     padding: $code-block-padding;
-    overflow-x: scroll;
+    overflow: auto;
 
     > code {
         border: 0;
@@ -100,8 +102,6 @@ pre {
 }
 
 pre {
-    transition: $code-block-transition;
-
     margin: $code-block-margin;
     background: $code-background;
 
@@ -110,14 +110,6 @@ pre {
     code {
         background: transparent;
     }
-
-    &:hover {
-        transition: $code-block-transition;
-
-        margin: $code-block-margin-hover;
-        background: $code-block-background-hover;
-
-        @extend .shadow-bottom;
-        @extend .code-block-border-hover;
-    }
+        
+    @extend .shadow-bottom;
 }

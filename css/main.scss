@@ -17,7 +17,7 @@ $base-font-weight: 300;
 $base-margin: 1em;
 $base-padding: 1em;
 
-$margin-from-top: 1em;
+$margin-from-top: 3em;
 
 $wide-li-margin: 0 1em 0.5em 2.6em;
 
@@ -33,7 +33,7 @@ $dashed-border: 2px #ccc dashed;
 
 // Layout
 
-$content-width: 800px;
+$content-width: 11600px;// 800px;
 $on-palm: 600px;
 $on-laptop: 800px;
 
@@ -154,18 +154,26 @@ $code-block-transition: margin 0.6s, background 1s, border 1.2s;
     color: #000;
 }
 
-@media (max-width: $content-width) {
-    .flex-column {
-        -webkit-flex-direction: column;
-        flex-direction: column;
-        align-items: center;
-        -webkit-align-items: center;
-    }
+//@media (max-width: $content-width) {
+.flex-column {
+-webkit-flex-direction: column;
+flex-direction: column;
+align-items: center;
+-webkit-align-items: center;
+}
 
-    .flex-override-basis {
-        flex-basis: auto !important;
-        -webkit-flex-basis: auto !important;
-    }
+.flex-override-basis {
+flex-basis: auto !important;
+-webkit-flex-basis: auto !important;
+}
+
+.aside-content {margin-top:-1.5em !important;}
+//}
+
+@media (max-width: 676px) {
+    article {margin:0 !important; padding:1em !important;}
+
+    pre {max-width:300px !important;margin: 0 auto !important;}
 }
 
 // Mixins

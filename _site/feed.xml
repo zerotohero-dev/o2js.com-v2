@@ -5,16 +5,16 @@
     <description>o2.js; a coherent solution to your JavaScript dilemma.</description>
     <link>http://o2js.com/</link>
     <atom:link href="http://o2js.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 06 Apr 2015 08:55:15 +0000</pubDate>
-    <lastBuildDate>Mon, 06 Apr 2015 08:55:15 +0000</lastBuildDate>
+    <pubDate>Tue, 23 Jun 2015 21:12:06 +0000</pubDate>
+    <lastBuildDate>Tue, 23 Jun 2015 21:12:06 +0000</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>Writing Has Never Been Easier</title>
-        <description>&lt;p&gt;&lt;a href=&quot;/images/flowing_time.jpg&quot;&gt;&lt;img src=&quot;/images/flowing_time_sm.jpeg&quot; title=&quot;Time… It’s all that matters.&quot; class=&quot;centered&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+        <description>&lt;p&gt;&lt;a href=&quot;/images/flowing_time.jpg&quot;&gt;&lt;img src=&quot;/images/flowing_time_sm.jpeg&quot; title=&quot;Time... It's all that matters.&quot; class=&quot;centered&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Until recently, I was using &lt;a href=&quot;https://github.com/v0lkan/o2js.com/tree/e91edd205580bdce95dc7e36a0adc46a06dab2ed&quot; title=&quot;A custom generator that uses MongoDB, and node.js — just to create a static website.&quot;&gt;a custom generator&lt;/a&gt; for &lt;strong&gt;&lt;a href=&quot;http://o2js.com/&quot;&gt;o2js.com&lt;/a&gt;&lt;/strong&gt;, and it was doing its job pretty well.&lt;/p&gt;
+  &lt;p&gt;Until recently, I was using &lt;a href=&quot;https://github.com/v0lkan/o2js.com/tree/e91edd205580bdce95dc7e36a0adc46a06dab2ed&quot; title=&quot;A custom generator that uses MongoDB, and node.js --- just to create a static website.&quot;&gt;a custom generator&lt;/a&gt; for &lt;strong&gt;&lt;a href=&quot;http://o2js.com/&quot;&gt;o2js.com&lt;/a&gt;&lt;/strong&gt;, and it was doing its job pretty well.&lt;/p&gt;
 
   &lt;p&gt;There was a tiny problem, however:&lt;/p&gt;
 
@@ -41,12 +41,12 @@
 
 &lt;p&gt;…&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.wikiwand.com/en/Writer%27s_block&quot; title=&quot;“Writer’s block” is just one of the many problems a writer has to deal with.&quot;&gt;&lt;strong&gt;Writing&lt;/strong&gt;, in and of itself, is hard enough&lt;/a&gt;, there’s no need to make it kind of like a torture.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.wikiwand.com/en/Writer%27s_block&quot; title=&quot;&amp;quot;Writer's block&amp;quot; is just one of the many problems a writer has to deal with.&quot;&gt;&lt;strong&gt;Writing&lt;/strong&gt;, in and of itself, is hard enough&lt;/a&gt;, there’s no need to make it kind of like a torture.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Writing should be fun&lt;/strong&gt;. And to make it fun, I’d prefer to…&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Open my favorite &lt;strong&gt;&lt;a href=&quot;http://daringfireball.net/projects/markdown/syntax&quot; title=&quot;Markdown ain’t no WYSIWG — It helps you focus on the content rather than formatting and design.&quot;&gt;markdown&lt;/a&gt;&lt;/strong&gt; editor;&lt;/li&gt;
+  &lt;li&gt;Open my favorite &lt;strong&gt;&lt;a href=&quot;http://daringfireball.net/projects/markdown/syntax&quot; title=&quot;Markdown ain't no WYSIWG --- It helps you focus on the content rather than formatting and design.&quot;&gt;markdown&lt;/a&gt;&lt;/strong&gt; editor;&lt;/li&gt;
   &lt;li&gt;Have a &lt;strong&gt;preview&lt;/strong&gt; of the end result (&lt;em&gt;i.e., the blog&lt;/em&gt;) post as I type;&lt;/li&gt;
   &lt;li&gt;And never bother publishing because the entire publish cycle is &lt;strong&gt;automated&lt;/strong&gt;.&lt;/li&gt;
 &lt;/ul&gt;
@@ -63,7 +63,7 @@
 
 &lt;p&gt;Reinventing the wheel teaches you &lt;strong&gt;a lot&lt;/strong&gt;!&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Hacking&lt;/strong&gt;, &lt;strong&gt;tweaking&lt;/strong&gt;, and &lt;strong&gt;replicating&lt;/strong&gt; existing solutions helps you see relationships between various components that you thought never existed. This insight helps you come up with &lt;strong&gt;newer&lt;/strong&gt; and &lt;strong&gt;better&lt;/strong&gt; outcomes. This, actually, is &lt;em&gt;&lt;a href=&quot;http://www.wikiwand.com/en/Creativity&quot; title=&quot;Creativity — Wikipedia&quot;&gt;the very definition of creativity&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Hacking&lt;/strong&gt;, &lt;strong&gt;tweaking&lt;/strong&gt;, and &lt;strong&gt;replicating&lt;/strong&gt; existing solutions helps you see relationships between various components that you thought never existed. This insight helps you come up with &lt;strong&gt;newer&lt;/strong&gt; and &lt;strong&gt;better&lt;/strong&gt; outcomes. This, actually, is &lt;em&gt;&lt;a href=&quot;http://www.wikiwand.com/en/Creativity&quot; title=&quot;Creativity --- Wikipedia&quot;&gt;the very definition of creativity&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;reinventing-the-blogging-workflow&quot;&gt;Reinventing the Blogging Workflow&lt;/h2&gt;
 
@@ -71,7 +71,7 @@
 
 &lt;p&gt;The question is:&lt;/p&gt;
 
-&lt;p&gt;“Is the &lt;strong&gt;&lt;a href=&quot;http://www.wikiwand.com/en/Opportunity_cost&quot; title=&quot;Opportunity Cost — Wikipedia&quot;&gt;opportunity cost of the time I spend&lt;/a&gt;&lt;/strong&gt; reinventing a static blog engine worth it?”&lt;/p&gt;
+&lt;p&gt;“Is the &lt;strong&gt;&lt;a href=&quot;http://www.wikiwand.com/en/Opportunity_cost&quot; title=&quot;Opportunity Cost --- Wikipedia&quot;&gt;opportunity cost of the time I spend&lt;/a&gt;&lt;/strong&gt; reinventing a static blog engine worth it?”&lt;/p&gt;
 
 &lt;p&gt;Or, in other words: “Is there a more &lt;strong&gt;productive&lt;/strong&gt; way to occupy my time?”&lt;/p&gt;
 
@@ -83,69 +83,45 @@
   &lt;p&gt;In my current setup, I just keep on writing. And everything is synchronized. — It’s &lt;strong&gt;magical&lt;/strong&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Curious?&lt;/p&gt;
+&lt;p&gt;Curious? Let’s begin.&lt;/p&gt;
 
-&lt;p&gt;Let’s start with the keyboard first because if you write “a lot”, then you should also invest in a decent keyboard.&lt;/p&gt;
+&lt;h2 id=&quot;the-editor&quot;&gt;The &lt;strong&gt;Editor&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;h2 id=&quot;keyboard-matters&quot;&gt;&lt;strong&gt;Keyboard&lt;/strong&gt; Matters&lt;/h2&gt;
+&lt;p&gt;I am quite happy using the &lt;strong&gt;&lt;a href=&quot;https://c9.io/&quot;&gt;Cloud9 IDE&lt;/a&gt;&lt;/strong&gt; as my blogging editor.&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;If writing has become a part of your life, then typing on a &lt;strong&gt;great keyboard&lt;/strong&gt; and using a &lt;strong&gt;decent distraction-free editor&lt;/strong&gt; is the least favor you can do to yourself.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.daskeyboard.com/&quot;&gt;&lt;img src=&quot;/images/das_keyboard.jpg&quot; title=&quot;Das Keyboard&quot; class=&quot;centered&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I know, I know… &lt;strong&gt;&lt;a href=&quot;http://www.daskeyboard.com/&quot; title=&quot;One of the best.&quot;&gt;Das Keyboard&lt;/a&gt;&lt;/strong&gt; is not the prettiest-looking keyboard in the world; yet its &lt;strong&gt;&lt;a href=&quot;http://www.keyboardco.com/blog/index.php/2012/12/an-introduction-to-cherry-mx-mechanical-switches/&quot; title=&quot;An introduction to Cherry MX mechanical switches.&quot;&gt;tactile feedback&lt;/a&gt;&lt;/strong&gt; is one of a kind. — Writing on it is a joy… So much that I constantly find myself making up excuses to write more &lt;strong&gt;;)&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;editor-matters-too&quot;&gt;&lt;strong&gt;Editor&lt;/strong&gt; Matters Too&lt;/h2&gt;
-
-&lt;p&gt;As per the &lt;strong&gt;editor&lt;/strong&gt; part, I have tried many of them; and I finally settled with &lt;strong&gt;&lt;a href=&quot;https://ia.net/writer/mac&quot; title=&quot;A quintessential writing machine for Mac&quot;&gt;IA Writer&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;The main reason I use &lt;strong&gt;IA Writer&lt;/strong&gt; is because of thier approach to &lt;strong&gt;typography&lt;/strong&gt;. And when I say &lt;strong&gt;typograpy&lt;/strong&gt; I don’t mean their support for &lt;a href=&quot;http://www.fastcodesign.com/3018353/be-smart-dont-use-dumb-quote-marks&quot;&gt;smart quotes&lt;/a&gt; or &lt;a href=&quot;http://practicaltypography.com/hyphens-and-dashes.html&quot;&gt;proper typographic dashes&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;They, of course, support those things; and that’s just the tip of the iceberg.&lt;/p&gt;
-
-&lt;h3 id=&quot;ia-writer-and-typography&quot;&gt;&lt;strong&gt;IA Writer&lt;/strong&gt; and Typography&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://ia.net/writer/mac&quot; title=&quot;A quintessential writing machine for Mac&quot;&gt;IA Writer&lt;/a&gt;&lt;/strong&gt;’s attention to proper typography, &lt;a href=&quot;http://lamb.cc/typograph/&quot;&gt;scale and rhytm&lt;/a&gt; shows that &lt;a href=&quot;https://ia.net/know-how/responsive-typography-the-basics&quot;&gt;the IA writer team embrace &lt;strong&gt;all aspects&lt;/strong&gt; of &lt;strong&gt;responsive&lt;/strong&gt; &lt;em&gt;typography&lt;/em&gt; in every possible detail of their product&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Why is this such a big deal? Because &lt;strong&gt;typography matters&lt;/strong&gt;. — At least it matters to me. And I know there are &lt;strong&gt;lucky&lt;/strong&gt; people out there who can live without caring about &lt;strong&gt;typography&lt;/strong&gt; too much &lt;strong&gt;:)&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Before having this decision I’ve tried various editors including &lt;strong&gt;&lt;a href=&quot;https://ia.net/writer/mac&quot; title=&quot;A quintessential writing machine for Mac&quot;&gt;IA Writer&lt;/a&gt;&lt;/strong&gt;, and &lt;strong&gt;&lt;a href=&quot;http://www.ulyssesapp.com/&quot; title=&quot;Ulysses makes writing fun and productive.&quot;&gt;Ulysses&lt;/a&gt;&lt;/strong&gt;. They are both great editors; however, they impose an additional level of indirection, which I don’t need.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Mentally stable individuals do not take notice of proper typographic punctuation. I’m not one of them. — For example, when I encounter a street sign reading &lt;code&gt;John's Place&lt;/code&gt; instead of &lt;code&gt;John’s Place&lt;/code&gt;, I throw a tantrum.&lt;/p&gt;
+  &lt;p&gt;Using a single environment to do everything simplifies my workflow.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h3 id=&quot;ia-writer-and-focus&quot;&gt;&lt;strong&gt;IA Writer&lt;/strong&gt; and Focus&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;IA Writer&lt;/strong&gt; enables me to focus while I am writing. Moreover, it does not alter the markdown I write. Hadn’t messed with my markdown, &lt;a href=&quot;http://www.ulyssesapp.com/&quot; title=&quot;Ulysses makes writing fun and productive.&quot;&gt;Ulysses&lt;/a&gt; would have been another alternative.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Although &lt;a href=&quot;http://www.ulyssesapp.com/&quot; title=&quot;Ulysses makes writing fun and productive.&quot;&gt;Ulysses&lt;/a&gt; provides a bunch of utilities that makes &lt;strong&gt;markdown&lt;/strong&gt; editing faster, the amount of control you lose is &lt;strong&gt;not worth it&lt;/strong&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Most of the time, I write my articles in &lt;strong&gt;&lt;a href=&quot;https://ia.net/writer/mac&quot; title=&quot;A quintessential writing machine for Mac&quot;&gt;IA Writer&lt;/a&gt;&lt;/strong&gt;, and when they are close to their final state, I paste them to my &lt;strong&gt;&lt;a href=&quot;https://c9.io/&quot;&gt;Cloud9 IDE&lt;/a&gt;&lt;/strong&gt; (&lt;em&gt;more on that later&lt;/em&gt;).&lt;/p&gt;
-
-&lt;p&gt;Here’s a sneak peek of how &lt;strong&gt;&lt;a href=&quot;https://ia.net/writer/mac&quot; title=&quot;A quintessential writing machine for Mac&quot;&gt;IA Writer&lt;/a&gt;&lt;/strong&gt; looks like:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;/images/ia-writer-lg.png&quot;&gt;&lt;img src=&quot;/images/ia-writer-sm.png&quot; title=&quot;It is *delightful* to write with IA Writer.&quot; class=&quot;centered&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Writing in &lt;strong&gt;IA Writer&lt;/strong&gt; is a delightful experience. And when you augment that experience with the &lt;em&gt;smoothness&lt;/em&gt; of a quality mechanical keyboard, you’ll never want to stop writing.&lt;/p&gt;
+&lt;p&gt;What I need is &lt;strong&gt;focus&lt;/strong&gt;; and swapping between environments will make me lose that focus.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;Aside&lt;/strong&gt;&lt;/p&gt;
 
-  &lt;p&gt;For the interested, &lt;strong&gt;Jekyll&lt;/strong&gt; &lt;a href=&quot;http://kramdown.gettalong.org/rdoc/Kramdown/Options.html&quot;&gt;also supports typographic substitutions&lt;/a&gt;. Yet I prefer to see “proper” typography in my &lt;strong&gt;markdown&lt;/strong&gt; instead.&lt;/p&gt;
+  &lt;p&gt;Admittedly, writing in &lt;strong&gt;IA Writer&lt;/strong&gt; is a delightful experience.&lt;/p&gt;
+
+  &lt;p&gt;One reason I’m stopping using is because I’m trying to move my life into the cloud; and when you are in the cloud, you cannot rely on native applications. — You’ll have to learn to be &lt;strong&gt;frugal&lt;/strong&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;In addition to the editor, if you identify yourself as a writer, or if your friends think that you write more than the average Joe, or if you feel like writing is a part of your life, then the least favor you can do to yourself is to &lt;strong&gt;&lt;a href=&quot;http://www.daskeyboard.com/&quot; title=&quot;One of the best.&quot;&gt;get a decent keyboard&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;jekyll-and-typograpy&quot;&gt;&lt;strong&gt;Jekyll&lt;/strong&gt; and Typograpy&lt;/h2&gt;
+
+&lt;p&gt;Mentally stable individuals do not take notice of proper typographic punctuation. I’m not one of them. — For example, when I encounter a street sign reading &lt;code&gt;John's Place&lt;/code&gt; instead of &lt;code&gt;John’s Place&lt;/code&gt;, I throw a tantrum.&lt;/p&gt;
+
+&lt;p&gt;Why is this such a big deal? Because &lt;strong&gt;typography matters&lt;/strong&gt;. — At least it matters to me. And I know there are &lt;strong&gt;lucky&lt;/strong&gt; people out there who can live without caring about &lt;strong&gt;typography&lt;/strong&gt; too much &lt;strong&gt;:)&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Luckily, &lt;strong&gt;Jekyll&lt;/strong&gt; &lt;a href=&quot;http://kramdown.gettalong.org/rdoc/Kramdown/Options.html&quot;&gt;supports typographic substitutions&lt;/a&gt; out of the box.&lt;/p&gt;
 
 &lt;p&gt;…&lt;/p&gt;
 
-&lt;p&gt;In addition to the keyboard and the editor, I will use &lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Not your daddy’s static site generator.&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt; and  &lt;strong&gt;&lt;a href=&quot;https://c9.io/&quot;&gt;Cloud9 IDE&lt;/a&gt;&lt;/strong&gt; to automate things, as we’ll soon see.&lt;/p&gt;
-
-&lt;p&gt;Let’s start with &lt;strong&gt;Cloud9&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;So the bottom line is, I’m using &lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Not your daddy's static site generator.&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt; as my blogging platform of choice; and using &lt;strong&gt;&lt;a href=&quot;https://c9.io/&quot;&gt;Cloud9 IDE&lt;/a&gt;&lt;/strong&gt; both as and editor, and also to automate things, as we’ll soon see.&lt;/p&gt;
 
 &lt;h2 id=&quot;creating-an-ssh-workspace&quot;&gt;Creating an &lt;strong&gt;SSH Workspace&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;One nice feature of &lt;strong&gt;&lt;a href=&quot;https://c9.io/&quot;&gt;Cloud9&lt;/a&gt;&lt;/strong&gt; is &lt;strong&gt;SSH Workspaces&lt;/strong&gt;. &lt;strong&gt;SSL Workspaces&lt;/strong&gt; let you edit the files on your server using a browser-based integrated development environment.&lt;/p&gt;
+&lt;p&gt;One nice feature of &lt;strong&gt;&lt;a href=&quot;https://c9.io/&quot;&gt;Cloud9 IDE&lt;/a&gt;&lt;/strong&gt; is &lt;strong&gt;SSH Workspaces&lt;/strong&gt;. &lt;strong&gt;SSL Workspaces&lt;/strong&gt; let you edit the files on your server using a browser-based integrated development environment.&lt;/p&gt;
 
 &lt;p&gt;Here’s how it looks like:&lt;/p&gt;
 
@@ -153,17 +129,17 @@
 
 &lt;p&gt;Setting your own SSH workspace in &lt;strong&gt;Cloud9&lt;/strong&gt; is pretty straightforward. &lt;a href=&quot;https://docs.c9.io/v1.0/docs/running-your-own-ssh-workspace&quot;&gt;&lt;strong&gt;Cloud9&lt;/strong&gt; documentation has a step-by-step instruction on how to do it&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;After setting up my &lt;strong&gt;SSH workspace&lt;/strong&gt;, the next thing I did was to create a sample &lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Not your daddy’s static site generator.&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt; website. &lt;a href=&quot;https://github.com/v0lkan/o2js.com-v2&quot;&gt;You can view the source code at &lt;strong&gt;GitHub&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;After setting up my &lt;strong&gt;SSH workspace&lt;/strong&gt;, the next thing I did was to create a sample &lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Not your daddy's static site generator.&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt; website. &lt;a href=&quot;https://github.com/v0lkan/o2js.com-v2&quot;&gt;You can view the source code at &lt;strong&gt;GitHub&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;setting-up-jekyll&quot;&gt;Setting Up &lt;strong&gt;Jekyll&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://jekyllrb.com/&quot;&gt;&lt;img src=&quot;/images/jekyll.png&quot; title=&quot;Jekyll&quot; class=&quot;centered&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Not your daddy’s static site generator.&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt; is a tool that helps generating static web content a breeze.&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Not your daddy's static site generator.&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt; is a tool that helps generating static web content a breeze.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Not your daddy’s static site generator.&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt; is especially a great fit for blogs: &lt;strong&gt;Blogs are first class citizens&lt;/strong&gt; in &lt;strong&gt;Jekyll&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Not your daddy's static site generator.&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt; is especially a great fit for blogs: &lt;strong&gt;Blogs are first class citizens&lt;/strong&gt; in &lt;strong&gt;Jekyll&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;To use &lt;strong&gt;Jekyll&lt;/strong&gt;, you will need to have &lt;strong&gt;&lt;a href=&quot;https://www.ruby-lang.org/en/downloads/&quot; title=&quot;Download Ruby&quot;&gt;Ruby&lt;/a&gt;&lt;/strong&gt; installed. If you don’t have &lt;strong&gt;Ruby&lt;/strong&gt; on your system, &lt;a href=&quot;https://www.ruby-lang.org/en/downloads/&quot; title=&quot;Download Ruby&quot;&gt;go ahead, and install the most recent one from rubylang.org&lt;/a&gt;.&lt;/p&gt;
 
@@ -171,7 +147,7 @@
   &lt;p&gt;For the uber-nerds out there: You can install &lt;strong&gt;Ruby&lt;/strong&gt; via &lt;strong&gt;&lt;a href=&quot;https://github.com/sstephenson/rbenv&quot; title=&quot;A better way to install ruby.&quot;&gt;rbenv&lt;/a&gt;&lt;/strong&gt; too. &lt;a href=&quot;https://github.com/sstephenson/rbenv/wiki/Why-rbenv%3F&quot; title=&quot;Why rbenv?&quot;&gt;And there are good reasons to do so&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Once &lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Not your daddy’s static site generator.&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt; is properly set up, the only thing you have to do to write a blog post is to create a markdown file under &lt;strong&gt;_posts&lt;/strong&gt; folder:&lt;/p&gt;
+&lt;p&gt;Once &lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Not your daddy's static site generator.&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt; is properly set up, the only thing you have to do to write a blog post is to create a markdown file under &lt;strong&gt;_posts&lt;/strong&gt; folder:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;ls _posts/
 2015-02-10-writing-has-never-been-easier.md&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -181,7 +157,7 @@
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
 &lt;span class=&quot;l-Scalar-Plain&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;post&lt;/span&gt;
 &lt;span class=&quot;l-Scalar-Plain&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;Writing Has Never Been Easier&lt;/span&gt;
-&lt;span class=&quot;l-Scalar-Plain&quot;&gt;excerpt&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;Until recently, I was using a custom generator for o2js.com…&lt;/span&gt;
+&lt;span class=&quot;l-Scalar-Plain&quot;&gt;excerpt&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;Until recently, I was using a custom generator for o2js.com...&lt;/span&gt;
 &lt;span class=&quot;l-Scalar-Plain&quot;&gt;categories&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
 &lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;productivity&lt;/span&gt;
 &lt;span class=&quot;l-Scalar-Plain&quot;&gt;tags&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
@@ -196,7 +172,7 @@
 &lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;gtd&lt;/span&gt;
 &lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
 
-&lt;span class=&quot;l-Scalar-Plain&quot;&gt;… Body of the article goes here …&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;nn&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;Body of the article goes here ...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;I won’t explain how to set up a &lt;strong&gt;Jekyll&lt;/strong&gt; website in detail, as it is &lt;a href=&quot;http://jekyllrb.com/docs/home/&quot; title=&quot;Jekyll Documentation&quot;&gt;explained really well on their website&lt;/a&gt;. — Just follow the examples there and you’ll be a &lt;strong&gt;Jekyll&lt;/strong&gt; master in no time.&lt;/p&gt;
@@ -256,7 +232,7 @@
 
 &lt;h2 id=&quot;installing-jekyll&quot;&gt;Installing &lt;strong&gt;Jekyll&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;Installing &lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Not your daddy’s static site generator.&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt; on Debian-based systems is really easy:&lt;/p&gt;
+&lt;p&gt;Installing &lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Not your daddy's static site generator.&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt; on Debian-based systems is really easy:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;sudo gem install jekyll&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -344,9 +320,30 @@ node index.js&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre
   &lt;p&gt;Writing is as easy as firing up an editor, and… well… actually writing &lt;strong&gt;:)&lt;/strong&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 
+&lt;h2 id=&quot;there-might-be-hiccups&quot;&gt;There Might Be Hiccups&lt;/h2&gt;
+
+&lt;p&gt;One problem with using a Cloud IDE is that sometimes things may go haywire. For &lt;strong&gt;&lt;a href=&quot;https://c9.io/&quot;&gt;Cloud9 IDE&lt;/a&gt;&lt;/strong&gt; this was an exceptionally rare case, I once was not able to launch my workspace for several hours.&lt;/p&gt;
+
+&lt;p&gt;For these situations, you might want to mount your remote workspace to your local file system.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;On a &lt;strong&gt;linux&lt;/strong&gt; system you can do this with &lt;strong&gt;SSHFS&lt;/strong&gt;, &lt;strong&gt;Samba&lt;/strong&gt;, or &lt;strong&gt;NFS&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;On Mac, if you are willing to spend a couple of bucks, &lt;strong&gt;&lt;a href=&quot;https://panic.com/transmit/&quot;&gt;Transmit&lt;/a&gt;&lt;/strong&gt; can remotely mount folders (&lt;em&gt;in addition to being an awesome file transfer client&lt;/em&gt;) for your.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Here’s how &lt;strong&gt;&lt;a href=&quot;https://panic.com/transmit/&quot;&gt;Transmit&lt;/a&gt;&lt;/strong&gt;’s folder mount looks like — You can locally edit your file in your favorite editor, and they will be updated on the server almost instantly:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/transmit_lg.png&quot;&gt;&lt;img src=&quot;/images/transmit.png&quot; title=&quot;Transmit can mount remote drives as if they were local.&quot; class=&quot;centered&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Also, unfortunately &lt;strong&gt;Cloud 9 IDE&lt;/strong&gt; does not work on tablets. — So if you want to edit your blog on a tablet, you might want to use an editor that supports that too.&lt;/p&gt;
+
+&lt;p&gt;For &lt;strong&gt;iPad&lt;/strong&gt;, I use a combination of &lt;strong&gt;&lt;a href=&quot;https://panic.com/dietcoda/&quot;&gt;Diet Coda&lt;/a&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;a href=&quot;http://www.textasticapp.com/&quot;&gt;Textastic&lt;/a&gt;&lt;/strong&gt;, and &lt;strong&gt;&lt;a href=&quot;https://panic.com/prompt/&quot;&gt;Prompt&lt;/a&gt;&lt;/strong&gt; to achieve that.&lt;/p&gt;
+
+&lt;p&gt;Also if you are using your &lt;strong&gt;iPad&lt;/strong&gt; to update your blog post remotely you migh want to give an editor that supports that too.&lt;/p&gt;
+
 &lt;h2 id=&quot;next-up&quot;&gt;Next Up&lt;/h2&gt;
 
-&lt;p&gt;I will gradually move the entire &lt;strong&gt;&lt;a href=&quot;http://o2js.com/&quot; title=&quot;o2.js — A coherent solution to your JavaScript dilemma.&quot;&gt;o2js.com&lt;/a&gt;&lt;/strong&gt; over here, and I’ll also improve this current theme, while keeping a focus on &lt;strong&gt;simplicity&lt;/strong&gt; and &lt;strong&gt;clarity&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;I will gradually move the entire &lt;strong&gt;&lt;a href=&quot;http://o2js.com/&quot; title=&quot;o2.js --- A coherent solution to your JavaScript dilemma.&quot;&gt;o2js.com&lt;/a&gt;&lt;/strong&gt; over here, and I’ll also improve this current theme, while keeping a focus on &lt;strong&gt;simplicity&lt;/strong&gt; and &lt;strong&gt;clarity&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;read-the-source-luke&quot;&gt;Read the Source, Luke&lt;/h2&gt;
 
@@ -371,26 +368,24 @@ Since all major browsers support it, I have no excuse not to use it.&lt;/p&gt;
 
 </description>
         <pubDate>Tue, 10 Feb 2015 00:00:00 +0000</pubDate>
-        <link>http://o2js.com/productivity/2015/02/10/writing-has-never-been-easier</link>
-        <guid isPermaLink="true">http://o2js.com/productivity/2015/02/10/writing-has-never-been-easier</guid>
-        
-        <category>writing</category>
+        <link>http://o2js.com/productivity/writing-has-never-been-easier</link>
+        <guid isPermaLink="true">http://o2js.com/productivity/writing-has-never-been-easier</guid>
         
         <category>blogging</category>
         
+        <category>creativity</category>
+        
+        <category>gtd</category>
+        
         <category>jekyll</category>
+        
+        <category>reflow</category>
+        
+        <category>reinvention</category>
         
         <category>workflow</category>
         
         <category>writing</category>
-        
-        <category>creativity</category>
-        
-        <category>reinvention</category>
-        
-        <category>reflow</category>
-        
-        <category>gtd</category>
         
         
         <category>productivity</category>

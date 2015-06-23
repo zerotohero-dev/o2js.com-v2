@@ -14,13 +14,13 @@ code {
   border-left: 1px #FFEA70 solid;
   border-radius: 3px; }
 
-.code-block-border-hover, pre:hover {
+.code-block-border-hover {
   border-top: 1px #cccccc solid;
   border-right: 2px #bebebe solid;
   border-bottom: 2px #bebebe solid;
   border-left: 1px #cccccc solid; }
 
-.shadow-bottom, pre:hover, .site-header {
+.shadow-bottom, pre, .site-header {
   -webkit-box-shadow: 0px 10px 15px -10px rgba(0, 0, 0, 0.36);
   -moz-box-shadow: 0px 10px 15px -10px rgba(0, 0, 0, 0.36);
   -ms-box-shadow: 0px 10px 15px -10px rgba(0, 0, 0, 0.36);
@@ -80,16 +80,27 @@ code {
 .link_visited, a:visited {
   color: #000; }
 
-@media (max-width: 800px) {
-  .flex-column, .main-wrap {
-    -webkit-flex-direction: column;
-    flex-direction: column;
-    align-items: center;
-    -webkit-align-items: center; }
+.flex-column, .main-wrap {
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  align-items: center;
+  -webkit-align-items: center; }
 
-  .flex-override-basis, .page-content, .aside-content {
-    flex-basis: auto !important;
-    -webkit-flex-basis: auto !important; } }
+.flex-override-basis, .page-content, .aside-content {
+  flex-basis: auto !important;
+  -webkit-flex-basis: auto !important; }
+
+.aside-content {
+  margin-top: -1.5em !important; }
+
+@media (max-width: 676px) {
+  article {
+    margin: 0 !important;
+    padding: 1em !important; }
+
+  pre {
+    max-width: 300px !important;
+    margin: 0 auto !important; } }
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -135,7 +146,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .byline {
   text-align: right;
-  font-size: 12.996px; }
+  font-size: 12.996px;
+  border-bottom: 2px #ccc dashed;
+  padding-bottom: 2em; }
   .byline a {
     font-weight: bold; }
 
@@ -165,25 +178,20 @@ code {
 
 pre {
   padding: 1em;
-  overflow-x: scroll; }
+  overflow: auto; }
   pre > code {
     border: 0;
     padding-right: 0;
     padding-left: 0; }
 
 pre {
-  transition: margin 0.6s, background 1s, border 1.2s;
   margin: 2em;
   background: #FFF9D6; }
   pre code {
     background: transparent; }
-  pre:hover {
-    transition: margin 0.6s, background 1s, border 1.2s;
-    margin: 2em 0;
-    background: #fff; }
 
 .page-content {
-  margin-top: 1em; }
+  margin-top: 3em; }
 
 .post-meta {
   text-align: center;
@@ -192,7 +200,7 @@ pre {
   font-family: "MVB Calliope", "Georgia Pro", Georgia, "Times New Roman", Times, serif; }
 
 .aside-content {
-  margin-top: 1em; }
+  margin-top: 3em; }
   .aside-content h1 {
     margin: 1em;
     margin-bottom: 0;
@@ -241,7 +249,10 @@ pre {
   font-family: "Franklin ITC Cond Med", "Input Mono Cond", "Lucida Console", Menlo, Monaco, "Courier New", Courier, mono, monospace; }
 
 .site-header {
-  font-family: "MVB Calliope", "Georgia Pro", Georgia, "Times New Roman", Times, serif; }
+  font-family: "MVB Calliope", "Georgia Pro", Georgia, "Times New Roman", Times, serif;
+  position: fixed;
+  width: 100%;
+  background: #fff; }
 
 .post-content {
   margin-bottom: 30px; }
@@ -276,7 +287,7 @@ pre {
  * Syntax highlighting styles
  */
 .highlight {
-  background: #fff;
+  background: #fdfdfd;
   /* Comment */
   /* Error */
   /* Generic */
