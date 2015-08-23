@@ -5,23 +5,22 @@
     <description>o2.js; a coherent solution to your JavaScript dilemma.</description>
     <link>http://o2js.com/</link>
     <atom:link href="http://o2js.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 23 Aug 2015 17:47:57 +0000</pubDate>
-    <lastBuildDate>Sun, 23 Aug 2015 17:47:57 +0000</lastBuildDate>
+    <pubDate>Sun, 23 Aug 2015 18:36:29 +0000</pubDate>
+    <lastBuildDate>Sun, 23 Aug 2015 18:36:29 +0000</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
-        <title>I Confess, I'm a Messy Side Projector</title>
+        <title>I Confess, I'm a Lousy Side Projector</title>
         <description>&lt;p&gt;&lt;a href=&quot;/images/side-projects.png&quot;&gt;&lt;img src=&quot;/images/side-projects.png&quot; title=&quot;Well… This pretty much describes me.&quot; class=&quot;centered&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;My friends consider me a &lt;strong&gt;hacker&lt;/strong&gt; and a &lt;strong&gt;side projector&lt;/strong&gt;. And I create
-&lt;strong&gt;side projects&lt;/strong&gt; of various sizes. I share most of these project publicly
-on &lt;a href=&quot;https://github.com/v0lkan/&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;strong&gt;side projects&lt;/strong&gt; of various sizes.&lt;/p&gt;
+
+  &lt;p&gt;I share most of these project publicly on &lt;a href=&quot;https://github.com/v0lkan/&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 
   &lt;p&gt;Most of these projects are &lt;strong&gt;half complete&lt;/strong&gt;, to say the least.&lt;/p&gt;
-&lt;/blockquote&gt;
 
-&lt;blockquote&gt;
   &lt;p&gt;I recently realized that I was losing track of them. So, to no to lose
 track of things, I decided to write them down.&lt;/p&gt;
 
@@ -42,7 +41,7 @@ what is occupying your time in the first place: You cannot optimize without meas
 &lt;h2 id=&quot;the-methodology&quot;&gt;The Methodology&lt;/h2&gt;
 
 &lt;p&gt;To solve my “&lt;em&gt;Oh God, what should I be doing next to make the best use of my time?!&lt;/em&gt;”
-problem, I sorted out my projects.&lt;/p&gt;
+problem, I grouped my projects into different buckets, and sorted them.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;To clarify terminology, when I say “project”, I look at it from a &lt;strong&gt;&lt;a href=&quot;https://www.wikiwand.com/en/Getting_Things_Done&quot;&gt;GTD&lt;/a&gt;&lt;/strong&gt;
@@ -472,16 +471,17 @@ they are recommendations because there cannot be one true way of writing.&lt;/p&
 
 &lt;p&gt;This is true for your writing style too.&lt;/p&gt;
 
-&lt;p&gt;Trying to document that constantly changes, ironically, will
+&lt;p&gt;Trying to document something that constantly changes, ironically, will
 prevent it from changing.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Standardizing things limits the way you explore your environment.
-It &lt;em&gt;can&lt;/em&gt; even be detrimental to your improvement, growth, and development.&lt;/p&gt;
+  &lt;p&gt;Standardizing things limits the way you explore your environment.&lt;/p&gt;
+
+  &lt;p&gt;It &lt;em&gt;can&lt;/em&gt; even be detrimental to your improvement, growth, and development.&lt;/p&gt;
 
   &lt;p&gt;Don’t be a rock that is conformant and restrictive.&lt;/p&gt;
 
-  &lt;p&gt;Always have a &lt;strong&gt;mind like water&lt;/strong&gt;: &lt;strong&gt;Be consistent, and adaptive&lt;/strong&gt;.&lt;/p&gt;
+  &lt;p&gt;Always have a &lt;em&gt;mind like water&lt;/em&gt;: &lt;strong&gt;Be consistent, and adaptive&lt;/strong&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 </description>
@@ -489,7 +489,7 @@ It &lt;em&gt;can&lt;/em&gt; even be detrimental to your improvement, growth, and
         <link>http://o2js.com/reference/personal/my-side-projects</link>
         <guid isPermaLink="true">http://o2js.com/reference/personal/my-side-projects</guid>
         
-        <category>side project</category>
+        <category>side projects</category>
         
         <category>hacking</category>
         

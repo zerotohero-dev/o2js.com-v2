@@ -22,6 +22,10 @@ ul, ol, dl, figure,
     margin-bottom: $spacing-unit / 2;
 }
 
+li {
+    margin-bottom: 0.5em;
+}
+
 p, h1, h2, h3, h4, h5, h6, ul, li {
     line-height: $base-line-height;
 }

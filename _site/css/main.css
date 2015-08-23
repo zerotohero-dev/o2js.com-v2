@@ -130,6 +130,9 @@ ul, ol, dl, figure,
 .highlight {
   margin-bottom: 15px; }
 
+li {
+  margin-bottom: 0.5em; }
+
 p, h1, h2, h3, h4, h5, h6, ul, li {
   line-height: 1.6em; }
 

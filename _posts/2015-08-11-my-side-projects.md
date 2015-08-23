@@ -1,13 +1,13 @@
 ---
 layout: post
-title: I Confess, I'm a Messy Side Projector
+title: I Confess, I'm a Lousy Side Projector
 excerpt: My friends consider me a hacker and a side projector. And I create projects of various sizes publicly sharing most of them on GitHub. I recently realized that I was losing track of those projects and most of them are half complete, to say the least. --- So not to lose track of things, I decided to write them down.
-updated: 2015-08-22
+updated: 2015-08-23
 categories:
 - reference
 - personal
 tags:
-- side project
+- side projects
 - hacking
 - reference
 ---
@@ -16,11 +16,12 @@ tags:
 title="Well… This pretty much describes me." class="centered"></a>
 
 > My friends consider me a **hacker** and a **side projector**. And I create
-> **side projects** of various sizes. I share most of these project publicly
-> on [GitHub][github].
+> **side projects** of various sizes.
+>
+> I share most of these project publicly on [GitHub][github].
 >
 > Most of these projects are **half complete**, to say the least.
-
+>
 > I recently realized that I was losing track of them. So, to no to lose
 > track of things, I decided to write them down.
 >
@@ -40,7 +41,7 @@ what is occupying your time in the first place: You cannot optimize without meas
 ## The Methodology
 
 To solve my "*Oh God, what should I be doing next to make the best use of my time?!*"
-problem, I sorted out my projects.
+problem, I grouped my projects into different buckets, and sorted them.
 
 > To clarify terminology, when I say "project", I look at it from a **[GTD][gtd]**
 > perspective:
@@ -462,15 +463,16 @@ As your personality changes, so does your signature.
 
 This is true for your writing style too.
 
-Trying to document that constantly changes, ironically, will
+Trying to document something that constantly changes, ironically, will
 prevent it from changing.
 
 > Standardizing things limits the way you explore your environment.
+>
 > It *can* even be detrimental to your improvement, growth, and development.
 >
 > Don't be a rock that is conformant and restrictive.
 >
-> Always have a **mind like water**: **Be consistent, and adaptive**.
+> Always have a *mind like water*: **Be consistent, and adaptive**.
 
 
 [vogon]: https://www.wikiwand.com/en/Vogon
