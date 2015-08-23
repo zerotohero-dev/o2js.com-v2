@@ -16,9 +16,11 @@ tags:
 - writing
 ---
 
-<a href="/images/flowing_time.jpg"><img src="/images/flowing_time_sm.jpeg" title="Time... It's all that matters." class="centered"></a>
+<a href="/images/flowing_time.jpg"><img src="/images/flowing_time_sm.jpeg"
+title="Time... It's all that matters." class="centered"></a>
 
-> Until recently, I was using [a custom generator][generator] for **[o2js.com](http://o2js.com/)**, and it was doing its job pretty well.
+> Until recently, I was using [a custom generator][generator] for
+> **[o2js.com](http://o2js.com/)**, and it was doing its job pretty well.
 >
 > There was a tiny problem, however:
 >
@@ -32,15 +34,19 @@ tags:
 > * Check the live published page;
 > * If I need to update the article, fix a typo etc., then **GOTO (1)**.
 
-When any of my articles got closer and closer to their final state, they went through this *vicious cycle* over and over again. --- It was like a never-ending nightmare:
+When any of my articles got closer and closer to their final state, they went
+through this *vicious cycle* over and over again. --- It was like a
+never-ending nightmare:
 
-> There was always "one last thing" to be rewritten, "one last typo" to be fixed; and it meant to start the above sequence... as if it would never end.
+> There was always "one last thing" to be rewritten, "one last typo" to be
+fixed; and it meant to start the above sequence... as if it would never end.
 
 I don't know you, and I feel like the above flow is **exhaustive**!
 
 ...
 
-[**Writing**, in and of itself, is hard enough][writers-block], there's no need to make it kind of like a torture.
+[**Writing**, in and of itself, is hard enough][writers-block], there's no need
+to make it kind of like a torture.
 
 **Writing should be fun**. And to make it fun, I'd prefer to...
 
@@ -48,17 +54,22 @@ I don't know you, and I feel like the above flow is **exhaustive**!
 * Have a **preview** of the end result (*i.e., the blog*) post as I type;
 * And never bother publishing because the entire publish cycle is **automated**.
 
-> Writing has to be as **hassle-free**, as **seamless**, and as **frictionless** as possible.
+> Writing has to be as **hassle-free**, as **seamless**, and as **frictionless**
+> as possible.
 
 ## To Reinvent or Not... That's the Problem
 
-Since my existing setup was far from actualizing this dream, I decided to come up with a new workflow.
+Since my existing setup was far from actualizing this dream, I decided to come
+up with a new workflow.
 
 [I'm an avid believer of "**wheel reinvention**"][chisel].
 
 Reinventing the wheel teaches you **a lot**!
 
-**Hacking**, **tweaking**, and **replicating** existing solutions helps you see relationships between various components that you thought never existed. This insight helps you come up with **newer** and **better** outcomes. This, actually, is *[the very definition of creativity][creativity]*.
+**Hacking**, **tweaking**, and **replicating** existing solutions helps you see
+relationships between various components that you thought never existed. This
+insight helps you come up with **newer** and **better** outcomes. This,
+actually, is *[the very definition of creativity][creativity]*.
 
 ## Reinventing the Blogging Workflow
 
@@ -66,15 +77,19 @@ So the question is not whether to reinvent.
 
 The question is:
 
-"Is the **[opportunity cost of the time I spend][opportunity-cost]** reinventing a static blog engine worth it?"
+"Is the **[opportunity cost of the time I spend][opportunity-cost]** reinventing
+a static blog engine worth it?"
 
 Or, in other words: "Is there a more **productive** way to occupy my time?"
 
-Answering this question --- and other similar questions --- helped me to see what I was missing:
+Answering this question --- and other similar questions --- helped me to see
+what I was missing:
 
-Instead of patching my hacky static content generator, I had to **reinvent my workflow** from the bottom up.
+Instead of patching my hacky static content generator, I had to **reinvent my
+workflow** from the bottom up.
 
-> In my current setup, I just keep on writing. And everything is synchronized. --- It's **magical**.
+> In my current setup, I just keep on writing. And everything is synchronized.
+> --- It's **magical**.
 
 Curious? Let's begin.
 
@@ -82,64 +97,93 @@ Curious? Let's begin.
 
 I am quite happy using the **[Cloud9 IDE][c9]** as my blogging editor.
 
-Before having this decision I've tried various editors including **[IA Writer][ia]**, and **[Ulysses][ulysses]**. They are both great editors; however, they impose an additional level of indirection, which I don't need.
+Before having this decision I've tried various editors including
+**[IA Writer][ia]**, and **[Ulysses][ulysses]**. They are both great editors;
+however, they impose an additional level of indirection, which I don't need.
 
 > Using a single environment to do everything simplifies my workflow.
 
-What I need is **focus**; and swapping between environments will make me lose that focus.
+What I need is **focus**; and swapping between environments will make me lose
+that focus.
 
 > **Aside**
 >
 > Admittedly, writing in **IA Writer** is a delightful experience.
 >
-> One reason I'm stopping using is because I'm trying to move my life into the cloud; and when you are in the cloud, you cannot rely on native applications. --- You'll have to learn to be **frugal**.
+> One reason I'm stopping using is because I'm trying to move my life into the
+> cloud; and when you are in the cloud, you cannot rely on native applications.
+> --- You'll have to learn to be **frugal**.
 
-In addition to the editor, if you identify yourself as a writer, or if your friends think that you write more than the average Joe, or if you feel like writing is a part of your life, then the least favor you can do to yourself is to **[get a decent keyboard][das]**.
+In addition to the editor, if you identify yourself as a writer, or if your
+friends think that you write more than the average Joe, or if you feel like
+writing is a part of your life, then the least favor you can do to yourself is
+to **[get a decent keyboard][das]**.
 
 ## **Jekyll** and Typograpy
 
-Mentally stable individuals do not take notice of proper typographic punctuation. I'm not one of them. --- For example, when I encounter a street sign reading `John's Place` instead of `John’s Place`, I throw a tantrum.
+Mentally stable individuals do not take notice of proper typographic punctuation.
+I'm not one of them. --- For example, when I encounter a street sign reading
+`John's Place` instead of `John’s Place`, I throw a tantrum.
 
-Why is this such a big deal? Because **typography matters**. --- At least it matters to me. And I know there are **lucky** people out there who can live without caring about **typography** too much **:)**.
+Why is this such a big deal? Because **typography matters**. --- At least it
+matters to *me*. And I know there are **lucky** people out there who can live
+without caring about **typography** too much **:)**.
 
-Luckily, **Jekyll** [supports typographic substitutions][kramdown-options] out of the box.
+Luckily, **Jekyll** [supports typographic substitutions][kramdown-options] out
+of the box.
 
 ...
 
-So the bottom line is, I'm using **[Jekyll][jekyll]** as my blogging platform of choice; and using **[Cloud9 IDE][c9]** both as and editor, and also to automate things, as we'll soon see.
+So the bottom line is, I'm using **[Jekyll][jekyll]** as my blogging platform of
+choice; and using **[Cloud9 IDE][c9]** both as and editor, and also to automate
+things, as we'll soon see.
 
 ## Creating an **SSH Workspace**
 
-One nice feature of **[Cloud9 IDE][c9]** is **SSH Workspaces**. **SSL Workspaces** let you edit the files on your server using a browser-based integrated development environment.
+One nice feature of **[Cloud9 IDE][c9]** is **SSH Workspaces**:
+
+**SSH Workspaces** let you edit the files on your server using a browser-based
+integrated development environment.
 
 Here's how it looks like:
 
-<a href="/images/c9-large.png"><img src="/images/c9-sm.png" title="Cloud9 IDE is hands down the BEST online IDE around." class="centered"></a>
+<a href="/images/c9-large.png"><img src="/images/c9-sm.png"
+title="Cloud9 IDE is hands down the BEST online IDE around." class="centered"></a>
 
-Setting your own SSH workspace in **Cloud9** is pretty straightforward. [**Cloud9** documentation has a step-by-step instruction on how to do it][c9-ssh].
+Setting your own SSH workspace in **Cloud9** is pretty straightforward.
+[**Cloud9** documentation has a step-by-step instruction on how to do it][c9-ssh].
 
-After setting up my **SSH workspace**, the next thing I did was to create a sample **[Jekyll][jekyll]** website. [You can view the source code at **GitHub**][o2js-com-v2-git].
+After setting up my **SSH workspace**, the next thing I did was to create a sample **[Jekyll][jekyll]** website. [You can view the source code at
+**GitHub**][o2js-com-v2-git].
 
 ## Setting Up **Jekyll**
 
-<a href="http://jekyllrb.com/"><img src="/images/jekyll.png" title="Jekyll" class="centered"></a>
+<a href="http://jekyllrb.com/"><img src="/images/jekyll.png" title="Jekyll"
+class="centered"></a>
 
-> **[Jekyll][jekyll]** is a tool that helps generating static web content a breeze.
+> **[Jekyll][jekyll]** is a tool that helps generating static web content a
+> breeze.
 
-**[Jekyll][jekyll]** is especially a great fit for blogs: **Blogs are first class citizens** in **Jekyll**.
+**[Jekyll][jekyll]** is especially a great fit for blogs: **Blogs are first
+class citizens** in **Jekyll**.
 
-To use **Jekyll**, you will need to have **[Ruby][ruby]** installed. If you don't have **Ruby** on your system, [go ahead, and install the most recent one from rubylang.org][ruby].
+To use **Jekyll**, you will need to have **[Ruby][ruby]** installed. If you
+don't have **Ruby** on your system, [go ahead, and install the most recent one
+from rubylang.org][ruby].
 
-> For the uber-nerds out there: You can install **Ruby** via **[rbenv][rbenv]** too. [And there are good reasons to do so][why-rbenv].
+> For the uber-nerds out there: You can install **Ruby** via **[rbenv][rbenv]**
+too. [And there are good reasons to do so][why-rbenv].
 
-Once **[Jekyll][jekyll]** is properly set up, the only thing you have to do to write a blog post is to create a markdown file under **_posts** folder:
+Once **[Jekyll][jekyll]** is properly set up, the only thing you have to do to
+write a blog post is to create a markdown file under **_posts** folder:
 
 {% highlight sh %}
 ls _posts/
 2015-02-10-writing-has-never-been-easier.md
 {% endhighlight %}
 
-Since this is a new blog installation, and I'm writing a singl blog post here, we have only one file in the directory. Here's the cotent of the file:
+Since this is a new blog installation, and I'm writing a singl blog post here, we
+have only one file in the directory. Here's the cotent of the file:
 
 {% highlight yaml %}
 ---
@@ -163,15 +207,22 @@ tags:
 ... Body of the article goes here ...
 {% endhighlight %}
 
-> I won't explain how to set up a **Jekyll** website in detail, as it is [explained really well on their website][jekyll-docs]. --- Just follow the examples there and you'll be a **Jekyll** master in no time.
+> I won't explain how to set up a **Jekyll** website in detail, as it is
+> [explained really well on their website][jekyll-docs]. --- Just follow
+> the examples there and you'll be a **Jekyll** master in no time.
 
 Currently my new **Jekyll** sites stays under **/var/www/SRC**.
 
-I know, it's not the most ideal place to put source code into, yet it does the job **;)**.
+I know, it's not the most ideal place to put source code into, yet it does the
+job **;)**.
 
-> For the security freak out there thinking that the source folder is accessible via internet: Well, yes; [and the code is open source anyway][o2js-com-v2-git], so it's not a big deal. --- And even if it is, we can always restrict access to that folder via **nginx.conf**.
+> For the security freak out there thinking that the source folder is accessible
+> via internet: Well, yes; [and the code is open source anyway][o2js-com-v2-git],
+> so it's not a big deal. --- And even if it is, we can always restrict access to
+> that folder via **nginx.conf**.
 
-While we're at that, here's how things are currently mapped in **nginx.conf** for reference:
+While we're at that, here's how things are currently mapped in **nginx.conf** for
+reference:
 
 {% highlight nginx %}
 server {
@@ -289,58 +340,81 @@ cd /var/www/SRC/o2js.com-v2/bin/;
 node index.js;
 {% endhighlight %}
 
-... any change that I make under the **SRC** folder will publish and sync the documents with the live website.
+... any change that I make under the **SRC** folder will publish and sync the
+documents with the live website.
 
-I even use [a nice little chrome extension][crx-refresh] to auto refresh the web page.
+I even use [a nice little chrome extension][crx-refresh] to auto refresh the
+web page.
 
 Here's my current blogging environment:
 
-<a href="/images/inception-lg.png"><img src="/images/inception-sm.png" title="A screenshot of this blog, inside itself ;)" class="centered"></a>
+<a href="/images/inception-lg.png"><img src="/images/inception-sm.png"
+title="A screenshot of this blog, inside itself ;)" class="centered"></a>
 
 * That's a [web-based IDE][c9];
 * And a browser side-by-side.
 
-I am testing this new approach as I am writing this blog post, and it works really well!
+I am testing this new approach as I am writing this blog post, and it works
+really well!
 
 * The page is refreshing as I continue writing and saving;
-* And I don't have to worry about publishing my blog, because it's being auto-published at every single change I make to it.
+* And I don't have to worry about publishing my blog, because it's being
+auto-published at every single change I make to it.
 
 ## Everything is Streamlined!
 
 Now I don't have an excuse not to write:
 
-> Writing is as easy as firing up an editor, and... well... actually writing **:)**.
+> Writing is as easy as firing up an editor, and... well... actually
+> writing **:)**.
 
 ## There Might Be Hiccups
 
-One problem with using a Cloud IDE is that sometimes things may go haywire. For **[Cloud9 IDE][c9]** this was an exceptionally rare case, I once was not able to launch my workspace for several hours.
+One problem with using a Cloud IDE is that sometimes things may go haywire. For
+**[Cloud9 IDE][c9]** this was an exceptionally rare case, I once was not able to
+launch my workspace for several hours.
 
-For these situations, you might want to mount your remote workspace to your local file system.
+For these situations, you might want to mount your remote workspace to your
+local file system.
 
 * On a **linux** system you can do this with **SSHFS**, **Samba**, or **NFS**.
-* On Mac, if you are willing to spend a couple of bucks, **[Transmit][transmit]** can remotely mount folders (*in addition to being an awesome file transfer client*) for your.
+* On Mac, if you are willing to spend a couple of bucks, **[Transmit][transmit]**
+can remotely mount folders (*in addition to being an awesome file transfer
+client*) for your.
 
-Here's how **[Transmit][transmit]**'s folder mount looks like --- You can locally edit your file in your favorite editor, and they will be updated on the server almost instantly:
+Here's how **[Transmit][transmit]**'s folder mount looks like --- You can locally
+edit your file in your favorite editor, and they will be updated on the server
+almost instantly:
 
-<a href="/images/transmit_lg.png"><img src="/images/transmit.png" title="Transmit can mount remote drives as if they were local." class="centered"></a>
+<a href="/images/transmit_lg.png"><img src="/images/transmit.png"
+title="Transmit can mount remote drives as if they were local."
+class="centered"></a>
 
-Also, unfortunately **Cloud 9 IDE** does not work on tablets. — So if you want to edit your blog on a tablet, you might want to use an editor that supports that too.
+Also, unfortunately **Cloud 9 IDE** does not work on tablets. — So if you want
+to edit your blog on a tablet, you might want to use an editor that supports
+that too.
 
-For **iPad**, I use a combination of **[Diet Coda][diet-coda]**, **[Textastic][textastic]**, and **[Prompt][prompt]** to achieve that.
+For **iPad**, I use a combination of **[Diet Coda][diet-coda]**,
+**[Textastic][textastic]**, and **[Prompt][prompt]** to achieve that.
 
-Also if you are using your **iPad** to update your blog post remotely you migh want to give an editor that supports that too.
+Also if you are using your **iPad** to update your blog post remotely you migh
+want to give an editor that supports that too.
 
 ## Next Up
 
-I will gradually move the entire **[o2js.com][o2js]** over here, and I'll also improve this current theme, while keeping a focus on **simplicity** and **clarity**.
+I will gradually move the entire **[o2js.com][o2js]** over here, and I'll also
+improve this current theme, while keeping a focus on **simplicity** and
+**clarity**.
 
 ## Read the Source, Luke
 
-You can see the source code of this blog, as the time of this writing, [at this **GitHub** history snapshopt][git-snap].
+You can see the source code of this blog, as the time of this writing, [at
+this **GitHub** history snapshopt][git-snap].
 
 ## Conclusion
 
-That was a quick overview of my **newer** and **better** blog publishing workflow.
+That was a quick overview of my **newer** and **better** blog publishing
+workflow.
 
 I really made my life easier.
 

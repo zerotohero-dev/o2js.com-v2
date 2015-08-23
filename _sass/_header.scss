@@ -1,9 +1,9 @@
 .site-header {
-    @extend .shadow-bottom;
+    //@extend .shadow-bottom;
 
     font-family: $title-font-family;
 
     position: fixed;
     width: 100%;
-    background: #fff;
+    background: #fafafa;
 }

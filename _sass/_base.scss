@@ -22,6 +22,10 @@ ul, ol, dl, figure,
     margin-bottom: $spacing-unit / 2;
 }
 
+p, h1, h2, h3, h4, h5, h6, ul, li {
+    line-height: $base-line-height;
+}
+
 img {
     max-width: 100%;
     vertical-align: middle;
@@ -42,7 +46,42 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: $base-font-weight;
 }
 
+hr {
+    margin-top: 2em;
+}
 
+
+.data-table {
+    width: 100%;
+    overflow: auto;
+    table-layout: fixed;
+    font-size: 0.8em;
+
+    td, th {
+        border-bottom: 1px #d6d6d6 solid;
+        background: #fafafa;
+        margin: 1em;
+        padding: 1em;
+        vertical-align: top;
+        text-align: center;
+    }
+
+    tr th {
+        background: #dadada;
+    }
+
+    tr:nth-child(2n+1) td {
+        background: #eaeaea;
+        margin: 1em;
+        padding: 1em;
+        vertical-align: top;
+        text-align: center;
+    }
+
+    td:hover, th:hover {
+        background: #ffffdd !important;
+    }
+}
 
 .byline {
     text-align: right;
@@ -110,6 +149,6 @@ pre {
     code {
         background: transparent;
     }
-        
+
     @extend .shadow-bottom;
 }

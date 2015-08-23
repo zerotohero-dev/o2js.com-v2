@@ -20,7 +20,7 @@ code {
   border-bottom: 2px #bebebe solid;
   border-left: 1px #cccccc solid; }
 
-.shadow-bottom, pre, .site-header {
+.shadow-bottom, pre {
   -webkit-box-shadow: 0px 10px 15px -10px rgba(0, 0, 0, 0.36);
   -moz-box-shadow: 0px 10px 15px -10px rgba(0, 0, 0, 0.36);
   -ms-box-shadow: 0px 10px 15px -10px rgba(0, 0, 0, 0.36);
@@ -109,11 +109,11 @@ dl, dd, ol, ul, figure {
 
 body {
   font-family: "Georgia Pro", "Book Antiqua", Georgia, "Times New Roman", times, sans-serif;
-  font-size: 18px;
-  line-height: 1.5em;
+  font-size: 16px;
+  line-height: 1.6em;
   font-weight: 300;
   color: #000;
-  background-color: #fdfdfd;
+  background-color: #ffffff;
   -webkit-text-size-adjust: 100%; }
 
 h1, h2 {
@@ -130,6 +130,9 @@ ul, ol, dl, figure,
 .highlight {
   margin-bottom: 15px; }
 
+p, h1, h2, h3, h4, h5, h6, ul, li {
+  line-height: 1.6em; }
+
 img {
   max-width: 100%;
   vertical-align: middle; }
@@ -144,9 +147,35 @@ li > ol {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 300; }
 
+hr {
+  margin-top: 2em; }
+
+.data-table {
+  width: 100%;
+  overflow: auto;
+  table-layout: fixed;
+  font-size: 0.8em; }
+  .data-table td, .data-table th {
+    border-bottom: 1px #d6d6d6 solid;
+    background: #fafafa;
+    margin: 1em;
+    padding: 1em;
+    vertical-align: top;
+    text-align: center; }
+  .data-table tr th {
+    background: #dadada; }
+  .data-table tr:nth-child(2n+1) td {
+    background: #eaeaea;
+    margin: 1em;
+    padding: 1em;
+    vertical-align: top;
+    text-align: center; }
+  .data-table td:hover, .data-table th:hover {
+    background: #ffffdd !important; }
+
 .byline {
   text-align: right;
-  font-size: 12.996px;
+  font-size: 11.552px;
   border-bottom: 2px #ccc dashed;
   padding-bottom: 2em; }
   .byline a {
@@ -158,9 +187,9 @@ article {
 blockquote {
   border: none;
   border-radius: 0;
-  font-size: 15.75px;
+  font-size: 14.4px;
   border-left: 4px solid #ccc;
-  margin: 1.5em 0;
+  margin: 1.6em 0;
   background: none;
   padding-left: 15px;
   font-style: italic; }
@@ -170,7 +199,7 @@ blockquote {
 pre,
 code {
   background: #FFF9D6;
-  font-size: 12.996px;
+  font-size: 11.552px;
   font-family: "Input Mono Cond", "Lucida Console", Menlo, Monaco, "Courier New", Courier, mono, monospace; }
 
 code {
@@ -195,7 +224,7 @@ pre {
 
 .post-meta {
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
   color: rgba(56, 56, 56, 0.5);
   font-family: "MVB Calliope", "Georgia Pro", Georgia, "Times New Roman", Times, serif; }
 
@@ -224,11 +253,17 @@ pre {
 .home {
   text-align: center;
   margin-bottom: 30px; }
-  .home h2, .home h3, .home h4, .home h5, .home h6 {
+  .home h2 {
     color: #BA3925;
     padding-top: 0.5em;
     font-family: "Franklin ITC Cond Med", "Input Mono Cond", "Lucida Console", Menlo, Monaco, "Courier New", Courier, mono, monospace; }
-  .home h2 strong, .home h3 strong, .home h4 strong, .home h5 strong, .home h6 strong {
+  .home h2 strong {
+    color: #BA3925; }
+  .home h3, .home h4, .home h5, .home h6 {
+    color: #000;
+    padding-top: 0.5em;
+    font-family: "Franklin ITC Cond Med", "Input Mono Cond", "Lucida Console", Menlo, Monaco, "Courier New", Courier, mono, monospace; }
+  .home h3 strong, .home h4 strong, .home h5 strong, .home h6 strong {
     color: #000; }
   .home .post-list {
     margin-left: 0;
@@ -239,7 +274,7 @@ pre {
         font-family: "MVB Calliope", "Georgia Pro", Georgia, "Times New Roman", Times, serif; }
       .home .post-list > li span {
         font-family: "Franklin ITC Cond Med", "Input Mono Cond", "Lucida Console", Menlo, Monaco, "Courier New", Courier, mono, monospace;
-        font-size: 18px;
+        font-size: 16px;
         font-style: italic; }
   .home h2, .home h3 {
     text-align: center; }
@@ -252,15 +287,27 @@ pre {
   font-family: "MVB Calliope", "Georgia Pro", Georgia, "Times New Roman", Times, serif;
   position: fixed;
   width: 100%;
-  background: #fff; }
+  background: #fafafa; }
+
+a.promo {
+  background: #FFE026; }
+
+a.promo:hover {
+  background: #ffffff; }
 
 .post-content {
   margin-bottom: 30px; }
-  .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6 {
+  .post-content h2 {
     color: #BA3925;
     padding-top: 0.5em;
     font-family: "Franklin ITC Cond Med", "Input Mono Cond", "Lucida Console", Menlo, Monaco, "Courier New", Courier, mono, monospace; }
-  .post-content h2 strong, .post-content h3 strong, .post-content h4 strong, .post-content h5 strong, .post-content h6 strong {
+  .post-content h2 strong {
+    color: #BA3925; }
+  .post-content h3, .post-content h4, .post-content h5, .post-content h6 {
+    color: #000;
+    padding-top: 0.5em;
+    font-family: "Franklin ITC Cond Med", "Input Mono Cond", "Lucida Console", Menlo, Monaco, "Courier New", Courier, mono, monospace; }
+  .post-content h3 strong, .post-content h4 strong, .post-content h5 strong, .post-content h6 strong {
     color: #000; }
   .post-content h1 {
     font-size: 36px; }
@@ -273,7 +320,10 @@ pre {
       .post-content h2 {
         font-size: 28px; } }
   .post-content h3 {
-    font-size: 26px; }
+    font-size: 24px;
+    xcolor: #000; }
+    .post-content h3 strong {
+      xcolor: #000; }
     @media screen and (max-width: 800px) {
       .post-content h3 {
         font-size: 22px; } }

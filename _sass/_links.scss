@@ -9,3 +9,11 @@ a:hover {
 a:visited {
     @extend .link_visited;
 }
+
+a.promo {
+    background: #FFE026;
+}
+
+a.promo:hover {
+    background: #ffffff;
+}

@@ -9,10 +9,10 @@ $base-font-family: "Georgia Pro", "Book Antiqua", Georgia, "Times New Roman", ti
 $title-font-family: "MVB Calliope", "Georgia Pro", Georgia, "Times New Roman", Times, serif;
 $monotype-font-family: "Input Mono Cond", "Lucida Console", Menlo, Monaco, "Courier New", Courier, mono, monospace;
 $heading-font-family: "Franklin ITC Cond Med", "Input Mono Cond", "Lucida Console", Menlo, Monaco, "Courier New", Courier, mono, monospace;
-$base-font-size: 18px;
-$medium-font-size: $base-font-size * 0.95;
-$small-font-size: $base-font-size * 0.875;
-$tiny-font-size: $base-font-size * 0.722;
+$base-font-size: 16px;
+$medium-font-size: $base-font-size * 0.99;
+$small-font-size: $base-font-size * 0.9;  // 0.875;
+$tiny-font-size: $base-font-size * 0.722; // 0.722;
 $base-font-weight: 300;
 $base-margin: 1em;
 $base-padding: 1em;
@@ -21,11 +21,11 @@ $margin-from-top: 3em;
 
 $wide-li-margin: 0 1em 0.5em 2.6em;
 
-$base-line-height: 1.5em;
+$base-line-height: 1.6em;
 $spacing-unit:  30px;
 
 $text-color: #000;
-$background-color: #fdfdfd;
+$background-color: #ffffff; //#fdfdfd;
 
 $grey-color: rgba(56,56,56,0.5);
 
@@ -179,13 +179,23 @@ flex-basis: auto !important;
 // Mixins
 
 @mixin base-heading() {
-    h2, h3, h4, h5, h6 {
+    h2 {
         color: #BA3925;
         padding-top: 0.5em;
         font-family: $heading-font-family;
     }
 
-    h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
+    h2 strong {
+        color: #BA3925;
+    }
+
+    h3, h4, h5, h6 {
+        color: #000;
+        padding-top: 0.5em;
+        font-family: $heading-font-family;
+    }
+
+    h3 strong, h4 strong, h5 strong, h6 strong {
         color: #000;
     }
 }
