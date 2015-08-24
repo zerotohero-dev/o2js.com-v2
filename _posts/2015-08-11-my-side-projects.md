@@ -18,7 +18,7 @@ title="Well… This pretty much describes me." class="centered"></a>
 > My friends consider me a **hacker** and a **side projector**. And I create
 > **side projects** of various sizes.
 >
-> I share most of these project publicly on [GitHub][github].
+> I share most of these projects publicly on [GitHub][github].
 >
 > Most of these projects are **half complete**, to say the least.
 >
@@ -67,7 +67,7 @@ allocate my time to more productive things.
 Any item in the bucket can jump into any other bucket at any time depending on
 my current goals, plans, and interests.
 
-So, without further ado, here's some of the side projects that I'm working on,
+So, without further ado, here's some of the side projects that I'm working on
 and their current states right now:
 
 > Note that most of these are **open source**, if you feel like you can add
@@ -193,6 +193,7 @@ improvement.
 
 [sensei]: https://github.com/v0lkan/sensei
 [sensu]: https://sensuapp.org/docs/latest/api-overview
+[node]: https://nodejs.org/
 
 ### Revolve
 
@@ -273,6 +274,7 @@ much content when you crawl without executing the **JavaScript** on it.
 
 [pringles]: https://github.com/v0lkan/pringles
 [linkibol]: http://linkibol.com
+[wikiwand]: http://www.wikiwand.com/
 
 ### Linkibol
 
@@ -308,7 +310,7 @@ target **;)**.
 Writing a book, however, requires a huge block of time and Jedi concentration.
 Unfortunately, I'm limited in those resources **:)**.
 
-So, Instead of writing a new book, I’ll focus on writing more articles here:
+So, instead of writing a new book, I’ll focus on writing more articles here:
 
 I'll continue making this blog better.
 

@@ -5,8 +5,8 @@
     <description>o2.js; a coherent solution to your JavaScript dilemma.</description>
     <link>http://o2js.com/</link>
     <atom:link href="http://o2js.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 24 Aug 2015 02:24:26 +0000</pubDate>
-    <lastBuildDate>Mon, 24 Aug 2015 02:24:26 +0000</lastBuildDate>
+    <pubDate>Mon, 24 Aug 2015 03:38:01 +0000</pubDate>
+    <lastBuildDate>Mon, 24 Aug 2015 03:38:01 +0000</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -17,7 +17,7 @@
   &lt;p&gt;My friends consider me a &lt;strong&gt;hacker&lt;/strong&gt; and a &lt;strong&gt;side projector&lt;/strong&gt;. And I create
 &lt;strong&gt;side projects&lt;/strong&gt; of various sizes.&lt;/p&gt;
 
-  &lt;p&gt;I share most of these project publicly on &lt;a href=&quot;https://github.com/v0lkan/&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+  &lt;p&gt;I share most of these projects publicly on &lt;a href=&quot;https://github.com/v0lkan/&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 
   &lt;p&gt;Most of these projects are &lt;strong&gt;half complete&lt;/strong&gt;, to say the least.&lt;/p&gt;
 
@@ -83,7 +83,7 @@ allocate my time to more productive things.&lt;/li&gt;
 &lt;p&gt;Any item in the bucket can jump into any other bucket at any time depending on
 my current goals, plans, and interests.&lt;/p&gt;
 
-&lt;p&gt;So, without further ado, here’s some of the side projects that I’m working on,
+&lt;p&gt;So, without further ado, here’s some of the side projects that I’m working on
 and their current states right now:&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -199,7 +199,7 @@ the site as it’s current state is “good enough”.&lt;/p&gt;
 
 &lt;h3 id=&quot;sensei&quot;&gt;Sensei&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/v0lkan/sensei&quot;&gt;Sensei&lt;/a&gt;&lt;/strong&gt; is a minimal [Node.js][node] wrapper around the
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/v0lkan/sensei&quot;&gt;Sensei&lt;/a&gt;&lt;/strong&gt; is a minimal &lt;a href=&quot;https://nodejs.org/&quot;&gt;Node.js&lt;/a&gt; wrapper around the
 &lt;a href=&quot;https://sensuapp.org/docs/latest/api-overview&quot;&gt;sensu api&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;It works as its current state; however, there’s still a lot of room for
@@ -273,7 +273,7 @@ result. So the result will be &lt;strong&gt;much more&lt;/strong&gt; than what a
 would crawl.&lt;/p&gt;
 
 &lt;p&gt;The project is ready as a proof-of-concept. I’ve tested it on
-[wikiwand][wikiwand], which is a dynamic website that does not display too
+&lt;a href=&quot;http://www.wikiwand.com/&quot;&gt;wikiwand&lt;/a&gt;, which is a dynamic website that does not display too
 much content when you crawl without executing the &lt;strong&gt;JavaScript&lt;/strong&gt; on it.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/v0lkan/pringles&quot;&gt;Pringles&lt;/a&gt; will be a part of &lt;a href=&quot;http://linkibol.com&quot;&gt;linkibol&lt;/a&gt;’s (&lt;em&gt;see below&lt;/em&gt;) indexer.&lt;/p&gt;
@@ -316,7 +316,7 @@ target &lt;strong&gt;;)&lt;/strong&gt;.&lt;/li&gt;
 &lt;p&gt;Writing a book, however, requires a huge block of time and Jedi concentration.
 Unfortunately, I’m limited in those resources &lt;strong&gt;:)&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;So, Instead of writing a new book, I’ll focus on writing more articles here:&lt;/p&gt;
+&lt;p&gt;So, instead of writing a new book, I’ll focus on writing more articles here:&lt;/p&gt;
 
 &lt;p&gt;I’ll continue making this blog better.&lt;/p&gt;
 
