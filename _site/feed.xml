@@ -5,8 +5,8 @@
     <description>o2.js; a coherent solution to your JavaScript dilemma.</description>
     <link>http://o2js.com/</link>
     <atom:link href="http://o2js.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 23 Aug 2015 18:36:29 +0000</pubDate>
-    <lastBuildDate>Sun, 23 Aug 2015 18:36:29 +0000</lastBuildDate>
+    <pubDate>Mon, 24 Aug 2015 00:26:21 +0000</pubDate>
+    <lastBuildDate>Mon, 24 Aug 2015 00:26:21 +0000</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -362,10 +362,129 @@ with 2560×1440 resolution.&lt;/p&gt;
 increasing as years pass by &lt;strong&gt;;)&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
+&lt;h3 id=&quot;o2js-javascript-framework&quot;&gt;&lt;strong&gt;o2.js&lt;/strong&gt; JavaScript Framework&lt;/h3&gt;
+
+&lt;p&gt;Well, this was a &lt;strong&gt;hard&lt;/strong&gt; decision to be made; it had to be done; and it
+was the correct decision.&lt;/p&gt;
+
+&lt;p&gt;…&lt;/p&gt;
+
+&lt;p&gt;To explain why it’s hard, &lt;a href=&quot;http://www.musingsfrommars.org/2006/03/ajax-dhtml-library-scorecard.html&quot;&gt;let me take you back to 2006&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;It all started with (&lt;em&gt;now obsolete&lt;/em&gt;) JavaScript framework &lt;strong&gt;sardalya&lt;/strong&gt; that
+I’d created.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Let us set the stage a bit:&lt;/p&gt;
+
+  &lt;p&gt;Back then, &lt;strong&gt;jQuery&lt;/strong&gt; was not in the arena.&lt;/p&gt;
+
+  &lt;p&gt;&lt;strong&gt;Table-based layouts&lt;/strong&gt; were the &lt;strong&gt;recommended&lt;/strong&gt; way of building a web page;&lt;/p&gt;
+
+  &lt;p&gt;&lt;strong&gt;Google&lt;/strong&gt; was &lt;strong&gt;not&lt;/strong&gt; a dominant search engine yet; and &lt;strong&gt;Netscape Navigator
+4&lt;/strong&gt; was still a browser that you had to support along with &lt;strong&gt;Internet
+Explorer 5&lt;/strong&gt; because they were owning the majority of the market.&lt;/p&gt;
+
+  &lt;p&gt;And &lt;strong&gt;Opera&lt;/strong&gt; was just about to make biggest worst business blunder by
+demanding its users to &lt;strong&gt;pay money&lt;/strong&gt; to remove ads from the browser.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In one of those lovely days &lt;a href=&quot;http://www.musingsfrommars.org/2006/03/ajax-dhtml-library-scorecard.html&quot;&gt;sardalya was listed as one of the best
+frameworks around&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;So I decided to work on it and make it &lt;strong&gt;even better&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;…&lt;/p&gt;
+
+&lt;p&gt;For a while, things went well.&lt;/p&gt;
+
+&lt;p&gt;Over the years, however, technology evolved: I had to phase
+out &lt;strong&gt;sardalya&lt;/strong&gt; and copy relevant parts of it to create a brand new framework: &lt;strong&gt;&lt;a href=&quot;https://github.com/o2js&quot;&gt;o2.js&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;That was the beginning of an endless series of rewrites of the same framework
+(&lt;em&gt;o2.js&lt;/em&gt;).&lt;/p&gt;
+
+&lt;p&gt;At each rewrite things were &lt;strong&gt;seemingly&lt;/strong&gt; getting better:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Code was becoming more stable.&lt;/li&gt;
+  &lt;li&gt;New ideas were emerging.&lt;/li&gt;
+  &lt;li&gt;And I was happily integrating those ideas, adding bits
+and pieces to the framework…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Then I suddenly came to a realization:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Everything around me was evolving faster and faster.&lt;/p&gt;
+
+  &lt;p&gt;&lt;strong&gt;JavaScript&lt;/strong&gt;, too, was &lt;strong&gt;not&lt;/strong&gt; an exception to that.&lt;/p&gt;
+
+  &lt;p&gt;Cycles, and breakthroughs in the industry were getting more frequent.&lt;/p&gt;
+
+  &lt;p&gt;Ten years ago, there was something groundbreaking &lt;strong&gt;every one or two years&lt;/strong&gt;.&lt;/p&gt;
+
+  &lt;p&gt;Now there was something new and groundbreaking &lt;strong&gt;every couple of months&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;If you are one of the lucky (&lt;em&gt;unlucky?&lt;/em&gt;) people to have lived through the
+&lt;strong&gt;JavaScript&lt;/strong&gt; revolotion, and the &lt;strong&gt;browser wars&lt;/strong&gt;; if there was no &lt;strong&gt;Google&lt;/strong&gt;
+when you started hacking for the web, then you probably see the
+&lt;strong&gt;geometric accelleration&lt;/strong&gt; of the evolution of technology just like I do.&lt;/p&gt;
+
+&lt;p&gt;…&lt;/p&gt;
+
+&lt;p&gt;Even if we skipped the rapid evolution of languages, frameworks, and technologies
+aside, &lt;strong&gt;&lt;a href=&quot;https://github.com/o2js&quot;&gt;o2.js&lt;/a&gt;&lt;/strong&gt; in an of itself was growing out of control:&lt;/p&gt;
+
+&lt;p&gt;It was turning into a &lt;strong&gt;monolith&lt;/strong&gt; that was trying to solve many things at once.&lt;/p&gt;
+
+&lt;p&gt;And the bigger the framework got, the harder it had become to &lt;strong&gt;document&lt;/strong&gt;,
+&lt;strong&gt;test&lt;/strong&gt;, and &lt;strong&gt;maintain&lt;/strong&gt; it.&lt;/p&gt;
+
+&lt;p&gt;And when something new (&lt;em&gt;you name it: web components, HTML5 local storage,
+ServiceWorker, Node.JS, EcmaScript 2015…&lt;/em&gt;) emerged, I had to readjust the
+entire monolithical codebase to take the emergent technology into account.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Soon I found myself in the world of generators, transpilers, workers,
+linters, parsers just to be able to support the framework’s day-to-day
+development.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;If &lt;strong&gt;&lt;a href=&quot;https://github.com/o2js&quot;&gt;o2.js&lt;/a&gt;&lt;/strong&gt; was a single module with a well defined purpose —
+such as a local storage helper, or an &lt;strong&gt;AMD&lt;/strong&gt; variant, or a &lt;strong&gt;Promise&lt;/strong&gt;
+implementation, or an animation library, etc. — things could have been easier.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;One thing that hit me like a full speed freight train was the fact that
+trying to solve many things at once was not the way to go.&lt;/p&gt;
+
+  &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://www.wikiwand.com/en/Unix_philosophy&quot;&gt;Unix philosophy&lt;/a&gt;&lt;/strong&gt; was time-tested and proven for a reason:&lt;/p&gt;
+
+  &lt;p&gt;I should be doing one thing at a time; and doing that thing &lt;strong&gt;well&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Trying to manage a monolith that does all the things, in this rapid
+(r)evolution was exhausting, time-consuming, counter-productive
+and &lt;strong&gt;unsustainable&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Long story short, effective today, I’m ceasing any active development on
+&lt;strong&gt;&lt;a href=&quot;https://github.com/o2js&quot;&gt;o2.js&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;I will still be using parts of its codebase to solve problems.&lt;/p&gt;
+
+&lt;p&gt;Those solutions, however, will be much more &lt;strong&gt;focused&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;They will have single, focused, and unique purposes; and they will be
+serving that purpose &lt;strong&gt;well&lt;/strong&gt;.&lt;/p&gt;
+
 &lt;h3 id=&quot;writing-writing-style-guides&quot;&gt;Writing “Writing Style Guide”s&lt;/h3&gt;
 
-&lt;p&gt;This topic deserves a separate article on its own;
-I’ll start drafting it our here anyway &lt;strong&gt;:)&lt;/strong&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;This topic deserves a separate article on its own;
+I’ll start drafting it out here anyway &lt;strong&gt;:)&lt;/strong&gt;:&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;I had started creating a few style guides for both writing code, and also for
 technical writing. I was using them as a reference for coding conventions in
@@ -422,8 +541,12 @@ with similar mindsets, I believe :)&lt;/em&gt;).&lt;/p&gt;
 &lt;p&gt;It’s true not only for style guides but also for any kind of strict rule that
 you impose upon the way you do things.&lt;/p&gt;
 
-&lt;p&gt;I have realized (&lt;strong&gt;ahem&lt;/strong&gt;… *after 10 or so years&lt;strong&gt;) that **it all boils down
-to consistency&lt;/strong&gt;. Documenting every miniscule detail about how to write an
+&lt;p&gt;I have realized (&lt;strong&gt;ahem&lt;/strong&gt;… &lt;em&gt;after ten or so years&lt;/em&gt;) that it all boils down
+to &lt;strong&gt;consistency&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;…&lt;/p&gt;
+
+&lt;p&gt;Documenting every miniscule detail about how to write an
 article, or how to author a piece of code is a &lt;strong&gt;futile effort&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;And the more excruciatingly-detailed that guide becomes, the slower your writing
@@ -433,7 +556,9 @@ bit and piece of rule written in the guideline.&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;Being &lt;strong&gt;consistent&lt;/strong&gt; is better than being &lt;strong&gt;conformant&lt;/strong&gt;.&lt;/p&gt;
 
-  &lt;p&gt;Perfection is boring: It consumes your time, and your mental resources
+  &lt;p&gt;&lt;strong&gt;Perfection is boring&lt;/strong&gt;:&lt;/p&gt;
+
+  &lt;p&gt;It consumes your time, and your mental resources
 without giving enough value in return.&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -454,7 +579,7 @@ like…&lt;/p&gt;
 &lt;p&gt;For writing, I follow the above links (&lt;em&gt;in priority order&lt;/em&gt;) and do it
 my own way, if I disagree with them.&lt;/p&gt;
 
-&lt;p&gt;For code style &lt;a href=&quot;https://github.com/rwaldron/idiomatic.js/&quot;&gt;idiomatic js&lt;/a&gt;, and I do it my own way if I
+&lt;p&gt;For code style &lt;a href=&quot;https://github.com/rwaldron/idiomatic.js/&quot;&gt;idiomatic JS&lt;/a&gt;, and I do it my own way if I
 am not aligned with anything in there.&lt;/p&gt;
 
 &lt;p&gt;…&lt;/p&gt;

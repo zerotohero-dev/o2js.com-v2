@@ -366,10 +366,121 @@ your development environment.
 [tomorrow]: https://github.com/chriskempson/tomorrow-theme
 [fira]: https://mozilla.github.io/Fira/
 
+### **o2.js** JavaScript Framework
+
+Well, this was a **hard** decision to be made; it had to be done; and it
+was the correct decision.
+
+...
+
+To explain why it's hard, [let me take you back to 2006][flashback].
+
+It all started with (*now obsolete*) JavaScript framework **sardalya** that
+I'd created.
+
+> Let us set the stage a bit:
+>
+> Back then, **jQuery** was not in the arena.
+>
+> **Table-based layouts** were the **recommended** way of building a web page;
+>
+> **Google** was **not** a dominant search engine yet; and **Netscape Navigator
+> 4** was still a browser that you had to support along with **Internet
+> Explorer 5** because they were owning the majority of the market.
+>
+> And **Opera** was just about to make biggest worst business blunder by
+> demanding its users to **pay money** to remove ads from the browser.
+
+In one of those lovely days [sardalya was listed as one of the best
+frameworks around][flashback].
+
+So I decided to work on it and make it **even better**.
+
+...
+
+For a while, things went well.
+
+Over the years, however, technology evolved: I had to phase
+out **sardalya** and copy relevant parts of it to create a brand new framework: **[o2.js][o2js]**.
+
+That was the beginning of an endless series of rewrites of the same framework
+(*o2.js*).
+
+At each rewrite things were **seemingly** getting better:
+
+* Code was becoming more stable.
+* New ideas were emerging.
+* And I was happily integrating those ideas, adding bits
+and pieces to the framework...
+
+Then I suddenly came to a realization:
+
+> Everything around me was evolving faster and faster.
+>
+> **JavaScript**, too, was **not** an exception to that.
+>
+> Cycles, and breakthroughs in the industry were getting more frequent.
+>
+> Ten years ago, there was something groundbreaking **every one or two years**.
+>
+> Now there was something new and groundbreaking **every couple of months**.
+
+If you are one of the lucky (*unlucky?*) people to have lived through the
+**JavaScript** revolotion, and the **browser wars**; if there was no **Google**
+when you started hacking for the web, then you probably see the
+**geometric accelleration** of the evolution of technology just like I do.
+
+...
+
+Even if we skipped the rapid evolution of languages, frameworks, and technologies
+aside, **[o2.js][o2js]** in an of itself was growing out of control:
+
+It was turning into a **monolith** that was trying to solve many things at once.
+
+And the bigger the framework got, the harder it had become to **document**,
+**test**, and **maintain** it.
+
+And when something new (*you name it: web components, HTML5 local storage,
+ServiceWorker, Node.JS, EcmaScript 2015...*) emerged, I had to readjust the
+entire monolithical codebase to take the emergent technology into account.
+
+> Soon I found myself in the world of generators, transpilers, workers,
+> linters, parsers just to be able to support the framework's day-to-day
+> development.
+
+If **[o2.js][o2js]** was a single module with a well defined purpose ---
+such as a local storage helper, or an **AMD** variant, or a **Promise**
+implementation, or an animation library, etc. --- things could have been easier.
+
+> One thing that hit me like a full speed freight train was the fact that
+> trying to solve many things at once was not the way to go.
+>
+> **[Unix philosophy][unix-philosophy]** was time-tested and proven for a reason:
+>
+> I should be doing one thing at a time; and doing that thing **well**.
+
+Trying to manage a monolith that does all the things, in this rapid
+(r)evolution was exhausting, time-consuming, counter-productive
+and **unsustainable**.
+
+Long story short, effective today, I'm ceasing any active development on
+**[o2.js][o2js]**.
+
+I will still be using parts of its codebase to solve problems.
+
+Those solutions, however, will be much more **focused**:
+
+They will have single, focused, and unique purposes; and they will be
+serving that purpose **well**.
+
+[flashback]: http://www.musingsfrommars.org/2006/03/ajax-dhtml-library-scorecard.html
+[o2js]: https://github.com/o2js
+[unix-philosophy]: http://www.wikiwand.com/en/Unix_philosophy
+
 ### Writing "Writing Style Guide"s
 
-This topic deserves a separate article on its own;
-I'll start drafting it our here anyway **:)**:
+> This topic deserves a separate article on its own;
+> I'll start drafting it out here anyway **:)**:
 
 I had started creating a few style guides for both writing code, and also for
 technical writing. I was using them as a reference for coding conventions in
@@ -418,8 +529,12 @@ with similar mindsets, I believe :)*).
 It's true not only for style guides but also for any kind of strict rule that
 you impose upon the way you do things.
 
-I have realized (**ahem**... *after 10 or so years**) that **it all boils down
-to consistency**. Documenting every miniscule detail about how to write an
+I have realized (**ahem**... *after ten or so years*) that it all boils down
+to **consistency**.
+
+...
+
+Documenting every miniscule detail about how to write an
 article, or how to author a piece of code is a **futile effort**.
 
 And the more excruciatingly-detailed that guide becomes, the slower your writing
@@ -428,7 +543,9 @@ bit and piece of rule written in the guideline.
 
 > Being **consistent** is better than being **conformant**.
 >
-> Perfection is boring: It consumes your time, and your mental resources
+> **Perfection is boring**:
+>
+> It consumes your time, and your mental resources
 > without giving enough value in return.
 
 Besides, there are already very good style guides out there; it'd be wiser to
@@ -446,7 +563,7 @@ like&hellip;
 For writing, I follow the above links (<em>in priority order</em>) and do it
 my own way, if I disagree with them.
 
-For code style [idiomatic js][idiomatic], and I do it my own way if I
+For code style [idiomatic JS][idiomatic], and I do it my own way if I
 am not aligned with anything in there.
 
 ...
@@ -473,7 +590,6 @@ prevent it from changing.
 > Don't be a rock that is conformant and restrictive.
 >
 > Always have a *mind like water*: **Be consistent, and adaptive**.
-
 
 [vogon]: https://www.wikiwand.com/en/Vogon
 [github]: https://github.com/v0lkan/

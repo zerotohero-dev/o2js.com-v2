@@ -416,10 +416,129 @@ with 2560×1440 resolution.</p>
 increasing as years pass by <strong>;)</strong></p>
 </blockquote>
 
+<h3 id="o2js-javascript-framework"><strong>o2.js</strong> JavaScript Framework</h3>
+
+<p>Well, this was a <strong>hard</strong> decision to be made; it had to be done; and it
+was the correct decision.</p>
+
+<p>…</p>
+
+<p>To explain why it’s hard, <a href="http://www.musingsfrommars.org/2006/03/ajax-dhtml-library-scorecard.html">let me take you back to 2006</a>.</p>
+
+<p>It all started with (<em>now obsolete</em>) JavaScript framework <strong>sardalya</strong> that
+I’d created.</p>
+
+<blockquote>
+  <p>Let us set the stage a bit:</p>
+
+  <p>Back then, <strong>jQuery</strong> was not in the arena.</p>
+
+  <p><strong>Table-based layouts</strong> were the <strong>recommended</strong> way of building a web page;</p>
+
+  <p><strong>Google</strong> was <strong>not</strong> a dominant search engine yet; and <strong>Netscape Navigator
+4</strong> was still a browser that you had to support along with <strong>Internet
+Explorer 5</strong> because they were owning the majority of the market.</p>
+
+  <p>And <strong>Opera</strong> was just about to make biggest worst business blunder by
+demanding its users to <strong>pay money</strong> to remove ads from the browser.</p>
+</blockquote>
+
+<p>In one of those lovely days <a href="http://www.musingsfrommars.org/2006/03/ajax-dhtml-library-scorecard.html">sardalya was listed as one of the best
+frameworks around</a>.</p>
+
+<p>So I decided to work on it and make it <strong>even better</strong>.</p>
+
+<p>…</p>
+
+<p>For a while, things went well.</p>
+
+<p>Over the years, however, technology evolved: I had to phase
+out <strong>sardalya</strong> and copy relevant parts of it to create a brand new framework: <strong><a href="https://github.com/o2js">o2.js</a></strong>.</p>
+
+<p>That was the beginning of an endless series of rewrites of the same framework
+(<em>o2.js</em>).</p>
+
+<p>At each rewrite things were <strong>seemingly</strong> getting better:</p>
+
+<ul>
+  <li>Code was becoming more stable.</li>
+  <li>New ideas were emerging.</li>
+  <li>And I was happily integrating those ideas, adding bits
+and pieces to the framework…</li>
+</ul>
+
+<p>Then I suddenly came to a realization:</p>
+
+<blockquote>
+  <p>Everything around me was evolving faster and faster.</p>
+
+  <p><strong>JavaScript</strong>, too, was <strong>not</strong> an exception to that.</p>
+
+  <p>Cycles, and breakthroughs in the industry were getting more frequent.</p>
+
+  <p>Ten years ago, there was something groundbreaking <strong>every one or two years</strong>.</p>
+
+  <p>Now there was something new and groundbreaking <strong>every couple of months</strong>.</p>
+</blockquote>
+
+<p>If you are one of the lucky (<em>unlucky?</em>) people to have lived through the
+<strong>JavaScript</strong> revolotion, and the <strong>browser wars</strong>; if there was no <strong>Google</strong>
+when you started hacking for the web, then you probably see the
+<strong>geometric accelleration</strong> of the evolution of technology just like I do.</p>
+
+<p>…</p>
+
+<p>Even if we skipped the rapid evolution of languages, frameworks, and technologies
+aside, <strong><a href="https://github.com/o2js">o2.js</a></strong> in an of itself was growing out of control:</p>
+
+<p>It was turning into a <strong>monolith</strong> that was trying to solve many things at once.</p>
+
+<p>And the bigger the framework got, the harder it had become to <strong>document</strong>,
+<strong>test</strong>, and <strong>maintain</strong> it.</p>
+
+<p>And when something new (<em>you name it: web components, HTML5 local storage,
+ServiceWorker, Node.JS, EcmaScript 2015…</em>) emerged, I had to readjust the
+entire monolithical codebase to take the emergent technology into account.</p>
+
+<blockquote>
+  <p>Soon I found myself in the world of generators, transpilers, workers,
+linters, parsers just to be able to support the framework’s day-to-day
+development.</p>
+</blockquote>
+
+<p>If <strong><a href="https://github.com/o2js">o2.js</a></strong> was a single module with a well defined purpose —
+such as a local storage helper, or an <strong>AMD</strong> variant, or a <strong>Promise</strong>
+implementation, or an animation library, etc. — things could have been easier.</p>
+
+<blockquote>
+  <p>One thing that hit me like a full speed freight train was the fact that
+trying to solve many things at once was not the way to go.</p>
+
+  <p><strong><a href="http://www.wikiwand.com/en/Unix_philosophy">Unix philosophy</a></strong> was time-tested and proven for a reason:</p>
+
+  <p>I should be doing one thing at a time; and doing that thing <strong>well</strong>.</p>
+</blockquote>
+
+<p>Trying to manage a monolith that does all the things, in this rapid
+(r)evolution was exhausting, time-consuming, counter-productive
+and <strong>unsustainable</strong>.</p>
+
+<p>Long story short, effective today, I’m ceasing any active development on
+<strong><a href="https://github.com/o2js">o2.js</a></strong>.</p>
+
+<p>I will still be using parts of its codebase to solve problems.</p>
+
+<p>Those solutions, however, will be much more <strong>focused</strong>:</p>
+
+<p>They will have single, focused, and unique purposes; and they will be
+serving that purpose <strong>well</strong>.</p>
+
 <h3 id="writing-writing-style-guides">Writing “Writing Style Guide”s</h3>
 
-<p>This topic deserves a separate article on its own;
-I’ll start drafting it our here anyway <strong>:)</strong>:</p>
+<blockquote>
+  <p>This topic deserves a separate article on its own;
+I’ll start drafting it out here anyway <strong>:)</strong>:</p>
+</blockquote>
 
 <p>I had started creating a few style guides for both writing code, and also for
 technical writing. I was using them as a reference for coding conventions in
@@ -476,8 +595,12 @@ with similar mindsets, I believe :)</em>).</p>
 <p>It’s true not only for style guides but also for any kind of strict rule that
 you impose upon the way you do things.</p>
 
-<p>I have realized (<strong>ahem</strong>… *after 10 or so years<strong>) that **it all boils down
-to consistency</strong>. Documenting every miniscule detail about how to write an
+<p>I have realized (<strong>ahem</strong>… <em>after ten or so years</em>) that it all boils down
+to <strong>consistency</strong>.</p>
+
+<p>…</p>
+
+<p>Documenting every miniscule detail about how to write an
 article, or how to author a piece of code is a <strong>futile effort</strong>.</p>
 
 <p>And the more excruciatingly-detailed that guide becomes, the slower your writing
@@ -487,7 +610,9 @@ bit and piece of rule written in the guideline.</p>
 <blockquote>
   <p>Being <strong>consistent</strong> is better than being <strong>conformant</strong>.</p>
 
-  <p>Perfection is boring: It consumes your time, and your mental resources
+  <p><strong>Perfection is boring</strong>:</p>
+
+  <p>It consumes your time, and your mental resources
 without giving enough value in return.</p>
 </blockquote>
 
@@ -508,7 +633,7 @@ like…</p>
 <p>For writing, I follow the above links (<em>in priority order</em>) and do it
 my own way, if I disagree with them.</p>
 
-<p>For code style <a href="https://github.com/rwaldron/idiomatic.js/">idiomatic js</a>, and I do it my own way if I
+<p>For code style <a href="https://github.com/rwaldron/idiomatic.js/">idiomatic JS</a>, and I do it my own way if I
 am not aligned with anything in there.</p>
 
 <p>…</p>
