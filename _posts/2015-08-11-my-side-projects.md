@@ -35,8 +35,9 @@ an instant anxiety and a feeling of guilt. You feel like you are not being
 committed to what you have promised to yourself.
 
 To overcome this anxiety or this **paralysis by analysis** state of mind, you'll
-have to sort out your priorities. And in order to sort them out, you should know
-what is occupying your time in the first place: You cannot optimize without measuring.
+have to **sort out your priorities**. And in order to sort them out, you should know
+what is occupying your time in the first place ---
+You cannot optimize without measuring.
 
 ## The Methodology
 
@@ -368,15 +369,14 @@ your development environment.
 
 ### **o2.js** JavaScript Framework
 
-Well, this was a **hard** decision to be made; it had to be done; and it
-was the correct decision.
+The astute reader might have realized that there is a theme in here:
 
-...
+> In order to get more stuff done; I had to let more stuff go.
 
-To explain why it's hard, [let me take you back to 2006][flashback].
+Letting go of **o2.js**, however, was one of the hardest of such decisions.
+Nevertheless it had to be done; and it was the correct decision.
 
-It all started with (*now obsolete*) JavaScript framework **sardalya** that
-I'd created.
+To explain why it's hard, [let me take you back to 2006][flashback]:
 
 > Let us set the stage a bit:
 >
@@ -391,17 +391,44 @@ I'd created.
 > And **Opera** was just about to make biggest worst business blunder by
 > demanding its users to **pay money** to remove ads from the browser.
 
-In one of those lovely days [sardalya was listed as one of the best
+It all started with (*now obsolete*) JavaScript framework **sardalya** that
+I'd created back then.
+
+In one of those lovely days of 2006 [**sardalya** got listed as one of the best
 frameworks around][flashback].
 
-So I decided to work on it and make it **even better**.
+I was not aware that **sardalya** was in such a good shape: I was using it for
+my day-to-day duties, and it was really improving my productivity however
+I was not aware that it was making others' lifes better too. -- Nope, there
+was no **GitHub** back then either **;)**.
+
+It was the first time I felt I was having an impact that was bigger than myself.
+<br>
+(*the second time I has such a feeling was [when I wrote a book](interview-questions).*)
+
+Having seen what **sardalya** can turn out to be, and how everybody can benefit
+from it too, I decided to work further on it and make it **even better**.
 
 ...
 
-For a while, things went well.
+For a couple of years, things went well.
 
-Over the years, however, technology evolved: I had to phase
-out **sardalya** and copy relevant parts of it to create a brand new framework: **[o2.js][o2js]**.
+On the long run, however, technology evolved and I had to phase
+out **sardalya**. I decided to copy relevant and useful parts of it to create
+a brand new framework: **[o2.js][o2js]** --- a framework that was created from
+the ashes of **sardalya**.
+
+> **Aside**
+>
+> I'm a startup guy:
+>
+> I think fast, act fast, and never hesitate to break things.
+>
+> Tearing things down entirely, burning bridges, and having a fresh and better
+> start has been the general theme of my life so far.
+>
+> Those transitions have often been painful, and have teached me **a lot** that
+> I could not have gained by attending to some biz school or reading a book.
 
 That was the beginning of an endless series of rewrites of the same framework
 (*o2.js*).
@@ -476,6 +503,7 @@ serving that purpose **well**.
 [flashback]: http://www.musingsfrommars.org/2006/03/ajax-dhtml-library-scorecard.html
 [o2js]: https://github.com/o2js
 [unix-philosophy]: http://www.wikiwand.com/en/Unix_philosophy
+[interview-questions]: http://o2js.com/interview-questions
 
 ### Writing "Writing Style Guide"s
 

@@ -5,8 +5,8 @@
     <description>o2.js; a coherent solution to your JavaScript dilemma.</description>
     <link>http://o2js.com/</link>
     <atom:link href="http://o2js.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 24 Aug 2015 00:26:21 +0000</pubDate>
-    <lastBuildDate>Mon, 24 Aug 2015 00:26:21 +0000</lastBuildDate>
+    <pubDate>Mon, 24 Aug 2015 02:24:26 +0000</pubDate>
+    <lastBuildDate>Mon, 24 Aug 2015 02:24:26 +0000</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -35,8 +35,9 @@ an instant anxiety and a feeling of guilt. You feel like you are not being
 committed to what you have promised to yourself.&lt;/p&gt;
 
 &lt;p&gt;To overcome this anxiety or this &lt;strong&gt;paralysis by analysis&lt;/strong&gt; state of mind, you’ll
-have to sort out your priorities. And in order to sort them out, you should know
-what is occupying your time in the first place: You cannot optimize without measuring.&lt;/p&gt;
+have to &lt;strong&gt;sort out your priorities&lt;/strong&gt;. And in order to sort them out, you should know
+what is occupying your time in the first place —
+You cannot optimize without measuring.&lt;/p&gt;
 
 &lt;h2 id=&quot;the-methodology&quot;&gt;The Methodology&lt;/h2&gt;
 
@@ -364,15 +365,16 @@ increasing as years pass by &lt;strong&gt;;)&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;o2js-javascript-framework&quot;&gt;&lt;strong&gt;o2.js&lt;/strong&gt; JavaScript Framework&lt;/h3&gt;
 
-&lt;p&gt;Well, this was a &lt;strong&gt;hard&lt;/strong&gt; decision to be made; it had to be done; and it
-was the correct decision.&lt;/p&gt;
+&lt;p&gt;The astute reader might have realized that there is a theme in here:&lt;/p&gt;
 
-&lt;p&gt;…&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;In order to get more stuff done; I had to let more stuff go.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;To explain why it’s hard, &lt;a href=&quot;http://www.musingsfrommars.org/2006/03/ajax-dhtml-library-scorecard.html&quot;&gt;let me take you back to 2006&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Letting go of &lt;strong&gt;o2.js&lt;/strong&gt;, however, was one of the hardest of such decisions.
+Nevertheless it had to be done; and it was the correct decision.&lt;/p&gt;
 
-&lt;p&gt;It all started with (&lt;em&gt;now obsolete&lt;/em&gt;) JavaScript framework &lt;strong&gt;sardalya&lt;/strong&gt; that
-I’d created.&lt;/p&gt;
+&lt;p&gt;To explain why it’s hard, &lt;a href=&quot;http://www.musingsfrommars.org/2006/03/ajax-dhtml-library-scorecard.html&quot;&gt;let me take you back to 2006&lt;/a&gt;:&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Let us set the stage a bit:&lt;/p&gt;
@@ -389,17 +391,46 @@ Explorer 5&lt;/strong&gt; because they were owning the majority of the market.&l
 demanding its users to &lt;strong&gt;pay money&lt;/strong&gt; to remove ads from the browser.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;In one of those lovely days &lt;a href=&quot;http://www.musingsfrommars.org/2006/03/ajax-dhtml-library-scorecard.html&quot;&gt;sardalya was listed as one of the best
+&lt;p&gt;It all started with (&lt;em&gt;now obsolete&lt;/em&gt;) JavaScript framework &lt;strong&gt;sardalya&lt;/strong&gt; that
+I’d created back then.&lt;/p&gt;
+
+&lt;p&gt;In one of those lovely days of 2006 &lt;a href=&quot;http://www.musingsfrommars.org/2006/03/ajax-dhtml-library-scorecard.html&quot;&gt;&lt;strong&gt;sardalya&lt;/strong&gt; got listed as one of the best
 frameworks around&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;So I decided to work on it and make it &lt;strong&gt;even better&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;I was not aware that &lt;strong&gt;sardalya&lt;/strong&gt; was in such a good shape: I was using it for
+my day-to-day duties, and it was really improving my productivity however
+I was not aware that it was making others’ lifes better too. – Nope, there
+was no &lt;strong&gt;GitHub&lt;/strong&gt; back then either &lt;strong&gt;;)&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;It was the first time I felt I was having an impact that was bigger than myself.
+&lt;br /&gt;
+(&lt;em&gt;the second time I has such a feeling was &lt;a href=&quot;interview-questions&quot;&gt;when I wrote a book&lt;/a&gt;.&lt;/em&gt;)&lt;/p&gt;
+
+&lt;p&gt;Having seen what &lt;strong&gt;sardalya&lt;/strong&gt; can turn out to be, and how everybody can benefit
+from it too, I decided to work further on it and make it &lt;strong&gt;even better&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;…&lt;/p&gt;
 
-&lt;p&gt;For a while, things went well.&lt;/p&gt;
+&lt;p&gt;For a couple of years, things went well.&lt;/p&gt;
 
-&lt;p&gt;Over the years, however, technology evolved: I had to phase
-out &lt;strong&gt;sardalya&lt;/strong&gt; and copy relevant parts of it to create a brand new framework: &lt;strong&gt;&lt;a href=&quot;https://github.com/o2js&quot;&gt;o2.js&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;On the long run, however, technology evolved and I had to phase
+out &lt;strong&gt;sardalya&lt;/strong&gt;. I decided to copy relevant and useful parts of it to create
+a brand new framework: &lt;strong&gt;&lt;a href=&quot;https://github.com/o2js&quot;&gt;o2.js&lt;/a&gt;&lt;/strong&gt; — a framework that was created from
+the ashes of &lt;strong&gt;sardalya&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Aside&lt;/strong&gt;&lt;/p&gt;
+
+  &lt;p&gt;I’m a startup guy:&lt;/p&gt;
+
+  &lt;p&gt;I think fast, act fast, and never hesitate to break things.&lt;/p&gt;
+
+  &lt;p&gt;Tearing things down entirely, burning bridges, and having a fresh and better
+start has been the general theme of my life so far.&lt;/p&gt;
+
+  &lt;p&gt;Those transitions have often been painful, and have teached me &lt;strong&gt;a lot&lt;/strong&gt; that
+I could not have gained by attending to some biz school or reading a book.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;That was the beginning of an endless series of rewrites of the same framework
 (&lt;em&gt;o2.js&lt;/em&gt;).&lt;/p&gt;
