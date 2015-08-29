@@ -1,15 +1,17 @@
 .main-wrap {
-    @extend .flexible;
+   // @extend .flexible;
 }
 
 .page-content {
     @extend .flex-item;
     @extend .flex-article;
-
-    margin-top: $margin-from-top;
 }
 
 .aside-content {
+    h1 {
+        padding-left: 1.2em;
+    }
+
     @extend .flex-item;
     @extend .flex-aside;
 }

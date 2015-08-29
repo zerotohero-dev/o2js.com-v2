@@ -137,8 +137,8 @@ different pieces come together to form a solution is euphoric for me.
 
 > **Learning** is a **lifestyle** --- **Learning** is **happiness**.
 
-Actually if **learning** is not your **lifestyle**, and you are  **IT**, then maybe it's
-then maybe you should have been working in another sector **;)**.
+Actually if **learning** is not your **lifestyle**, and you are  **IT**, then
+maybe it's then maybe you should have been working in another sector **;)**.
 
 Here is the things in my current queue that I study the most:
 
