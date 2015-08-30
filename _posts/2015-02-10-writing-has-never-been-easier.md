@@ -153,7 +153,8 @@ title="Cloud9 IDE is hands down the BEST online IDE around." class="centered"></
 Setting your own SSH workspace in **Cloud9** is pretty straightforward.
 [**Cloud9** documentation has a step-by-step instruction on how to do it][c9-ssh].
 
-After setting up my **SSH workspace**, the next thing I did was to create a sample **[Jekyll][jekyll]** website. [You can view the source code at
+After setting up my **SSH workspace**, the next thing I did was to create a sample
+**[Jekyll][jekyll]** website. [You can view the source code at
 **GitHub**][o2js-com-v2-git].
 
 ## Setting Up **Jekyll**
@@ -446,18 +447,18 @@ Until next time...
 [jekyll-docs]: http://jekyllrb.com/docs/home/ "Jekyll Documentation"
 [livereload-ext]: http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions- "LiveReload extensions FTW!"
 [o2js]: http://o2js.com/ "o2.js --- A coherent solution to your JavaScript dilemma."
-[chisel]: http://blog.geekli.st/post/111932989787/grab-your-chisel-and-start-pounding-a-guest
-[c9]: https://c9.io/
-[c9-ssh]: https://docs.c9.io/v1.0/docs/running-your-own-ssh-workspace
-[o2js-com-v2-git]: https://github.com/v0lkan/o2js.com-v2
-[crx-refresh]: https://chrome.google.com/webstore/detail/super-auto-refresh/kkhjakkgopekjlempoplnjclgedabddk?hl=en
-[git-snap]: https://github.com/v0lkan/o2js.com-v2/tree/9a338741493f9188437096343fa8ba3b08a80678
-[smart-quote]: http://www.fastcodesign.com/3018353/be-smart-dont-use-dumb-quote-marks
-[hypens-and-dashes]: http://practicaltypography.com/hyphens-and-dashes.html
-[responsive-typography]: https://ia.net/know-how/responsive-typography-the-basics
-[scale-and-rhytm]: http://lamb.cc/typograph/
-[kramdown-options]: http://kramdown.gettalong.org/rdoc/Kramdown/Options.html
-[transmit]: https://panic.com/transmit/
-[diet-coda]: https://panic.com/dietcoda/
-[textastic]: http://www.textasticapp.com/
-[prompt]: https://panic.com/prompt/
+[chisel]: http://blog.geekli.st/post/111932989787/grab-your-chisel-and-start-pounding-a-guest "Grab Your Chisel and Start Pounding"
+[c9]: https://c9.io/ "Cloud9 IDE"
+[c9-ssh]: https://docs.c9.io/v1.0/docs/running-your-own-ssh-workspace "Cloud9 SSH"
+[o2js-com-v2-git]: https://github.com/v0lkan/o2js.com-v2 "o2js.com new version"
+[crx-refresh]: https://chrome.google.com/webstore/detail/super-auto-refresh/kkhjakkgopekjlempoplnjclgedabddk?hl=en "crx-refresh extension"
+[git-snap]: https://github.com/v0lkan/o2js.com-v2/tree/9a338741493f9188437096343fa8ba3b08a80678 "git-snap"
+[smart-quote]: http://www.fastcodesign.com/3018353/be-smart-dont-use-dumb-quote-marks "smart quotes"
+[hypens-and-dashes]: http://practicaltypography.com/hyphens-and-dashes.html "hypens and dashes"
+[responsive-typography]: https://ia.net/know-how/responsive-typography-the-basics "responsive typography"
+[scale-and-rhytm]: http://lamb.cc/typograph/ "scale and rhytm"
+[kramdown-options]: http://kramdown.gettalong.org/rdoc/Kramdown/Options.html "Kramdown"
+[transmit]: https://panic.com/transmit/ "Transmit"
+[diet-coda]: https://panic.com/dietcoda/ "Diet Coda"
+[textastic]: http://www.textasticapp.com/ "Textastic"
+[prompt]: https://panic.com/prompt/ "Prompt"

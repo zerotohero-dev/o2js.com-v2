@@ -4,3 +4,18 @@
     color: $grey-color;
     font-family: $title-font-family;
 }
+
+.post {
+    background: #fff;
+    opacity: 0.85;
+    border-radius: 2px;
+    padding-top: 7em;
+    border-top: 1px #ccc solid;
+    border-bottom: 1px #aaa solid;
+    border-left: 1px #ccc solid;
+    border-right: 1px #aaa solid;
+
+    -webkit-box-shadow: 1px 3px 9px 0px rgba(153,153,153,0.75);
+    -moz-box-shadow: 1px 3px 9px 0px rgba(153,153,153,0.75);
+    box-shadow: 1px 3px 9px 0px rgba(153,153,153,0.75);
+}

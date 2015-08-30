@@ -9,7 +9,7 @@ categories:
 tags:
 - side projects
 - hacking
-- reference
+- productivity
 ---
 
 <a href="/images/side-projects.png"><img src="/images/side-projects.png"

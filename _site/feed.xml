@@ -5,8 +5,8 @@
     <description>o2.js; a coherent solution to your JavaScript dilemma.</description>
     <link>http://o2js.com/</link>
     <atom:link href="http://o2js.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 29 Aug 2015 15:42:04 +0000</pubDate>
-    <lastBuildDate>Sat, 29 Aug 2015 15:42:04 +0000</lastBuildDate>
+    <pubDate>Sun, 30 Aug 2015 16:04:04 +0000</pubDate>
+    <lastBuildDate>Sun, 30 Aug 2015 16:04:04 +0000</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -156,8 +156,8 @@ different pieces come together to form a solution is euphoric for me.&lt;/p&gt;
   &lt;p&gt;&lt;strong&gt;Learning&lt;/strong&gt; is a &lt;strong&gt;lifestyle&lt;/strong&gt; — &lt;strong&gt;Learning&lt;/strong&gt; is &lt;strong&gt;happiness&lt;/strong&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Actually if &lt;strong&gt;learning&lt;/strong&gt; is not your &lt;strong&gt;lifestyle&lt;/strong&gt;, and you are  &lt;strong&gt;IT&lt;/strong&gt;, then maybe it’s
-then maybe you should have been working in another sector &lt;strong&gt;;)&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Actually if &lt;strong&gt;learning&lt;/strong&gt; is not your &lt;strong&gt;lifestyle&lt;/strong&gt;, and you are  &lt;strong&gt;IT&lt;/strong&gt;, then
+maybe it’s then maybe you should have been working in another sector &lt;strong&gt;;)&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;Here is the things in my current queue that I study the most:&lt;/p&gt;
 
@@ -649,7 +649,7 @@ prevent it from changing.&lt;/p&gt;
         
         <category>hacking</category>
         
-        <category>reference</category>
+        <category>productivity</category>
         
         
         <category>reference</category>
@@ -715,7 +715,7 @@ as possible.&lt;/p&gt;
 &lt;p&gt;Since my existing setup was far from actualizing this dream, I decided to come
 up with a new workflow.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://blog.geekli.st/post/111932989787/grab-your-chisel-and-start-pounding-a-guest&quot;&gt;I’m an avid believer of “&lt;strong&gt;wheel reinvention&lt;/strong&gt;”&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://blog.geekli.st/post/111932989787/grab-your-chisel-and-start-pounding-a-guest&quot; title=&quot;Grab Your Chisel and Start Pounding&quot;&gt;I’m an avid believer of “&lt;strong&gt;wheel reinvention&lt;/strong&gt;”&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Reinventing the wheel teaches you &lt;strong&gt;a lot&lt;/strong&gt;!&lt;/p&gt;
 
@@ -750,7 +750,7 @@ workflow&lt;/strong&gt; from the bottom up.&lt;/p&gt;
 
 &lt;h2 id=&quot;the-editor&quot;&gt;The &lt;strong&gt;Editor&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;I am quite happy using the &lt;strong&gt;&lt;a href=&quot;https://c9.io/&quot;&gt;Cloud9 IDE&lt;/a&gt;&lt;/strong&gt; as my blogging editor.&lt;/p&gt;
+&lt;p&gt;I am quite happy using the &lt;strong&gt;&lt;a href=&quot;https://c9.io/&quot; title=&quot;Cloud9 IDE&quot;&gt;Cloud9 IDE&lt;/a&gt;&lt;/strong&gt; as my blogging editor.&lt;/p&gt;
 
 &lt;p&gt;Before having this decision I’ve tried various editors including
 &lt;strong&gt;&lt;a href=&quot;https://ia.net/writer/mac&quot; title=&quot;A quintessential writing machine for Mac&quot;&gt;IA Writer&lt;/a&gt;&lt;/strong&gt;, and &lt;strong&gt;&lt;a href=&quot;http://www.ulyssesapp.com/&quot; title=&quot;Ulysses makes writing fun and productive.&quot;&gt;Ulysses&lt;/a&gt;&lt;/strong&gt;. They are both great editors;
@@ -788,18 +788,18 @@ I’m not one of them. — For example, when I encounter a street sign reading
 matters to &lt;em&gt;me&lt;/em&gt;. And I know there are &lt;strong&gt;lucky&lt;/strong&gt; people out there who can live
 without caring about &lt;strong&gt;typography&lt;/strong&gt; too much &lt;strong&gt;:)&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;Luckily, &lt;strong&gt;Jekyll&lt;/strong&gt; &lt;a href=&quot;http://kramdown.gettalong.org/rdoc/Kramdown/Options.html&quot;&gt;supports typographic substitutions&lt;/a&gt; out
+&lt;p&gt;Luckily, &lt;strong&gt;Jekyll&lt;/strong&gt; &lt;a href=&quot;http://kramdown.gettalong.org/rdoc/Kramdown/Options.html&quot; title=&quot;Kramdown&quot;&gt;supports typographic substitutions&lt;/a&gt; out
 of the box.&lt;/p&gt;
 
 &lt;p&gt;…&lt;/p&gt;
 
 &lt;p&gt;So the bottom line is, I’m using &lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Not your daddy's static site generator.&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt; as my blogging platform of
-choice; and using &lt;strong&gt;&lt;a href=&quot;https://c9.io/&quot;&gt;Cloud9 IDE&lt;/a&gt;&lt;/strong&gt; both as and editor, and also to automate
+choice; and using &lt;strong&gt;&lt;a href=&quot;https://c9.io/&quot; title=&quot;Cloud9 IDE&quot;&gt;Cloud9 IDE&lt;/a&gt;&lt;/strong&gt; both as and editor, and also to automate
 things, as we’ll soon see.&lt;/p&gt;
 
 &lt;h2 id=&quot;creating-an-ssh-workspace&quot;&gt;Creating an &lt;strong&gt;SSH Workspace&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;One nice feature of &lt;strong&gt;&lt;a href=&quot;https://c9.io/&quot;&gt;Cloud9 IDE&lt;/a&gt;&lt;/strong&gt; is &lt;strong&gt;SSH Workspaces&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;One nice feature of &lt;strong&gt;&lt;a href=&quot;https://c9.io/&quot; title=&quot;Cloud9 IDE&quot;&gt;Cloud9 IDE&lt;/a&gt;&lt;/strong&gt; is &lt;strong&gt;SSH Workspaces&lt;/strong&gt;:&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;SSH Workspaces&lt;/strong&gt; let you edit the files on your server using a browser-based
 integrated development environment.&lt;/p&gt;
@@ -809,9 +809,10 @@ integrated development environment.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;/images/c9-large.png&quot;&gt;&lt;img src=&quot;/images/c9-sm.png&quot; title=&quot;Cloud9 IDE is hands down the BEST online IDE around.&quot; class=&quot;centered&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Setting your own SSH workspace in &lt;strong&gt;Cloud9&lt;/strong&gt; is pretty straightforward.
-&lt;a href=&quot;https://docs.c9.io/v1.0/docs/running-your-own-ssh-workspace&quot;&gt;&lt;strong&gt;Cloud9&lt;/strong&gt; documentation has a step-by-step instruction on how to do it&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&quot;https://docs.c9.io/v1.0/docs/running-your-own-ssh-workspace&quot; title=&quot;Cloud9 SSH&quot;&gt;&lt;strong&gt;Cloud9&lt;/strong&gt; documentation has a step-by-step instruction on how to do it&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;After setting up my &lt;strong&gt;SSH workspace&lt;/strong&gt;, the next thing I did was to create a sample &lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Not your daddy's static site generator.&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt; website. &lt;a href=&quot;https://github.com/v0lkan/o2js.com-v2&quot;&gt;You can view the source code at
+&lt;p&gt;After setting up my &lt;strong&gt;SSH workspace&lt;/strong&gt;, the next thing I did was to create a sample
+&lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Not your daddy's static site generator.&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt; website. &lt;a href=&quot;https://github.com/v0lkan/o2js.com-v2&quot; title=&quot;o2js.com new version&quot;&gt;You can view the source code at
 &lt;strong&gt;GitHub&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;setting-up-jekyll&quot;&gt;Setting Up &lt;strong&gt;Jekyll&lt;/strong&gt;&lt;/h2&gt;
@@ -877,7 +878,7 @@ job &lt;strong&gt;;)&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;For the security freak out there thinking that the source folder is accessible
-via internet: Well, yes; &lt;a href=&quot;https://github.com/v0lkan/o2js.com-v2&quot;&gt;and the code is open source anyway&lt;/a&gt;,
+via internet: Well, yes; &lt;a href=&quot;https://github.com/v0lkan/o2js.com-v2&quot; title=&quot;o2js.com new version&quot;&gt;and the code is open source anyway&lt;/a&gt;,
 so it’s not a big deal. — And even if it is, we can always restrict access to
 that folder via &lt;strong&gt;nginx.conf&lt;/strong&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -992,7 +993,7 @@ node index.js&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre
 &lt;p&gt;… any change that I make under the &lt;strong&gt;SRC&lt;/strong&gt; folder will publish and sync the
 documents with the live website.&lt;/p&gt;
 
-&lt;p&gt;I even use &lt;a href=&quot;https://chrome.google.com/webstore/detail/super-auto-refresh/kkhjakkgopekjlempoplnjclgedabddk?hl=en&quot;&gt;a nice little chrome extension&lt;/a&gt; to auto refresh the
+&lt;p&gt;I even use &lt;a href=&quot;https://chrome.google.com/webstore/detail/super-auto-refresh/kkhjakkgopekjlempoplnjclgedabddk?hl=en&quot; title=&quot;crx-refresh extension&quot;&gt;a nice little chrome extension&lt;/a&gt; to auto refresh the
 web page.&lt;/p&gt;
 
 &lt;p&gt;Here’s my current blogging environment:&lt;/p&gt;
@@ -1000,7 +1001,7 @@ web page.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;/images/inception-lg.png&quot;&gt;&lt;img src=&quot;/images/inception-sm.png&quot; title=&quot;A screenshot of this blog, inside itself ;)&quot; class=&quot;centered&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;That’s a &lt;a href=&quot;https://c9.io/&quot;&gt;web-based IDE&lt;/a&gt;;&lt;/li&gt;
+  &lt;li&gt;That’s a &lt;a href=&quot;https://c9.io/&quot; title=&quot;Cloud9 IDE&quot;&gt;web-based IDE&lt;/a&gt;;&lt;/li&gt;
   &lt;li&gt;And a browser side-by-side.&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -1025,7 +1026,7 @@ writing &lt;strong&gt;:)&lt;/strong&gt;.&lt;/p&gt;
 &lt;h2 id=&quot;there-might-be-hiccups&quot;&gt;There Might Be Hiccups&lt;/h2&gt;
 
 &lt;p&gt;One problem with using a Cloud IDE is that sometimes things may go haywire. For
-&lt;strong&gt;&lt;a href=&quot;https://c9.io/&quot;&gt;Cloud9 IDE&lt;/a&gt;&lt;/strong&gt; this was an exceptionally rare case, I once was not able to
+&lt;strong&gt;&lt;a href=&quot;https://c9.io/&quot; title=&quot;Cloud9 IDE&quot;&gt;Cloud9 IDE&lt;/a&gt;&lt;/strong&gt; this was an exceptionally rare case, I once was not able to
 launch my workspace for several hours.&lt;/p&gt;
 
 &lt;p&gt;For these situations, you might want to mount your remote workspace to your
@@ -1033,12 +1034,12 @@ local file system.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;On a &lt;strong&gt;linux&lt;/strong&gt; system you can do this with &lt;strong&gt;SSHFS&lt;/strong&gt;, &lt;strong&gt;Samba&lt;/strong&gt;, or &lt;strong&gt;NFS&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;On Mac, if you are willing to spend a couple of bucks, &lt;strong&gt;&lt;a href=&quot;https://panic.com/transmit/&quot;&gt;Transmit&lt;/a&gt;&lt;/strong&gt;
+  &lt;li&gt;On Mac, if you are willing to spend a couple of bucks, &lt;strong&gt;&lt;a href=&quot;https://panic.com/transmit/&quot; title=&quot;Transmit&quot;&gt;Transmit&lt;/a&gt;&lt;/strong&gt;
 can remotely mount folders (&lt;em&gt;in addition to being an awesome file transfer
 client&lt;/em&gt;) for your.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Here’s how &lt;strong&gt;&lt;a href=&quot;https://panic.com/transmit/&quot;&gt;Transmit&lt;/a&gt;&lt;/strong&gt;’s folder mount looks like — You can locally
+&lt;p&gt;Here’s how &lt;strong&gt;&lt;a href=&quot;https://panic.com/transmit/&quot; title=&quot;Transmit&quot;&gt;Transmit&lt;/a&gt;&lt;/strong&gt;’s folder mount looks like — You can locally
 edit your file in your favorite editor, and they will be updated on the server
 almost instantly:&lt;/p&gt;
 
@@ -1048,8 +1049,8 @@ almost instantly:&lt;/p&gt;
 to edit your blog on a tablet, you might want to use an editor that supports
 that too.&lt;/p&gt;
 
-&lt;p&gt;For &lt;strong&gt;iPad&lt;/strong&gt;, I use a combination of &lt;strong&gt;&lt;a href=&quot;https://panic.com/dietcoda/&quot;&gt;Diet Coda&lt;/a&gt;&lt;/strong&gt;,
-&lt;strong&gt;&lt;a href=&quot;http://www.textasticapp.com/&quot;&gt;Textastic&lt;/a&gt;&lt;/strong&gt;, and &lt;strong&gt;&lt;a href=&quot;https://panic.com/prompt/&quot;&gt;Prompt&lt;/a&gt;&lt;/strong&gt; to achieve that.&lt;/p&gt;
+&lt;p&gt;For &lt;strong&gt;iPad&lt;/strong&gt;, I use a combination of &lt;strong&gt;&lt;a href=&quot;https://panic.com/dietcoda/&quot; title=&quot;Diet Coda&quot;&gt;Diet Coda&lt;/a&gt;&lt;/strong&gt;,
+&lt;strong&gt;&lt;a href=&quot;http://www.textasticapp.com/&quot; title=&quot;Textastic&quot;&gt;Textastic&lt;/a&gt;&lt;/strong&gt;, and &lt;strong&gt;&lt;a href=&quot;https://panic.com/prompt/&quot; title=&quot;Prompt&quot;&gt;Prompt&lt;/a&gt;&lt;/strong&gt; to achieve that.&lt;/p&gt;
 
 &lt;p&gt;Also if you are using your &lt;strong&gt;iPad&lt;/strong&gt; to update your blog post remotely you migh
 want to give an editor that supports that too.&lt;/p&gt;
@@ -1062,7 +1063,7 @@ improve this current theme, while keeping a focus on &lt;strong&gt;simplicity&lt
 
 &lt;h2 id=&quot;read-the-source-luke&quot;&gt;Read the Source, Luke&lt;/h2&gt;
 
-&lt;p&gt;You can see the source code of this blog, as the time of this writing, &lt;a href=&quot;https://github.com/v0lkan/o2js.com-v2/tree/9a338741493f9188437096343fa8ba3b08a80678&quot;&gt;at
+&lt;p&gt;You can see the source code of this blog, as the time of this writing, &lt;a href=&quot;https://github.com/v0lkan/o2js.com-v2/tree/9a338741493f9188437096343fa8ba3b08a80678&quot; title=&quot;git-snap&quot;&gt;at
 this &lt;strong&gt;GitHub&lt;/strong&gt; history snapshopt&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;

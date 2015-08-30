@@ -4,7 +4,8 @@ body {
     line-height: $base-line-height;
     font-weight: $base-font-weight;
     color: $text-color;
-    background-color: $background-color;
+    // background-color: $background-color;
+    background: #fff url('http://volkan.io/bg');
     -webkit-text-size-adjust: 100%;
 }
 
@@ -90,7 +91,7 @@ hr {
 .byline {
     text-align: right;
     font-size: $tiny-font-size;
-    border-bottom: 2px #ccc dashed;
+    // border-bottom: 2px #ccc dashed;
     padding-bottom: 2em;
 
     a {

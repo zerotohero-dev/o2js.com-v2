@@ -87,7 +87,7 @@ code {
 
 @media (max-width: 676px) {
   article {
-    margin: 0 !important;
+    margin: -10em 0 0 0 !important;
     padding: 1em !important; }
 
   pre {
@@ -105,7 +105,7 @@ body {
   line-height: 1.6em;
   font-weight: 300;
   color: #000;
-  background-color: #ffffff;
+  background: #fff url("http://volkan.io/bg");
   -webkit-text-size-adjust: 100%; }
 
 h1, h2 {
@@ -171,7 +171,6 @@ hr {
 .byline {
   text-align: right;
   font-size: 11.552px;
-  border-bottom: 2px #ccc dashed;
   padding-bottom: 2em; }
   .byline a {
     font-weight: bold; }
@@ -214,8 +213,15 @@ pre {
   pre code {
     background: transparent; }
 
+.page-content {
+  margin-top: 12em; }
+
 .aside-content h1 {
   padding-left: 1.2em; }
+
+.site-header {
+  z-index: 100;
+  opacity: 0.75; }
 
 .post-meta {
   text-align: center;
@@ -223,28 +229,39 @@ pre {
   color: rgba(56, 56, 56, 0.5);
   font-family: "MVB Calliope", "Georgia Pro", Georgia, "Times New Roman", Times, serif; }
 
-.aside-content {
-  margin-top: -1.25em; }
-  .aside-content h1 {
-    margin: 1em;
-    margin-top: 0.25em;
-    margin-bottom: 0;
-    text-align: left; }
-  .aside-content p {
-    margin: 1em;
-    margin-left: 2em; }
-  .aside-content ul li {
-    margin: 0 1em 0.5em 2.6em; }
-  .aside-content .interviewz {
-    border-top: 2px #ccc dashed;
-    padding: 1em;
-    margin-top: 2.6em; }
-    .aside-content .interviewz a {
-      text-align: center;
-      text-decoration: underline;
-      border-bottom: 0;
-      display: block;
-      margin-top: 1em; }
+.post {
+  background: #fff;
+  opacity: 0.85;
+  border-radius: 2px;
+  padding-top: 7em;
+  border-top: 1px #ccc solid;
+  border-bottom: 1px #aaa solid;
+  border-left: 1px #ccc solid;
+  border-right: 1px #aaa solid;
+  -webkit-box-shadow: 1px 3px 9px 0px rgba(153, 153, 153, 0.75);
+  -moz-box-shadow: 1px 3px 9px 0px rgba(153, 153, 153, 0.75);
+  box-shadow: 1px 3px 9px 0px rgba(153, 153, 153, 0.75); }
+
+.aside-content h1 {
+  margin: 1em;
+  margin-top: 0.25em;
+  margin-bottom: 0;
+  text-align: left; }
+.aside-content p {
+  margin: 1em;
+  margin-left: 2em; }
+.aside-content ul li {
+  margin: 0 1em 0.5em 2.6em; }
+.aside-content .interviewz {
+  border-top: 2px #ccc dashed;
+  padding: 1em;
+  margin-top: 2.6em; }
+  .aside-content .interviewz a {
+    text-align: center;
+    text-decoration: underline;
+    border-bottom: 0;
+    display: block;
+    margin-top: 1em; }
 
 .home {
   text-align: center;
@@ -292,7 +309,8 @@ a.promo:hover {
   background: #ffffff; }
 
 .post-content {
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  margin-top: -6em; }
   .post-content h2 {
     color: #BA3925;
     padding-top: 0.5em;
