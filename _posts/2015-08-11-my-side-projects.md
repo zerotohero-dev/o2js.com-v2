@@ -80,25 +80,40 @@ and their current states right now:
 
 > These are actively being developed; adding new features, fixing bugs, etc.
 
-### Board
+### Sif
 
-**[Board][board]** is a minimalistic and highly-scalable dashboard and
-monitoring app.
+**[sif][sif]** is an intelligent curator that makes information meanigful and
+findable. --- It is [a command line utility][sif] that I use to organize my links,
+basically.
 
-Also, [here's a demo board][board-demo].
+> **Aside**
+>
+> It also happens that [**sif** is a Norse goddess][sif-wikipedia].
 
-There are a lot of features to add; it's currently ready as a minimally viable
-solution. --- Feel free to [fork it][board].
+During my day-to-day work, I touch a substantial amount of links. I regularly
+collect, categorize, and **sift** those links.
 
-I'm preparing a list of what cool features to implement next.
+After collecting such links for a while I realized that it becomes harder to
+search your bookmarks after your browser's bookmark index grows above a few
+tens of megabytes. I also realized that my browser slowed down after my bookmark
+index file grew above a certain threshold.
 
-I'm also drafting a blog post about **[board]**'s implementation details, which
-I will be sharing soon, hopefully.
+> There are social bookmarking, and content sharing websites for this very purpose
+> of organizing content. They, however are slow to respond when compared to something
+> that you can run locally. And you have to be online to be able to sort and update
+> your bookmarks.
 
-[board]: https://github.com/v0lkan/board
-[board-demo]: http://volkan.io:4244/shuttle
-[gtd]: https://www.wikiwand.com/en/Getting_Things_Done
-[me]: mailto:me@volkan.io
+A **command-line interface** is the **fastest** that you'll ever get;
+and having a local copy of your index file is really helpful.
+
+Besides, since it's a plain text file, you can edit it with any editor: You
+won't need a fancy application, or a web interface to sift through your links.
+
+[You can visit sif's **GitHub repository** to learn more about it][sif].
+Contributions are always welcome, of course **;)**.
+
+[sif]: https://github.com/v0lkan/sif
+[sif-wikipedia]: http://www.wikiwand.com/en/Sif
 
 ### **o2js.com** Version 2
 
@@ -248,6 +263,26 @@ not using **[es2015][es6]** right now, then you are already lagging behind.
 
 [es6]: http://es6-features.org/
 
+### Board
+
+**[Board][board]** is a minimalistic and highly-scalable dashboard and
+monitoring app.
+
+Also, [here's a demo board][board-demo].
+
+There are a lot of features to add; it's currently ready as a minimally viable
+solution. --- Feel free to [fork it][board].
+
+I'm preparing a list of what cool features to implement next.
+
+I'm also drafting a blog post about **[board]**'s implementation details, which
+I will be sharing soon, hopefully.
+
+[board]: https://github.com/v0lkan/board
+[board-demo]: http://volkan.io:4244/shuttle
+[gtd]: https://www.wikiwand.com/en/Getting_Things_Done
+[me]: mailto:me@volkan.io
+
 ### Tosspick
 
 A fun mobile game that I'm actively working on. --- It's a new adventure
@@ -276,6 +311,29 @@ much content when you crawl without executing the **JavaScript** on it.
 [linkibol]: http://linkibol.com
 [wikiwand]: http://www.wikiwand.com/
 
+### JFDI
+
+**[jfdi][jfdi]**, in a nutshell, is an **CLI** to help you
+focus what goals you will achieve **right now**.
+
+Why? Because we geeks live in the terminal.
+
+And using something that's already running and most of the time available in front
+of your eyes helps you **overcome the inertia** of launching a separate application
+just to manage your goals.
+
+**[jfdi][jfdi]** is fast, and simple.
+
+[You can read more on **the project's GitHub page**][jfdi].
+
+[jfdi]: https://github.com/v0lkan/jfdi
+
+## Ice Box
+
+> The following are the projects that are in the **ice box**.
+>
+> That is to say, they **won't** be active for a **long** time.
+
 ### Linkibol
 
 **[Linkibol][linkibol]** is an attempt to create a **niche** and **focused** search
@@ -290,12 +348,6 @@ I will also use **[elastic search][elastic]** (*[see the learning
 section](#learning-stuff)*) to create more relevant search results. ---
 Currently **[linkibol][linkibol]** has a home-baked full text search engine.
 It works fine; however, [elastic search][elastic] will provide much better results.
-
-## Ice Box
-
-> The following are the projects that are in the **ice box**.
->
-> That is to say, they **won't** be active for a **long** time.
 
 ### Writing a Technical Book on Modern JavaScript
 

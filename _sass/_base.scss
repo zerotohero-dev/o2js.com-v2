@@ -4,8 +4,7 @@ body {
     line-height: $base-line-height;
     font-weight: $base-font-weight;
     color: $text-color;
-    // background-color: $background-color;
-    background: #fff url('http://volkan.io/bg');
+    background: #fff url('/bg');
     -webkit-text-size-adjust: 100%;
 }
 

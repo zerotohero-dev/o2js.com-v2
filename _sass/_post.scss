@@ -1,21 +1,32 @@
-.post-meta {
-    text-align: center;
-    font-size: $base-font-size;
-    color: $grey-color;
-    font-family: $title-font-family;
-}
+	.post-meta {
+	    text-align: center;
+	    font-size: $base-font-size;
+	    color: $grey-color;
+	    font-family: $title-font-family;
+	}
 
-.post {
-    background: #fff;
-    opacity: 0.85;
+	.post, .home {
+	    background: #fff;
+	    //opacity: 0.85;
     border-radius: 2px;
     padding-top: 7em;
-    border-top: 1px #ccc solid;
-    border-bottom: 1px #aaa solid;
-    border-left: 1px #ccc solid;
-    border-right: 1px #aaa solid;
+   // border-top: 1px #ccc solid;
+  //  border-bottom: 1px #aaa solid;
+  //  border-left: 1px #ccc solid;
+  //  border-right: 1px #aaa solid;
 
-    -webkit-box-shadow: 1px 3px 9px 0px rgba(153,153,153,0.75);
-    -moz-box-shadow: 1px 3px 9px 0px rgba(153,153,153,0.75);
-    box-shadow: 1px 3px 9px 0px rgba(153,153,153,0.75);
+ //   -webkit-box-shadow: 1px 3px 9px 0px rgba(153,153,153,0.75);
+  //  -moz-box-shadow: 1px 3px 9px 0px rgba(153,153,153,0.75);
+   // box-shadow: 1px 3px 9px 0px rgba(153,153,153,0.75);
+}
+
+.post, .home {
+   -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.1) inset;
+
+}
+
+.home {
+    padding: 0 3em 3em 3em;
 }

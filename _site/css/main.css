@@ -87,8 +87,11 @@ code {
 
 @media (max-width: 676px) {
   article {
-    margin: -10em 0 0 0 !important;
+    margin: -6em 0 0 0 !important;
     padding: 1em !important; }
+
+  .post {
+    margin-top: -9em; }
 
   pre {
     max-width: 300px !important;
@@ -105,7 +108,7 @@ body {
   line-height: 1.6em;
   font-weight: 300;
   color: #000;
-  background: #fff url("http://volkan.io/bg");
+  background: #fff url("/bg");
   -webkit-text-size-adjust: 100%; }
 
 h1, h2 {
@@ -229,18 +232,18 @@ pre {
   color: rgba(56, 56, 56, 0.5);
   font-family: "MVB Calliope", "Georgia Pro", Georgia, "Times New Roman", Times, serif; }
 
-.post {
+.post, .home {
   background: #fff;
-  opacity: 0.85;
   border-radius: 2px;
-  padding-top: 7em;
-  border-top: 1px #ccc solid;
-  border-bottom: 1px #aaa solid;
-  border-left: 1px #ccc solid;
-  border-right: 1px #aaa solid;
-  -webkit-box-shadow: 1px 3px 9px 0px rgba(153, 153, 153, 0.75);
-  -moz-box-shadow: 1px 3px 9px 0px rgba(153, 153, 153, 0.75);
-  box-shadow: 1px 3px 9px 0px rgba(153, 153, 153, 0.75); }
+  padding-top: 7em; }
+
+.post, .home {
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.1) inset; }
+
+.home {
+  padding: 0 3em 3em 3em; }
 
 .aside-content h1 {
   margin: 1em;

@@ -5,8 +5,8 @@
     <description>o2.js; a coherent solution to your JavaScript dilemma.</description>
     <link>http://o2js.com/</link>
     <atom:link href="http://o2js.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 30 Aug 2015 16:04:04 +0000</pubDate>
-    <lastBuildDate>Sun, 30 Aug 2015 16:04:04 +0000</lastBuildDate>
+    <pubDate>Fri, 09 Oct 2015 13:51:33 +0000</pubDate>
+    <lastBuildDate>Fri, 09 Oct 2015 13:51:33 +0000</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -100,20 +100,41 @@ your comments and suggestions.&lt;/p&gt;
   &lt;p&gt;These are actively being developed; adding new features, fixing bugs, etc.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h3 id=&quot;board&quot;&gt;Board&lt;/h3&gt;
+&lt;h3 id=&quot;sif&quot;&gt;Sif&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/v0lkan/board&quot;&gt;Board&lt;/a&gt;&lt;/strong&gt; is a minimalistic and highly-scalable dashboard and
-monitoring app.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/v0lkan/sif&quot;&gt;sif&lt;/a&gt;&lt;/strong&gt; is an intelligent curator that makes information meanigful and
+findable. — It is &lt;a href=&quot;https://github.com/v0lkan/sif&quot;&gt;a command line utility&lt;/a&gt; that I use to organize my links,
+basically.&lt;/p&gt;
 
-&lt;p&gt;Also, &lt;a href=&quot;http://volkan.io:4244/shuttle&quot;&gt;here’s a demo board&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Aside&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;There are a lot of features to add; it’s currently ready as a minimally viable
-solution. — Feel free to &lt;a href=&quot;https://github.com/v0lkan/board&quot;&gt;fork it&lt;/a&gt;.&lt;/p&gt;
+  &lt;p&gt;It also happens that &lt;a href=&quot;http://www.wikiwand.com/en/Sif&quot;&gt;&lt;strong&gt;sif&lt;/strong&gt; is a Norse goddess&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;I’m preparing a list of what cool features to implement next.&lt;/p&gt;
+&lt;p&gt;During my day-to-day work, I touch a substantial amount of links. I regularly
+collect, categorize, and &lt;strong&gt;sift&lt;/strong&gt; those links.&lt;/p&gt;
 
-&lt;p&gt;I’m also drafting a blog post about &lt;strong&gt;&lt;a href=&quot;https://github.com/v0lkan/board&quot;&gt;board&lt;/a&gt;&lt;/strong&gt;’s implementation details, which
-I will be sharing soon, hopefully.&lt;/p&gt;
+&lt;p&gt;After collecting such links for a while I realized that it becomes harder to
+search your bookmarks after your browser’s bookmark index grows above a few
+tens of megabytes. I also realized that my browser slowed down after my bookmark
+index file grew above a certain threshold.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;There are social bookmarking, and content sharing websites for this very purpose
+of organizing content. They, however are slow to respond when compared to something
+that you can run locally. And you have to be online to be able to sort and update
+your bookmarks.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;A &lt;strong&gt;command-line interface&lt;/strong&gt; is the &lt;strong&gt;fastest&lt;/strong&gt; that you’ll ever get;
+and having a local copy of your index file is really helpful.&lt;/p&gt;
+
+&lt;p&gt;Besides, since it’s a plain text file, you can edit it with any editor: You
+won’t need a fancy application, or a web interface to sift through your links.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/v0lkan/sif&quot;&gt;You can visit sif’s &lt;strong&gt;GitHub repository&lt;/strong&gt; to learn more about it&lt;/a&gt;.
+Contributions are always welcome, of course &lt;strong&gt;;)&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;o2jscom-version-2&quot;&gt;&lt;strong&gt;o2js.com&lt;/strong&gt; Version 2&lt;/h3&gt;
 
@@ -254,6 +275,21 @@ however, the older ones still need to be converted.&lt;/p&gt;
 &lt;p&gt;This is a &lt;strong&gt;big&lt;/strong&gt; transformation that I have to do it gradually because if you’re
 not using &lt;strong&gt;&lt;a href=&quot;http://es6-features.org/&quot;&gt;es2015&lt;/a&gt;&lt;/strong&gt; right now, then you are already lagging behind.&lt;/p&gt;
 
+&lt;h3 id=&quot;board&quot;&gt;Board&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/v0lkan/board&quot;&gt;Board&lt;/a&gt;&lt;/strong&gt; is a minimalistic and highly-scalable dashboard and
+monitoring app.&lt;/p&gt;
+
+&lt;p&gt;Also, &lt;a href=&quot;http://volkan.io:4244/shuttle&quot;&gt;here’s a demo board&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;There are a lot of features to add; it’s currently ready as a minimally viable
+solution. — Feel free to &lt;a href=&quot;https://github.com/v0lkan/board&quot;&gt;fork it&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I’m preparing a list of what cool features to implement next.&lt;/p&gt;
+
+&lt;p&gt;I’m also drafting a blog post about &lt;strong&gt;&lt;a href=&quot;https://github.com/v0lkan/board&quot;&gt;board&lt;/a&gt;&lt;/strong&gt;’s implementation details, which
+I will be sharing soon, hopefully.&lt;/p&gt;
+
 &lt;h3 id=&quot;tosspick&quot;&gt;Tosspick&lt;/h3&gt;
 
 &lt;p&gt;A fun mobile game that I’m actively working on. — It’s a new adventure
@@ -278,6 +314,29 @@ much content when you crawl without executing the &lt;strong&gt;JavaScript&lt;/s
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/v0lkan/pringles&quot;&gt;Pringles&lt;/a&gt; will be a part of &lt;a href=&quot;http://linkibol.com&quot;&gt;linkibol&lt;/a&gt;’s (&lt;em&gt;see below&lt;/em&gt;) indexer.&lt;/p&gt;
 
+&lt;h3 id=&quot;jfdi&quot;&gt;JFDI&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/v0lkan/jfdi&quot;&gt;jfdi&lt;/a&gt;&lt;/strong&gt;, in a nutshell, is an &lt;strong&gt;CLI&lt;/strong&gt; to help you
+focus what goals you will achieve &lt;strong&gt;right now&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Why? Because we geeks live in the terminal.&lt;/p&gt;
+
+&lt;p&gt;And using something that’s already running and most of the time available in front
+of your eyes helps you &lt;strong&gt;overcome the inertia&lt;/strong&gt; of launching a separate application
+just to manage your goals.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/v0lkan/jfdi&quot;&gt;jfdi&lt;/a&gt;&lt;/strong&gt; is fast, and simple.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/v0lkan/jfdi&quot;&gt;You can read more on &lt;strong&gt;the project’s GitHub page&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;ice-box&quot;&gt;Ice Box&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The following are the projects that are in the &lt;strong&gt;ice box&lt;/strong&gt;.&lt;/p&gt;
+
+  &lt;p&gt;That is to say, they &lt;strong&gt;won’t&lt;/strong&gt; be active for a &lt;strong&gt;long&lt;/strong&gt; time.&lt;/p&gt;
+&lt;/blockquote&gt;
+
 &lt;h3 id=&quot;linkibol&quot;&gt;Linkibol&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://linkibol.com&quot;&gt;Linkibol&lt;/a&gt;&lt;/strong&gt; is an attempt to create a &lt;strong&gt;niche&lt;/strong&gt; and &lt;strong&gt;focused&lt;/strong&gt; search
@@ -292,14 +351,6 @@ internal cached documents.&lt;/p&gt;
 section&lt;/a&gt;&lt;/em&gt;) to create more relevant search results. —
 Currently &lt;strong&gt;&lt;a href=&quot;http://linkibol.com&quot;&gt;linkibol&lt;/a&gt;&lt;/strong&gt; has a home-baked full text search engine.
 It works fine; however, &lt;a href=&quot;https://www.elastic.co/&quot;&gt;elastic search&lt;/a&gt; will provide much better results.&lt;/p&gt;
-
-&lt;h2 id=&quot;ice-box&quot;&gt;Ice Box&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;The following are the projects that are in the &lt;strong&gt;ice box&lt;/strong&gt;.&lt;/p&gt;
-
-  &lt;p&gt;That is to say, they &lt;strong&gt;won’t&lt;/strong&gt; be active for a &lt;strong&gt;long&lt;/strong&gt; time.&lt;/p&gt;
-&lt;/blockquote&gt;
 
 &lt;h3 id=&quot;writing-a-technical-book-on-modern-javascript&quot;&gt;Writing a Technical Book on Modern JavaScript&lt;/h3&gt;
 
