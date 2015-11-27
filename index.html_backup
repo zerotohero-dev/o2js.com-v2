@@ -1,0 +1,56 @@
+---
+layout: default
+---
+<div class="home">
+    <p>&nbsp;</p>
+
+    <h1>Hi I’m <strong>Volkan</strong></h1>
+
+    <p><img title="Coffee is the answer ;)" alt="" src="/images/cf.png"></p>
+
+    <p>I’m <a href="http://volkan.io">Volkan</a>, and this is the place I write<br>
+    mostly about <strong>JavaScript</strong> techniques and best practices.</p>
+
+    <p>You’ll also find articles around the topics:<br>
+    <strong>technology</strong>, <strong>hacking</strong>, <strong>geekery</strong>,
+    “the” <strong>cloud</strong>, and <strong>productivity</strong>.</p>
+
+    <h2>Articles</h2>
+
+    <ul class="post-list">
+    {% for post in site.posts %}
+        <li>
+        <h3>
+        <a href="{{ post.url | prepend: site.baseurl | replace:'.html',''}}"
+            >{{ post.title }}</a>
+                <span> ({{ post.updated | date: "%b %-d, %Y" }})</span>
+        </h3>
+        </li>
+    {% endfor %}
+    </ul>
+
+    <blockquote style="text-align:left;">
+        <p><strong>Note</strong>:</p>
+
+        <p>I’ll be gradually converting the articles in the existing site, and moving them here.</p>
+
+        <p><strong>The article list above is by no means complete</strong>.</p>
+
+        <p>Besides, this blog is under a constant rewriting process because technology, standards, 
+        conventions, and implementations <strong>change</strong> forever. 
+        Things that once were “best practices” can quickly become “antipatterns”.</p>
+
+        <p>Though, <a href="https://archive.org/web/">thanks to the witches and wizards who’ve created the wayback machine</a>, once something becomes public,
+        it never gets lost <strong>;)</strong></p>
+
+        <p>So you might be interested in <a href="https://web.archive.org/web/20130624151559/http://o2js.com/">browsing the internet archives for even older versions of this blog</a>.</p>
+        
+        <p>You might also want to <a href="http://o2js.com/v1">browse the old site for the articles that I have not converted yet</a>.</p>
+        
+
+        <p>There is also <a href="https://github.com/v0lkan/o2js.com/tree/master/server/blog/markdown">a repository of articles</a> that have not been migrated yet.</p>
+
+        <p>I know, it’s messy <strong>:)</strong> — I'm trying to clean it up as my time permits.</p>
+        <p><strong>Volkan</strong>.</p>
+    </blockquote>
+</div>
