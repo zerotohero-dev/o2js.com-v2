@@ -104,7 +104,7 @@ dl, dd, ol, ul, figure {
 
 body {
   font-family: "Georgia Pro", "Book Antiqua", Georgia, "Times New Roman", times, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6em;
   font-weight: 300;
   color: #000;
@@ -173,7 +173,7 @@ hr {
 
 .byline {
   text-align: right;
-  font-size: 11.552px;
+  font-size: 12.996px;
   padding-bottom: 2em; }
   .byline a {
     font-weight: bold; }
@@ -184,7 +184,7 @@ article {
 blockquote {
   border: none;
   border-radius: 0;
-  font-size: 14.4px;
+  font-size: 16.2px;
   border-left: 4px solid #ccc;
   margin: 1.6em 0;
   background: none;
@@ -196,7 +196,7 @@ blockquote {
 pre,
 code {
   background: #FFF9D6;
-  font-size: 11.552px;
+  font-size: 12.996px;
   font-family: "Input Mono Cond", "Lucida Console", Menlo, Monaco, "Courier New", Courier, mono, monospace; }
 
 code {
@@ -228,7 +228,7 @@ pre {
 
 .post-meta {
   text-align: center;
-  font-size: 16px;
+  font-size: 18px;
   color: rgba(56, 56, 56, 0.5);
   font-family: "MVB Calliope", "Georgia Pro", Georgia, "Times New Roman", Times, serif; }
 
@@ -290,7 +290,7 @@ pre {
         font-family: "MVB Calliope", "Georgia Pro", Georgia, "Times New Roman", Times, serif; }
       .home .post-list > li span {
         font-family: "Franklin ITC Cond Med", "Input Mono Cond", "Lucida Console", Menlo, Monaco, "Courier New", Courier, mono, monospace;
-        font-size: 16px;
+        font-size: 18px;
         font-style: italic; }
   .home h2, .home h3 {
     text-align: center; }
