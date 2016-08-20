@@ -1,0 +1,6 @@
+img, pre {
+   width: 200px;
+   max-width: 200px;
+   xdisplay: none;
+   overflow: scroll;
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>o2.js – A Coherent Solution to Your JavaScript Dilemma</title>
+    <meta name="description" content="o2.js; a coherent solution to your JavaScript dilemma.">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link href="//cloud.webtype.com/css/7aac64b3-a02e-43cb-9465-10369d68dd33.css" rel="stylesheet" type="text/css" />
+
+    <link rel="canonical" href="http://o2js.com/index_backup">
+
+    <link rel="alternate" type="application/rss+xml" title="o2.js – A Coherent Solution to Your JavaScript Dilemma"
+        href="http://o2js.com/feed.xml">
+
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        window.ga('create', 'UA-56512-12', 'o2js.com');
+        window.ga('send', 'pageview');
+    </script>
+</head>
+
+<body>
+    
+<header class="site-header"><a href="/" class="promo">explore other articles</a> &nbsp; | &nbsp; <a href="/interview-questions/">&raquo; <strong>ACE</strong> your interview &raquo;</a></header>
+
+
+
+    <div class="main-wrap">
+
+
+        <div class="aside-content">
+            <h1>Chase Me</h1>
+
+            <ul>
+            <li>me @ <a href="http://volkan.io/">volkan.io</a></li>
+            <li>Technical Lead @ <a href="http://cisco.com/">Cisco</a></li>
+            <li><a href="https://twitter.com/linkibol">@linkibol</a></li>
+            <li><a href="https://github.com/v0lkan">github.com/v0lkan</a></li>
+            <li><a href="https://speakerdeck.com/volkan">speakerdeck.com/volkan</a></li>
+            <li><a href="https://linkedin.com/in/volkanozcelik">linkedin.com/in/volkanozcelik</a></li>
+            </ul>
+
+            
+        </div>
+
+
+        <div class="page-content">
+            <div class="wrapper">
+            <div class="home">
+    <p>&nbsp;</p>
+
+    <h1>Hi I’m <strong>Volkan</strong></h1>
+
+    <p><img title="Coffee is the answer ;)" alt="" src="/images/cf.png"></p>
+
+    <p>I’m <a href="http://volkan.io">Volkan</a>, and this is the place I write<br>
+    mostly about <strong>JavaScript</strong> techniques and best practices.</p>
+
+    <p>You’ll also find articles around the topics:<br>
+    <strong>technology</strong>, <strong>hacking</strong>, <strong>geekery</strong>,
+    “the” <strong>cloud</strong>, and <strong>productivity</strong>.</p>
+
+    <h2>Articles</h2>
+
+    <ul class="post-list">
+    
+        <li>
+        <h3>
+        <a href="/reference/personal/my-side-projects"
+            >I Confess, I'm a Lousy Side Projector</a>
+                <span> (Nov 7, 2015)</span>
+        </h3>
+        </li>
+    
+        <li>
+        <h3>
+        <a href="/productivity/writing-has-never-been-easier"
+            >Writing Has Never Been Easier</a>
+                <span> (Nov 7, 2015)</span>
+        </h3>
+        </li>
+    
+    </ul>
+
+    <blockquote style="text-align:left;">
+        <p><strong>Note</strong>:</p>
+
+        <p>I’ll be gradually converting the articles in the existing site, and moving them here.</p>
+
+        <p><strong>The article list above is by no means complete</strong>.</p>
+
+        <p>Besides, this blog is under a constant rewriting process because technology, standards, 
+        conventions, and implementations <strong>change</strong> forever. 
+        Things that once were “best practices” can quickly become “antipatterns”.</p>
+
+        <p>Though, <a href="https://archive.org/web/">thanks to the witches and wizards who’ve created the wayback machine</a>, once something becomes public,
+        it never gets lost <strong>;)</strong></p>
+
+        <p>So you might be interested in <a href="https://web.archive.org/web/20130624151559/http://o2js.com/">browsing the internet archives for even older versions of this blog</a>.</p>
+        
+        <p>You might also want to <a href="http://o2js.com/v1">browse the old site for the articles that I have not converted yet</a>.</p>
+        
+
+        <p>There is also <a href="https://github.com/v0lkan/o2js.com/tree/master/server/blog/markdown">a repository of articles</a> that have not been migrated yet.</p>
+
+        <p>I know, it’s messy <strong>:)</strong> — I'm trying to clean it up as my time permits.</p>
+        <p><strong>Volkan</strong>.</p>
+    </blockquote>
+</div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+</footer>
+
+</body>
+</html>

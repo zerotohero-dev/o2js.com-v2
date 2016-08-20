@@ -1,0 +1,937 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <title>o2.js - A Coherent Solution to You JavaScript Dilemma | See How Easily You Can Create a Promise </title>
+
+    <meta name="description" content="o2js.com; a coherent solution to your JavaScript dilemma.">
+    <meta name="author" content="Volkan Özçelik">
+    <meta name="viewport" content="width=device-width" />
+
+<link href="//cloud.webtype.com/css/7aac64b3-a02e-43cb-9465-10369d68dd33.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/style.css" rel="stylesheet" />
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-56512-12', 'o2js.com');
+        ga('send', 'pageview');
+    </script>
+</head>
+<body class="wf-active posts" style="background:url(/bg)">
+    <div class="container">
+        <p style="text-align:center">Feeling Lost? <a href="http://o2js.com/o2js-com-v2---a-new-hope?#topic-list" class="topics" title="the big index of articles written so far&hellip;"><strong>Start Here &raquo;&raquo;</strong></a></p>
+
+        
+<h2 class="title span8"><a href="/see-how-easily-you-can-create-a-promise">See How Easily You Can Create a Promise</a></h2>
+<div class="span8">
+  <blockquote>
+<p>This is the <strong>first</strong> part of a <strong>three</strong> part series. </p>
+<ul>
+<li>In this current part we will be <strong>creating</strong> a <strong>Promise</strong>; </li>
+<li>In the second part we will discuss practical uses of <strong><a href="http://promises-aplus.github.io/promises-spec/">Promises</a></strong>; </li>
+<li>And in the final part we will discuss <strong><a href="http://en.wikipedia.org/wiki/Anti-pattern">anti-patterns</a></strong> related to <strong>Promises</strong>.</li>
+</ul>
+</blockquote>
+<h3>Introduction</h3>
+<p><img src="http://o2js.com/assets/schrodinger.png?2" alt="the destiny of a Promise can be anything." style="float:left;border:1px #ccc solid;margin:1em;"></p>
+<p>If you are a front end developer, and you have not been living in a cave for the recent few years, you should have heard about <a href="http://promises-aplus.github.io/promises-spec/"><strong>various JavaScript Promise implementations</strong></a>, and (<em>more recently</em>) <a href="https://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise-objects"><strong>native EcmaScript Promises</strong></a>.</p>
+<p>The idea of <strong>Promises</strong> is nothing new; it stems from <a href="http://en.wikipedia.org/wiki/Monad_(category_theory)">the category theory</a>: At the very basis, a <strong>Promise</strong> represents the <em>possible</em> outcome of a <em>future</em> computation.</p>
+<p>Or to put it simpler, a <strong>Promise</strong> encapsulates the result of a <strong>future</strong> task.</p>
+<div style="clear:both;"></div>
+
+<p>Similar to the infamous <a href="http://en.wikipedia.org/wiki/Schr%C3%B6dinger&#39;s_cat">“Schrodinger’s cat” thought experiment</a>, you will not know a <strong>Promise</strong>’s final fate before it’s actually <strong>fulfilled</strong>. </p>
+<p>The <strong>fulfillment</strong> of a promise collapses its state to a <strong>single immutable truth</strong>:</p>
+<blockquote>
+<p>Similar to the <a href="http://en.wikipedia.org/wiki/Schr%C3%B6dinger&#39;s_cat">cat experiment</a>, when the cat is dead, it’s dead. That is to say, when the destiny (<em>i.e., the <strong>state</strong></em>) of a <strong>Promise</strong> is set, the <strong>Promise</strong> is <strong>read-only</strong>. It’s <strong>frozen</strong> in time, and there’s no way to alter its representation.</p>
+</blockquote>
+<h3>Agenda</h3>
+<p>In this article…</p>
+<ul>
+<li>We will be briefly defining what <strong>Monads</strong> are, and why <strong>Promises</strong> are (<em>like</em>) <strong>Monads</strong>;</li>
+<li>Implementing a <strong>Promise</strong>;</li>
+<li>While <a href="http://promises-aplus.github.io/promises-spec/">mentioning the relevant sections of the Promises/A+ spec</a> on our way.</li>
+</ul>
+<blockquote>
+<p>I highly recommend you to <strong><a href="http://promises-aplus.github.io/promises-spec/">read the spec before reading this article any further</a></strong>, because things are about to get “a little” confusing.</p>
+</blockquote>
+<h3><strong>Promises</strong> Have <strong>Monadic</strong> Behavior</h3>
+<p>Here is the <a href="http://en.wikipedia.org/wiki/Monad_(functional_programming)">wikipedia definition of a <strong>Monad</strong></a>:</p>
+<blockquote>
+<p>A <strong>monad</strong> is a structure that represents computations defined as sequences of steps. A <strong>type</strong> with a monad structure defines what it means to <strong>chain</strong> operations, or <strong>nest</strong> functions of that type together. This allows the programmer to build <strong>pipelines</strong> that process data in steps, in which each action is <strong>decorated</strong> with additional <strong>processing rules</strong> provided by the monad.</p>
+</blockquote>
+<p>So what’s a <strong>Promise</strong>?</p>
+<blockquote>
+<p>A <strong>Promise</strong> is an object that represents the result of a <strong>future computation</strong>. The <code>then(onFulfilled, onRejected)</code> method of the <strong>Promise</strong> defines a way to <strong>chain</strong> those computations, or <strong>nest</strong> two <strong>Promises</strong>, so that the ultimate and final fate of the inner <strong>Promise</strong>, once determined, cascades and affects the fate of the outer <strong>Promise</strong>. This allows the programmer to build <strong>pipelines</strong> that process asynchronous operations as if they were a synchronous series of events. The <strong>Promise</strong> is <strong>decorated</strong> with additional <strong>processing rules</strong> provided by the <a href="http://promises-aplus.github.io/promises-spec/">Promises A+ Spec</a>.</p>
+</blockquote>
+<p>See the similarity?</p>
+<p>Moreover, the fact that <a href="http://hackage.haskell.org/package/monad-par-0.3/docs/Control-Monad-Par.html">there are Monad constructs that act like a <strong>Promise</strong></a> also supports <a href="https://www.youtube.com/watch?v=dkZFtimgAcM">Douglas Crockford’s discussion</a> that a <strong>Promise</strong> is, in deed, a <strong><a href="http://en.wikipedia.org/wiki/Monad_(functional_programming)">Monad</a></strong>.</p>
+<blockquote>
+<p>I’ll stop the <strong>Promise</strong>/<strong>Monad</strong> debate here, because the topic of “<em>Monadic Behavior in JavaScript</em>” requires a separate blog post on its own. </p>
+<p>Rest assured, we will be having enough of a brain meld in this article, even without diving into the <strong>zen</strong> of <strong>Monads</strong>.</p>
+</blockquote>
+<h3>Sir! Can You Use “Plain English” Please</h3>
+<p>Simply put, a <strong>Monad</strong> is a <strong>wrapper</strong> function around a <strong>value</strong>. So by calling that function, you get the <strong>value</strong>.</p>
+<p>There are also <a href="http://www.haskell.org/haskellwiki/Monad_laws">three monadic laws</a> that a <strong>Monad</strong> has to conform to.</p>
+<p>A <strong>Promise</strong> is an object that walks like a <strong>Monad</strong>, talks like a <strong>Monad</strong>; therefore, for those who do not live in an ivory tower of statelessness, a <strong>Promise</strong> is a <strong>Monad</strong>.</p>
+<blockquote>
+<p>Similar to the fact that <a href="http://www.haskell.org/haskellwiki/Monad_laws">monadic laws</a> define the behavior of a <strong>Monad</strong>, the behavior of a <strong>Promise</strong> is governed by promise <strong>specifications</strong>. The most popular, and well-laid-out specification is <a href="http://promises-aplus.github.io/promises-spec/">the Promises/A+ Spec</a>. </p>
+<p>So in this article we will be adhering to that spec.</p>
+</blockquote>
+<p>Still not clear?</p>
+<p>Let’s start building a <strong>Promise</strong>; <code>then</code> I <strong>promise</strong> everything will be clearer.</p>
+<h3>The <strong>Promise</strong> Interface</h3>
+<p>As per the specification, <a href="http://promises-aplus.github.io/promises-spec/">a <strong>Promise</strong> is nothing but an <strong>Object</strong> with a <strong>then</strong> method</a>. </p>
+<p>At any time a promise can be either <strong>PENDING</strong>, or <strong>FULFILLED</strong>, or <strong>REJECTED</strong>. </p>
+<p>When the promise is constructed, its initial state is <strong>PENDING</strong>.</p>
+<p>The <strong>then</strong> method of the promise takes two arguments: <strong>onFulfilled</strong>, and <strong>onRejected</strong>. Both of these arguments are <strong>optional</strong>. These arguments are the delegates that will be executed when the promise transitions to a non-<strong>PENDING</strong> state.</p>
+<p>Here is an initial implementation, to begin with:</p>
+<pre><code><span class="comment">// src/o2/then/promise/core.js</span>
+
+<span class="string">'use strict'</span>;
+
+<span class="comment">/**
+ *<span class="phpdoc"> @module</span> o2.then
+ */</span>
+
+<span class="comment">/**
+ *<span class="phpdoc"> @class</span> o2.then.Promise
+ */</span>
+
+<span class="keyword">function</span> isPending(promise) {<span class="keyword">throw</span> <span class="string">'Not Implemented'</span>;}
+<span class="keyword">function</span> enqueue(promise, onFulfilled, onRejected) {<span class="keyword">throw</span> <span class="string">'Not Implemented'</span>;}
+<span class="keyword">function</span> handleNext(promise, onFulfilled, onRejected) {<span class="keyword">throw</span> <span class="string">'Not Implemented'</span>;}
+
+<span class="keyword">function</span> Promise() {}
+
+<span class="comment">/**
+ *<span class="phpdoc"> @method</span> then
+ *<span class="phpdoc"> @final</span>
+ *
+ *<span class="phpdoc"> @param</span> {Function} [onFulfilled]
+ *<span class="phpdoc"> @param</span> {Function} [onRejected]
+ *
+ *<span class="phpdoc"> @returns</span> {Promise}
+ */</span>
+Promise.prototype.then = <span class="keyword">function</span>(onFulfilled, onRejected) {
+    <span class="keyword">if</span> (isPending(<span class="keyword">this</span>)) {
+        <span class="keyword">return</span> enqueue(<span class="keyword">this</span>, onFulfilled, onRejected);
+    }
+
+    <span class="keyword">return</span> handleNext(<span class="keyword">this</span>, onFulfilled, onRejected);
+};
+
+module.exports = Promise;</code></pre>
+<p>If the promise is in a <strong>PENDING</strong> state, we queue the handlers (via the <strong>enqueue</strong> method). </p>
+<blockquote>
+<p>In other words, we <strong>defer</strong> the resolution of the promise as long as it remains <strong>PENDING</strong>. </p>
+</blockquote>
+<p>Let’s leave the <strong>isPending</strong>, <strong>enqueue</strong>, and <strong>handleNext</strong> methods unimplemented for a while. We’ll revisit them soon.</p>
+<h3>Moving Privates To Their Own Module</h3>
+<p>One thing that might be useful at this stage though, would be to move those unimplemented methods into a separate module: </p>
+<pre><code><span class="comment">// src/o2/then/promise/core.js</span>
+
+...
+
+<span class="keyword">var</span> privates = <span class="keyword">require</span>(<span class="string">'./privates/core'</span>),
+    isPending = privates.isPending,
+    enqueue = privates.enqueue,
+    handleNext = privates.handleNext;
+...</code></pre>
+<p>Why? </p>
+<p>Because sometimes we feel that a privately-scoped function might belong to a helper/utility module, so that other modules can also benefit from its functionality. </p>
+<p>If we move the private methods to their own modules <strong>from day one</strong>, then they will have minimal-to-zero dependency to their owner module; and it will be much easier to extract them out to a more general-purpose file.</p>
+<p>Additionally, this approach gives us the ability to <strong>test</strong> our private methods. </p>
+<h3>Wait… Isn’t Testing Private Methods a <strong>Bad</strong> Thing?</h3>
+<p>Although testing private methods may be considered as an <strong>anti-pattern</strong>, the hard reality of building real-life applications begets the fact that sometimes we <strong>do</strong> need to test private methods. </p>
+<blockquote>
+<p>Saying “private methods do not need testing”, is like saying “a car is fine as long as it drives okay”.</p>
+<p>First of all, it’s not that easy to <strong>define</strong> “okay”.</p>
+<p>Secondly, even if the driver is not noticing anything, things may start to degrade in time. A bolt gets loose, a sensor starts malfunctioning, the engine might start leaking oil… $#!% happens not only in real life, but also software projects.</p>
+<p>That’s why mechanics don’t just sit in the cockpit and drive the car to fix it. Quite the opposite, they test the <strong>internals</strong> of the car. They open the hood and play with the car’s private parts.</p>
+</blockquote>
+<p>At least it’s good to know that this “moving privates to their own module” approach gives us the <strong>freedom</strong> to test the private parts, <strong>if/when</strong> we need to.</p>
+<h3>The <strong>Deferred</strong></h3>
+<p>For proper <a href="http://en.wikipedia.org/wiki/Separation_of_concerns">separation of concerns</a>, a <strong>Promise</strong> should not be able to fulfill itself (<em>i.e., the user of a <strong>Promise</strong> should not have any control over the <strong>Promise</strong>’s state transition</em>).</p>
+<p>One way to do this is to create a <strong>Deferred</strong> object that exports a <strong>Promise</strong> interface.</p>
+<blockquote>
+<p>The <strong>Deferred</strong> will export a <strong>promise</strong> interface which is a <strong>Promise</strong>. The <strong>Deferred</strong> will have methods to <strong>resolve</strong> and <strong>reject</strong> the <strong>Promise</strong> that it manages, whereas the <strong>promise</strong> interface it exports won’t publicly have those methods.</p>
+</blockquote>
+<p>Let’s start with creating the skeleton of a <strong>Deferred</strong> first:</p>
+<pre><code><span class="comment">// src/o2/then/deferred/core.js</span>
+
+<span class="string">'use strict'</span>
+
+<span class="comment">/**
+ *<span class="phpdoc"> @method</span> Deferred
+ *<span class="phpdoc"> @constructor</span>
+ */</span>
+<span class="keyword">function</span> Deferred() {
+}
+
+<span class="comment">/**
+ *<span class="phpdoc"> @method</span> resolve
+ *<span class="phpdoc"> @final</span>
+ *
+ *<span class="phpdoc"> @param</span> value
+ */</span>
+Deferred.prototype.resolve = <span class="keyword">function</span>(value) {
+    <span class="keyword">throw</span> <span class="string">'Not Implemented'</span>;
+};
+
+<span class="comment">/**
+ *<span class="phpdoc"> @method</span> reject
+ *<span class="phpdoc"> @final</span>
+ *
+ *<span class="phpdoc"> @param</span> reason
+ */</span>
+Deferred.prototype.reject = <span class="keyword">function</span>(reason) {
+    <span class="keyword">throw</span> <span class="string">'Not Implemented'</span>;
+};
+
+module.exports = Deferred;</code></pre>
+<h3><strong>Deferred</strong> States</h3>
+<p>A <strong>Deferred</strong> can be in one of the following states:</p>
+<pre><code><span class="comment">// src/o2/then/defererd/state/core.js</span>
+
+<span class="string">'use strict'</span>;
+
+exports.PENDING = <span class="number">0</span>;
+exports.FULFILLED = <span class="number">1</span>;
+exports.REJECTED = -<span class="number">1</span>;</code></pre>
+<h3>The <strong>Deferred</strong> Constructor</h3>
+<p>Now let’s add a few attributes to the <strong>Deferred</strong> constructor, and make it export a <strong>promise</strong> interface.</p>
+<pre><code><span class="comment">/**
+ *<span class="phpdoc"> @method</span> Deferred
+ *<span class="phpdoc"> @constructor</span>
+ */</span>
+<span class="keyword">function</span> Deferred() {
+    <span class="keyword">this</span>.state = state.PENDING;
+    <span class="keyword">this</span>.outcome = <span class="keyword">null</span>;
+    <span class="keyword">this</span>.futures = [];
+    <span class="keyword">this</span>.promise = <span class="keyword">new</span> Promise(<span class="keyword">this</span>, Deferred);
+}</code></pre>
+<p>Where…</p>
+<ul>
+<li><strong>state</strong> is the current state of the <strong>Deferred</strong>; </li>
+<li><strong>outcome</strong> is its value when the <strong>Promise</strong> it manages gets fulfilled; </li>
+<li><strong>futures</strong> is basically a <a href="http://en.wikipedia.org/wiki/Queue_(abstract_data_type)">queue</a> that’s populated when <a href="http://promises-aplus.github.io/promises-spec/#point-36"><strong>then</strong> is called multiple times on the <strong>promise</strong></a>. </li>
+<li><strong>promise</strong> is the <strong>Promise</strong> interface that the <strong>Deferred</strong> exposes to the world.</li>
+</ul>
+<blockquote>
+<p><strong>Aside</strong>:</p>
+<p>Here, we are injecting the <strong>Deferred</strong> object as a <a href="http://en.wikipedia.org/wiki/Dependency_injection">dependency</a> into the <strong>Promise</strong> constructor.</p>
+<p>Should you want looser coupling between the <strong>Promise</strong> and its owner <strong>Deferred</strong>, you could choose a <a href="http://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern">PubSub implementation</a> instead.</p>
+<p>In this article, we will continue using the <a href="http://en.wikipedia.org/wiki/Dependency_injection">dependency injection</a> approach because it’s easier to follow. Besides, there’s no need to introduce an additional level of abstraction to an already-convoluted concept.</p>
+</blockquote>
+<h3>“Resolving” and “Rejecting” a <strong>Deferred</strong></h3>
+<p>The resolution of the <strong>Deferred</strong> is done by two methods. Namely, <strong>resolve</strong>, and <strong>reject</strong>:</p>
+<p>Let’s start with the simpler one:</p>
+<pre><code><span class="comment">// src/o2/then/deferred/core.js</span>
+
+<span class="comment">/**
+ *<span class="phpdoc"> @method</span> reject
+ *<span class="phpdoc"> @static</span>
+ *<span class="phpdoc"> @final</span>
+ *
+ *<span class="phpdoc"> @param</span> reason
+ */</span>
+Deferred.prototype.reject = <span class="keyword">function</span>(reason) {
+    <span class="keyword">this</span>.state = state.REJECTED;
+    <span class="keyword">this</span>.outcome = reason;
+
+    reject(<span class="keyword">this</span>, reason);
+
+    <span class="keyword">this</span>.reject = noop;
+};</code></pre>
+<p>When rejecting a <strong>Deferred</strong> we update its state from <strong>PENDING</strong> to <strong>REJECTED</strong>; we update its outcome with the <strong>reason</strong> of rejection; and then we run a rejection procedure (<em>i.e., <code>reject(this, value)</code></em>). We will come to the rejection procedure soon.</p>
+<p>And when a <strong>Deferred</strong> is <strong>resolved</strong> we do the following:</p>
+<pre><code><span class="comment">// src/o2/then/deferred/core.js</span>
+
+<span class="comment">/**
+ *<span class="phpdoc"> @method</span> resolve
+ *<span class="phpdoc"> @final</span>
+ *
+ *<span class="phpdoc"> @param</span> value
+ */</span>
+Deferred.prototype.resolve = <span class="keyword">function</span>(value) {
+    <span class="keyword">if</span> (isPromise(value)) {
+        chain(<span class="keyword">this</span>, value);
+
+        <span class="keyword">this</span>.resolve = noop;
+
+        <span class="keyword">return</span>;
+    }
+
+    resolve(<span class="keyword">this</span>, value);
+
+    <span class="keyword">this</span>.resolve = noop; \\ (*)
+};</code></pre>
+<p>One obvious difference here is, if the <strong>value</strong> that we are trying to resolve is a <strong>Promise</strong>, then we <strong>chain</strong> it. Otherwise, we run the resolution procedure (<em>i.e., <code>resolve(this, value)</code></em>).</p>
+<p>The <strong>chain</strong> method makes our <strong>Deferred</strong> wait for the <strong>value</strong> (<em>which is a <strong>Promise</strong></em>) to be <strong>fulfilled</strong>(**) before resolving itself.</p>
+<p>As per the specification, <a href="http://promises-aplus.github.io/promises-spec/#point-29">you cannot resolve or reject a deferred more than once</a>. Thus when we <strong>reject</strong> a deferred, we set the <strong>reject</strong> method to <strong>noop</strong>, where <strong>noop</strong> is simply an anonymous function.</p>
+<p>We’ll come to the <strong>chain</strong> and <strong>resolve</strong> methods shortly.</p>
+<blockquote>
+<p><strong>Aside</strong>:</p>
+<p>* – Setting <code>this.reject</code> and <code>this.resolve</code> to <code>noop</code> at the end of the method ensures that once <strong>state</strong> and <strong>outcome</strong> of the <strong>Deferred</strong> are set, they are <strong>final</strong>, <strong>immutable</strong>,  and will never change.</p>
+<p>** – A <strong>Promise</strong> is said to be <strong>fulfilled</strong> when its owning <strong>Deferred</strong> is <strong>resolved</strong> or <strong>rejected</strong>.</p>
+</blockquote>
+<h3>The <strong>Promise</strong> Constructor</h3>
+<p>While we are at there, let us modify the <strong>Promise</strong> constructor too:</p>
+<pre><code><span class="comment">// src/o2/then/promise/core.js</span>
+
+<span class="comment">/**
+ *<span class="phpdoc"> @method</span> Promise
+ *<span class="phpdoc"> @constructor</span>
+ *
+ *<span class="phpdoc"> @param</span> ownerDeferred
+ *<span class="phpdoc"> @param</span> DeferredConstructor
+ */</span>
+<span class="keyword">function</span> Promise(ownerDeferred, DeferredConstructor) {
+    <span class="keyword">this</span>.deferred = ownerDeferred;
+    <span class="keyword">this</span>.Deferred = DeferredConstructor;
+}</code></pre>
+<p>Again, it’s nothing fancy: We’ve already injected the dependencies to the <strong>Promise</strong> constructor when we created the <strong>Deferred</strong> constructor above. Here, we are just assigning those dependencies as member variables to the promise.</p>
+<p>Let’s introduce another concept called “<strong>Future</strong>”.</p>
+<h3><strong>Futures</strong></h3>
+<p>A <strong>Future</strong> is an entity that abstracts a future computation.</p>
+<p>There <strong>Future</strong> constructor takes a <strong>Deferred</strong>, an <strong>onFulfilled</strong> delegate, and an <strong>onRejected</strong> delegate.</p>
+<ul>
+<li>The <strong>onFulfilled</strong> delegate is called when <strong>resolving</strong> the <strong>Future</strong>;</li>
+<li>And the <strong>onRejected</strong> delegate is called when <strong>rejecting</strong> the <strong>Future</strong>.</li>
+</ul>
+<p>Here is the <strong>Future</strong> constructor:</p>
+<pre><code><span class="comment">// src/o2/then/future/core.js</span>
+
+<span class="comment">/**
+ *<span class="phpdoc"> @method</span> Future
+ *<span class="phpdoc"> @constructor</span>
+ *
+ *<span class="phpdoc"> @param</span> deferred
+ *<span class="phpdoc"> @param</span> onFulfilled
+ *<span class="phpdoc"> @param</span> onRejected
+ */</span>
+<span class="keyword">function</span> Future(deferred, onFulfilled, onRejected) {
+    <span class="keyword">this</span>.deferred = deferred;
+    <span class="keyword">this</span>.onFulfilled = onFulfilled;
+    <span class="keyword">this</span>.onRejected = onRejected;
+}</code></pre>
+<p>The <strong>resolve</strong> and <strong>reject</strong> methods of the <strong>Future</strong> object simply delegate the operation to a private <code>handle(deferred, delegate)</code> method, as follows:</p>
+<pre><code><span class="comment">// src/o2/then/future/core.js</span>
+
+<span class="comment">/**
+ *<span class="phpdoc"> @method</span> resolve
+ *<span class="phpdoc"> @final</span>
+ *
+ *<span class="phpdoc"> @param</span> value
+ */</span>
+Future.prototype.resolve = <span class="keyword">function</span>(value) {
+    handle(<span class="keyword">this</span>.deferred, 
+        isFunction(<span class="keyword">this</span>.onFulfilled) ? 
+        <span class="keyword">this</span>.onFulfilled : identity, value
+    );
+};
+
+<span class="comment">/**
+ *<span class="phpdoc"> @method</span> reject
+ *<span class="phpdoc"> @final</span>
+ *
+ *<span class="phpdoc"> @param</span> reason
+ */</span>
+Future.prototype.reject = <span class="keyword">function</span>(reason) {
+    handle(<span class="keyword">this</span>.deferred, 
+        isFunction(<span class="keyword">this</span>.onRejected) ? 
+        <span class="keyword">this</span>.onRejected : identity, reason
+    );
+};</code></pre>
+<p>As per the specification, <a href="http://promises-aplus.github.io/promises-spec/#point-23">both <strong>onFulfilled</strong> and <strong>onRejected</strong> are optional</a>. Therefore, the <strong>onFulfilled</strong> and <strong>onRejected</strong> arguments that the <strong>Future</strong> uses might be <strong>undefined</strong>. In that case, we simply use a pass-through <a href="http://en.wikipedia.org/wiki/Identity_function">identity function</a>.</p>
+<p>How the <strong>handle</strong> method operates <a href="http://promises-aplus.github.io/promises-spec/#the_promise_resolution_procedure">has also been defined in greater depth in the specification</a>. </p>
+<p>Here is a way of implementing <strong>handle</strong>:</p>
+<pre><code><span class="comment">// src/o2/future/privates/core.js</span>
+
+<span class="string">'use strict'</span>;
+
+<span class="keyword">var</span> next = <span class="keyword">require</span>(<span class="string">'../../node_modules/o2.functional/core'</span>).next,
+
+    kCircularResolution = <span class="string">'Cannot resolve a promise with itself'</span>;
+
+<span class="comment">/**
+ *<span class="phpdoc"> @param</span> deferred
+ *<span class="phpdoc"> @param</span> handler
+ *<span class="phpdoc"> @param</span> value
+ */</span>
+exports.handle = <span class="keyword">function</span>(deferred, handler, value) {
+    next(<span class="keyword">function</span>() {
+        <span class="keyword">var</span> returnValue;
+
+        <span class="keyword">try</span> {
+            returnValue = handler(value);
+        } <span class="keyword">catch</span> (e) {
+            deferred.reject(e);
+
+            <span class="keyword">return</span>;
+        }
+
+        <span class="keyword">if</span> (returnValue === deferred.promise) {
+            deferred.reject(
+                <span class="keyword">new</span> TypeError(kCircularResolution)
+            );
+        } <span class="keyword">else</span> {
+            deferred.resolve(returnValue);
+        }
+    });
+};</code></pre>
+<p>The <strong>next</strong> function works similar to <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window.setTimeout">window.setTimeout</a> or <a href="http://howtonode.org/understanding-process-next-tick">process.nextTick</a>. We have to use it, because as per the specification, <a href="http://promises-aplus.github.io/promises-spec/#point-67">the resolution of a <strong>Future</strong> should be done with a <strong>fresh execution stack</strong></a>.</p>
+<p>Executing <strong>handle</strong> with a fresh call stack actually makes a lot of sense too: </p>
+<p>Delegating the execution of <strong>handle</strong> to the next tick allows us to be able to call the <strong>then</strong> method of a <strong>Promise</strong> multiple times and <strong>queue</strong> the resulting <strong>Future</strong>s.</p>
+<p>Here are a few other remarks:</p>
+<ul>
+<li>The <strong>Deferred</strong> that the <strong>Future</strong> is bound to is <strong>fulfilled</strong> with the <strong>returnValue</strong> of our handler function;</li>
+<li>When an <strong>error</strong> occurs when executing the <strong>handler</strong>, the bound <strong>Deferred</strong> is immediately <strong>rejected</strong>;</li>
+<li>If the <strong>returnValue</strong> of the <strong>handler</strong> cannot be the <strong>Deferred</strong>’s associated <strong>Promise</strong>; otherwise it will be a circular call.</li>
+</ul>
+<blockquote>
+<p>In summary, if everything goes well, the bound <strong>Deferred</strong> is <strong>resolved</strong> with the <strong>returnValue</strong> of the <strong>handler</strong> function; otherwise the <strong>Deferred</strong> will be <strong>rejected</strong> with a <strong>reason</strong>.</p>
+</blockquote>
+<p>An immediate question is: “…and how exactly does the <strong>Deferred</strong> get fulfilled or rejected?”, which we will analyze next.</p>
+<h3>Fulfilling a <strong>Deferred</strong></h3>
+<p>Let’s do a recap: Here’s how <strong>resolve</strong> and <strong>reject</strong> methods of our <strong>Deferred</strong> look like:</p>
+<pre><code><span class="comment">/**
+ *<span class="phpdoc"> @method</span> resolve
+ *<span class="phpdoc"> @final</span>
+ *
+ *<span class="phpdoc"> @param</span> value
+ */</span>
+Deferred.prototype.resolve = <span class="keyword">function</span>(value) {
+    <span class="keyword">if</span> (isPromise(value)) {
+        chain(<span class="keyword">this</span>, value);
+
+        <span class="keyword">this</span>.resolve = noop;
+
+        <span class="keyword">return</span>;
+    }
+
+    resolve(<span class="keyword">this</span>, value);
+
+    <span class="keyword">this</span>.resolve = noop;
+};
+
+<span class="comment">/**
+ *<span class="phpdoc"> @method</span> reject
+ *<span class="phpdoc"> @static</span>
+ *<span class="phpdoc"> @final</span>
+ *
+ *<span class="phpdoc"> @param</span> reason
+ */</span>
+Deferred.prototype.reject = <span class="keyword">function</span>(reason) {
+    <span class="keyword">this</span>.state = state.REJECTED;
+    <span class="keyword">this</span>.outcome = reason;
+
+    reject(<span class="keyword">this</span>, reason);
+
+    <span class="keyword">this</span>.reject = noop;
+};</code></pre>
+<p>What we have not covered so far, though, is the internals of those private <strong>resolve</strong> and <strong>reject</strong> methods.</p>
+<p><strong>Resolving</strong> and <strong>rejecting</strong> a deferred is relatively straightforward:</p>
+<ul>
+<li>We first update the <strong>state</strong> and the final <strong>outcome</strong> of the <strong>Deferred</strong> instance;</li>
+<li>And then we <strong>resolve</strong> or <strong>reject</strong> all of its associated <strong>Future</strong>s.</li>
+</ul>
+<pre><code><span class="comment">// src/o2/then/deferred/core.js</span>
+
+<span class="comment">/**
+ *<span class="phpdoc"> @param</span> deferred
+ *<span class="phpdoc"> @param</span> value
+ */</span>
+exports.reject = <span class="keyword">function</span>(deferred, value) {
+    deferred.state = state.FULFILLED;
+    deferred.outcome = value;
+
+    rejectFutures(deferred, value);
+};
+
+<span class="comment">/**
+ *<span class="phpdoc"> @param</span> deferred
+ *<span class="phpdoc"> @param</span> value
+ */</span>
+exports.resolve = <span class="keyword">function</span>(deferred, value) {
+    deferred.state = state.FULFILLED;
+    deferred.outcome = value;
+
+    resolveFutures(deferred, value);
+};</code></pre>
+<p>… where <strong>resolveFutures</strong> and <strong>rejectFutures</strong> are just simple iterations:</p>
+<pre><code><span class="comment">// src/o2/deferred/privates/privates/core.js</span>
+
+<span class="comment">/**
+ *<span class="phpdoc"> @param</span> deferred
+ *<span class="phpdoc"> @param</span> value
+ */</span>
+exports.resolveFutures = <span class="keyword">function</span>(deferred, value) {
+    <span class="keyword">var</span> futures = deferred.futures,
+        i, len;
+
+    <span class="keyword">for</span> (i = <span class="number">0</span>, len = futures.length; i &lt; len; i++) {
+        futures[i].resolve(value);
+    }
+
+    deferred.futures = <span class="keyword">null</span>;
+};
+
+<span class="comment">/**
+ *<span class="phpdoc"> @param</span> deferred
+ *<span class="phpdoc"> @param</span> reason
+ */</span>
+exports.rejectFutures = <span class="keyword">function</span>(deferred, reason) {
+    <span class="keyword">var</span> futures = deferred.futures,
+        i, len;
+
+    <span class="keyword">for</span>(i = <span class="number">0</span>, len = futures.length; i &lt; len; i++) {
+        futures[i].reject(reason);
+    }
+
+    deferred.futures = <span class="keyword">null</span>;
+};</code></pre>
+<h3>Chaining a <strong>Promise</strong></h3>
+<p>If the <strong>value</strong> we are trying to resolve in <code>deferred.resolve(value)</code> is a <strong>Promise</strong>, or something that <em>acts like</em> a <strong>Promise</strong> (<em>i.e., a <a href="http://promises-aplus.github.io/promises-spec/#point-7">thenaable</a></em>), then our <strong>Deferred</strong> <a href="http://promises-aplus.github.io/promises-spec/#point-50">needs to <strong>wait</strong> for the <strong>resolution</strong> of that promise</a>. </p>
+<blockquote>
+<p>The concept of a <strong>Deferred</strong> waiting for the <strong>resolution</strong> of another <strong>Promise</strong> before resolving its own promise is commonly known as <strong>promise chaining</strong>. This is one of the most powerful features of <strong>promises</strong>.</p>
+</blockquote>
+<p>Here is the implementation of the <strong>chain</strong> method:</p>
+<pre><code><span class="comment">// src/o2/deferred/privates/privates/core.js</span>
+
+<span class="comment">/**
+ *<span class="phpdoc"> @param</span> deferred
+ *<span class="phpdoc"> @param</span> promise
+ */</span>
+exports.chain = <span class="keyword">function</span>(deferred, promise) {
+    <span class="keyword">var</span> processed = <span class="keyword">false</span>,
+        resolve = exports.resolve,
+        reject = exports.reject,
+        chain = exports.chain;
+
+    <span class="keyword">try</span> {
+        promise.then(
+            <span class="keyword">function</span>(value) {
+                <span class="keyword">if</span> (processed) {<span class="keyword">return</span>;}
+
+                processed = <span class="keyword">true</span>;
+
+                <span class="keyword">if</span> (isPromise(value)) {
+                    chain(deferred, value);
+
+                    <span class="keyword">return</span>;
+                }
+
+                resolve(deferred, value);
+            },
+            <span class="keyword">function</span>(reason) {
+                <span class="keyword">if</span> (processed) {<span class="keyword">return</span>;}
+
+                processed = <span class="keyword">true</span>;
+
+                reject(deferred, reason);
+            }
+        );
+    } <span class="keyword">catch</span> (<span class="keyword">exception</span>) {
+        (<span class="keyword">function</span>() {
+            processed = <span class="keyword">true</span>;
+
+            reject(deferred, <span class="keyword">exception</span>);
+        }());
+    }
+};</code></pre>
+<p>Basically…</p>
+<ul>
+<li>When our chained <strong>Promise</strong> is resolved, we resolve our <strong>Deferred</strong>; </li>
+<li>And if our chained <strong>Promise</strong> is resolved with another <strong>Promise</strong>, then we again wait for the resolution of that <strong>Promise</strong> by calling <strong>chain</strong> again.</li>
+</ul>
+<blockquote>
+<p><strong>Aside</strong>: </p>
+<p>Although calling <code>chain()</code> inside <strong>exports.chain</strong> feels like <a href="http://en.wikipedia.org/wiki/Recursion">recursion</a>, it is <strong>not</strong>, because the <strong>then</strong> method (<em>and therefore the <strong>chain</strong> method</em>) will be called <strong>asynchronously</strong> in a totally separate <strong>execution stack</strong>.</p>
+<p><strong>Caveat</strong>: </p>
+<p>Note that we use a separate <strong>resolve</strong> method (<em>as in <code>resolve(deferred, value)</code></em>) instead of calling <code>deferred.resolve(value)</code>. </p>
+<p>Remember that we’ve set <strong>deferred.resolve</strong> to <strong>noop</strong> via “<code>this.resolve = noop;</code>” in <strong>Deferred.prototype.resolve</strong> above. </p>
+<p>So calling <code>deferred.resolve(value)</code> would have been a <strong>noop</strong> that does not do anything at all, which is not the expected behavior we want.</p>
+</blockquote>
+<h3><strong>Promise.then</strong></h3>
+<p>Let’s revisit to our <strong>Promise</strong> to see its internals:</p>
+<pre><code><span class="comment">// src/o2/then/promise/privates/core.js</span>
+
+Promise.prototype.then = <span class="keyword">function</span>(onFulfilled, onRejected) {
+    <span class="keyword">if</span> (isPending(<span class="keyword">this</span>)) {
+        <span class="keyword">return</span> enqueue(<span class="keyword">this</span>, onFulfilled, onRejected);
+    }
+
+    <span class="keyword">return</span> handleNext(<span class="keyword">this</span>, onFulfilled, onRejected);
+};</code></pre>
+<p>Here’s the helper <strong>isPending</strong> method:</p>
+<pre><code><span class="comment">// src/o2/then/promise/privates/privates/core.js</span>
+
+<span class="comment">/**
+ *<span class="phpdoc"> @param</span> promise
+ */</span>
+exports.isPending = <span class="keyword">function</span>(promise) {
+    <span class="keyword">return</span> getState(promise) === state.PENDING;
+};</code></pre>
+<p>where…</p>
+<pre><code><span class="comment">// src/o2/then/promise/privates/privates/privates/core.js</span>
+
+<span class="comment">/**
+ *<span class="phpdoc"> @param</span> promise
+ *<span class="phpdoc"> @returns</span> {state}
+ */</span>
+exports.getState = <span class="keyword">function</span>(promise) {
+    <span class="keyword">return</span> promise.deferred.state;
+};</code></pre>
+<h3><strong>enqueue</strong> and <strong>handleNext</strong></h3>
+<p><strong>enqueue</strong>, and <strong>handleNext</strong> methods should also return <strong>Promises</strong>, because <a href="http://promises-aplus.github.io/promises-spec/#point-39">the spec states that the <strong>then</strong> method of a <strong>Promise</strong> must always return a <em>new</em> <strong>Promise</strong></a>.</p>
+<p>Here’s how these methods look like:</p>
+<pre><code><span class="comment">/**
+ *<span class="phpdoc"> @param</span> promise
+ *<span class="phpdoc"> @param</span> onFulfilled
+ *<span class="phpdoc"> @param</span> onRejected
+ */</span>
+exports.enqueue = <span class="keyword">function</span>(promise, onFulfilled, onRejected) {
+    <span class="keyword">var</span> newDeferred = <span class="keyword">new</span> promise.Deferred();
+
+    enqueue(promise, <span class="keyword">new</span> Future(newDeferred, onFulfilled, onRejected));
+
+    <span class="keyword">return</span> newDeferred.promise;
+};
+
+<span class="comment">/**
+ *<span class="phpdoc"> @param</span> promise
+ *<span class="phpdoc"> @param</span> onFulfilled
+ *<span class="phpdoc"> @param</span> onRejected
+ */</span>
+exports.handleNext = <span class="keyword">function</span>(promise, onFulfilled, onRejected) {
+    <span class="keyword">var</span> newDeferred = <span class="keyword">new</span> promise.Deferred();
+
+    handleNext(promise, <span class="keyword">new</span> Future(newDeferred, onFulfilled, onRejected));
+
+    <span class="keyword">return</span> newDeferred.promise;
+};</code></pre>
+<p>Let&#39;s outline what we&#39;ve done above:</p>
+<ul>
+<li><strong>enqueue</strong> and <strong>handleNext</strong> return new <strong>Promise</strong> objects (<em>we will come to that soon</em>);</li>
+<li>At each method we create a new <strong>Future</strong> that manages the fate of the new <strong>Deferred</strong> that is the owner of the <strong>Promise</strong> to be returned (<em>note that we return <code>newDeferred.promise</code></em>).</li>
+<li>And each method delegate the overall processing to private <code>handleNext(promise, future)</code> and <code>enqueue(promise, future)</code> methods.</li>
+</ul>
+<p>And here are <code>handleNext(promise, future)</code> and <code>enqueue(promise, future)</code> methods, for reference:</p>
+<pre><code><span class="comment">/**
+ *<span class="phpdoc"> @param</span> promise
+ *<span class="phpdoc"> @param</span> future
+ */</span>
+exports.enqueue = <span class="keyword">function</span>(promise, future) {
+    promise.deferred.futures.push(future);
+};
+
+<span class="comment">/**
+ *<span class="phpdoc"> @param</span> promise
+ *<span class="phpdoc"> @param</span> future
+ */</span>
+exports.handleNext = <span class="keyword">function</span>(promise, future) {
+    <span class="keyword">var</span> currentState = exports.getState(promise),
+        currentOutcome = getOutcome(promise),
+        resolve = resolution[currentState];
+
+    <span class="keyword">if</span> (!resolve) {<span class="keyword">return</span>;}
+
+    resolve(future, currentOutcome);
+};</code></pre>
+<blockquote>
+<p>A <strong>Promise</strong> is said to be in a <strong>PENDING</strong> state, when its owner <strong>Deferred</strong> is in a <strong>PENDING</strong> state.</p>
+</blockquote>
+<p>Since <a href="http://promises-aplus.github.io/promises-spec/#point-36"><code>promise.then(fnFulfill, fnReject)</code> may be called multiple times</a>, if/when the status of the <strong>Promise</strong> is <strong>PENDING</strong>, we push all these future computations to the <strong>futures</strong> member of the <strong>Deferred</strong> via the <code>enqueue(promise, future)</code> call.</p>
+<p>And once the promise gets <strong>FULFILLED</strong> or <strong>REJECTED</strong>, we immediately handle it (<em>via the <code>handle(promise, future)</code> call</em>).</p>
+<p><code>getOutcome(promise)</code> is equivalent to <code>promise.deferred.outcome</code>.</p>
+<p><code>enqueue(currentPromise, future)</code> creates a new <strong>Future</strong> with a new <strong>Deferred</strong>, queues it, and returns that deferred’s <strong>promise</strong> interface. It populates the <strong>futures</strong> collection, to be processed with the current deferred’s (<em>i.e. the <strong>owner</strong> deferred of the <strong>currentPromise</strong></em>) resolution.</p>
+<p><code>handleNext(promise, future)</code> creates a new <strong>Future</strong> with a new <strong>Deferred</strong>, handles it, and returns that <strong>deferred</strong>’s <strong>promise</strong> <em>interface</em>.</p>
+<p>Internally, <strong>enqueue</strong> is nothing but an array push operation; <strong>handleNext</strong> is slightly more involved, though:</p>
+<ul>
+<li>We first create a <strong>resolution <a href="http://en.wikipedia.org/wiki/Strategy_pattern">strategy</a></strong>,</li>
+<li>Then we <strong>resolve</strong> our <strong>future</strong>, using this strategy, with the outcome of our <strong>promise</strong>.</li>
+</ul>
+<p>And the resolution strategy is a mapping of various states to handlers, as we will see next.</p>
+<h3>The Resolution <strong>Strategy</strong></h3>
+<p>Here’s how the the above <strong>resolution</strong> <a href="http://en.wikipedia.org/wiki/Strategy_pattern">strategy</a> works:</p>
+<pre><code><span class="comment">// src/o2/then/promise/privates/privates/privates/strategy.js</span>
+
+<span class="string">'use strict'</span>;
+
+...
+
+<span class="comment">/**
+ *<span class="phpdoc"> @param</span> future
+ *<span class="phpdoc"> @param</span> outcome
+ */</span>
+resolutionStrategy[state.PENDING] = <span class="keyword">function</span>(future, outcome) {
+    void future;
+    void outcome;
+};
+
+<span class="comment">/**
+ *<span class="phpdoc"> @param</span> future
+ *<span class="phpdoc"> @param</span> outcome
+ */</span>
+resolutionStrategy[state.FULFILLED] = <span class="keyword">function</span>(future, outcome) {
+    future.resolve(outcome);
+};
+
+<span class="comment">/**
+ *<span class="phpdoc"> @param</span> future
+ *<span class="phpdoc"> @param</span> outcome
+ */</span>
+resolutionStrategy[state.REJECTED] = <span class="keyword">function</span>(future, outcome) {
+    future.reject(outcome);
+};
+
+exports.resolution = resolutionStrategy;</code></pre>
+<p>That’s all we had to do to create a <strong><a href="http://promises-aplus.github.io/promises-spec/">Promises/A+</a></strong> compliant <strong>Promise</strong> implementation.</p>
+<p>There’s one last thing to do though: Exposing a simpler public interface.</p>
+<h3>The <strong>o2.then</strong> Public Interface</h3>
+<p>At minimum, we will need to export a <strong>defer</strong> method that returns a new <strong>Deferred</strong>:</p>
+<pre><code><span class="comment">// src/o2/then/core.js</span>
+
+...
+
+
+<span class="comment">/**
+ * Returns a `Deferred` **d**, where…
+ *
+ * * `d.resolve(value)` resolves the deferred,
+ * * `d.reject(reason)` rejects the deferred.
+ * * `d.promise` is a "thenable"  Promises/A+ compliant promise interface.
+ * 
+ *<span class="phpdoc"> @method</span> defer
+ *<span class="phpdoc"> @static</span>
+ *<span class="phpdoc"> @final</span>
+ *
+ *<span class="phpdoc"> @returns</span> {Deferred}
+ */</span>
+exports.defer = <span class="keyword">function</span>() {
+    <span class="keyword">return</span> <span class="keyword">new</span> Deferred();
+};</code></pre>
+<h3>Let’s Test Our Code</h3>
+<p>The entire code that we’ve discussed so far is also <a href="https://www.npmjs.org/package/o2.then">available through <strong>npm</strong></a>.</p>
+<p>To play with it, let’s create a test folder and fetch the code first:</p>
+<pre><code>$ mkdir test
+$ cd test
+$ npm init
+$ npm install o2.then
+
+npm WARN package.json test@<span class="number">0.0</span>.<span class="number">0</span> No description
+npm WARN package.json test@<span class="number">0.0</span>.<span class="number">0</span> No repository field.
+npm WARN package.json test@<span class="number">0.0</span>.<span class="number">0</span> No README data
+npm http GET https:<span class="comment">//registry.npmjs.org/o2.then</span>
+npm http <span class="number">304</span> https:<span class="comment">//registry.npmjs.org/o2.then</span>
+npm http GET https:<span class="comment">//registry.npmjs.org/o2.functional/0.1.1</span>
+npm http GET https:<span class="comment">//registry.npmjs.org/o2.validation/0.2.0</span>
+npm http <span class="number">304</span> https:<span class="comment">//registry.npmjs.org/o2.functional/0.1.1</span>
+npm http <span class="number">304</span> https:<span class="comment">//registry.npmjs.org/o2.validation/0.2.0</span>
+o2.then@<span class="number">0.2</span>.<span class="number">2</span> node_modules/o2.then
+├── o2.validation@<span class="number">0.2</span>.<span class="number">0</span>
+└── o2.functional@<span class="number">0.1</span>.<span class="number">1</span>
+
+$ vim index.js</code></pre>
+<p>And let the contents of <strong>index.js</strong> be as follows:</p>
+<pre><code><span class="string">'use strict'</span>;
+
+<span class="keyword">var</span> then = <span class="keyword">require</span>(<span class="string">'o2.then/core'</span>),
+    deferred = then.defer(),
+    promise = deferred.promise;
+
+setTimeout(<span class="keyword">function</span>() {
+    deferred.resolve(<span class="string">'o2js.com:'</span>);
+}, <span class="number">1000</span>);
+
+promise.then(<span class="keyword">function</span>(value) {
+    console.log(value);
+
+    <span class="keyword">var</span> deferred = then.defer();
+
+    setTimeout(<span class="keyword">function</span>() {
+        deferred.resolve(value + <span class="string">' A coherent'</span>);
+    }, <span class="number">1000</span>);
+
+    promise = deferred.promise;
+
+    promise.then(<span class="keyword">function</span>(value) {
+        console.log(value);
+
+        <span class="keyword">var</span> deferred = then.defer();
+
+        setTimeout(<span class="keyword">function</span>() {
+            deferred.resolve(value + <span class="string">' solution'</span>);
+        }, <span class="number">2000</span>);
+
+        <span class="keyword">return</span> deferred.promise.then(<span class="keyword">function</span>(value) {
+            <span class="keyword">return</span> value + <span class="string">' to your JavaScript'</span>;
+        });
+    }).then(<span class="keyword">function</span>(value) {
+        console.log(value);
+
+        <span class="keyword">return</span> value + <span class="string">' dilemma!'</span>;
+    }).then(<span class="keyword">function</span>(value) {
+        console.log(value);
+    });
+
+    <span class="keyword">return</span> promise;
+}).then(<span class="keyword">function</span>(value) {
+    console.log(value);
+});
+
+promise.then(<span class="keyword">function</span>(value) {
+    console.log(value);
+});</code></pre>
+<p>The output will be:</p>
+<pre><code>o2js.com:
+o2js.com:
+o2js.com: A coherent
+o2js.com: A coherent
+o2js.com: A coherent solution to your JavaScript
+o2js.com: A coherent solution to your JavaScript dilemma!</code></pre>
+<p>Of course, this is just a dummy sample application. We will be diving into more practical <strong>Promise</strong> use cases in the next article of this series.</p>
+<h3>Read the Source, Luke</h3>
+<p>You can visit the version of the code that’s discussed in this article <a href="https://github.com/v0lkan/o2.js/tree/11614f9280e7543446cdaf28857f8357e7047e44/src/o2/then">in this <strong>GitHub</strong> history snapshot</a>.</p>
+<p>You can also install the most up-to-date code of this project may be <a href="https://www.npmjs.org/package/o2.then">via npm</a>.</p>
+<h3>Conclusion</h3>
+<p>You can easily see how <strong>Promises</strong> flatten the <a href="http://callbackhell.com/">callback hell</a>, and make the code more manageable, and, actually, that’s   the least important reason why <strong>Promises</strong> are useful. You might also want to <a href="http://domenic.me/2012/10/14/youre-missing-the-point-of-promises/">read Domenic’s excellent article to not to miss the point of <strong>Promises</strong></a>.</p>
+<blockquote>
+<p>Once you get used to the overall <strong>Promise</strong> idiom, you will never go back.</p>
+<p>You will see every <strong>async</strong> callback as a <strong>Promise</strong>.</p>
+<p>When you see your peers using <a href="http://en.wikipedia.org/wiki/Continuation-passing_style">continuation-passing style</a> <strong>callbacks</strong>, you will impatiently ask them why they are not using <strong>promises</strong> instead.</p>
+</blockquote>
+<p>This was just a very basic <strong><a href="http://promises-aplus.github.io/promises-spec/">Promise</a></strong> implementation. Feel free to use it in production, if you like.</p>
+<p>And there are several other excellent <strong>Promise</strong> libraries though:</p>
+<ul>
+<li><strong><a href="https://github.com/kriskowal/q">Q</a></strong> A full-featured <strong>Promise</strong> library with a large, powerful API surface, adapters for <strong>Node.js</strong>, progress support, and preliminary support for long stack traces.</li>
+<li><strong><a href="https://github.com/tildeio/rsvp.js">RSVP.js</a></strong>: A very small and lightweight, and still fully compliant, <strong>Promise</strong> library.</li>
+<li><strong><a href="https://github.com/cujojs/when">when.js</a></strong>: A <strong>Promise</strong> library with utilities for managing collections of eventual tasks, as well as support for both progress and cancellation.</li>
+</ul>
+<h3>Next Up?</h3>
+<p>In the next part of the series, we will be looking at promise <strong>patterns</strong> and <strong>best practices</strong>.</p>
+<p>Until then…</p>
+<p><strong>May the source be with you</strong>!</p>
+
+  <blockquote>
+    Do you have something to say? Have I missed anything?<br>
+    Send your comments and suggestions to <a href="mailto:volkan@o2js.com">volkan@o2js.com</a>.
+  </blockquote>
+  <div class="byline">
+    by <a href="http://volkan.io/">Volkan Özçelik</a> on 03.23.14
+  </div>
+</div>
+
+
+
+
+
+<div class="menu right">
+    
+      <a href="poor-mans-server-backup-solution" class="btn btn-grey">&laquo; older post</a>
+    
+
+    
+      <a href="the-secrets-of-high-performance-mobile-javascript-applications" class="btn btn-grey">newer post &raquo;</a>
+    
+</div>
+
+
+
+    </div>
+    <header class="aboutme">
+        <div class="legend">
+            <h1><a href="http://volkan.io/">Volkan Özçelik</a></h1>
+
+            <p><strong>Chase Me</strong></p>
+            <ul>
+            <li>Technical Lead @ <a href="http://cisco.com/">Cisco</a></li>
+            <li><a href="https://twitter.com/linkibol">@linkibol</a></li>
+            <li><a href="https://github.com/v0lkan">github.com/v0lkan</a></li>
+            <li><a href="https://speakerdeck.com/volkan">speakerdeck.com/volkan</a></li>
+            <li><a href="https://linkedin.com/in/volkanozcelik">linkedin.com/in/volkanozcelik</a></li>
+            </ul>
+
+            <p><strong>o2.js</strong></p>
+
+            <ul>
+            <li><a href="https://github.com/o2js">Read the Source, Luke</a></li>
+            </ul>
+        </div>
+        <p class="interviewz">
+            Psttt&hellip;
+            Wanna ace that interview?<br>
+            Then you have some reading to do:<br>
+            <a style="text-align:center;display:block;margin-top:1em"
+            href="http://o2js.com/interview-questions"
+            title="JavaScript Interview Questions">»» Get the Only Reference
+            on <strong>JavaScript Engineering Interviews</strong>
+            You Will <em>Ever</em> Need, Now!
+            ««</a>
+        </p>
+    </header>
+<script>
+    (function(window, document) {
+        'use strict';
+
+        var isScrolled = false,
+            isProcessed = false,
+
+            AD_SHOW_DELAY = 3000,
+            AD_SHOW_INIT_TOP_THRESHOLD = 50,
+            AD_CONTAINER_CLASS = 'interviewz',
+            AD_CONTAINER_HOVER_CLASS = 'interviewz hovered',
+
+            // A modern-ish RAF polyfill.
+            tick = window.requestAnimationFrame ||
+            window.mozRequestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            window.msRequestAnimationFrame ||
+            window.oRequestAnimationFrame;
+
+            if (!tick) {return;}
+
+            window.addEventListener('scroll', function() {
+                isScrolled = true;
+            })
+
+            function loop() {
+                if (isProcessed) {return;}
+
+                tick(loop);
+
+                if (!isScrolled) {return;}
+
+                var top = Math.max(
+                    document.body.scrollTop,
+                    document.documentElement.scrollTop
+                );
+
+                if (top < AD_SHOW_INIT_TOP_THRESHOLD) {return;}
+
+                isProcessed = true;
+
+                setTimeout(function(){
+                    var container = document.getElementsByClassName(
+                        AD_CONTAINER_CLASS
+                    )[0];
+
+                    container.className = AD_CONTAINER_HOVER_CLASS;
+                }, AD_SHOW_DELAY);
+
+                window.onscroll = function(){};
+            }
+
+            loop();
+    }(this, this.document));
+</script>
+</body>
+</html>

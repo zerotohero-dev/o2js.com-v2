@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <title>o2.js - A Coherent Solution to You JavaScript Dilemma</title>
+
+    <meta name="description" content="o2js.com; a coherent solution to your JavaScript dilemma.">
+    <meta name="author" content="Volkan Özçelik">
+    <meta name="viewport" content="width=device-width" />
+
+<link href="//cloud.webtype.com/css/7aac64b3-a02e-43cb-9465-10369d68dd33.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/style.css" rel="stylesheet" />
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-56512-12', 'o2js.com');
+        ga('send', 'pageview');
+    </script>
+</head>
+<body class="wf-active main" style="background:url(/bg)">
+    <div class="container">
+        <p style="text-align:center">Feeling Lost? <a href="http://o2js.com/o2js-com-v2---a-new-hope?#topic-list" class="topics" title="the big index of articles written so far&hellip;"><strong>Start Here &raquo;&raquo;</strong></a></p>
+
+        
+<h2 class="title span8"><a href="/upcoming-news">Upcoming News</a></h2>
+<div class="span8">
+  <p><a href="http://o2js.com/assets/mind_like_water_large.png"><img src="http://o2js.com/assets/mind_like_water.png" style="float:left;margin:2em;" alt="" title="Be like water; when you receive a pepple, give a 'pebble response'; when you receive a boulder, give a 'boulder response'; steadily evolve, while accepting and internalizing every experience you have on the road. — Because it’s the road that matters." /></a></p>
+<p>Although I have not written recently, there’s a lot going on behind the scenes.</p>
+<p>Everything is gradually morphing into a better state. </p>
+<p>Since most of these are not (<em>yet</em>) publicly visible, I wanted to share the overall progress, along with my excitement, and passion.</p>
+<div style="clear:both;"></div>
+
+<p>Here are a few things on the way.</p>
+<h3>I&#39;m Turning <strong>o2js.com</strong> Into an Evergreen <strong>Ebook</strong></h3>
+<p>This is one of my biggest works in progress. I’ve organized the content into sections and subsections as follows:</p>
+<p><img src="http://o2js.com/assets/sections.png" alt="" title="Sections"></p>
+<p>I will be adding more to this. </p>
+<p>Basically, it will be a never-ending work, constantly updating itself.</p>
+<blockquote>
+<p>Since creating an <strong>ebook</strong> will be a serious effort, it “<strong>might</strong>” not be free — I am still thinking about the details.</p>
+<p>I will also add <strong>special</strong> sections to the ebook that will not be on the web version, to justify its price tag.</p>
+<p>By the way, the web version will <strong>always</strong> be free <strong>forever</strong>.</p>
+</blockquote>
+<h3>Moving <strong>o2.js</strong> Into Small And Reusable Modules</h3>
+<blockquote>
+<p>The current trend is being small, modular, independent, pluggable, and reusable. </p>
+<p><a href="https://news.ycombinator.com/item?id=8243523" title="Discuss &quot;Yahoo! Stopping All Developent on YUI&quot; on hackernews.">Even <strong>Yahoo!</strong> ceased all new development on its monolithic <strong>YUI</strong> framework</a>.</p>
+</blockquote>
+<p>Via the same reasoning, I’ve logically split <strong>o2.js</strong> into <strong><a href="https://github.com/o2js" title="Visit o2.js on github.">24 smaller sub-modules</a></strong>, each of them will be independent of each other, and will be maintained in a separate repository.</p>
+<h3>Some Wheel Reinvention Is Due</h3>
+<p>We, human beings, learn by <strong>imitation</strong>.</p>
+<p>Learning programming <strong>patterns</strong> and <strong>paradigms</strong> is no different:</p>
+<ul>
+<li>First you <strong>copy</strong> others’ code; </li>
+<li>Then you think about how you can <strong>extend </strong>that code, and what you can do differently;</li>
+<li>And eventually you come up with your own <strong>approach</strong>, and <strong>style</strong>.</li>
+</ul>
+<p>Of course, there are battle-tested solutions to almost any technical problem that you can imagine; however, creating things from scratch gives you a <strong>deeper understanding</strong> behind the magic about <strong>why</strong> things work the way they work. </p>
+<h4>Curiosity Kills the Cat</h4>
+<blockquote>
+<p>The insight you gain from the process is invaluable. I highly suggest you to regularly re-invent the wheel to expand your horizon.</p>
+</blockquote>
+<p>Don’t get me wrong: If you are working on a real-life application, that will be used by a real audience, then <strong>re-use</strong> existing frameworks, libraries, and solutions as much as you can. </p>
+<blockquote>
+<p>If you are learning new things, don’t fear to re-invent, fail, retry, break, and experiment.</p>
+</blockquote>
+<p>Besides, sometime you do need something minimalistic, just to solve a domain-specific problem, where creating a tiny module from scratch might be a feasible solution.</p>
+<h4>New <strong>o2.js</strong> Modules</h4>
+<p>Having said that, I’ll be working on quite a few re-usable modules:</p>
+<ul>
+<li>A basic <strong>string utilities</strong> module;</li>
+<li>A browser-based <strong>dependency-resolution</strong> module (<em>like <strong><a href="http://requirejs.org/" title="require.js">require.js</a></strong>, yet much lightweight and simple</em>);</li>
+<li>A <strong>converter</strong> that converts the server-side <strong><a href="http://nodejs.org/" title="Node.JS">CommonJS</a></strong> modules, into a format that the above module uses (<em>similar to what <strong><a href="http://browserify.org/" title="Browserify">browserify</a></strong> does, with less voodoo magic</em>);</li>
+<li>A really simple <strong>unit testing</strong> library that integrates with <strong><a href="https://travis-ci.org/" title="Travis CI">Travis</a></strong>;</li>
+<li>Make that unit testing solution test the modules that are supposed to run on the browser too, by mocking certain <strong>DOM</strong> interactions;</li>
+<li>Create <strong>code coverage reports</strong> out of these unit tests.</li>
+</ul>
+<p>All of these will also be the ingredients of quite a few articles, which I will be writing along the way.</p>
+<h3>Stay Tuned <strong>;)</strong></h3>
+<p>People who know me know that I’m <strong>always</strong> extremely busy with “things”. Which means that all of these aforementioned “reinvention”s will happen gradually, steadily, yet slowly.</p>
+<p>Hope it will be a useful journey both for me, as well as for anyone who is passionate about creating, making, breaking, and <strong><a href="http://o2js.com/are-you-ready-to-hack" title="Who Else Is Ready to Hack?">hacking</a></strong> things.</p>
+
+  <blockquote>
+    Do you have something to say? Have I missed anything?<br>
+    Send your comments and suggestions to <a href="mailto:volkan@o2js.com">volkan@o2js.com</a>.
+  </blockquote>
+  <div class="byline">
+    by <a href="http://volkan.io/">Volkan Özçelik</a> on 11.06.14
+  </div>
+</div>
+
+
+
+<div class="menu right">
+  <a href="/heres-a-smart-way-to-untangle-your-dependencies" class="btn btn-grey">&laquo; older post</a>
+</div>
+
+
+
+
+
+    </div>
+    <header class="aboutme">
+        <div class="legend">
+            <h1><a href="http://volkan.io/">Volkan Özçelik</a></h1>
+
+            <p><strong>Chase Me</strong></p>
+            <ul>
+            <li>Technical Lead @ <a href="http://cisco.com/">Cisco</a></li>
+            <li><a href="https://twitter.com/linkibol">@linkibol</a></li>
+            <li><a href="https://github.com/v0lkan">github.com/v0lkan</a></li>
+            <li><a href="https://speakerdeck.com/volkan">speakerdeck.com/volkan</a></li>
+            <li><a href="https://linkedin.com/in/volkanozcelik">linkedin.com/in/volkanozcelik</a></li>
+            </ul>
+
+            <p><strong>o2.js</strong></p>
+
+            <ul>
+            <li><a href="https://github.com/o2js">Read the Source, Luke</a></li>
+            </ul>
+        </div>
+        <p class="interviewz">
+            Psttt&hellip;
+            Wanna ace that interview?<br>
+            Then you have some reading to do:<br>
+            <a style="text-align:center;display:block;margin-top:1em"
+            href="http://o2js.com/interview-questions"
+            title="JavaScript Interview Questions">»» Get the Only Reference
+            on <strong>JavaScript Engineering Interviews</strong>
+            You Will <em>Ever</em> Need, Now!
+            ««</a>
+        </p>
+    </header>
+<script>
+    (function(window, document) {
+        'use strict';
+
+        var isScrolled = false,
+            isProcessed = false,
+
+            AD_SHOW_DELAY = 3000,
+            AD_SHOW_INIT_TOP_THRESHOLD = 50,
+            AD_CONTAINER_CLASS = 'interviewz',
+            AD_CONTAINER_HOVER_CLASS = 'interviewz hovered',
+
+            // A modern-ish RAF polyfill.
+            tick = window.requestAnimationFrame ||
+            window.mozRequestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            window.msRequestAnimationFrame ||
+            window.oRequestAnimationFrame;
+
+            if (!tick) {return;}
+
+            window.addEventListener('scroll', function() {
+                isScrolled = true;
+            })
+
+            function loop() {
+                if (isProcessed) {return;}
+
+                tick(loop);
+
+                if (!isScrolled) {return;}
+
+                var top = Math.max(
+                    document.body.scrollTop,
+                    document.documentElement.scrollTop
+                );
+
+                if (top < AD_SHOW_INIT_TOP_THRESHOLD) {return;}
+
+                isProcessed = true;
+
+                setTimeout(function(){
+                    var container = document.getElementsByClassName(
+                        AD_CONTAINER_CLASS
+                    )[0];
+
+                    container.className = AD_CONTAINER_HOVER_CLASS;
+                }, AD_SHOW_DELAY);
+
+                window.onscroll = function(){};
+            }
+
+            loop();
+    }(this, this.document));
+</script>
+</body>
+</html>

@@ -1,0 +1,1128 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+    * {margin:0;padding:0;}
+    pre {
+        font-family: Monaco, Menlo, "Courier New", Courier, monotype;
+        font-size: 1em;
+        line-height: 1.5em;
+        background: #c0c0c0;
+        color: #444444;
+        border: 1px #555555 solid;
+        margin: 1em 1em 1em 3em;
+        padding: 1em;
+        overflow: auto;
+    }
+    body {
+        font-family: Georgia, "Times New Roman", times, serif;        
+        background: #333333;
+        color: #aaaaaa;
+        max-width: 1150px;
+        margin: 0 auto;
+    }
+    h3 {
+        color: #aaaaaa;
+        font-size: 1.5em;
+        margin: 1em 0 1em 0;
+        position: relative;
+        left: -5em;
+        padding: 0.5em;
+        background: #550000;
+        font-weight: normal;
+    }
+
+    p {
+        margin: 0.5em 1em 0.5em 3em;
+        font-size: 1.3em;
+        line-height: 1.6em;
+    }
+
+    a { 
+        color: #ffffff;
+    }
+
+    pre a {
+        color: #000000;
+    }
+
+    #Wrap {
+        background: #444444;
+        padding: 0em 2em 2em 2em;
+        border-top: 1px solid;
+    }
+</style>
+</head>
+<body>
+<div id="Wrap">
+<h3>About This Page</h3>
+
+<p>This is a quick scrape from <a href="https://golang.org/ref/spec">The Go Programming Language Specification</a>.</p>
+
+<p>The <strong>source code samples</strong> are kept, and the rest is wiped out.</p>
+
+<p>It is like a…, “<em>quick and dirty</em>” cheatsheet, kind of <strong>;)</strong></p>
+
+<h3 id="Characters">Characters</h3><h3 id="Letters_and_digits">Letters and digits</h3><h3 id="Comments">Comments</h3><h3 id="Tokens">Tokens</h3><h3 id="Semicolons">Semicolons</h3><h3 id="Identifiers">Identifiers</h3><pre>a
+_x9
+ThisVariableIsExported
+αβ
+</pre><h3 id="Keywords">Keywords</h3><h3 id="Operators_and_Delimiters">Operators and Delimiters</h3><h3 id="Integer_literals">Integer literals</h3><pre>42
+0600
+0xBadFace
+170141183460469231731687303715884105727
+</pre><h3 id="Floating-point_literals">Floating-point literals</h3><pre>0.
+72.40
+072.40  // == 72.40
+2.71828
+1.e+0
+6.67428e-11
+1E6
+.25
+.12345E+5
+</pre><h3 id="Imaginary_literals">Imaginary literals</h3><pre>0i
+011i  // == 11i
+0.i
+2.71828i
+1.e+0i
+6.67428e-11i
+1E6i
+.25i
+.12345E+5i
+</pre><h3 id="Rune_literals">Rune literals</h3><pre>'a'
+'ä'
+'本'
+'\t'
+'\000'
+'\007'
+'\377'
+'\x07'
+'\xff'
+'\u12e4'
+'\U00101234'
+'\''         // rune literal containing single quote character
+'aa'         // illegal: too many characters
+'\xa'        // illegal: too few hexadecimal digits
+'\0'         // illegal: too few octal digits
+'\uDFFF'     // illegal: surrogate half
+'\U00110000' // illegal: invalid Unicode code point
+</pre><h3 id="String_literals">String literals</h3><pre>`abc`                // same as "abc"
+`\n
+\n`                  // same as "\\n\n\\n"
+"\n"
+"\""                 // same as `"`
+"Hello, world!\n"
+"日本語"
+"\u65e5本\U00008a9e"
+"\xff\u00FF"
+"\uD800"             // illegal: surrogate half
+"\U00110000"         // illegal: invalid Unicode code point
+</pre><pre>"日本語"                                 // UTF-8 input text
+`日本語`                                 // UTF-8 input text as a raw literal
+"\u65e5\u672c\u8a9e"                    // the explicit Unicode code points
+"\U000065e5\U0000672c\U00008a9e"        // the explicit Unicode code points
+"\xe6\x97\xa5\xe6\x9c\xac\xe8\xaa\x9e"  // the explicit UTF-8 bytes
+</pre><pre>var x interface{}  // x is nil and has static type interface{}
+var v *T           // v has value nil, static type *T
+x = 42             // x has value 42 and dynamic type int
+x = v              // x has value (*T)(nil) and dynamic type *T
+</pre><pre>   type T1 string
+   type T2 T1
+   type T3 []T1
+   type T4 T3
+</pre><h3 id="Method_sets">Method sets</h3><h3 id="Boolean_types">Boolean types</h3><h3 id="Numeric_types">Numeric types</h3><h3 id="String_types">String types</h3><h3 id="Array_types">Array types</h3><pre>[32]byte
+[2*N] struct { x, y int32 }
+[1000]*float64
+[3][5]int
+[2][2][2]float64  // same as [2]([2]([2]float64))
+</pre><h3 id="Slice_types">Slice types</h3><pre>make([]T, length, capacity)
+</pre><pre>make([]int, 50, 100)
+new([100]int)[0:50]
+</pre><h3 id="Struct_types">Struct types</h3><pre>// An empty struct.
+struct {}
+
+// A struct with 6 fields.
+struct {
+    x, y int
+    u float32
+    _ float32  // padding
+    A *[]int
+    F func()
+}
+</pre><pre>// A struct with four anonymous fields of type T1, *T2, P.T3 and *P.T4
+struct {
+    T1        // field name is T1
+    *T2       // field name is T2
+    P.T3      // field name is T3
+    *P.T4     // field name is T4
+    x, y int  // field names are x and y
+}
+</pre><pre>struct {
+    T     // conflicts with anonymous field *T and *P.T
+    *T    // conflicts with anonymous field T and *P.T
+    *P.T  // conflicts with anonymous field T and *T
+}
+</pre><pre>struct {
+    x, y float64 ""  // an empty tag string is like an absent tag
+    name string  "any string is permitted as a tag"
+    _    [4]byte "ceci n'est pas un champ de structure"
+}
+
+// A struct corresponding to a TimeStamp protocol buffer.
+// The tag strings define the protocol buffer field numbers;
+// they follow the convention outlined by the reflect package.
+struct {
+    microsec  uint64 `protobuf:"1"`
+    serverIP6 uint64 `protobuf:"2"`
+}
+</pre><h3 id="Pointer_types">Pointer types</h3><pre>*Point
+*[4]int
+</pre><h3 id="Function_types">Function types</h3><pre>func()
+func(x int) int
+func(a, _ int, z float32) bool
+func(a, b int, z float32) (bool)
+func(prefix string, values ...int)
+func(a, b int, z float64, opt ...interface{}) (success bool)
+func(int, int, float64) (float64, *[]int)
+func(n int) func(p *T)
+</pre><h3 id="Interface_types">Interface types</h3><pre>// A simple File interface
+interface {
+    Read(b Buffer) bool
+    Write(b Buffer) bool
+    Close()
+}
+</pre><pre>func (p T) Read(b Buffer) bool { return … }
+func (p T) Write(b Buffer) bool { return … }
+func (p T) Close() { … }
+</pre><pre>interface{}
+</pre><pre>type Locker interface {
+    Lock()
+    Unlock()
+}
+</pre><pre>func (p T) Lock() { … }
+func (p T) Unlock() { … }
+</pre><pre>type ReadWriter interface {
+    Read(b Buffer) bool
+    Write(b Buffer) bool
+}
+
+type File interface {
+    ReadWriter  // same as adding the methods of ReadWriter
+    Locker      // same as adding the methods of Locker
+    Close()
+}
+
+type LockedFile interface {
+    Locker
+    File        // illegal: Lock, Unlock not unique
+    Lock()      // illegal: Lock not unique
+}
+</pre><pre>// illegal: Bad cannot embed itself
+type Bad interface {
+    Bad
+}
+
+// illegal: Bad1 cannot embed itself using Bad2
+type Bad1 interface {
+    Bad2
+}
+type Bad2 interface {
+    Bad1
+}
+</pre><h3 id="Map_types">Map types</h3><pre>map[string]int
+map[*T]struct{ x, y float64 }
+map[string]interface{}
+</pre><pre>make(map[string]int)
+make(map[string]int, 100)
+</pre><h3 id="Channel_types">Channel types</h3><pre>chan T          // can be used to send and receive values of type T
+chan&lt;- float64  // can only be used to send float64s
+&lt;-chan int      // can only be used to receive ints
+</pre><pre>chan&lt;- chan int    // same as chan&lt;- (chan int)
+chan&lt;- &lt;-chan int  // same as chan&lt;- (&lt;-chan int)
+&lt;-chan &lt;-chan int  // same as &lt;-chan (&lt;-chan int)
+chan (&lt;-chan int)
+</pre><pre>make(chan int, 100)
+</pre><h3 id="Type_identity">Type identity</h3><pre>type (
+    T0 []string
+    T1 []string
+    T2 struct{ a, b int }
+    T3 struct{ a, c int }
+    T4 func(int, float64) *T0
+    T5 func(x int, y float64) *[]string
+)
+</pre><pre>T0 and T0
+[]int and []int
+struct{ a, b *T5 } and struct{ a, b *T5 }
+func(x int, y float64) *[]string and func(int, float64) (result *[]string)
+</pre><h3 id="Assignability">Assignability</h3><h3 id="Label_scopes">Label scopes</h3><h3 id="Blank_identifier">Blank identifier</h3><h3 id="Predeclared_identifiers">Predeclared identifiers</h3><h3 id="Exported_identifiers">Exported identifiers</h3><h3 id="Uniqueness_of_identifiers">Uniqueness of identifiers</h3><h3 id="Constant_declarations">Constant declarations</h3><pre>const Pi float64 = 3.14159265358979323846
+const zero = 0.0         // untyped floating-point constant
+const (
+    size int64 = 1024
+    eof        = -1  // untyped integer constant
+)
+const a, b, c = 3, 4, "foo"  // a = 3, b = 4, c = "foo", untyped integer and string constants
+const u, v float32 = 0, 3    // u = 0.0, v = 3.0
+</pre><pre>const (
+    Sunday = iota
+    Monday
+    Tuesday
+    Wednesday
+    Thursday
+    Friday
+    Partyday
+    numberOfDays  // this constant is not exported
+)
+</pre><h3 id="Iota">Iota</h3><pre>const ( // iota is reset to 0
+    c0 = iota  // c0 == 0
+    c1 = iota  // c1 == 1
+    c2 = iota  // c2 == 2
+)
+
+const ( // iota is reset to 0
+    a = 1 &lt;&lt; iota  // a == 1
+    b = 1 &lt;&lt; iota  // b == 2
+    c = 3          // c == 3  (iota is not used but still incremented)
+    d = 1 &lt;&lt; iota  // d == 8
+)
+
+const ( // iota is reset to 0
+    u         = iota * 42  // u == 0     (untyped integer constant)
+    v float64 = iota * 42  // v == 42.0  (float64 constant)
+    w         = iota * 42  // w == 84    (untyped integer constant)
+)
+
+const x = iota  // x == 0  (iota has been reset)
+const y = iota  // y == 0  (iota has been reset)
+</pre><pre>const (
+    bit0, mask0 = 1 &lt;&lt; iota, 1&lt;&lt;iota - 1  // bit0 == 1, mask0 == 0
+    bit1, mask1                           // bit1 == 2, mask1 == 1
+    _, _                                  // skips iota == 2
+    bit3, mask3                           // bit3 == 8, mask3 == 7
+)
+</pre><h3 id="Type_declarations">Type declarations</h3><pre>type IntArray [16]int
+
+type (
+    Point struct{ x, y float64 }
+    Polar Point
+)
+
+type TreeNode struct {
+    left, right *TreeNode
+    value *Comparable
+}
+
+type Block interface {
+    BlockSize() int
+    Encrypt(src, dst []byte)
+    Decrypt(src, dst []byte)
+}
+</pre><pre>// A Mutex is a data type with two methods, Lock and Unlock.
+type Mutex struct         { /* Mutex fields */ }
+func (m *Mutex) Lock()    { /* Lock implementation */ }
+func (m *Mutex) Unlock()  { /* Unlock implementation */ }
+
+// NewMutex has the same composition as Mutex but its method set is empty.
+type NewMutex Mutex
+
+// The method set of the <a href="#Pointer_types">base type</a> of PtrMutex remains unchanged,
+// but the method set of PtrMutex is empty.
+type PtrMutex *Mutex
+
+// The method set of *PrintableMutex contains the methods
+// Lock and Unlock bound to its anonymous field Mutex.
+type PrintableMutex struct {
+    Mutex
+}
+
+// MyBlock is an interface type that has the same method set as Block.
+type MyBlock Block
+</pre><pre>type TimeZone int
+
+const (
+    EST TimeZone = -(5 + iota)
+    CST
+    MST
+    PST
+)
+
+func (tz TimeZone) String() string {
+    return fmt.Sprintf("GMT%+dh", tz)
+}
+</pre><h3 id="Variable_declarations">Variable declarations</h3><pre>var i int
+var U, V, W float64
+var k = 0
+var x, y float32 = -1, -2
+var (
+    i       int
+    u, v, s = 2.0, 3.0, "bar"
+)
+var re, im = complexSqrt(-1)
+var _, found = entries[name]  // map lookup; only interested in "found"
+</pre><pre>var d = math.Sin(0.5)  // d is float64
+var i = 42             // i is int
+var t, ok = x.(T)      // t is T, ok is bool
+var n = nil            // illegal
+</pre><h3 id="Short_variable_declarations">Short variable declarations</h3><pre>i, j := 0, 10
+f := func() int { return 7 }
+ch := make(chan int)
+r, w := os.Pipe(fd)  // os.Pipe() returns two values
+_, y, _ := coord(p)  // coord() returns three values; only interested in y coordinate
+</pre><pre>field1, offset := nextField(str, 0)
+field2, offset := nextField(str, offset)  // redeclares offset
+a, a := 1, 2                              // illegal: double declaration of a or no new variable if a was declared elsewhere
+</pre><h3 id="Function_declarations">Function declarations</h3><pre>func IndexRune(s string, r rune) int {
+    for i, c := range s {
+        if c == r {
+            return i
+        }
+    }
+    // invalid: missing return statement
+}
+</pre><pre>func min(x int, y int) int {
+    if x &lt; y {
+        return x
+    }
+    return y
+}
+
+func flushICache(begin, end uintptr)  // implemented externally
+</pre><h3 id="Method_declarations">Method declarations</h3><pre>func (p *Point) Length() float64 {
+    return math.Sqrt(p.x * p.x + p.y * p.y)
+}
+
+func (p *Point) Scale(factor float64) {
+    p.x *= factor
+    p.y *= factor
+}
+</pre><pre>func(p *Point, factor float64)
+</pre><h3 id="Operands">Operands</h3><h3 id="Qualified_identifiers">Qualified identifiers</h3><pre>math.Sin // denotes the Sin function in package math
+</pre><h3 id="Composite_literals">Composite literals</h3><pre>type Point3D struct { x, y, z float64 }
+type Line struct { p, q Point3D }
+</pre><pre>origin := Point3D{}                            // zero value for Point3D
+line := Line{origin, Point3D{y: -4, z: 12.3}}  // zero value for line.q.x
+</pre><pre>var pointer *Point3D = &amp;Point3D{y: 1000}
+</pre><pre>buffer := [10]string{}             // len(buffer) == 10
+intSet := [6]int{1, 2, 3, 5}       // len(intSet) == 6
+days := [...]string{"Sat", "Sun"}  // len(days) == 2
+</pre><pre>[]T{x1, x2, … xn}
+</pre><pre>tmp := [n]T{x1, x2, … xn}
+tmp[0 : n]
+</pre><pre>[...]Point{{1.5, -3.5}, {0, 0}}     // same as [...]Point{Point{1.5, -3.5}, Point{0, 0}}
+[][]int{{1, 2, 3}, {4, 5}}          // same as [][]int{[]int{1, 2, 3}, []int{4, 5}}
+[][]Point{{{0, 1}, {1, 2}}}         // same as [][]Point{[]Point{Point{0, 1}, Point{1, 2}}}
+map[string]Point{"orig": {0, 0}}    // same as map[string]Point{"orig": Point{0, 0}}
+
+[...]*Point{{1.5, -3.5}, {0, 0}}    // same as [...]*Point{&amp;Point{1.5, -3.5}, &amp;Point{0, 0}}
+
+map[Point]string{{0, 0}: "orig"}    // same as map[Point]string{Point{0, 0}: "orig"}
+</pre><pre>if x == (T{a,b,c}[i]) { … }
+if (x == T{a,b,c}[i]) { … }
+</pre><pre>// list of prime numbers
+primes := []int{2, 3, 5, 7, 9, 2147483647}
+
+// vowels[ch] is true if ch is a vowel
+vowels := [128]bool{'a': true, 'e': true, 'i': true, 'o': true, 'u': true, 'y': true}
+
+// the array [10]float32{-1, 0, 0, 0, -0.1, -0.1, 0, 0, 0, -1}
+filter := [10]float32{-1, 4: -0.1, -0.1, 9: -1}
+
+// frequencies in Hz for equal-tempered scale (A4 = 440Hz)
+noteFrequency := map[string]float32{
+    "C0": 16.35, "D0": 18.35, "E0": 20.60, "F0": 21.83,
+    "G0": 24.50, "A0": 27.50, "B0": 30.87,
+}
+</pre><h3 id="Function_literals">Function literals</h3><pre>func(a, b int, z float64) bool { return a*b &lt; int(z) }
+</pre><pre>f := func(x, y int) int { return x + y }
+func(ch chan int) { ch &lt;- ACK }(replyChan)
+</pre><h3 id="Primary_expressions">Primary expressions</h3><pre>x
+2
+(s + ".txt")
+f(3.1415, true)
+Point{1, 2}
+m["foo"]
+s[i : j + 1]
+obj.color
+f.p[i].x()
+</pre><h3 id="Selectors">Selectors</h3><pre>x.f
+</pre><pre>type T0 struct {
+    x int
+}
+
+func (*T0) M0()
+
+type T1 struct {
+    y int
+}
+
+func (T1) M1()
+
+type T2 struct {
+    z int
+    T1
+    *T0
+}
+
+func (*T2) M2()
+
+type Q *T2
+
+var t T2     // with t.T0 != nil
+var p *T2    // with p != nil and (*p).T0 != nil
+var q Q = p
+</pre><pre>t.z          // t.z
+t.y          // t.T1.y
+t.x          // (*t.T0).x
+
+p.z          // (*p).z
+p.y          // (*p).T1.y
+p.x          // (*(*p).T0).x
+
+q.x          // (*(*q).T0).x        (*q).x is a valid field selector
+
+p.M0()       // ((*p).T0).M0()      M0 expects *T0 receiver
+p.M1()       // ((*p).T1).M1()      M1 expects T1 receiver
+p.M2()       // p.M2()              M2 expects *T2 receiver
+t.M2()       // (&amp;t).M2()           M2 expects *T2 receiver, see section on Calls
+</pre><pre>q.M0()       // (*q).M0 is valid but not a field selector
+</pre><h3 id="Method_expressions">Method expressions</h3><pre>type T struct {
+    a int
+}
+func (tv  T) Mv(a int) int         { return 0 }  // value receiver
+func (tp *T) Mp(f float32) float32 { return 1 }  // pointer receiver
+
+var t T
+</pre><pre>T.Mv
+</pre><pre>func(tv T, a int) int
+</pre><pre>t.Mv(7)
+T.Mv(t, 7)
+(T).Mv(t, 7)
+f1 := T.Mv; f1(t, 7)
+f2 := (T).Mv; f2(t, 7)
+</pre><pre>(*T).Mp
+</pre><pre>func(tp *T, f float32) float32
+</pre><pre>(*T).Mv
+</pre><pre>func(tv *T, a int) int
+</pre><h3 id="Method_values">Method values</h3><pre>type T struct {
+    a int
+}
+func (tv  T) Mv(a int) int         { return 0 }  // value receiver
+func (tp *T) Mp(f float32) float32 { return 1 }  // pointer receiver
+
+var t T
+var pt *T
+func makeT() T
+</pre><pre>t.Mv
+</pre><pre>func(int) int
+</pre><pre>t.Mv(7)
+f := t.Mv; f(7)
+</pre><pre>pt.Mp
+</pre><pre>func(float32) float32
+</pre><pre>f := t.Mv; f(7)   // like t.Mv(7)
+f := pt.Mp; f(7)  // like pt.Mp(7)
+f := pt.Mv; f(7)  // like (*pt).Mv(7)
+f := t.Mp; f(7)   // like (&amp;t).Mp(7)
+f := makeT().Mp   // invalid: result of makeT() is not addressable
+</pre><pre>var i interface { M(int) } = myVal
+f := i.M; f(7)  // like i.M(7)
+</pre><h3 id="Index_expressions">Index expressions</h3><pre>a[x]
+</pre><pre>v, ok = a[x]
+v, ok := a[x]
+var v, ok = a[x]
+</pre><h3 id="Slice_expressions">Slice expressions</h3><pre>a[low : high]
+</pre><pre>a := [5]int{1, 2, 3, 4, 5}
+s := a[1:4]
+</pre><pre>s[0] == 2
+s[1] == 3
+s[2] == 4
+</pre><pre>a[2:]  // same as a[2 : len(a)]
+a[:3]  // same as a[0 : 3]
+a[:]   // same as a[0 : len(a)]
+</pre><pre>a[low : high : max]
+</pre><pre>a := [5]int{1, 2, 3, 4, 5}
+t := a[1:3:5]
+</pre><pre>t[0] == 2
+t[1] == 3
+</pre><h3 id="Type_assertions">Type assertions</h3><pre>x.(T)
+</pre><pre>var x interface{} = 7  // x has dynamic type int and value 7
+i := x.(int)           // i has type int and value 7
+
+type I interface { m() }
+var y I
+s := y.(string)        // illegal: string does not implement I (missing method m)
+r := y.(io.Reader)     // r has type io.Reader and y must implement both I and io.Reader
+</pre><pre>v, ok = x.(T)
+v, ok := x.(T)
+var v, ok = x.(T)
+</pre><h3 id="Calls">Calls</h3><pre>f(a1, a2, … an)
+</pre><pre>math.Atan2(x, y)  // function call
+var pt *Point
+pt.Scale(3.5)     // method call with receiver pt
+</pre><pre>func Split(s string, pos int) (string, string) {
+    return s[0:pos], s[pos:]
+}
+
+func Join(s, t string) string {
+    return s + t
+}
+
+if Join(Split(value, len(value)/2)) != value {
+    log.Panic("test fails")
+}
+</pre><pre>var p Point
+p.Scale(3.5)
+</pre><h3 id="Passing_arguments_to_..._parameters">Passing arguments to <code>...</code> parameters</h3><pre>func Greeting(prefix string, who ...string)
+Greeting("nobody")
+Greeting("hello:", "Joe", "Anna", "Eileen")
+</pre><pre>s := []string{"James", "Jasmine"}
+Greeting("goodbye:", s...)
+</pre><h3 id="Operators">Operators</h3><pre>var s uint = 33
+var i = 1&lt;&lt;s           // 1 has type int
+var j int32 = 1&lt;&lt;s     // 1 has type int32; j == 0
+var k = uint64(1&lt;&lt;s)   // 1 has type uint64; k == 1&lt;&lt;33
+var m int = 1.0&lt;&lt;s     // 1.0 has type int
+var n = 1.0&lt;&lt;s != i    // 1.0 has type int; n == false if ints are 32bits in size
+var o = 1&lt;&lt;s == 2&lt;&lt;s   // 1 and 2 have type int; o == true if ints are 32bits in size
+var p = 1&lt;&lt;s == 1&lt;&lt;33  // illegal if ints are 32bits in size: 1 has type int, but 1&lt;&lt;33 overflows int
+var u = 1.0&lt;&lt;s         // illegal: 1.0 has type float64, cannot shift
+var u1 = 1.0&lt;&lt;s != 0   // illegal: 1.0 has type float64, cannot shift
+var u2 = 1&lt;&lt;s != 1.0   // illegal: 1 has type float64, cannot shift
+var v float32 = 1&lt;&lt;s   // illegal: 1 has type float32, cannot shift
+var w int64 = 1.0&lt;&lt;33  // 1.0&lt;&lt;33 is a constant shift expression
+</pre><pre>+x
+23 + 3*x[i]
+x &lt;= f()
+^a &gt;&gt; b
+f() || g()
+x == y+1 &amp;&amp; &lt;-chanPtr &gt; 0
+</pre><h3 id="Arithmetic_operators">Arithmetic operators</h3><pre>x = q*y + r  and  |r| &lt; |y|
+</pre><pre> x     y     x / y     x % y
+ 5     3       1         2
+-5     3      -1        -2
+ 5    -3      -1         2
+-5    -3       1        -2
+</pre><pre>          x, q
+int8                     -128
+int16                  -32768
+int32             -2147483648
+int64    -9223372036854775808
+</pre><pre> x     x / 4     x % 4     x &gt;&gt; 2     x &amp; 3
+ 11      2         3         2          3
+-11     -2        -3        -3          1
+</pre><pre>s := "hi" + string(c)
+s += " and good bye"
+</pre><h3 id="Comparison_operators">Comparison operators</h3><pre>const c = 3 &lt; 4            // c is the untyped boolean constant true
+
+type MyBool bool
+var x, y int
+var (
+    // The result of a comparison is an untyped boolean.
+    // The usual assignment rules apply.
+    b3        = x == y // b3 has type bool
+    b4 bool   = x == y // b4 has type bool
+    b5 MyBool = x == y // b5 has type MyBool
+)
+</pre><h3 id="Logical_operators">Logical operators</h3><h3 id="Address_operators">Address operators</h3><pre>&amp;x
+&amp;a[f(2)]
+&amp;Point{2, 3}
+*p
+*pf(x)
+
+var x *int = nil
+*x   // causes a run-time panic
+&amp;*x  // causes a run-time panic
+</pre><h3 id="Receive_operator">Receive operator</h3><pre>v1 := &lt;-ch
+v2 = &lt;-ch
+f(&lt;-ch)
+&lt;-strobe  // wait until clock pulse and discard received value
+</pre><pre>x, ok = &lt;-ch
+x, ok := &lt;-ch
+var x, ok = &lt;-ch
+</pre><h3 id="Conversions">Conversions</h3><pre>*Point(p)        // same as *(Point(p))
+(*Point)(p)      // p is converted to *Point
+&lt;-chan int(c)    // same as &lt;-(chan int(c))
+(&lt;-chan int)(c)  // c is converted to &lt;-chan int
+func()(x)        // function signature func() x
+(func())(x)      // x is converted to func()
+(func() int)(x)  // x is converted to func() int
+func() int(x)    // x is converted to func() int (unambiguous)
+</pre><pre>uint(iota)               // iota value of type uint
+float32(2.718281828)     // 2.718281828 of type float32
+complex128(1)            // 1.0 + 0.0i of type complex128
+float32(0.49999999)      // 0.5 of type float32
+float64(-1e-1000)        // 0.0 of type float64
+string('x')              // "x" of type string
+string(0x266c)           // "♬" of type string
+MyString("foo" + "bar")  // "foobar" of type MyString
+string([]byte{'a'})      // not a constant: []byte{'a'} is not a constant
+(*int)(nil)              // not a constant: nil is not a constant, *int is not a boolean, numeric, or string type
+int(1.2)                 // illegal: 1.2 cannot be represented as an int
+string(65.0)             // illegal: 65.0 is not an integer constant
+</pre><pre>string('a')       // "a"
+string(-1)        // "\ufffd" == "\xef\xbf\xbd"
+string(0xf8)      // "\u00f8" == "ø" == "\xc3\xb8"
+type MyString string
+MyString(0x65e5)  // "\u65e5" == "日" == "\xe6\x97\xa5"
+</pre><pre>string([]byte{'h', 'e', 'l', 'l', '\xc3', '\xb8'})   // "hellø"
+string([]byte{})                                     // ""
+string([]byte(nil))                                  // ""
+
+type MyBytes []byte
+string(MyBytes{'h', 'e', 'l', 'l', '\xc3', '\xb8'})  // "hellø"
+</pre><pre>string([]rune{0x767d, 0x9d6c, 0x7fd4})   // "\u767d\u9d6c\u7fd4" == "白鵬翔"
+string([]rune{})                         // ""
+string([]rune(nil))                      // ""
+
+type MyRunes []rune
+string(MyRunes{0x767d, 0x9d6c, 0x7fd4})  // "\u767d\u9d6c\u7fd4" == "白鵬翔"
+</pre><pre>[]byte("hellø")   // []byte{'h', 'e', 'l', 'l', '\xc3', '\xb8'}
+[]byte("")        // []byte{}
+
+MyBytes("hellø")  // []byte{'h', 'e', 'l', 'l', '\xc3', '\xb8'}
+</pre><pre>[]rune(MyString("白鵬翔"))  // []rune{0x767d, 0x9d6c, 0x7fd4}
+[]rune("")                 // []rune{}
+
+MyRunes("白鵬翔")           // []rune{0x767d, 0x9d6c, 0x7fd4}
+</pre><h3 id="Constant_expressions">Constant expressions</h3><pre>const a = 2 + 3.0          // a == 5.0   (untyped floating-point constant)
+const b = 15 / 4           // b == 3     (untyped integer constant)
+const c = 15 / 4.0         // c == 3.75  (untyped floating-point constant)
+const Θ float64 = 3/2      // Θ == 1.0   (type float64, 3/2 is integer division)
+const Π float64 = 3/2.     // Π == 1.5   (type float64, 3/2. is float division)
+const d = 1 &lt;&lt; 3.0         // d == 8     (untyped integer constant)
+const e = 1.0 &lt;&lt; 3         // e == 8     (untyped integer constant)
+const f = int32(1) &lt;&lt; 33   // illegal    (constant 8589934592 overflows int32)
+const g = float64(2) &gt;&gt; 1  // illegal    (float64(2) is a typed floating-point constant)
+const h = "foo" &gt; "bar"    // h == true  (untyped boolean constant)
+const j = true             // j == true  (untyped boolean constant)
+const k = 'w' + 1          // k == 'x'   (untyped rune constant)
+const l = "hi"             // l == "hi"  (untyped string constant)
+const m = string(k)        // m == "x"   (type string)
+const Σ = 1 - 0.707i       //            (untyped complex constant)
+const Δ = Σ + 2.0e-4       //            (untyped complex constant)
+const Φ = iota*1i - 1/1i   //            (untyped complex constant)
+</pre><pre>const ic = complex(0, c)   // ic == 3.75i  (untyped complex constant)
+const iΘ = complex(0, Θ)   // iΘ == 1i     (type complex128)
+</pre><pre>const Huge = 1 &lt;&lt; 100         // Huge == 1267650600228229401496703205376  (untyped integer constant)
+const Four int8 = Huge &gt;&gt; 98  // Four == 4                                (type int8)
+</pre><pre>3.14 / 0.0   // illegal: division by zero
+</pre><pre>uint(-1)     // -1 cannot be represented as a uint
+int(3.14)    // 3.14 cannot be represented as an int
+int64(Huge)  // 1267650600228229401496703205376 cannot be represented as an int64
+Four * 300   // operand 300 cannot be represented as an int8 (type of Four)
+Four * 100   // product 400 cannot be represented as an int8 (type of Four)
+</pre><pre>^1         // untyped integer constant, equal to -2
+uint8(^1)  // illegal: same as uint8(-2), -2 cannot be represented as a uint8
+^uint8(1)  // typed uint8 constant, same as 0xFF ^ uint8(1) = uint8(0xFE)
+int8(^1)   // same as int8(-2)
+^int8(1)   // same as -1 ^ int8(1) = -2
+</pre><h3 id="Order_of_evaluation">Order of evaluation</h3><pre>y[f()], ok = g(h(), i()+x[j()], &lt;-c), k()
+</pre><pre>a := 1
+f := func() int { a++; return a }
+x := []int{a, f()}            // x may be [1, 2] or [2, 2]: evaluation order between a and f() is not specified
+m := map[int]int{a: 1, a: 2}  // m may be {2: 1} or {2: 2}: evaluation order between the two map assignments is not specified
+n := map[int]int{a: f()}      // n may be {2: 3} or {3: 3}: evaluation order between the key and the value is not specified
+</pre><pre>var a, b, c = f() + v(), g(), sqr(u()) + v()
+
+func f() int        { return c }
+func g() int        { return a }
+func sqr(x int) int { return x*x }
+
+// functions u and v are independent of all other variables and functions
+</pre><h3 id="Terminating_statements">Terminating statements</h3><h3 id="Empty_statements">Empty statements</h3><h3 id="Labeled_statements">Labeled statements</h3><pre>Error: log.Panic("error encountered")
+</pre><h3 id="Expression_statements">Expression statements</h3><pre>append cap complex imag len make new real
+unsafe.Alignof unsafe.Offsetof unsafe.Sizeof
+</pre><pre>h(x+y)
+f.Close()
+&lt;-ch
+(&lt;-ch)
+len("foo")  // illegal if len is the built-in function
+</pre><h3 id="Send_statements">Send statements</h3><pre>ch &lt;- 3  // send value 3 to channel ch
+</pre><h3 id="IncDec_statements">IncDec statements</h3><h3 id="Assignments">Assignments</h3><pre>x = 1
+*p = f()
+a[i] = 23
+(k) = &lt;-ch  // same as: k = &lt;-ch
+</pre><pre>a[i] &lt;&lt;= 2
+i &amp;^= 1&lt;&lt;n
+</pre><pre>x, y = f()
+</pre><pre>one, two, three = '一', '二', '三'
+</pre><pre>_ = x       // evaluate x but ignore it
+x, _ = f()  // evaluate f() but ignore second result value
+</pre><pre>a, b = b, a  // exchange a and b
+
+x := []int{1, 2, 3}
+i := 0
+i, x[i] = 1, 2  // set i = 1, x[0] = 2
+
+i = 0
+x[i], i = 2, 1  // set x[0] = 2, i = 1
+
+x[0], x[0] = 1, 2  // set x[0] = 1, then x[0] = 2 (so x[0] == 2 at end)
+
+x[1], x[3] = 4, 5  // set x[1] = 4, then panic setting x[3] = 5.
+
+type Point struct { x, y int }
+var p *Point
+x[2], p.x = 6, 7  // set x[2] = 6, then panic setting p.x = 7
+
+i = 2
+x = []int{3, 5, 7}
+for i, x[i] = range x {  // set i, x[2] = 0, x[0]
+    break
+}
+// after this loop, i == 0 and x == []int{3, 5, 3}
+</pre><h3 id="If_statements">If statements</h3><pre>if x &gt; max {
+    x = max
+}
+</pre><pre>if x := f(); x &lt; y {
+    return x
+} else if x &gt; z {
+    return z
+} else {
+    return y
+}
+</pre><h3 id="Switch_statements">Switch statements</h3><pre>switch tag {
+default: s3()
+case 0, 1, 2, 3: s1()
+case 4, 5, 6, 7: s2()
+}
+
+switch x := f(); {  // missing switch expression means "true"
+case x &lt; 0: return -x
+default: return x
+}
+
+switch {
+case x &lt; y: f1()
+case x &lt; z: f2()
+case x == 4: f3()
+}
+</pre><pre>switch x.(type) {
+// cases
+}
+</pre><pre>switch i := x.(type) {
+case nil:
+    printString("x is nil")                // type of i is type of x (interface{})
+case int:
+    printInt(i)                            // type of i is int
+case float64:
+    printFloat64(i)                        // type of i is float64
+case func(int) float64:
+    printFunction(i)                       // type of i is func(int) float64
+case bool, string:
+    printString("type is bool or string")  // type of i is type of x (interface{})
+default:
+    printString("don't know the type")     // type of i is type of x (interface{})
+}
+</pre><pre>v := x  // x is evaluated exactly once
+if v == nil {
+    i := v                                 // type of i is type of x (interface{})
+    printString("x is nil")
+} else if i, isInt := v.(int); isInt {
+    printInt(i)                            // type of i is int
+} else if i, isFloat64 := v.(float64); isFloat64 {
+    printFloat64(i)                        // type of i is float64
+} else if i, isFunc := v.(func(int) float64); isFunc {
+    printFunction(i)                       // type of i is func(int) float64
+} else {
+    _, isBool := v.(bool)
+    _, isString := v.(string)
+    if isBool || isString {
+        i := v                         // type of i is type of x (interface{})
+        printString("type is bool or string")
+    } else {
+        i := v                         // type of i is type of x (interface{})
+        printString("don't know the type")
+    }
+}
+</pre><h3 id="For_statements">For statements</h3><pre>for a &lt; b {
+    a *= 2
+}
+</pre><pre>for i := 0; i &lt; 10; i++ {
+    f(i)
+}
+</pre><pre>for cond { S() }    is the same as    for ; cond ; { S() }
+for      { S() }    is the same as    for true     { S() }
+</pre><pre>var testdata *struct {
+    a *[7]int
+}
+for i, _ := range testdata.a {
+    // testdata.a is never evaluated; len(testdata.a) is constant
+    // i ranges from 0 to 6
+    f(i)
+}
+
+var a [10]string
+for i, s := range a {
+    // type of i is int
+    // type of s is string
+    // s == a[i]
+    g(i, s)
+}
+
+var key string
+var val interface {}  // value type of m is assignable to val
+m := map[string]int{"mon":0, "tue":1, "wed":2, "thu":3, "fri":4, "sat":5, "sun":6}
+for key, val = range m {
+    h(key, val)
+}
+// key == last map key encountered in iteration
+// val == map[key]
+
+var ch chan Work = producer()
+for w := range ch {
+    doWork(w)
+}
+
+// empty a channel
+for range ch {}
+</pre><h3 id="Go_statements">Go statements</h3><pre>go Server()
+go func(ch chan&lt;- bool) { for { sleep(10); ch &lt;- true; }} (c)
+</pre><h3 id="Select_statements">Select statements</h3><pre>var a []int
+var c, c1, c2, c3, c4 chan int
+var i1, i2 int
+select {
+case i1 = &lt;-c1:
+    print("received ", i1, " from c1\n")
+case c2 &lt;- i2:
+    print("sent ", i2, " to c2\n")
+case i3, ok := (&lt;-c3):  // same as: i3, ok := &lt;-c3
+    if ok {
+        print("received ", i3, " from c3\n")
+    } else {
+        print("c3 is closed\n")
+    }
+case a[f()] = &lt;-c4:
+    // same as:
+    // case t := &lt;-c4
+    //  a[f()] = t
+default:
+    print("no communication\n")
+}
+
+for {  // send random sequence of bits to c
+    select {
+    case c &lt;- 0:  // note: no statement, no fallthrough, no folding of cases
+    case c &lt;- 1:
+    }
+}
+
+select {}  // block forever
+</pre><h3 id="Return_statements">Return statements</h3><pre>func noResult() {
+    return
+}
+</pre><pre>func simpleF() int {
+    return 2
+}
+
+func complexF1() (re float64, im float64) {
+    return -7.0, -4.0
+}
+</pre><pre>func complexF2() (re float64, im float64) {
+    return complexF1()
+}
+</pre><pre>func complexF3() (re float64, im float64) {
+    re = 7.0
+    im = 4.0
+    return
+}
+
+func (devnull) Write(p []byte) (n int, _ error) {
+    n = len(p)
+    return
+}
+</pre><pre>func f(n int) (res int, err error) {
+    if _, err := f(n-1); err != nil {
+        return  // invalid return statement: err is shadowed
+    }
+    return
+}
+</pre><h3 id="Break_statements">Break statements</h3><pre>OuterLoop:
+    for i = 0; i &lt; n; i++ {
+        for j = 0; j &lt; m; j++ {
+            switch a[i][j] {
+            case nil:
+                state = Error
+                break OuterLoop
+            case item:
+                state = Found
+                break OuterLoop
+            }
+        }
+    }
+</pre><h3 id="Continue_statements">Continue statements</h3><pre>RowLoop:
+    for y, row := range rows {
+        for x, data := range row {
+            if data == endOfRow {
+                continue RowLoop
+            }
+            row[x] = data + bias(x, y)
+        }
+    }
+</pre><h3 id="Goto_statements">Goto statements</h3><pre>goto Error
+</pre><pre> goto L  // BAD
+    v := 3
+L:
+</pre><pre>if n%2 == 1 {
+    goto L1
+}
+for n &gt; 0 {
+    f()
+    n--
+L1:
+    f()
+    n--
+}
+</pre><h3 id="Fallthrough_statements">Fallthrough statements</h3><h3 id="Defer_statements">Defer statements</h3><pre>lock(l)
+defer unlock(l)  // unlocking happens before surrounding function returns
+
+// prints 3 2 1 0 before surrounding function returns
+for i := 0; i &lt;= 3; i++ {
+    defer fmt.Print(i)
+}
+
+// f returns 1
+func f() (result int) {
+    defer func() {
+        result++
+    }()
+    return 0
+}
+</pre><h3 id="Close">Close</h3><h3 id="Length_and_capacity">Length and capacity</h3><pre>0 &lt;= len(s) &lt;= cap(s)
+</pre><pre>const (
+    c1 = imag(2i)                    // imag(2i) = 2.0 is a constant
+    c2 = len([10]float64{2})         // [10]float64{2} contains no function calls
+    c3 = len([10]float64{c1})        // [10]float64{c1} contains no function calls
+    c4 = len([10]float64{imag(2i)})  // imag(2i) is a constant and no function call is issued
+    c5 = len([10]float64{imag(z)})   // invalid: imag(z) is a (non-constant) function call
+)
+var z complex128
+</pre><h3 id="Allocation">Allocation</h3><pre>type S struct { a int; b float64 }
+new(S)
+</pre><h3 id="Making_slices_maps_and_channels">Making slices, maps and channels</h3><pre>s := make([]int, 10, 100)       // slice with len(s) == 10, cap(s) == 100
+s := make([]int, 1e3)           // slice with len(s) == cap(s) == 1000
+s := make([]int, 1&lt;&lt;63)         // illegal: len(s) is not representable by a value of type int
+s := make([]int, 10, 0)         // illegal: len(s) &gt; cap(s)
+c := make(chan int, 10)         // channel with a buffer size of 10
+m := make(map[string]int, 100)  // map with initial space for 100 elements
+</pre><h3 id="Appending_and_copying_slices">Appending to and copying slices</h3><pre>s0 := []int{0, 0}
+s1 := append(s0, 2)                // append a single element     s1 == []int{0, 0, 2}
+s2 := append(s1, 3, 5, 7)          // append multiple elements    s2 == []int{0, 0, 2, 3, 5, 7}
+s3 := append(s2, s0...)            // append a slice              s3 == []int{0, 0, 2, 3, 5, 7, 0, 0}
+s4 := append(s3[3:6], s3[2:]...)   // append overlapping slice    s4 == []int{3, 5, 7, 2, 3, 5, 7, 0, 0}
+
+var t []interface{}
+t = append(t, 42, 3.1415, "foo")   //                             t == []interface{}{42, 3.1415, "foo"}
+
+var b []byte
+b = append(b, "bar"...)            // append string contents      b == []byte{'b', 'a', 'r' }
+</pre><pre>var a = [...]int{0, 1, 2, 3, 4, 5, 6, 7}
+var s = make([]int, 6)
+var b = make([]byte, 5)
+n1 := copy(s, a[0:])            // n1 == 6, s == []int{0, 1, 2, 3, 4, 5}
+n2 := copy(s, s[2:])            // n2 == 4, s == []int{2, 3, 4, 5, 4, 5}
+n3 := copy(b, "Hello, World!")  // n3 == 5, b == []byte("Hello")
+</pre><h3 id="Deletion_of_map_elements">Deletion of map elements</h3><h3 id="Complex_numbers">Manipulating complex numbers</h3><pre>var a = complex(2, -2)             // complex128
+const b = complex(1.0, -1.4)       // untyped complex constant 1 - 1.4i
+x := float32(math.Cos(math.Pi/2))  // float32
+var c64 = complex(5, -x)           // complex64
+const s uint = complex(1, 0)       // untyped complex constant 1 + 0i can be converted to uint
+_ = complex(1, 2&lt;&lt;s)               // illegal: 2 has floating-point type, cannot shift
+var rl = real(c64)                 // float32
+var im = imag(a)                   // float64
+const c = imag(b)                  // untyped constant -1.4
+_ = imag(3 &lt;&lt; s)                   // illegal: 3 has complex type, cannot shift
+</pre><h3 id="Handling_panics">Handling panics</h3><pre>panic(42)
+panic("unreachable")
+panic(Error("cannot parse"))
+</pre><pre>func protect(g func()) {
+    defer func() {
+        log.Println("done")  // Println executes normally even if there is a panic
+        if x := recover(); x != nil {
+            log.Printf("run time panic: %v", x)
+        }
+    }()
+    log.Println("start")
+    g()
+}
+</pre><h3 id="Bootstrapping">Bootstrapping</h3><h3 id="Source_file_organization">Source file organization</h3><h3 id="Package_clause">Package clause</h3><pre>package math
+</pre><h3 id="Import_declarations">Import declarations</h3><pre>import _ "lib/math"
+</pre><h3 id="An_example_package">An example package</h3><pre>package main
+
+import "fmt"
+
+// Send the sequence 2, 3, 4, … to channel 'ch'.
+func generate(ch chan&lt;- int) {
+    for i := 2; ; i++ {
+        ch &lt;- i  // Send 'i' to channel 'ch'.
+    }
+}
+
+// Copy the values from channel 'src' to channel 'dst',
+// removing those divisible by 'prime'.
+func filter(src &lt;-chan int, dst chan&lt;- int, prime int) {
+    for i := range src {  // Loop over values received from 'src'.
+        if i%prime != 0 {
+            dst &lt;- i  // Send 'i' to channel 'dst'.
+        }
+    }
+}
+
+// The prime sieve: Daisy-chain filter processes together.
+func sieve() {
+    ch := make(chan int)  // Create a new channel.
+    go generate(ch)       // Start generate() as a subprocess.
+    for {
+        prime := &lt;-ch
+        fmt.Print(prime, "\n")
+        ch1 := make(chan int)
+        go filter(ch, ch1, prime)
+        ch = ch1
+    }
+}
+
+func main() {
+    sieve()
+}
+</pre><h3 id="The_zero_value">The zero value</h3><pre>var i int
+var i int = 0
+</pre><pre>type T struct { i int; f float64; next *T }
+t := new(T)
+</pre><pre>t.i == 0
+t.f == 0.0
+t.next == nil
+</pre><pre>var t T
+</pre><h3 id="Package_initialization">Package initialization</h3><pre>var (
+    a = c + b
+    b = f()
+    c = f()
+    d = 3
+)
+
+func f() int {
+    d++
+    return d
+}
+</pre><pre>func init() { … }
+</pre><h3 id="Program_execution">Program execution</h3><pre>func main() { … }
+</pre><pre>type error interface {
+    Error() string
+}
+</pre><pre>func Read(f *File, b []byte) (n int, err error)
+</pre><pre>package runtime
+
+type Error interface {
+    error
+    // and perhaps other methods
+}
+</pre><h3 id="Package_unsafe">Package <code>unsafe</code></h3><pre>var f float64
+bits = *(*uint64)(unsafe.Pointer(&amp;f))
+
+type ptr unsafe.Pointer
+bits = *(*uint64)(ptr(&amp;f))
+
+var p ptr = nil
+</pre><pre>uintptr(unsafe.Pointer(&amp;s)) + unsafe.Offsetof(s.f) == uintptr(unsafe.Pointer(&amp;s.f))
+</pre><pre>uintptr(unsafe.Pointer(&amp;x)) % unsafe.Alignof(x) == 0
+</pre><h3 id="Size_and_alignment_guarantees">Size and alignment guarantees</h3>
+</div></body>
+</html>

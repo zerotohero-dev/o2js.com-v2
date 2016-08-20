@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <title>o2.js - A Coherent Solution to You JavaScript Dilemma | The Setup </title>
+
+    <meta name="description" content="o2js.com; a coherent solution to your JavaScript dilemma.">
+    <meta name="author" content="Volkan Özçelik">
+    <meta name="viewport" content="width=device-width" />
+
+<link href="//cloud.webtype.com/css/7aac64b3-a02e-43cb-9465-10369d68dd33.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/style.css" rel="stylesheet" />
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-56512-12', 'o2js.com');
+        ga('send', 'pageview');
+    </script>
+</head>
+<body class="wf-active posts" style="background:url(/bg)">
+    <div class="container">
+        <p style="text-align:center">Feeling Lost? <a href="http://o2js.com/o2js-com-v2---a-new-hope?#topic-list" class="topics" title="the big index of articles written so far&hellip;"><strong>Start Here &raquo;&raquo;</strong></a></p>
+
+        
+<h2 class="title span8"><a href="/the-setup">The Setup</a></h2>
+<div class="span8">
+  <p>As I promised <a href="http://o2js.com/hello-node-js-blogging-world">in the last post</a>, I&#39;ll go into the details of the overall architecture of this site.</p>
+<blockquote>
+<p>Although the steps defined in this article is specific to my needs, it can be helpful in general too. We will cover concepts like <strong>how to create a reverse proxy using IIS7</strong>, <strong>how to install and configure NGINX</strong>, <strong>how to configure virtualbox</strong>, <strong>how to do port forwarding to a local virtual machine</strong>… and the like.</p>
+</blockquote>
+<p>Let&#39;s begin by setting up <strong>IIS</strong>:</p>
+<h3>Configuring IIS7</h3>
+<p>Our goal will be to forward all the requests that come to <strong>o2js.com</strong> to a local port, hoping that there&#39;s somebody at that port listening to the requests.</p>
+<p>So, the first thing is to open <strong>IIS Manager</strong>, and create a website with the following bindings:</p>
+<p><a href="http://o2js.com/assets/bindings_large.png"><img src="http://o2js.com/assets/bindings.png" alt="IIS7 bindings"></a></p>
+<p>And here&#39;s the <strong>web.config</strong> file in the site&#39;s root directory:</p>
+<pre><code>&lt;?xml version=<span class="string">"1.0"</span> encoding=<span class="string">"UTF-8"</span><span class="preprocessor">?></span>
+&lt;configuration>
+    &lt;system.web>
+        &lt;sessionState mode=<span class="string">"Off"</span> />
+    &lt;/system.web>
+    &lt;system.webServer>
+        &lt;rewrite>
+            &lt;rules>
+                &lt;rule name=<span class="string">"ReverseProxyInboundRule1"</span> stopProcessing=<span class="string">"true"</span>>
+                    &lt;match url=<span class="string">"(.*)"</span> />
+                    &lt;action type=<span class="string">"Rewrite"</span> url=<span class="string">"http://localhost:8001/{R:1}"</span> />
+                &lt;/rule>
+            &lt;/rules>
+        &lt;/rewrite>
+    &lt;/system.webServer>
+&lt;/configuration></code></pre>
+<p>This site will simply act as a proxy, forwarding any request that comes to it to <strong>localhost:8001</strong>.</p>
+<blockquote>
+<p>I have also <strong>blocked external access to port 8001</strong> using <strong>windows firewall</strong>. Since the forwarding is done to a local address only, the outside world does not need to access port 8001.</p>
+</blockquote>
+<p>That&#39;s all for the <strong>IIS</strong> part. The next thing is to set up the <em>virtual machine</em>:</p>
+<h3>Configuring VirtualBox</h3>
+<p><a href="https://www.virtualbox.org/">VirtualBox</a> is a powerful <strong>x86</strong> and <strong>AMD64/Intel64</strong> <a href="http://en.wikipedia.org/wiki/Virtualization">virtualization</a> product. I am running an <a href="http://www.ubuntu.com/desktop">64 bit ubuntu virtual machine</a> inside the virtualbox that I&#39;ve installed to my windows server.</p>
+<p><a href="http://o2js.com/assets/virtualbox_large.png"><img src="http://o2js.com/assets/virtualbox.png" alt="virtualbox"></a></p>
+<p><a href="http://www.wikihow.com/Install-Ubuntu-on-VirtualBox">Installing an operating system into virtualbox</a> is pretty straightforward.</p>
+<p>After installing the OS (<em>which is <strong>ubuntu</strong> in my case</em>), I defined the following <strong><a href="https://en.wikipedia.org/wiki/Network_address_translation">NAT</a></strong> rules:</p>
+<p><a href="http://o2js.com/assets/nat_large.png"><img src="http://o2js.com/assets/nat.png" alt="NAT rules"></a></p>
+<p>Here&#39;s what I do with these ports:</p>
+<ul>
+<li>I occasionally run <strong><a href="https://github.com/techwraith/scotch">scotch</a></strong> on <strong>port 8000</strong> to create static files of this blog (<em>more on that later</em>).</li>
+<li>I am forwarding <strong>port 22</strong> to <strong>SSH</strong> to this virtual machine from outside.</li>
+<li>I am forwarding <strong>port 8001</strong> so that any request to <em>port 8001</em> of the <em>host machine</em> directly goes to this virtual server (i.e. the <em>guest machine</em>) – This sets the receiving endpoint of the redirect rule that we&#39;ve set up in the <strong>web.config</strong> above.</li>
+</ul>
+<p>The next thing is setting up <strong>NGINX</strong>:</p>
+<h3>SSH</h3>
+<p>After forwarding ports, we can <strong>SSH</strong> to the virtual server via <code>ssh -l {username} -p 22 {serverip}</code> command.</p>
+<p>Here&#39;s how the server looks like right now:</p>
+<p><a href="http://o2js.com/assets/server_large.png"><img src="http://o2js.com/assets/server.png" alt="htop"></a></p>
+<p>Not bad for a virtual server, huh <strong>;)</strong>?</p>
+<h3>Configuring NGINX</h3>
+<p>Installing <strong><a href="http://nginx.org">NGINX</a></strong> is as easy as running <code>sudo apt-get install nginx</code>.</p>
+<p>After installing <strong>NGINX</strong>, I&#39;ve created this <strong>nginx.conf</strong>:</p>
+<pre><code>user www-data;
+worker_processes 4;
+pid /run/nginx.pid;
+
+events {
+  worker_connections 768;
+}
+
+http {
+  sendfile on;
+  tcp_nopush on;
+  tcp_nodelay on;
+  keepalive_timeout 65;
+  types_hash_max_size 2048;
+
+  include /etc/nginx/mime.types;
+  default_type application/octet-stream;
+
+  access_log /var/log/nginx/access.log;
+  error_log /var/log/nginx/error.log;
+
+  gzip on;
+  gzip_disable &quot;msie6&quot;;
+
+  include /etc/nginx/conf.d/*.conf;
+  include /etc/nginx/sites-enabled/*;
+
+    server {
+        listen          8001;
+        server_name     o2js.com;
+        access_log      logs/o2js.com.access.log;
+        root            /home/volkan/PROJECTS/o2js.com/server/blog/static;
+
+        # rewrite_log on;
+        rewrite ^/$           /index.html;
+        rewrite ^([^.]+)$     $1.html;
+    }
+}</code></pre>
+<p>This is the most basic configuration file that you can start with.</p>
+<p>The rewrite rules</p>
+<pre><code>rewrite ^/$           /index.html;
+rewrite ^([^.]+)$     $1.html;</code></pre>
+<p>are there to map <strong>o2js.com/article_goes_here.html</strong> links to <strong>o2js.com/article_goes_here</strong> (<em>without the </em>.html* extension), which is cleaner.</p>
+<p>And we haven&#39;t created <em>/home/volkan/PROJECTS/o2js.com/server/blog/static</em> folder yet. That&#39;s the next thing we&#39;ll do:</p>
+<h3>Creating the Project Folder</h3>
+<p>The source code of this blog (<em>along with markdown versions of all of the articles in it</em>) <a href="https://github.com/v0lkan/o2js.com">can be cloned at github</a>.</p>
+<pre><code>$: cd /home/volkan/PROJECTS/
+$: git <span class="keyword">clone</span> https:<span class="comment">//github.com/v0lkan/o2js.com.git</span></code></pre>
+<h3>Installing Scotch</h3>
+<p><a href="https://github.com/techwraith/scotch">Scotch</a> is a dead-simple, <a href="http://daringfireball.net/projects/markdown/">markdown</a>-based blogging framework for <a href="http://nodejs.org/">node.js</a>.</p>
+<p>Installing <strong>scotch</strong> is really easy:</p>
+<pre><code>$: cd /home/volkan/PROJECTS/o2js.com/
+$: npm install -g scotch-blog
+$: cd blog
+$: sudo scotch serve 8080</code></pre>
+<p>Then going to <em><a href="http://localhost:8080/dashboard/install">http://localhost:8080/dashboard/install</a></em> will install <strong>scotch</strong> for you.</p>
+<blockquote>
+<p>Make sure that you have <strong><a href="http://www.mongodb.org/">MongoDB</a></strong> installed, before installing <strong>scotch</strong>.</p>
+</blockquote>
+<h3>Generating Static Blog Content</h3>
+<p>This is also as easy as calling <code>scotch generate</code> in the blog folder.</p>
+<p>This will create a static copy of the site under a folder named <em>*static</em>.</p>
+<h3>That&#39;s It</h3>
+<p>In this post, I tried to share…</p>
+<ul>
+<li>How I set up a minimalist <strong>node.js</strong> blog;</li>
+<li>How I created a <strong>static</strong> version of that blog;</li>
+<li>How I served this static content through <strong>NGINX</strong>;</li>
+<li>And how I <strong>reverse-proxied</strong> to that blog through <strong>IIS</strong>.</li>
+</ul>
+<p>The end result of all this effort is this very blog that you&#39;re reading right now <strong>;)</strong>.</p>
+<blockquote>
+<p>Whenever I write a new blog article, I also create a markdown file for it.<br>
+I synchronize these markdown files and other static content with the <a href="https://github.com/v0lkan/o2js.com">blog&#39;s github repository</a>.</p>
+</blockquote>
+<p>Which also means that when I do a change, I&#39;m updating the master branch, and publishing my updates on the master branch immediately.
+– There&#39;s no dev branch; there&#39;s no staging…</p>
+<p><img src="http://o2js.com/assets/prod.png" alt="Testing on Production Meme"></p>
+<p>I like living dangerously <strong>;)</strong>.</p>
+<p>One other thing before I forget: <a href="https://github.com/v0lkan/o2js.com/issues">there are a bunch of issues that I&#39;ve opened already</a>, to enhance this blog&#39;s functionality further. <a href="http://o2js.com/hello-node-js-blogging-world">As I&#39;ve said earlier</a>, this is a very long transition project. And if you have any ideas, I&#39;d love to learn about them.</p>
+
+  <blockquote>
+    Do you have something to say? Have I missed anything?<br>
+    Send your comments and suggestions to <a href="mailto:volkan@o2js.com">volkan@o2js.com</a>.
+  </blockquote>
+  <div class="byline">
+    by <a href="http://volkan.io/">Volkan Özçelik</a> on 08.25.13
+  </div>
+</div>
+
+
+
+
+
+<div class="menu right">
+    
+      <a href="hello-node-js-blogging-world" class="btn btn-grey">&laquo; older post</a>
+    
+
+    
+      <a href="o2js-com-v2---a-new-hope" class="btn btn-grey">newer post &raquo;</a>
+    
+</div>
+
+
+
+    </div>
+    <header class="aboutme">
+        <div class="legend">
+            <h1><a href="http://volkan.io/">Volkan Özçelik</a></h1>
+
+            <p><strong>Chase Me</strong></p>
+            <ul>
+            <li>Technical Lead @ <a href="http://cisco.com/">Cisco</a></li>
+            <li><a href="https://twitter.com/linkibol">@linkibol</a></li>
+            <li><a href="https://github.com/v0lkan">github.com/v0lkan</a></li>
+            <li><a href="https://speakerdeck.com/volkan">speakerdeck.com/volkan</a></li>
+            <li><a href="https://linkedin.com/in/volkanozcelik">linkedin.com/in/volkanozcelik</a></li>
+            </ul>
+
+            <p><strong>o2.js</strong></p>
+
+            <ul>
+            <li><a href="https://github.com/o2js">Read the Source, Luke</a></li>
+            </ul>
+        </div>
+        <p class="interviewz">
+            Psttt&hellip;
+            Wanna ace that interview?<br>
+            Then you have some reading to do:<br>
+            <a style="text-align:center;display:block;margin-top:1em"
+            href="http://o2js.com/interview-questions"
+            title="JavaScript Interview Questions">»» Get the Only Reference
+            on <strong>JavaScript Engineering Interviews</strong>
+            You Will <em>Ever</em> Need, Now!
+            ««</a>
+        </p>
+    </header>
+<script>
+    (function(window, document) {
+        'use strict';
+
+        var isScrolled = false,
+            isProcessed = false,
+
+            AD_SHOW_DELAY = 3000,
+            AD_SHOW_INIT_TOP_THRESHOLD = 50,
+            AD_CONTAINER_CLASS = 'interviewz',
+            AD_CONTAINER_HOVER_CLASS = 'interviewz hovered',
+
+            // A modern-ish RAF polyfill.
+            tick = window.requestAnimationFrame ||
+            window.mozRequestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            window.msRequestAnimationFrame ||
+            window.oRequestAnimationFrame;
+
+            if (!tick) {return;}
+
+            window.addEventListener('scroll', function() {
+                isScrolled = true;
+            })
+
+            function loop() {
+                if (isProcessed) {return;}
+
+                tick(loop);
+
+                if (!isScrolled) {return;}
+
+                var top = Math.max(
+                    document.body.scrollTop,
+                    document.documentElement.scrollTop
+                );
+
+                if (top < AD_SHOW_INIT_TOP_THRESHOLD) {return;}
+
+                isProcessed = true;
+
+                setTimeout(function(){
+                    var container = document.getElementsByClassName(
+                        AD_CONTAINER_CLASS
+                    )[0];
+
+                    container.className = AD_CONTAINER_HOVER_CLASS;
+                }, AD_SHOW_DELAY);
+
+                window.onscroll = function(){};
+            }
+
+            loop();
+    }(this, this.document));
+</script>
+</body>
+</html>

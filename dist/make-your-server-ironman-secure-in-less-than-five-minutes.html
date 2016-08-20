@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <title>o2.js - A Coherent Solution to You JavaScript Dilemma | Make Your Server Ironman-Secure in Less Than Five Minutes </title>
+
+    <meta name="description" content="o2js.com; a coherent solution to your JavaScript dilemma.">
+    <meta name="author" content="Volkan Özçelik">
+    <meta name="viewport" content="width=device-width" />
+
+<link href="//cloud.webtype.com/css/7aac64b3-a02e-43cb-9465-10369d68dd33.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/style.css" rel="stylesheet" />
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-56512-12', 'o2js.com');
+        ga('send', 'pageview');
+    </script>
+</head>
+<body class="wf-active posts" style="background:url(/bg)">
+    <div class="container">
+        <p style="text-align:center">Feeling Lost? <a href="http://o2js.com/o2js-com-v2---a-new-hope?#topic-list" class="topics" title="the big index of articles written so far&hellip;"><strong>Start Here &raquo;&raquo;</strong></a></p>
+
+        
+<h2 class="title span8"><a href="/make-your-server-ironman-secure-in-less-than-five-minutes">Make Your Server Ironman-Secure in Less Than Five Minutes</a></h2>
+<div class="span8">
+  <blockquote><a href="http://o2js.com/assets/hacker.jpg"><img src="http://o2js.com/assets/hack.png" style="float:left;margin:0.5em"></a>
+
+After <a href="http://o2js.com/the-setup">setting up your server</a>, the next thing would be to
+<strong>decrease its attack surface</strong>, and make it harder for unauthorized people
+to access it.
+
+<div style="clear:both"></div>
+
+We will do this two-fold:
+
+<ul><li>First, we will <strong>disable password authentication</strong> to protect the server
+against  <a href="https://securityledger.com/2012/12/new-25-gpu-monster-devours-passwords-in-seconds/">brute-force password cracking attacks</a>;</li>
+<li>Then we will <strong>configure our firewall</strong> to only enable access to ports that are in use.</li>
+<ul>
+</blockquote>
+
+<p>In this tutorial, I will be using an <a href="http://ubuntu.com">Ubuntu 13.04</a> for the server and
+a <strong>Mac OSX</strong> for the client. The steps you would follow will more or less be
+identical in any linux flavor. If you are using a windows client, you might
+want to use a shell emulator, such as <a href="http://www.cygwin.com/">cygwin</a>.</p>
+<blockquote>
+<p><strong>Danger Zone</strong>:</p>
+<p>If you mess things up when following this tutorial, you might lose the ability to remotely connect to your server.  So make sure your hosting
+provider gives you alternative ways to access to your server for emergencies.
+This can be a virtual console such as <a href="https://www.linode.com/linodes/">lish</a>; or you might need to open
+a support ticket to your hosting provider.</p>
+<p>And always <strong>backup everything</strong> before touching them.</p>
+</blockquote>
+<p>So let&#39;s begin by securing our authentication mechanism first:</p>
+<h3>Disabling Password Authentication</h3>
+<p>Go to your <strong>.ssh</strong> directory under your home folder. If there is no <strong>.ssh</strong>
+directory, just create one.</p>
+<pre><code>[user@macbook:~]$ cd ~/.ssh</code></pre>
+<p>If there are files in the folder back them up, just in case:</p>
+<pre><code>[user@macbook:~]$ mkdir backup
+[user@macbook:~]$ cp id_rsa backup/id_rsa
+[user@macbook:~]$ cp id_rsa.pub backup/id_rsa.pub
+[user@macbook:~]$ cp known_hosts backup/known_hosts</code></pre>
+<p>After having backed up the <strong>.ssh</strong> folder contents, let&#39;s create a key pair:</p>
+<pre><code>[user@macbook:~]$ ssh-keygen</code></pre>
+<p>Answer all the questions prompted. Generally accepting the defaults by
+pressing enter is okay.</p>
+<blockquote>
+<p>You might want to set a password if you are extra
+paranoid, but you don&#39;t need to. So when you are asked for a password, just
+press enter.</p>
+</blockquote>
+<p>This will generate a <a href="http://en.wikipedia.org/wiki/Public-key_cryptography">private-public key pair</a> for you.</p>
+<ul>
+<li><strong>~/.ssh/id_rsa.pub</strong> is your <strong>public key</strong>, you can freely distribute it.</li>
+<li><strong>~/.ssh/id_rsa</strong> is your <strong>private key</strong>, this should remain secret.</li>
+</ul>
+<blockquote>
+<p>The interested reader might want to look at this article about
+<a href="http://arstechnica.com/security/2013/02/lock-robster-keeping-the-bad-guys-out-with-asymmetric-encryption/">how an asymmetric cryptography a day can lock robsters away</a>.</p>
+</blockquote>
+<p>Just another warning before moving further: <strong>make sure to backup your keys in a trusted place</strong>.</p>
+<blockquote>
+<p>Copy your <strong>id_rsa</strong>, and <strong>id_rsa.pub</strong> to an external place that you trust
+so that if your hard drive crashes you could be able to get your keys back.
+I store my backup keys in a <a href="http://www.truecrypt.org/">truecrypt</a> volume in my <a href="http://dropbox.com">Dropbox</a>.</p>
+</blockquote>
+<p>Now, let&#39;s copy our public key over the wire.</p>
+<pre><code>[user@macbook:~]$ scp id_rsa.pub root@myserver:/root/id_rsa.pub</code></pre>
+<blockquote>
+<p>In this example, I&#39; using the root account, which is <a href="http://askubuntu.com/questions/16178/why-is-it-bad-to-run-as-root">bad</a>.</p>
+<p>You might think that logging in as root should be safe, as long as you know
+what you are doing. Similarly, you can also ride a motorcycle in
+the nude, and nothing may happen. But I bet you&#39;d feel better
+if you had your armor jacket, vest, and helmet on when you crash the bike.</p>
+</blockquote>
+<p>So ideally you would also like to</p>
+<ul>
+<li>Create a regular user;</li>
+<li><a href="http://askubuntu.com/questions/27559/how-do-i-disable-remote-ssh-login-as-root-from-a-server">Disable remote root login</a>;</li>
+<li>And login with that regular user&#39;s account.</li>
+</ul>
+<p>I will be using <strong>root</strong> account for the sake of simplicity; just keep in mind that
+it is a <strong>bad practice</strong> to do so.</p>
+<p>Back to our server:</p>
+<pre><code>[user@macbook:~]$ ssh root@myserver
+[root@myserver:~]$ touch .ssh/authorized_keys
+[root@myserver:~]$ cd /root/
+[root@myserver:~]$ cat id_rsa.pub >> .ssh/authorized_keys
+[root@myserver:~]$ service ssh restart
+[root@myserver:~]$ <span class="keyword">exit</span></code></pre>
+<p>This will enable us to login with our private key, without using a password.
+So…</p>
+<pre><code>[user@macbook:~]$ ssh root@myserver</code></pre>
+<p>will log you in without asking for any password if you&#39;ve set things up correctly.</p>
+<p>The next step is to <strong>disable password authentication</strong>.</p>
+<blockquote>
+<p><strong>Danger Zone</strong>:</p>
+<p>Make sure that you can <code>ssh root@myserver</code> without entering your password
+before proceeding further; or you will lose access to your server.</p>
+<p>You can use </p>
+<p><code>ssh root@myserver -v</code> </p>
+<p>to peek at what&#39;s going on and make sure that your public key is being used by the server.</p>
+</blockquote>
+<p>Now that our <strong>SSH</strong> is set up; let&#39;s make our server even more secure:</p>
+<pre><code>[user@macbook:~]$ ssh root@myserver
+[root@myserver:~]$ vim /etc/ssh/sshd_config
+~</code></pre>
+<p>Find the line that starts with <code>PasswordAuthentication</code> and replace that line with:</p>
+<pre><code>PasswordAuthentication no</code></pre>
+<p>Save and exit by <code>:wq</code>. And then restart the <strong>ssh</strong> service:</p>
+<pre><code>[root@myserver:~]$ service ssh restart
+[root@myserver:~]$ <span class="keyword">exit</span></code></pre>
+<p>After all these set, the only way to log in to your server for a malicious hacker is to gain an access to your private key. </p>
+<p>This will protect you against <strong>brute force password cracking</strong> attempts. </p>
+<p>However, we are not done yet. Let us fortify our network too:</p>
+<h3>Configuring the Firewall</h3>
+<p>Although there are <strong>GUI</strong> tools like <a href="http://www.fs-security.com/">firestarter</a> to configure your firewall, sooner or later you will find yourself in need to use the command line to set up your firewall. </p>
+<p>And firewall configuration from the command line is easy:</p>
+<pre><code>[user@macbook:~]$ ssh root@myserver
+[root@myserver:~]$ iptables -L</code></pre>
+<p>The above command will list the available firewall rules. If you haven&#39;t set up anything yet, you will see something like:</p>
+<pre><code>Chain INPUT (policy ACCEPT)
+target     prot opt source               destination
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination</code></pre>
+<p>This is an empty set of rules.</p>
+<blockquote>
+<p><strong>Danger Zone</strong>:</p>
+<p>Remember that the worst that could happen at this stage is that you might
+get locked out of your machine.
+If that happens, either reboot your machine, or connect by some other means
+to clear the rules chain.
+To clear all the rules, and reset the firewall to its initial state, just
+enter:</p>
+<p><code>iptables -F</code></p>
+</blockquote>
+<p>The first thing is, we would want to keep connections that are already established:</p>
+<pre><code>[root@myserver:~]$ iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT</code></pre>
+<p>Then we would allow every connection from the local machine (<em>i.e. the loopback interface</em>):</p>
+<pre><code>[root@myserver:~]$ iptables -A INPUT -i lo -j ACCEPT
+[root@myserver:~]$ iptables -A INPUT -d 127.0.0.0/8 -j REJECT</code></pre>
+<p>The above rule accepts every connection to the localhost (<em>127.0.0.1</em>) and rejects any other loopback (<em>lo</em>) address (<em>127.0.0.0/8</em> means everything between <em>127.0.0.0</em> and <em>127.255.255.255</em>).</p>
+<p>Now, grant access to the ports that you need:</p>
+<pre><code>[root@myserver:~]$ iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+[root@myserver:~]$ iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+[root@myserver:~]$ iptables -A INPUT -p tcp --dport 443 -j ACCEPT
+[root@myserver:~]$ iptables -A INPUT -p tcp --dport 8000 -j ACCEPT</code></pre>
+<p>(<em>22 is <strong>SSH</strong>, 80 is <strong>HTTP</strong>, 443 is <strong>HTTPS</strong>, and 8000 is my blog publish port</em>)</p>
+<p>You might also want to allow all outbound traffic:</p>
+<pre><code>[root@myserver:~]$ iptables -A OUTPUT -j ACCEPT</code></pre>
+<p>And optionally allow ping:</p>
+<pre><code>[root@myserver:~]$ iptables -A INPUT -p icmp -j ACCEPT</code></pre>
+<p>And then revoke access from everything else:</p>
+<pre><code>[root@myserver:~]$ iptables -A INPUT -j DROP
+[root@myserver:~]$ iptables -A FORWARD -j DROP</code></pre>
+<h3>Restoring Firewall State At Reboot</h3>
+<p>We&#39;ve setup our firewall, and we are not done yet; because when we reboot our server, all of those rules will be erased. To solve this problem, first create a backup of the rules:</p>
+<pre><code>[root@myserver:~]$ iptables-save &gt; /root/rules.backup</code></pre>
+<p>Then backup your <strong>/etc/rc.local</strong> file:</p>
+<pre><code>[root@myserver:~]$ cp /etc/rc.local /etc/rc.local.backup</code></pre>
+<p>Then edit your <strong>/etc/rc.local</strong>:</p>
+<pre><code>[root@myserver:~]$ vim /etc/rc.local</code></pre>
+<p>and add this line:</p>
+<pre><code>iptables-restore &lt; /root/rules.backup</code></pre>
+<p>This will apply the rules after the server reboots.</p>
+<h3>Conclusion</h3>
+<p>In this article, we&#39;ve learned how to make our linux box bulletproof by:</p>
+<ul>
+<li>Configuring <strong>SSH</strong>;</li>
+<li>Disabling <strong>SSH</strong> password authentication;</li>
+<li>Configuring our firewall using <code>iptables</code>;</li>
+<li>Backing up our firewall configuration using <code>iptables-save</code>;</li>
+<li>And restoring the firewall configuration by editing <code>/etc/rc.local</code> and using <code>iptables-restore</code>.</li>
+</ul>
+<blockquote>
+<p>What tricks do you have to make your server secure, in your sleeve?</p>
+<p>I&#39;d love to hear them.</p>
+</blockquote>
+
+  <blockquote>
+    Do you have something to say? Have I missed anything?<br>
+    Send your comments and suggestions to <a href="mailto:volkan@o2js.com">volkan@o2js.com</a>.
+  </blockquote>
+  <div class="byline">
+    by <a href="http://volkan.io/">Volkan Özçelik</a> on 09.15.13
+  </div>
+</div>
+
+
+
+
+
+<div class="menu right">
+    
+      <a href="jfdi-a-hackers-way-to-get-stuff-done" class="btn btn-grey">&laquo; older post</a>
+    
+
+    
+      <a href="procrastiworking" class="btn btn-grey">newer post &raquo;</a>
+    
+</div>
+
+
+
+    </div>
+    <header class="aboutme">
+        <div class="legend">
+            <h1><a href="http://volkan.io/">Volkan Özçelik</a></h1>
+
+            <p><strong>Chase Me</strong></p>
+            <ul>
+            <li>Technical Lead @ <a href="http://cisco.com/">Cisco</a></li>
+            <li><a href="https://twitter.com/linkibol">@linkibol</a></li>
+            <li><a href="https://github.com/v0lkan">github.com/v0lkan</a></li>
+            <li><a href="https://speakerdeck.com/volkan">speakerdeck.com/volkan</a></li>
+            <li><a href="https://linkedin.com/in/volkanozcelik">linkedin.com/in/volkanozcelik</a></li>
+            </ul>
+
+            <p><strong>o2.js</strong></p>
+
+            <ul>
+            <li><a href="https://github.com/o2js">Read the Source, Luke</a></li>
+            </ul>
+        </div>
+        <p class="interviewz">
+            Psttt&hellip;
+            Wanna ace that interview?<br>
+            Then you have some reading to do:<br>
+            <a style="text-align:center;display:block;margin-top:1em"
+            href="http://o2js.com/interview-questions"
+            title="JavaScript Interview Questions">»» Get the Only Reference
+            on <strong>JavaScript Engineering Interviews</strong>
+            You Will <em>Ever</em> Need, Now!
+            ««</a>
+        </p>
+    </header>
+<script>
+    (function(window, document) {
+        'use strict';
+
+        var isScrolled = false,
+            isProcessed = false,
+
+            AD_SHOW_DELAY = 3000,
+            AD_SHOW_INIT_TOP_THRESHOLD = 50,
+            AD_CONTAINER_CLASS = 'interviewz',
+            AD_CONTAINER_HOVER_CLASS = 'interviewz hovered',
+
+            // A modern-ish RAF polyfill.
+            tick = window.requestAnimationFrame ||
+            window.mozRequestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            window.msRequestAnimationFrame ||
+            window.oRequestAnimationFrame;
+
+            if (!tick) {return;}
+
+            window.addEventListener('scroll', function() {
+                isScrolled = true;
+            })
+
+            function loop() {
+                if (isProcessed) {return;}
+
+                tick(loop);
+
+                if (!isScrolled) {return;}
+
+                var top = Math.max(
+                    document.body.scrollTop,
+                    document.documentElement.scrollTop
+                );
+
+                if (top < AD_SHOW_INIT_TOP_THRESHOLD) {return;}
+
+                isProcessed = true;
+
+                setTimeout(function(){
+                    var container = document.getElementsByClassName(
+                        AD_CONTAINER_CLASS
+                    )[0];
+
+                    container.className = AD_CONTAINER_HOVER_CLASS;
+                }, AD_SHOW_DELAY);
+
+                window.onscroll = function(){};
+            }
+
+            loop();
+    }(this, this.document));
+</script>
+</body>
+</html>

@@ -1,0 +1,1499 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <title>o2.js - A Coherent Solution to You JavaScript Dilemma | Let&#39;s Make a JavaScript Framework Boilerplate </title>
+
+    <meta name="description" content="o2js.com; a coherent solution to your JavaScript dilemma.">
+    <meta name="author" content="Volkan Özçelik">
+    <meta name="viewport" content="width=device-width" />
+
+<link href="//cloud.webtype.com/css/7aac64b3-a02e-43cb-9465-10369d68dd33.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/style.css" rel="stylesheet" />
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-56512-12', 'o2js.com');
+        ga('send', 'pageview');
+    </script>
+</head>
+<body class="wf-active posts" style="background:url(/bg)">
+    <div class="container">
+        <p style="text-align:center">Feeling Lost? <a href="http://o2js.com/o2js-com-v2---a-new-hope?#topic-list" class="topics" title="the big index of articles written so far&hellip;"><strong>Start Here &raquo;&raquo;</strong></a></p>
+
+        
+<h2 class="title span8"><a href="/lets-make-a-javascript-framework-boilerplate">Let&#39;s Make a JavaScript Framework Boilerplate</a></h2>
+<div class="span8">
+  <p><img src="http://o2js.com/assets/eva.png" style="float:left;margin:1em;"></p>
+<p>Creating, documenting, testing, and maintaining a <strong>JavaScript Framework</strong> (<em>and any <strong>JavaScript</strong> code base, per se</em>) is not an easy task; it requires careful planning in advance. And it&#39;s really hard to find quality resources on how to do this.</p>
+<div style="clear:both"></div>
+
+<p>In this tutorial, </p>
+<ul>
+<li>We will be creating a simple &quot;<em>hello world</em>&quot; module, and publishing it to <strong><a href="https://npmjs.org/">npm</a></strong>; </li>
+<li>Automating builds and unit tests; </li>
+<li>Creating documentation for our code; </li>
+<li>And integrating tools and services to continuously assess our code&#39;s overall quality and complexity. </li>
+</ul>
+<p>We will also make sure that this &quot;<em>hello world</em>&quot; module is usable both on the server (<em>i.e. in a <strong><a href="http://nodejs.org/">Node.JS</a></strong> environment</em>) and on the client (<em>i.e., when imported as an <strong><a href="http://requirejs.org/docs/whyamd.html">AMD</a></strong> module</em>).</p>
+<blockquote>
+<p>By the end of this tutorial, you will have an idea about the steps you need to take to create and maintain a <em>reusable</em> <strong>JavaScript</strong> framework.</p>
+</blockquote>
+<p>Let&#39;s focus on &quot;creating the framework&quot; first; we will cover <strong>documenting</strong>, <strong>testing</strong>, and <strong>maintenance</strong> shortly after. </p>
+<h3>Creating a Framework is Hard</h3>
+<p>To create a <strong>JavaScript</strong> framework, you will have to:</p>
+<ul>
+<li>Establish <strong>requirements</strong>;</li>
+<li>Determine the <strong>scope</strong> of your framework;</li>
+<li>Think about your class/module <strong>hierarchy</strong>, conceptualize a <strong>dependency</strong> diagram;</li>
+<li>Think about how you can make the framework <strong>flexible</strong> and <strong>extensible</strong>;</li>
+<li>And provide coding <strong>guidelines</strong>, and <strong>conventions</strong>, in your <strong>documentation</strong>.</li>
+</ul>
+<p>And as you are developing your framework, you have to ensure that it is:</p>
+<ul>
+<li>Easy to learn;</li>
+<li>Easy to use, <strong>even without documentation</strong>;</li>
+<li><strong>Hard to misuse</strong>;</li>
+<li>Easy to read and maintain;</li>
+<li>And easy to extend.</li>
+</ul>
+<p>You will be doing all of these (<em>and more</em>) before even writing a single line of code. </p>
+<p>All of these are necessary, and <strong>not</strong> sufficient. Your framework will also need:</p>
+<ul>
+<li>Build and task <strong>automation</strong>;</li>
+<li>Documentation <strong>generation</strong>;</li>
+<li>Code quality <strong>analyses</strong>;</li>
+<li>Continuous <strong>integration</strong>;</li>
+<li>And <strong>unit tests</strong>…</li>
+</ul>
+<p>Moreover, you will also need to manage external dependencies, and versioning.</p>
+<h4>Consistency is Gold</h4>
+<p>Last, but not the least, you will need to be <strong>brutally consistent</strong>:</p>
+<ul>
+<li>You should be consistent in <strong>naming</strong> your methods within the <strong>API</strong>;</li>
+<li>You should be consistent in your <strong>verbiage</strong>, i.e.: using verbs, nouns, and keywords <strong>exactly</strong> the same way, at all times – this is especially something that is often overlooked when writing documentations;</li>
+<li>You should be consistent in your <strong>method signatures</strong>, your parameters have a logical and similar order;</li>
+<li>You should be consistent with the <strong>terminology</strong> (<em>i.e.: if you are using a <strong>Factory</strong> class somewhere, do not use a <strong>Builder</strong> class somewhere else – name classes and modules that do identical things, <strong>identically</strong></em>).</li>
+<li>And the list goes on…</li>
+</ul>
+<blockquote>
+<p>If you don&#39;t pay attention to all these from day one, it&#39;s highly probable that your project will turn into a maintenance hell a year from now.</p>
+</blockquote>
+<h3><a href="http://alistapart.com/article/REDESIGNREALIGN">Realigning</a> <strong>o2.js</strong></h3>
+<p>If you have been reading this blog for a while, you also know that <a href="http://o2js.com/o2js-com-v2---a-new-hope">I have started rewriting all of my blogs and articles</a>.</p>
+<p>What I&#39;ve not mentioned there, is the fact that <strong><a href="https://github.com/v0lkan/o2.js/tree/master">o2.js</a> JavaScript Framework</strong> is under a major rewrite too. </p>
+<p>When you <a href="https://github.com/v0lkan/o2.js/tree/dev">look at the <strong>dev</strong> branch</a>, you will see that there is a major change:</p>
+<blockquote>
+<p>I have moved all the existing source code to a <strong>draft</strong> folder to have a fresh start.</p>
+</blockquote>
+<p><img src="http://o2js.com/assets/o2draft.png" alt="folder tree" title="the ‘draft’ folder"></p>
+<p>This will also help me to create a project folder structure from scratch. And that&#39;s what we&#39;ll be doing next.</p>
+<h3>Cloning the Repository</h3>
+<p>I&#39;ll start by cloning <a href="https://github.com/v0lkan/o2.js/tree/dev">the current <strong>dev</strong> branch</a>.</p>
+<pre><code>$ cd ~/PROJECTS
+$ git <span class="keyword">clone</span> git@github.com:v0lkan/o2.js.git
+$ cd o2.js
+$ git checkout dev</code></pre>
+<blockquote>
+<p>If you are new to <strong><a href="http://git-scm.com/">git</a></strong> and <strong><a href="https://github.com/">GitHub</a></strong>, you might want to <a href="https://help.github.com/">read some documentation, before going further</a>.</p>
+</blockquote>
+<h3>Our First &quot;<em>Hello, World</em>&quot; Method</h3>
+<p>Let&#39;s begin by creating a really dumb function:</p>
+<pre><code><span class="keyword">function</span> sayHi() {
+    <span class="keyword">return</span> <span class="string">"Hello world; hello stars; hello universe!"</span>;
+}</code></pre>
+<blockquote>
+<p>By the end of this article, you will be amazed how much effort it requires to convert this single one-liner into a reusable, and maintainable module. </p>
+</blockquote>
+<p>For a simple dummy function like this, what we will be doing in the following sections might look like an overkill; however as your project evolves, and gets more and more complicated, you will see that this initial effort pays off.</p>
+<p>So let us continue our journey, by putting this lonely function to a proper folder:</p>
+<h3>Creating a Directory Structure</h3>
+<p>Since our function returns a <strong>String</strong>, it makes sense to put it into a &quot;<em>string utilities</em>&quot; package. </p>
+<p>It is also a common practice to put the source files into a &quot;<strong>src</strong>&quot; folder.</p>
+<p>Assuming that we will extend our framework, and add more modules; it also makes sense to create <strong>a separate folder for each module</strong>. So our initial directory structure will be in the form <code>src/&lt;PROJECT&gt;/&lt;module&gt;/</code>. </p>
+<p>Here&#39;s how it looks like:</p>
+<pre><code>src
+└── o2
+    └── string</code></pre>
+<p>Since the name of our framework is <strong>o2</strong>, the project folder is named &quot;<em>o2</em>&quot;; and since our package is a string utilities package, we named the folder as &quot;<em>string</em>&quot;.</p>
+<p>Now let&#39;s create a <strong>core.js</strong> in the &quot;<em>string</em>&quot; folder, which will make our file tree as follows:</p>
+<pre><code>src
+└── o2
+    └── string
+        └── core.js</code></pre>
+<h3>Creating a <strong>Node.JS</strong> Module</h3>
+<p>We will need to slightly modify our <code>sayHi</code> function to be able to run it in <strong><a href="http://nodejs.org/">Node.JS</a></strong>. </p>
+<p>Our new <strong>src/o2/string/core.js</strong> will look like:</p>
+<pre><code><span class="string">'use strict'</span>;
+
+exports.sayHi = <span class="keyword">function</span>() {
+    <span class="keyword">return</span> <span class="string">"Hello world; hello stars; hello universe!"</span>;
+};</code></pre>
+<blockquote>
+<p>If you are new to <strong>Node.JS</strong>, before going any further, you might want to <a href="http://nodejs.org/">read about what <strong>Node.JS</strong> is</a>; and <a href="http://nodejs.org/docs/latest/api/modules.html">how <strong>Node.JS</strong> modules are structured</a>.</p>
+</blockquote>
+<h3>Publishing to <strong>npm</strong></h3>
+<p><strong><a href="https://npmjs.org/">npm</a></strong> is the official package manager for <strong><a href="http://nodejs.org/">Node.JS</a></strong>. </p>
+<p>As of <strong>Node.JS</strong> version 0.6.3, <strong>npm</strong> is bundled and installed automatically with the environment. <strong>npm</strong> runs through the command line and manages dependencies for an application.</p>
+<blockquote>
+<p>If you want others to use your module in their <strong>Node.JS</strong> applications, then you will want to publish your modules to <strong><a href="https://npmjs.org/">npm</a></strong>.</p>
+<p>You will need to have <strong><a href="http://nodejs.org/">Node.JS</a></strong> installed to use <strong>npm</strong>.</p>
+</blockquote>
+<p>Let&#39;s start initializing our <strong>npm</strong> package:</p>
+<pre><code>$ cd src/o2/string
+$ npm init</code></pre>
+<p><code>npm init</code> will ask you a bunch of questions, and create a <strong>package.json</strong> in the <strong>project&#39;s root directory</strong> based on your answers. </p>
+<p>Here is the <strong>package.json</strong> I&#39;ve created for the <strong>string</strong> module using <code>npm init</code>:</p>
+<pre><code>{
+  "name": "o2.string",
+  "version": "0.0.1",
+  "description": "o2.js String utility methods",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" &amp;&amp; exit 1"
+  },
+  "keywords": [
+    "string",
+    "format",
+    "o2.js"
+  ],
+  "author": "Volkan Özçelik",
+  "license": "MIT",
+  "main": "core.js"
+}</code></pre>
+<h3>Helper Documents</h3>
+<p>Additionally, it would be nice to have <strong>LICENSE.md</strong>, a <strong>CHANGELOG.md</strong>, a <strong>CONVENTIONS.md</strong>, <strong>CONTRIBUTE.md</strong>, and a <strong>README.md</strong> files for your module.</p>
+<ul>
+<li><strong>LICENSE.md</strong> will be the boring copyright stuff;</li>
+<li><strong>CHANGELOG.md</strong> will be the file you will be updating regularly at each new version, to tell the framework users what has changed with respect to the former version;</li>
+<li><strong>CONVENTIONS.md</strong> will be your library&#39;s guidelines, naming and coding conventions;</li>
+<li><strong>CONTRIBUTE.md</strong> will be the file you would be telling how people can contribute to your project;</li>
+<li>And <strong>README.md</strong> will be first thing the library user reads. This file is, in deed, the most important file of the entire module, and it deserves its own blog post.</li>
+</ul>
+<p>Adding these altogether, our final file tree would be something like this:</p>
+<pre><code>src
+└── o2
+    └── string
+        ├── CHANGELOG.md
+        ├── CONTRIBUTE.md
+        ├── CONVENTIONS.md
+        ├── LICENSE.md
+        ├── README.md
+        ├── core.js
+        └── package.json</code></pre>
+<p>After creating all these execute the following command inside <strong>src/o2/string/</strong> directory:</p>
+<pre><code>$ npm publish</code></pre>
+<p>Calling <code>npm publish</code> will publish our code to the global <strong>npm</strong> registry.</p>
+<h3>Managing Intra-Modular Dependencies</h3>
+<p>Now let&#39;s create another module to make this dummy example a little more fun:</p>
+<pre><code>$ mkdir src/o2/ajax
+$ cd src/o2/ajax
+$ npm init</code></pre>
+<p>The file structure will be similar:</p>
+<pre><code>src
+└── o2
+    └── ajax
+        ├── CHANGELOG.md
+        ├── CONTRIBUTE.md
+        ├── CONVENTIONS.md
+        ├── LICENSE.md
+        ├── README.md
+        ├── core.js
+        └── package.json</code></pre>
+<p>Now, let&#39;s assume our <strong>ajax</strong> module depends on the <strong>string</strong> module to do some of its operations. We can maintain this dependency via <strong>npm</strong> too:</p>
+<pre><code>$ cd src/o2/ajax
+$ npm install &quot;o2.string&quot; --save</code></pre>
+<p>The <code>--save</code> directive tells <strong>npm</strong> command line tool to download the latest version of the <strong>o2.string</strong> module from the <strong>npm registry</strong>, and modify the <strong>package.json</strong> to reflect this change. </p>
+<p>Note that we have just published the <strong>o2.string</strong> module using <code>npm publish</code> in the former section. By calling <code>npm instal</code> we are downloading that code to a local <strong>node_modules</strong> folder.</p>
+<blockquote>
+<p>Oh, by the way, <a href="https://scalenpm.org/">npm needs your help</a>, <a href="https://scalenpm.org/">you can make a donation, and receive a lot of cool gigs, too</a>.</p>
+</blockquote>
+<p>After this operation, the directory structure will be as follows:</p>
+<pre><code>src
+└── o2
+    ├── ajax
+    │   ├── CHANGELOG.md
+    │   ├── CONTRIBUTE.md
+    │   ├── CONVENTIONS.md
+    │   ├── LICENSE.md
+    │   ├── README.md
+    │   ├── core.js
+    │   ├── node_modules
+    │   │   └── o2.string
+    │   │       ├── CHANGELOG.md
+    │   │       ├── CONTRIBUTE.md
+    │   │       ├── CONVENTIONS.md
+    │   │       ├── LICENSE.md
+    │   │       ├── README.md
+    │   │       ├── core.js
+    │   │       └── package.json
+    │   └── package.json
+    └── string
+        ├── CHANGELOG.md
+        ├── CONTRIBUTE.md
+        ├── CONVENTIONS.md
+        ├── LICENSE.md
+        ├── README.md
+        ├── core.js
+        └── package.json</code></pre>
+<p>There&#39;s a new <strong>node_modules</strong> folder where the dependencies of <strong>o2.ajax</strong> module are installed; and the <strong>package.json</strong> in <strong>src/o2/ajax</strong> will be something like:</p>
+<pre><code>{
+  &quot;name&quot;: &quot;o2.ajax&quot;,
+
+  ...
+
+  &quot;dependencies&quot;: {
+    &quot;o2.string&quot;: &quot;0.0.3&quot;
+  }
+}</code></pre>
+<p>Let&#39;s try the following for fun:</p>
+<pre><code>$ cd src/o2/ajax
+$ rm -rf node_modules
+$ npm install</code></pre>
+<p>After running <code>npm install</code> the <strong>node_modules</strong> folder that we&#39;ve removed will be populated with the dependencies again.</p>
+<blockquote>
+<p>Managing dependencies this way gives you additional flexibility, because you can install different versions of your dependent modules if you want. </p>
+</blockquote>
+<p>One downside of this approach is that the changes you make to the dependent module (<em>i.e.: <strong>o2/string/core</strong> in this example</em>) will not immediately reflect to the consumer module (<em>i.e.: <strong>o2/ajax/core</strong> in this example</em>). </p>
+<p>In order for the changes to propagate:</p>
+<ul>
+<li>First, publish your dependencies with <code>npm publish</code>;</li>
+<li>Then, change the version number in the <strong>package.json</strong> of the module that uses the dependency;</li>
+<li>And finally, re-install the dependency with <code>npm install</code>.</li>
+</ul>
+<p>Next, we will use the dependency that we have just installed.</p>
+<h3>Using Internal Dependencies</h3>
+<p>Our <strong>o2.ajax</strong> module will be as simple, dummy, and useless as our <strong>o2.string</strong> module.</p>
+<p>Here is the content of <strong>src/o2/ajax/core.js</strong>:</p>
+<pre><code><span class="string">'use strict'</span>;
+
+<span class="keyword">var</span> stringCore = <span class="keyword">require</span>(<span class="string">'./node_modules/o2.string/core'</span>);
+
+exports.sayHi = <span class="keyword">function</span>() {
+    <span class="keyword">return</span> stringCore.sayHi();
+};</code></pre>
+<p>So our <strong>o2.ajax</strong> module uses our <strong>o2.string</strong> module to say hi <strong>;)</strong>.</p>
+<blockquote>
+<p>If our framework was only for <strong>Node.JS</strong> runtime, we could have used <code>require(&#39;o2.string/core&#39;)</code> instead of <code>require(&#39;./node_modules/o2.string/core&#39;)</code>. </p>
+<p>We cannot do this right now; because later in this article, we will be converting our <strong>Node.JS</strong> modules to <strong>AMD modules</strong> so that they can be used in the browser too.</p>
+</blockquote>
+<p>I will assume that we have successfully cloned our remote github repository to our local drive.</p>
+<blockquote>
+<p>You can follow the instructions to <a href="https://help.github.com/articles/set-up-git">set up git</a>, <a href="https://help.github.com/articles/create-a-repo">create a repository</a>, and <a href="https://help.github.com/articles/fork-a-repo">cloning a repository</a> for <strong>GitHub</strong> integration.</p>
+</blockquote>
+<p>Having said that, let us look at how we can manage external third-party dependencies.</p>
+<h3>Configuring External Repositories</h3>
+<p>Our framework may also depend on other third-party <strong>GitHub</strong> repositories. In that case you will have to add them as <strong>submodule</strong>s. </p>
+<p>Suppose, for example, that we will be using the <strong><a href="http://requirejs.org/docs/whyamd.html">AMD</a></strong> library <a href="http://requirejs.org/">require.js</a> in our framework. For this, we will create an <strong>externals</strong> directory, and add a <strong>git submodule</strong> as follows:</p>
+<pre><code>$ mkdir externals
+$ git submodule add git@github.com:jrburke/requirejs.git externals/requirejs</code></pre>
+<p>This will add <strong>require.js</strong> source code to <strong>externals/requirejs</strong> folder. </p>
+<blockquote>
+<p>For a more in-depth information and other <code>git submodule</code> tips and tricks, <a href="http://chrisjean.com/2009/04/20/git-submodules-adding-using-removing-and-updating/">Chris Jean has an excellent tutorial</a>.</p>
+</blockquote>
+<h3>Wait! <a href="http://bower.io/">Bower</a> Does This in a Much Better Way</h3>
+<blockquote>
+<p><a href="http://bower.io/">Bower</a> is a package manager for the web. It offers a generic, unopinionated solution to the problem of front-end package management, while exposing the package dependency model via an API that can be consumed by a more opinionated build stack.</p>
+</blockquote>
+<p>Informally speaking, <strong>bower</strong> is the <strong>npm</strong> of front-end libraries.</p>
+<p>So let’s <strong>ditch our submodules</strong> and <strong>do things the bower way</strong>.</p>
+<p>First, you’ll need to install <strong>bower</strong> globally.</p>
+<pre><code>npm install -g bower</code></pre>
+<p>Then search for <strong>require.js</strong>:</p>
+<pre><code>$ bower search requirejs
+Search results:
+
+    requirejs git:<span class="comment">//github.com/jrburke/requirejs</span>
+    requirejs-text git:<span class="comment">//github.com/requirejs/text</span>
+    requirejs-plugins git:<span class="comment">//github.com/millermedeiros/requirejs-plugins.git</span>
+    requirejs-domready git:<span class="comment">//github.com/requirejs/domReady.git</span>
+...</code></pre>
+<p>The first match is what we want.</p>
+<p>Now let’s init <strong>bower</strong>:</p>
+<pre><code>$ bower init</code></pre>
+<p>Then answer the questions. At the end of the process you will have a <strong>bower.json</strong> like this:</p>
+<pre><code>{
+  "name": "o2.js",
+  "version": "2.0.1",
+  "homepage": "http://o2js.com/",
+  "authors": [
+    "Volkan Özçelik &lt;volkan@o2js.com>"
+  ],
+  "description": "o2.js JavaScript Framework",
+  "keywords": [
+    "o2.js",
+    "modules",
+    "amd",
+    "node.js",
+    "framework"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}</code></pre>
+<p>Now let’s add <strong>require.js</strong> as a production dependency to that file:</p>
+<pre><code>{
+  "name": "o2.js",
+  "version": "2.0.1",
+  "homepage": "http://o2js.com/",
+  "authors": [
+    "Volkan Özçelik &lt;volkan@o2js.com>"
+  ],
+  "description": "o2.js JavaScript Framework",
+  "keywords": [
+    "o2.js",
+    "modules",
+    "amd",
+    "node.js",
+    "framework"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "2.1.9"
+  }
+}</code></pre>
+<p>After saving our changes <strong>bower.json</strong>, let us install our dependencies:</p>
+<pre><code>$ bower install</code></pre>
+<p>This will install <strong>require.js</strong> into a <strong>bower_components</strong> folder.</p>
+<p>Now that we have installed <strong>require.js</strong> with bower, let’s remove the submodule bindings:</p>
+<p>To do this we will first delete delete the relevant section from the <strong>.gitmodules</strong> file, by removing these lines:</p>
+<pre><code>[submodule <span class="string">"externals/requirejs"</span>]
+    path = externals/requirejs
+    url = https:<span class="comment">//github.com/jrburke/requirejs.git</span></code></pre>
+<p>Then remove the submodule from <strong>git</strong>:</p>
+<pre><code>$ git rm --cached externals/requirejs/</code></pre>
+<p>Then remove it from <strong>.git/modules</strong>:</p>
+<pre><code>$ rm -rf .git/modules/externals/requirejs/</code></pre>
+<p>Then once you’re done with all these, remove the untracked externals folder:</p>
+<pre><code>$ rm -rf externals</code></pre>
+<p>That is way harder than adding a submodule <strong>:)</strong>. Better think carefully before adding submodules to your project <strong>;)</strong>.</p>
+<blockquote>
+<p>Note that <code>git submodule deinit</code> does a lot of the above heavy-lifting; however it’s always beneficial to know the internals.</p>
+</blockquote>
+<h3>Converting <strong><a href="http://wiki.commonjs.org/wiki/CommonJS">CommonJS</a></strong> Modules to <strong><a href="http://requirejs.org/docs/whyamd.html">AMD</a></strong></h3>
+<p>If we want to use our <strong>o2.string</strong> and <strong>o2.ajax</strong> modules in a browser environment, we will need to convert them to something that can run on the browser. Luckily, <strong><a href="http://requirejs.org/docs/optimization.html">r.js</a></strong> can do this for us. Just <code>cd</code> to the project root, and execute the following:</p>
+<pre><code>$ npm install -g <span class="keyword">require</span>.js
+$ mkdir amd
+$ mkdir amd/o2
+$ r.js -convert src/o2/ amd/o2</code></pre>
+<p>Then the <strong>amd</strong> folder hierarchy will be identical to that of <strong>src/o2</strong>:</p>
+<pre><code>amd
+├── ajax
+│   ├── CHANGELOG.md
+│   ├── CONTRIBUTE.md
+│   ├── CONVENTIONS.md
+│   ├── LICENSE.md
+│   ├── README.md
+│   ├── core.js
+│   ├── node_modules
+│   │   └── o2.string
+│   │       ├── CHANGELOG.md
+│   │       ├── CONTRIBUTE.md
+│   │       ├── CONVENTIONS.md
+│   │       ├── LICENSE.md
+│   │       ├── README.md
+│   │       ├── core.js
+│   │       └── package.json
+│   └── package.json
+└── string
+    ├── CHANGELOG.md
+    ├── CONTRIBUTE.md
+    ├── CONVENTIONS.md
+    ├── LICENSE.md
+    ├── README.md
+    ├── core.js
+    └── package.json</code></pre>
+<p>And our <strong>JavaScript</strong> files will be converted. </p>
+<p>Let&#39;s see <strong>amd/ajax/core.js</strong> as an example:</p>
+<pre><code>define(<span class="keyword">function</span> (<span class="keyword">require</span>, exports, module) {<span class="string">'use strict'</span>;
+
+<span class="keyword">var</span> stringCore = <span class="keyword">require</span>(<span class="string">'./node_modules/o2.string/core'</span>);
+
+exports.sayHi = <span class="keyword">function</span>() {
+    <span class="keyword">return</span> stringCore.sayHi();
+};
+
+});</code></pre>
+<p>You will see that the code is wrapped in <code>define(function (require, exports, module) {</code> … <code>});</code> – In deed, that&#39;s the only thing that is added to the files. It&#39;s not rocket surgery, and it&#39;s really convenient to have a tool that can do this automatically for us, so that we won&#39;t have to manually edit all the files.</p>
+<blockquote>
+<p>You can do this conversion manually too. And it&#39;s okay, if you have just a few files. </p>
+<p>However, for projects with a lot of files, automating things as much as we can, should be the way to go.</p>
+<p>We will be doing more and more automation in the following sections.</p>
+</blockquote>
+<h3>Using a Task Runner</h3>
+<p>Sooner or later you will need to use a task runner to <strong>validate</strong>, <strong>benchmark</strong>, and <strong>build</strong> your library.</p>
+<blockquote>
+<p><strong><a href="http://gruntjs.com/">Grunt</a></strong> will be our task runner of choice, because… well… <strong>Grunt is awesome</strong>!</p>
+</blockquote>
+<p>To install <strong>grunt</strong>, first you&#39;ll need to <a href="http://nodejs.org/">install <strong>Node.JS</strong></a>, and then execute the following command:</p>
+<pre><code>$ npm install -g grunt-cli</code></pre>
+<p>Then you should create a <strong>Gruntfile.js</strong> in your <strong>project&#39;s root directory</strong>. </p>
+<p>Here is a basic one to begin with:</p>
+<pre><code>module.exports = <span class="keyword">function</span>(grunt) {
+    <span class="string">'use strict'</span>;
+
+    grunt.initConfig({
+    });
+};</code></pre>
+<p>We will be adding more to to this <strong>GruntFile.js</strong> momentarily.</p>
+<h3>Linting Our Files</h3>
+<p><strong>JavaScript</strong> is an extremely flexible language; and this comes with a curse of its own: </p>
+<p>You can easily write crappy code if you don&#39;t pay attention to what you&#39;re doing. Tools like <strong><a href="http://www.jshint.com/">JSHint</a></strong> can <a href="http://en.wikipedia.org/wiki/Static_program_analysis">statically analyze</a> your code to keep it in good shape.</p>
+<blockquote>
+<p>We will use <strong><a href="http://www.jshint.com/">JSHint</a></strong> as our static code analysis tool, because it is maintained by excellent developers. The community behind <strong>JSHint</strong> is by no means arrogant and thickheaded, to an extent to utter <a href="http://www.developer.com/daily_news/jshint-forks-opinionated-jslint.html">&quot;Your sadly pathetic bleatings are harshing my mellow.&quot;</a> in a naïvely narcissistic pride.</p>
+<p>You know what? <strong><a href="https://brendaneich.com/2010/11/paren-free/">JSLint can suck it</a>!</strong> – <strong>JSHint</strong> is less opinionated, more flexible, and it is far more open future enhancements, suggestions, comments, and recommendations.</p>
+</blockquote>
+<p>&#39;nuff said <strong>;)</strong> – Let&#39;s create a <strong>.jshintrc</strong> file in our <strong>project root directory</strong> first, with the following content:</p>
+<pre><code>{
+    <span class="string">"bitwise"</span>: <span class="keyword">false</span>,
+    <span class="string">"curly"</span>: <span class="keyword">true</span>,
+    <span class="string">"eqeqeq"</span>: <span class="keyword">true</span>,
+    <span class="string">"forin"</span>: <span class="keyword">true</span>,
+    <span class="string">"immed"</span>: <span class="keyword">true</span>,
+    <span class="string">"indent"</span>: <span class="number">4</span>,
+    <span class="string">"latedef"</span>: <span class="keyword">true</span>,
+    <span class="string">"newcap"</span>: <span class="keyword">true</span>,
+    <span class="string">"noarg"</span>: <span class="keyword">true</span>,
+    <span class="string">"noempty"</span>: <span class="keyword">true</span>,
+    <span class="string">"nomen"</span>: <span class="keyword">true</span>,
+    <span class="string">"nonew"</span>: <span class="keyword">true</span>,
+    <span class="string">"onevar"</span>: <span class="keyword">true</span>,
+    <span class="string">"plusplus"</span>: <span class="keyword">false</span>,
+    <span class="string">"quotmark"</span>: <span class="string">"single"</span>,
+    <span class="string">"regexp"</span>: <span class="keyword">true</span>,
+    <span class="string">"strict"</span>: <span class="keyword">true</span>,
+    <span class="string">"undef"</span>: <span class="keyword">true</span>,
+    <span class="string">"unused"</span>: <span class="keyword">true</span>,
+    <span class="string">"white"</span>: <span class="keyword">false</span>,
+    <span class="string">"trailing"</span>: <span class="keyword">true</span>,
+    <span class="string">"node"</span>: <span class="keyword">true</span>,
+    <span class="string">"maxlen"</span>: <span class="number">80</span>,
+    <span class="string">"globals"</span>: {
+        <span class="string">"exports"</span>: <span class="keyword">false</span>,
+        <span class="string">"require"</span>: <span class="keyword">false</span>,
+        <span class="string">"define"</span>: <span class="keyword">false</span>,
+        <span class="string">"window"</span>: <span class="keyword">false</span>,
+        <span class="string">"document"</span>: <span class="keyword">false</span>,
+        <span class="string">"ok"</span>: <span class="keyword">false</span>,
+        <span class="string">"expect"</span>: <span class="keyword">false</span>
+    }
+}</code></pre>
+<p>You can read what all these options mean <a href="http://www.jshint.com/docs/">at the <strong>JSHint</strong> documentation page</a>.</p>
+<p>We will also configure our <strong>Gruntfile.js</strong> to validate our source files:</p>
+<pre><code>module.exports = <span class="keyword">function</span>(grunt) {
+    <span class="string">'use strict'</span>;
+
+    grunt.initConfig({
+        jshint: {
+            options: {
+                jshintrc: <span class="string">'.jshintrc'</span>
+            },
+            src: [<span class="string">'Gruntfile.js'</span>, <span class="string">'src/**/*.js'</span>]
+        }
+    });
+
+    grunt.loadNpmTasks(<span class="string">'grunt-contrib-jshint'</span>);
+
+    grunt.registerTask(<span class="string">'default'</span>, [<span class="string">'jshint'</span>]);
+    grunt.registerTask(<span class="string">'default'</span>, [<span class="string">'jshint'</span>]);
+};</code></pre>
+<p>If you&#39;ve configured everything correctly so far, running <code>grunt lint</code> will produce the following output:</p>
+<pre><code>$ grunt lint
+
+Running &quot;jshint:src&quot; (jshint) task
+&gt;&gt; 4 files lint free.
+
+Done, without errors.</code></pre>
+<h3>Adding Documentation</h3>
+<p>A good documentation is a <strong>must have</strong> for any framework. </p>
+<p>Creating a good documentation is a nontrivial task. A good documentation should cover:</p>
+<ul>
+<li><strong>Method information</strong>: This should explain what the function does, why it does it (<em>if not obvious</em>), caveats if any. This should also include usage examples;</li>
+<li><strong>Parameter listing</strong>: Explain every possible parameter, and their default values (<em>if any</em>), explain if the parameters have any additional limitations beyond their type;</li>
+<li><strong>Return information</strong>: What does the method return? where can it be used?</li>
+<li><strong>Related method</strong>: Would it help the reader, if she reads some other method&#39;s documentation too?</li>
+<li><strong>Exceptional cases</strong>: Any exceptions, and errors raised <strong>should</strong> be documented;</li>
+<li><strong>More Usage Examples</strong>: An introductory document (<em>README.md, maybe</em>) that explains the intentions and the correct usage examples and ideas <strong>beyond</strong> the actual <strong>API</strong> documentation.</li>
+</ul>
+<p>In the light of these, Let us create some <strong><a href="http://usejsdoc.org/">JS Doc</a></strong> for our dummy methods. </p>
+<p>Here&#39;s the documented <strong>src/o2/ajax/core.js</strong>, for example:</p>
+<pre><code><span class="string">'use strict'</span>;
+
+<span class="comment">/**
+ *<span class="phpdoc"> @module</span> o2.ajax
+ */</span>
+
+<span class="keyword">var</span> stringCore = <span class="keyword">require</span>(<span class="string">'./node_modules/o2.string/core'</span>);
+
+<span class="comment">/**
+ *<span class="phpdoc"> @class</span> o2.ajax.core
+ *<span class="phpdoc"> @uses</span> o2.string.core
+ */</span>
+
+<span class="comment">/**
+ * Returns a welcome `String`.
+ *
+ * Usage example:
+ *
+ *<span class="phpdoc"> @example</span>
+ *     var ajaxUtil = require('ajax/core');
+ *
+ *     // `greeting` will be a welcome text of type `String`.
+ *     var greeting = ajaxUtil.sayHi();
+ *
+ *<span class="phpdoc"> @method</span> sayHi
+ *<span class="phpdoc"> @static</span>
+ *
+ *<span class="phpdoc"> @returns</span> {String} The welcome `String`.
+ */</span>
+exports.sayHi = <span class="keyword">function</span>() {
+    <span class="keyword">return</span> stringCore.sayHi();
+};</code></pre>
+<p>The next thing we will do will be to create a <strong>HTML documentation</strong> out of these <strong>JSDoc</strong> comments. </p>
+<p>For this, let us add the following to our <strong>Gruntfile.js</strong>:</p>
+<pre><code>module.exports = <span class="keyword">function</span>(grunt) {
+    <span class="string">'use strict'</span>;
+
+    grunt.initConfig({
+
+        ...
+
+        pkg: grunt.file.readJSON(<span class="string">'package.json'</span>),
+        yuidoc: {
+            compile: {
+                name: <span class="string">'&lt;%= pkg.name %>'</span>,
+                description: <span class="string">'&lt;%= pkg.description %>'</span>,
+                version: <span class="string">'&lt;%= pkg.version %>'</span>,
+                url: <span class="string">'&lt;%= pkg.homepage %>'</span>,
+                logo: <span class="string">'../assets/logo.png'</span>,
+
+                options: {
+                    paths: <span class="string">'src/o2'</span>,
+                    outdir: <span class="string">'documentation'</span>
+                }
+            }
+        }
+    });
+
+    ...
+
+    grunt.loadNpmTasks(<span class="string">'grunt-contrib-yuidoc'</span>);
+
+    grunt.registerTask(<span class="string">'doc'</span>, [<span class="string">'yuidoc'</span>]);
+};</code></pre>
+<p>And then install the plugin:</p>
+<pre><code>$ mkdir documentation
+$ npm install grunt-contrib-yuidoc --save-dev</code></pre>
+<p>After this setup, when we run</p>
+<pre><code>$ grunt doc</code></pre>
+<p>We will get a nice <strong>HTML</strong> documentation in our <strong>documentation</strong> folder:</p>
+<p><a href="http://o2js.com/assets/doc-large.png"><img src="http://o2js.com/assets/doc-small.png" alt="" title="Click to see a larger version"></a></p>
+<h3>Adding Unit Tests</h3>
+<p>Unit test ensure our framework&#39;s quality and maintainability. </p>
+<p>Since our framework will be used both on the client and on the server we will need different test suites for client and server environments. </p>
+<p>Let&#39;s create the test folders first:</p>
+<pre><code>$ mkdir test
+$ mkdir test/node
+$ mkdir test/web</code></pre>
+<p>And then add just two blank files for <strong>string.core</strong> tests for <strong>server</strong> and <strong>client</strong> environments respectively:</p>
+<pre><code>$ touch test/node/o2.string.core_test.js <span class="comment"># server test</span>
+$ touch test/web/o2.string.core_test.js  <span class="comment"># client test</span></code></pre>
+<h4>Server Test</h4>
+<p>We will use <strong><a href="http://vowsjs.org/">vows.js</a></strong> for our server-side tests. </p>
+<p>Here is our <strong>test/node/o2.string.core_test.js</strong> file.</p>
+<pre><code><span class="string">'use strict'</span>;
+
+<span class="keyword">var</span> core = <span class="keyword">require</span>(<span class="string">'../../src/o2/string/core'</span>);
+<span class="keyword">var</span> assert = <span class="keyword">require</span>(<span class="string">'assert'</span>);
+<span class="keyword">var</span> vows = <span class="keyword">require</span>(<span class="string">'vows'</span>);
+
+vows.describe(<span class="string">'o2.string.core'</span>).addBatch({
+    <span class="string">'stringUtil.sayHi'</span>: {
+        <span class="string">'when "stringUtil.sayHi()" is called'</span>: {
+            topic: <span class="keyword">function</span>() {
+                <span class="keyword">return</span> core.sayHi().toLowerCase().indexOf(<span class="string">'hello'</span>) > -<span class="number">1</span>;
+            },
+            <span class="string">'it should return a greeting'</span>: <span class="keyword">function</span>(expectation) {
+                assert.equal(expectation, <span class="keyword">true</span>);
+            }
+        }
+    }
+}).export(module);</code></pre>
+<blockquote>
+<p>Note that these tests are simple test samples to demonstrate the concept.</p>
+<p>We will cover how to write great unit tests, in depth, in a later article.</p>
+</blockquote>
+<p>We will also need to install <strong>vows</strong> and configure our <strong>package.json</strong>:</p>
+<pre><code>$ npm install vows --save-dev</code></pre>
+<p>Let&#39;s configure our <strong>package.json</strong> in our <strong>project root directory</strong>, to enable this test:</p>
+<pre><code>{
+  "name": "o2",
+  "version": "0.26.12",
+  "author": "Volkan Özçelik &lt;volkan@o2js.com>",
+  "description": "o2.js JavaScript Framework",
+  "homepage": "http://o2js.com/",
+  "keywords": [
+    ...
+  ],
+  "scripts": {
+    "test": "vows test/node/*.js --spec"
+  },
+  "repository": {
+    ...
+  },
+  "license": "MIT",
+  "devDependencies": {
+    ...
+  }
+}</code></pre>
+<p>The <code>vows test/node/*.js --spec</code> will run our server-side test. To run the tests just call <code>npm test</code> from the command line:</p>
+<pre><code>$ npm test
+
+&gt; o2@0.26.12 test /Users/volkan.ozcelik/PROJECTS/o2.js
+&gt; vows test/node/*.js --spec
+
+  ♢ o2.string.core 
+
+  sayHi when &quot;sayHi()&quot; is called
+    ✓ it should return a greeting
+
+✓ OK » 1 honored (0.006s)</code></pre>
+<h4>Client Test</h4>
+<p>Next, we will add a client-side test. </p>
+<p>We will use <strong><a href="http://pivotal.github.io/jasmine/">Jasmine</a></strong> for that. </p>
+<p>Go to the project root, and run the following commands:</p>
+<pre><code>$ npm install grunt-contrib-connect --save-dev
+$ npm install grunt-contrib-jasmine --save-dev</code></pre>
+<p>The next thing, as usual, is to configure our <strong>Gruntfile.js</strong>:</p>
+<pre><code>module.exports = <span class="keyword">function</span>(grunt) {
+    <span class="string">'use strict'</span>;
+
+    grunt.initConfig({
+
+        ...
+
+        connect: {
+            test: {
+                options: {
+                    port: <span class="number">8080</span>
+                }
+            }
+        },
+        jasmine: {
+            taskName: {
+                src: <span class="string">'amd/**/*.js'</span>,
+                options: {
+                    specs: <span class="string">'test/web/*_test.js'</span>,
+                    host: <span class="string">'http://127.0.0.1:8080/'</span>,
+                    template: <span class="keyword">require</span>(<span class="string">'grunt-template-jasmine-requirejs'</span>),
+                    templateOptions: {
+                        requireConfig: {
+                        }
+                    }
+                }
+            }
+        },
+
+        ...
+
+    });
+
+    ... 
+
+    grunt.loadNpmTasks(<span class="string">'grunt-contrib-connect'</span>);
+    grunt.loadNpmTasks(<span class="string">'grunt-contrib-jasmine'</span>);
+
+    grunt.registerTask(<span class="string">'test'</span>, [<span class="string">'connect:test'</span>, <span class="string">'jasmine'</span>]);
+};</code></pre>
+<p><strong>grunt-contrib-connect</strong> creates temporary web server, and <strong>grunt-contrib-jasmine</strong> runs the <strong>Jasmine</strong> specs on a <a href="http://www.sencha.com/blog/headless-testing-for-continuous-integration-with-git-and-jasmine">headless</a> browser using <a href="https://code.google.com/p/phantomjs/">phantom.js</a>.</p>
+<p>And here is our <strong>test/web/o2.string.core_test.js</strong> file:</p>
+<pre><code><span class="string">'use strict'</span>;
+
+<span class="keyword">require</span>([
+    <span class="string">'amd/o2/string/core'</span>,
+    <span class="string">'amd/o2/ajax/core'</span>
+], <span class="keyword">function</span>(
+    core,
+    ajax
+) {
+    describe(<span class="string">"o2.string.core"</span>, <span class="keyword">function</span>() {
+        it(<span class="string">"returns a greeting when `sayHi` is called."</span>, <span class="keyword">function</span>() {
+            <span class="keyword">var</span> div = document.createElement(<span class="string">'div'</span>);
+
+            div.innerHTML = core.sayHi() + ajax.sayHi();
+
+            <span class="keyword">var</span> greet = <span class="string">'Hello world; hello stars; hello universe!'</span>;
+
+            expect(div.innerHTML).toBe(greet + greet);
+        });
+    });
+});</code></pre>
+<p>So, calling <code>grunt test</code> will give the following output:</p>
+<pre><code>$ grunt test
+Running &quot;connect:test&quot; (connect) task
+Started connect web server on 127.0.0.1:8080.
+
+Running &quot;jasmine:taskName&quot; (jasmine) task
+Testing jasmine specs via phantom
+.
+1 spec in 0.238s.
+&gt;&gt; 0 failures</code></pre>
+<blockquote>
+<p><strong>Hint</strong>: </p>
+<p>Along with unit testing tools like <a href="http://vowsjs.org/">vows</a>, and <a href="http://pivotal.github.io/jasmine/">Jasmine</a>, a mocking tool like <a href="http://sinonjs.org/">sinon.js</a> might also come in handy.</p>
+</blockquote>
+<h3>Automating Command-Line Tasks</h3>
+<p>We can use <strong>grunt-exec</strong> to run non-Grunt shell scripts. </p>
+<p>Let&#39;s make our lives easier by adding a few of those.</p>
+<p>First we will need to install <strong>grunt-exec</strong>, as a development dependency:</p>
+<pre><code>$ npm install grunt-exec --save-dev</code></pre>
+<p>Then we will configure our <strong>Gruntfile.js</strong>:</p>
+<pre><code>module.exports = <span class="keyword">function</span>(grunt) {
+    <span class="string">'use strict'</span>;
+
+    grunt.initConfig({
+
+        ...
+
+        exec: {
+            clean: {
+                command: <span class="string">'find amd/o2/string/ -maxdepth 1 -type f -delete;'</span> +
+                  <span class="string">'find amd/o2/ajax/ -maxdepth 1 -type f -delete;'</span> +
+                  <span class="string">'find amd/o2/ajax/node_modules/o2.string -maxdepth 1 '</span> +
+                  <span class="string">'-type f -delete;'</span>,
+                stdout: <span class="keyword">true</span>,
+                stderr: <span class="keyword">true</span>
+            },
+            amdify: {
+                command: <span class="string">'r.js -convert src/o2 amd/o2;'</span>,
+                stdout: <span class="keyword">true</span>,
+                stderr: <span class="keyword">true</span>
+            },
+            <span class="string">'test'</span>: {
+                command: <span class="string">'npm test'</span>,
+                stdout: <span class="keyword">true</span>,
+                stderr: <span class="keyword">true</span>
+            }
+        },
+
+        ...
+    });
+
+    grunt.loadNpmTasks(<span class="string">'grunt-exec'</span>);
+
+    grunt.registerTask(<span class="string">'publish'</span>, [<span class="string">'exec:clean'</span>, <span class="string">'exec:amdify'</span>]);
+    grunt.registerTask(<span class="string">'testAll'</span>, [<span class="string">'exec:test'</span>, <span class="string">'test'</span>]);
+
+    ...
+};</code></pre>
+<p>And modify <strong>test</strong> section of the <strong>package.json</strong> in the <strong>project root directory</strong> as follows:</p>
+<pre><code>  &quot;scripts&quot;: {
+    &quot;test&quot;: &quot;vows test/node/*.js --spec;grunt test&quot;
+  },</code></pre>
+<p>Now, whenever we run <code>grunt publish</code>, we will remove the current files in our <strong>amd</strong> folder, and create new <strong>AMD</strong> modules from the source files in our <strong>src</strong> directory.</p>
+<p>And when we run <code>grunt testAll</code>, we will test our <strong>Node.JS</strong> modules, followed by our <strong>AMD</strong> modules.</p>
+<p>The next thing we will do is to automate our build tests.</p>
+<h3>Continuous Integration</h3>
+<blockquote>
+<p><a href="http://en.wikipedia.org/wiki/Continuous_integration">Continuous Integration (<em>CI</em>)</a> is an <strong>incremental</strong> and <strong>iterative</strong> software development methodology.  It is a software development practice where members of a team integrate their work frequently, usually each person integrates at least daily - leading to multiple integrations per day. Each integration is verified by an <strong>automated build</strong> (including test) to detect integration errors as quickly as possible. </p>
+</blockquote>
+<p><strong>CI</strong> is also a &quot;<em>must have</em>&quot; for our framework: </p>
+<p>When we integrate our code base to a <strong>CI Server</strong>, every time we publish an update, a series of tasks and tests will automatically run and we will get an immediate report if any of our build tasks or tests fail. Not only will this significantly reduce possible integration problems and allow us to develop cohesive software more rapidly, but also it will help us identify problems in our framework as early as possible.</p>
+<blockquote>
+<p>Implementing <strong>code quality checkers</strong> and <strong>automatic reporting</strong> in the build system, coupled with a <strong>continuous integration</strong> and <strong>continuous inspection</strong> systems, will help you identify code quality <em>hotspots</em>, and <strong><a href="http://www.amazon.com/Refactoring-Improving-Design-Existing-Code/dp/0201485672">refactor</a></strong> your code accordingly.</p>
+</blockquote>
+<p>We will be using <strong><a href="https://travis-ci.org">Travis</a></strong> as our <strong>CI</strong> server. </p>
+<p>Setting up <strong>Travis</strong> is really easy:</p>
+<ul>
+<li>First, open an account at <a href="https://travis-ci.org"><a href="https://travis-ci.org/">https://travis-ci.org/</a></a>;</li>
+<li>Then, sign in with your <a href="https://github.com/">github</a> credentials;</li>
+<li>Go to your <a href="https://travis-ci.org/profile">profile page</a> and <strong>turn on</strong> your repository.</li>
+</ul>
+<p>Here is how it looks like:</p>
+<p><a href="http://o2js.com/assets/travis-large.png"><img src="http://o2js.com/assets/travis.png"  title="Click to see a larger version"></a></p>
+<p><strong>Travis</strong> will use <code>npm test</code> command to execute our tests. Since we want to test the recent <strong>AMD</strong> modules, along with <strong>Node.JS</strong> files, we will slightly modify our <strong>package.json</strong> in our <strong>project root directory</strong>:</p>
+<pre><code>...
+  &quot;scripts&quot;: {
+    &quot;test&quot;: &quot;grunt publish;vows test/node/*.js --spec;grunt test&quot;
+  },
+...</code></pre>
+<p>And since we are using <strong>grunt</strong> in our test script, we need to let <strong>Travis</strong> know about it:</p>
+<pre><code>$ npm install grunt-cli --save-dev</code></pre>
+<p>The next thing we will do is to create a <strong>.travis.yml</strong> in the <strong>project root directory</strong> to tell <strong>Travis</strong> which versions of <strong>Node.JS</strong> we would like our framework to be tested in:</p>
+<pre><code>language: node_js
+node_js:
+  - &quot;0.10&quot;
+  - &quot;0.8&quot;</code></pre>
+<p>That&#39;s it! </p>
+<p>From now on, every time we push things to <strong>grunt</strong>, we will get automated tests:</p>
+<pre><code>$ git add .
+$ git commit -m &#39;travis configuration update&#39;
+$ git push origin dev</code></pre>
+<p>We can see our build results on the <a href="https://travis-ci.org"><strong>Travis</strong> website</a>.</p>
+<p><a href="http://o2js.com/assets/travis-results-large.png"><img src="http://o2js.com/assets/travis-results.png"  title="Click to see a larger version"></a></p>
+<h3>Gain Control Over Your Code&#39;s Complexity</h3>
+<p>In this section, we will…</p>
+<ul>
+<li>Analyze our code’s <strong>complexity</strong>;</li>
+<li>Streamline this complexity analysis to our <strong><a href="http://en.wikipedia.org/wiki/Continuous_integration">CI</a></strong> pipeline;</li>
+<li>And create <strong>coverage reports</strong> for our code base.</li>
+</ul>
+<p>Let’s start by analyzing code complexity first:</p>
+<h4>Code Complexity Analysis</h4>
+<p>Every code base has its inherent level of complexity; however we can reduce the complexity of our code by limiting the interdependency of components, by letting them do one thing, and letting them <a href="http://en.wikipedia.org/wiki/Unix_philosophy">do that thing well</a>. This is commonly referred to as <strong><a href="http://en.wikipedia.org/wiki/Cohesion_(computer_science)">favoring cohesion over coupling</a></strong>.</p>
+<blockquote>
+<p>If you do not watch your code&#39;s complexity over time, each additional line of code you add will make your framework harder to maintain, more fragile, and more prone to bugs and regressions.</p>
+</blockquote>
+<p>There are certain tools, and metrics that we can use to have an idea of how complex our code is. One such tool that we can use is <strong><a href="https://github.com/vigetlabs/grunt-complexity">grunt-complexity</a></strong>.</p>
+<blockquote>
+<p><strong>Caveat</strong>:</p>
+<p>Code complexity metrics do not set hard and fast <strong>rules</strong>, they just provide <strong>guidelines</strong>; thus, an increase in the codes&#39; complexity index is not necessarily a bad thing. </p>
+<p>Some of the modules that you create might be complex, simply because of the intricacy of the problem that it&#39;s trying to solve. An increased complexity metric is just something that you, as a library developer, have to keep an eye on.</p>
+</blockquote>
+<p>Let&#39;s start by installing it to our project as a development dependency:</p>
+<pre><code>$ npm install grunt-complexity --save-dev</code></pre>
+<p>And then we will configure our <strong>Gruntfile.js</strong>:</p>
+<pre><code>module.exports = <span class="keyword">function</span>(grunt) {
+    <span class="string">'use strict'</span>;
+
+    grunt.initConfig({
+
+        ...
+
+        complexity: {
+            generic: {
+                src: [<span class="string">'src/**/*.js'</span>],
+                options: {
+                    jsLintXML: <span class="string">'report.xml'</span>, <span class="comment">// create XML JSLint-like report</span>
+                    checkstyleXML: <span class="string">'checkstyle.xml'</span>, <span class="comment">// create checkstyle report</span>
+                    errorsOnly: <span class="keyword">false</span>, <span class="comment">// show only maintainability errors</span>
+                    cyclomatic: <span class="number">3</span>,
+                    halstead: <span class="number">8</span>,
+                    maintainability: <span class="number">100</span>
+                }
+            }
+        },
+
+        ...
+    });
+
+    grunt.loadNpmTasks(<span class="string">'grunt-complexity'</span>);
+
+    ...
+
+    grunt.registerTask(<span class="string">'publish'</span>, [
+        <span class="string">'exec:clean'</span>,
+        <span class="string">'exec:amdify'</span>,
+        <span class="string">'lint'</span>,
+        <span class="string">'complexity'</span>
+    ]);
+
+    ...
+};</code></pre>
+<p>When we run</p>
+<pre><code>$ grunt complexity</code></pre>
+<p>we will get a nicely formatted code complexity report:</p>
+<pre><code>$ grunt complexity
+Running &quot;complexity:generic&quot; (complexity) task
+
+✓ src/o2/ajax/core.js                         ████████ 161.23
+✓ src/o2/ajax/node_modules/o2.string/core.js  █████████ 171.00
+✓ src/o2/string/core.js                       █████████ 171.00
+
+Done, without errors.</code></pre>
+<p>You can read <a href="http://jscomplexity.org/complexity">jscomplexity.org&#39;s help file</a> to get an idea of what those numbers refer to.</p>
+<h4>Adding Complexity Analysis to Our <strong>CI</strong> Pipeline</h4>
+<p>Moreover, since we have added <strong>lint</strong> and <strong>complexity</strong> tasks to our publish task, when we run <code>npm test</code>
+We will get lint and complexity results along with server-side and client-side test results:</p>
+<pre><code>$ npm test
+
+&gt; o2@0.26.12 test /Users/volkan.ozcelik/PROJECTS/o2.js
+&gt; grunt publish;vows test/node/*.js --spec;grunt test
+
+Running &quot;exec:clean&quot; (exec) task
+
+Running &quot;exec:amdify&quot; (exec) task
+
+Running &quot;jshint:src&quot; (jshint) task
+&gt;&gt; 4 files lint free.
+
+Running &quot;complexity:generic&quot; (complexity) task
+
+✓ src/o2/ajax/core.js                         ████████ 161.23
+✓ src/o2/ajax/node_modules/o2.string/core.js  █████████ 171.00
+✓ src/o2/string/core.js                       █████████ 171.00
+
+Done, without errors.
+
+  ♢ o2.string.core 
+
+  sayHi when &quot;sayHi()&quot; is called
+    ✓ it should return a greeting
+
+✓ OK » 1 honored (0.004s) 
+
+Running &quot;connect:test&quot; (connect) task
+Started connect web server on 127.0.0.1:8080.
+
+Running &quot;jasmine:taskName&quot; (jasmine) task
+Testing jasmine specs via phantom
+.
+1 spec in 0.255s.
+&gt;&gt; 0 failures
+
+Done, without errors.</code></pre>
+<h4>Covering Your A**</h4>
+<p>When we have enough modules that interact with one another, a <strong>code coverage tool</strong> might be really handy to maintain <strong>code quality</strong>.</p>
+<p>So let us start creating the foundations of it.</p>
+<ul>
+<li>For the <strong><a href="http://requirejs.org/docs/whyamd.html">AMD</a></strong> modules, we will be using <strong><a href="http://tntim96.github.io/JSCover/">JSCover</a></strong> as our code coverage tool;</li>
+<li>And for the <strong><a href="http://nodejs.org/">Node.JS</a></strong> modules, <strong><a href="http://vowsjs.org/">vows.js</a></strong> can automatically detect certain kinds of instrumentation.</li>
+</ul>
+<p>Let’s begin with <strong>AMD</strong>:</p>
+<h5>Covering <strong>AMD</strong> Tests</h5>
+<blockquote>
+<p>Running our front-end <strong><a href="http://requirejs.org/docs/whyamd.html">AMD</a></strong> tests in an actual browser (<em>instead of a headless <a href="https://code.google.com/p/phantomjs/">phantom.js</a> process</em>), by launching a <strong>spec runner</strong> html file, can be helpful in finding and fixing test failures. </p>
+</blockquote>
+<p>Having a separate <strong>spec runner</strong> html is also necessary for our coverage analysis, as we will be generating <strong><a href="http://en.wikipedia.org/wiki/Instrumentation">instrumentation code</a></strong> off of this <strong>spec runner</strong>.</p>
+<p>To be able to run our <strong><a href="http://pivotal.github.io/jasmine/">Jasmine</a></strong> spec runner html in a browser, we will need to install <strong><a href="http://pivotal.github.io/jasmine/">Jasmine</a></strong> and <strong><a href="http://requirejs.org/">require.js</a></strong> using <strong><a href="http://bower.io/">bower</a></strong>. </p>
+<p>Let’s do that first:</p>
+<h5>Installing Bower Dependencies</h5>
+<p>Let’s update <strong>bower.json</strong></p>
+<pre><code>...
+  &quot;dependencies&quot;: {
+    &quot;requirejs&quot;: “2.1.9”,
+    &quot;jasmine&quot;: &quot;2.0.0&quot;
+  }
+...</code></pre>
+<p>When we run <code>bower install</code> we will see a <strong>jasmine</strong> folder under <strong>bower_components</strong>. We’ll need to go the <strong>dist</strong> folder and extract the recent version. Here’s how it looks like:</p>
+<p><img src="http://o2js.com/assets/jasmine-bower.png" alt=""></p>
+<p>Now we will go to <strong>bower_components/jasmine/dist/</strong> folder and unzip the latest version (<em>we will be using version <strong>2.0.0</strong> for this tutorial</em>).</p>
+<h5>Preparing the Spec Runner</h5>
+<p>The <strong>bower_components/jasmine/dist/Jasmine-standalone-2.0.0/SpecRunner.html</strong> is a sample spec runner that we can use as a basis in our project, and we will do the same to create a spec runner for our modules at <strong>{project root}/specrunner.html</strong>:</p>
+<pre><code>&lt;!doctype html>
+&lt;!-- {project root}/specrunner.html —-> 
+&lt;html>
+&lt;head>
+    &lt;meta charset=<span class="string">"utf-8"</span>>
+    &lt;title>o2.js AMD Spec Runner&lt;/title>
+
+    &lt;!-- Jasmine core. -->
+    &lt;link rel=<span class="string">"shortcut icon"</span> type=<span class="string">"image/png"</span> 
+href=<span class="string">"bower_components/jasmine/dist/
+jasmine-standalone-2.0.0/lib/jasmine-2.0.0/jasmine_favicon.png"</span>>
+    &lt;link rel=<span class="string">"stylesheet"</span> type=<span class="string">"text/css"</span> 
+href=<span class="string">"bower_components/jasmine/dist/
+jasmine-standalone-2.0.0/lib/jasmine-2.0.0/jasmine.css"</span>>
+    &lt;script type=<span class="string">"text/javascript"</span> 
+src=<span class="string">"bower_components/jasmine/dist/
+jasmine-standalone-2.0.0/lib/jasmine-2.0.0/jasmine.js"</span>>&lt;/script>
+    &lt;script type=<span class="string">"text/javascript"</span> 
+src=<span class="string">"bower_components/jasmine/dist/
+jasmine-standalone-2.0.0/lib/jasmine-2.0.0/jasmine-html.js"</span>>&lt;/script>
+    &lt;script type=<span class="string">"text/javascript"</span> 
+src=<span class="string">"bower_components/jasmine/dist/
+jasmine-standalone-2.0.0/lib/jasmine-2.0.0/boot.js"</span>>&lt;/script>
+
+    &lt;!-- <span class="keyword">require</span>.js. -->
+    &lt;script src=<span class="string">"bower_components/requirejs/require.js"</span>>&lt;/script>
+
+    &lt;!— Override Jasmine boot loader <span class="keyword">for</span> AMD. -->
+    &lt;script src=<span class="string">"test/override/jasmine/boot.js"</span>>&lt;/script>
+
+    &lt;!-- <span class="keyword">require</span>.js configuration. -->
+    &lt;script src=<span class="string">"test/config/requirejs/config.js"</span>>&lt;/script>
+
+    &lt;!-- Specs to test. -->
+    &lt;script src=<span class="string">"test/config/amd/o2/config.js"</span>>&lt;/script>
+&lt;/head>
+&lt;body>
+&lt;/body>
+&lt;/html></code></pre>
+<p>Where <strong>/test/override/jasmine/boot.js</strong> is just a hack to run <strong><a href="http://pivotal.github.io/jasmine/">Jasmine</a></strong> when all the <strong><a href="http://requirejs.org/docs/whyamd.html">AMD</a></strong> modules are ready:</p>
+<pre><code>(<span class="keyword">function</span>(window) {
+    <span class="string">'use strict'</span>;
+
+    <span class="keyword">var</span> oldLoad = window.onload;
+
+    window.initializeJasmine = <span class="keyword">function</span>() {
+
+        <span class="comment">// Jasmine 2.0.0 requires some non-zero timeout to prepare; </span>
+        <span class="comment">// not sure if it's a bug.</span>
+        <span class="comment">// TODO: investigate why this does not work with `setTimeout(fn, 0);`</span>
+        setTimeout(oldLoad, <span class="number">100</span>);
+    };
+
+    window.onload = <span class="keyword">function</span>(){};
+}(<span class="keyword">this</span>));</code></pre>
+<p>And <strong>test/config/requirejs/config.js</strong> has just some very basic <strong>require.js</strong> configuration:</p>
+<pre><code><span class="comment">// test/config/require/config.js</span>
+(<span class="keyword">function</span>(<span class="keyword">require</span>) {
+    <span class="string">'use strict'</span>;
+
+    <span class="keyword">require</span>.onError = <span class="keyword">function</span>(error) {
+        <span class="keyword">var</span> message = error.requireType + <span class="string">': '</span>;
+
+        <span class="keyword">if</span> (error.requireType === <span class="string">'scripterror'</span> || 
+error.requireType === <span class="string">'notloaded'</span> &amp;&amp; error.requireModules) {
+            message += <span class="string">'Illegal path or script error: '</span> + 
+<span class="string">'[\''</span> + error.requireModules.join(<span class="string">"', '"</span>) + <span class="string">'\']'</span>;
+        } <span class="keyword">else</span> {
+            message += error.message;
+        }
+
+        <span class="keyword">throw</span> <span class="keyword">new</span> Error(message);
+    };
+
+    <span class="keyword">require</span>.config({});
+}(<span class="keyword">require</span>));</code></pre>
+<p>Finally, <strong>test/config/amd/o2/config.js</strong> is just another boot loader, which <code>require</code>s all the modules, and then <code>require</code>s all the tests and then runs them:</p>
+<pre><code><span class="comment">// test/config/amd/o2/config.js</span>
+<span class="comment">// TODO: automate generation of this file.</span>
+<span class="keyword">require</span>([
+    <span class="string">'amd/o2/ajax/core'</span> ,
+    <span class="string">'amd/o2/ajax/node_modules/o2.string/core'</span> ,
+    <span class="string">'amd/o2/io/core'</span> ,
+    <span class="string">'amd/o2/string/core'</span>,
+    <span class="string">'amd/o2/timer/core'</span>
+], <span class="keyword">function</span>(){ <span class="keyword">require</span>([
+    <span class="string">'test/web/o2.string.core_test.js'</span>
+], <span class="keyword">function</span>() {
+    window.initializeJasmine();
+});});</code></pre>
+<p>We will need to update this file as we add new modules to our test suites. It would be nice to auto generate this file with <strong><a href="http://gruntjs.com/">grunt</a></strong> too. I’m leaving it as a future <strong>TODO</strong>.</p>
+<blockquote>
+<p>This <strong>specrunner.html</strong> generation process is partially similar to what <a href="ht.tps://github.com/gruntjs/grunt-contrib-jasmine">grunt-contrib-jasmine</a> does behind the scenes. </p>
+</blockquote>
+<p>When you load the <strong>specrunner.html</strong> in a browser, you’ll get something like this:</p>
+<p><img src="http://o2js.com/assets/spec-ran.png" alt=""></p>
+<p>Since our <a href="http://pivotal.github.io/jasmine/">Jasmine</a> specs are running as expected, now it’s time to add some coverage to them:</p>
+<h5>Adding Coverage to the <strong><a href="http://requirejs.org/docs/whyamd.html">AMD</a></strong> Modules</h5>
+<p>For <strong><a href="http://requirejs.org/docs/whyamd.html">AMD</a></strong> coverage reports, we will be using <strong><a href="http://tntim96.github.io/JSCover/">JSCover</a></strong>.</p>
+<blockquote>
+<p><strong>Hint</strong>:</p>
+<p>You can also try <a href="http://en.wikipedia.org/wiki/Code_coverage">code coverage</a> tools like <a href="http://blanketjs.org/">blanket</a>, or <a href="http://gotwarlost.github.io/istanbul/">Istanbul</a>. </p>
+<p>I’ve tried them and several other coverage tools. – <strong>JSCover</strong> was the easiest to set up, which worked with <strong><a href="http://requirejs.org/docs/whyamd.html">AMD</a></strong> modules “out of the box”, without needing to write a special adapter, or change the test configuration. – <strong>It just worked</strong>!</p>
+</blockquote>
+<p>So what makes <strong><a href="http://tntim96.github.io/JSCover/">JSCover</a></strong> stand out? </p>
+<p>Here are quite a few reasons why <strong><a href="http://tntim96.github.io/JSCover/">JSCover</a></strong> rocks:</p>
+<ul>
+<li>The advantage of <strong><a href="http://tntim96.github.io/JSCover/">JSCover</a></strong> to other code coverage tools is the fact that it adds <a href="http://en.wikipedia.org/wiki/Instrumentation">instrumentation</a> to <strong>JavaScript</strong> code <strong>before</strong> it is executed in a web browser; </li>
+<li>Since a separate copy of instrumented files are used, <strong>you won’t need to change your unit test configuration</strong>;</li>
+<li>You can lazy-load modules, and request files on the fly. They will be instrumented as soon as they are loaded;</li>
+<li>Covering <strong><a href="http://requirejs.org/docs/whyamd.html">AMD</a></strong> modules is a piece of cake (<em>see the next item</em>);</li>
+<li><strong>JSCover</strong> is loader-agnostic. You can use <strong><a href="http://requirejs.org/">require.js</a></strong> or your home-made custom loader, it doesn’t matter: Files will be instrumented, as soon as their scripts are evaluated;</li>
+<li>Yet another advantage of <strong><a href="http://tntim96.github.io/JSCover/">JSCover</a></strong> is that it can generate <strong>custom reports</strong> that can be easily consumed by other systems (like <strong><a href="http://www.sonarqube.org/">Sonar</a></strong>);</li>
+<li>Did I say that it is really easy to set up, configure and use?</li>
+<li>And the last but not the least, it comes with <strong>sample codes</strong>, which run out of the box, that you can copy and use as an initial boilerplatete.</li>
+</ul>
+<p>Convinced? Let’s add <strong><a href="http://tntim96.github.io/JSCover/">JSCover</a></strong> as a submodule to our project:</p>
+<pre><code>$ mkdir externals
+$ git submodule add https:<span class="comment">//github.com/tntim96/JSCover.git externals/jscover</span></code></pre>
+<p>In order to use <strong>JSCover</strong> we need to build it first.</p>
+<blockquote>
+<p>To build <a href="http://tntim96.github.io/JSCover/">JSCover</a> you will need <a href="http://maven.apache.org/">maven</a>, <a href="http://ant.apache.org/">ant</a>, <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">java</a> installed on your system. If you don’t have these, install them before you proceed any further.</p>
+<p>You will also need to install <a href="http://maven.apache.org/ant-tasks/index.html">maven ant tasks</a>. This is as easy as <a href="http://maven.apache.org/ant-tasks/index.html">downloading the jar file</a>, and copying it to your <strong><a href="http://ant.apache.org/">ant</a></strong> lib directory.</p>
+</blockquote>
+<p>I’ll be using <strong><a href="http://www.jetbrains.com/idea/">JetBrains IntelliJ Idea</a></strong>, which is, by far, the best <strong>Java</strong> development IDE, ever! You don’t have to use <strong>IntelliJ</strong>. – You can use the command line to run <strong><a href="http://ant.apache.org/">ant</a></strong> and <strong><a href="http://maven.apache.org/">maven</a></strong> tasks.</p>
+<p>Now go to <strong>externals/jscover</strong> directory…</p>
+<p><img src="http://o2js.com/assets/jscover-files.png" alt=""></p>
+<p>and double click <strong>JSCover.ipr</strong> to launch <strong>IntelliJ</strong>. </p>
+<p>Then go to <strong>Ant Build</strong> tab, and double click <strong>jar</strong> and then <strong>jar-all</strong> tasks to create the <strong>target/dist/js.jar</strong>, <strong>target/dist/JSCover.jar</strong>, and <strong>target/dist/JSCover-all.jar</strong> jar files:</p>
+<p><img src="http://o2js.com/assets/jscover-ant.png" alt=""></p>
+<p>Now that we have the <strong>jar</strong>s, it’s time to create a coverage server:</p>
+<pre><code>$ mkdir test/coverage
+$ mkdir test/coverage/web
+$ mkdir test/coverage/web/server
+$ cd test/coverage/web/server
+$ touch run.bat
+$ touch run.sh</code></pre>
+<p>I’m leaving <strong>run.bat</strong> as a placeholder for Windows systems. Since I don’t have a Windows system, I will only create the <strong>run.sh</strong>:</p>
+<pre><code><span class="comment"># run.sh</span>
+java -jar ../../../../externals/jscover/target/dist/JSCover-all.jar \
+-ws --document-root=../../../.. --report-dir=../../../../reports/jscover \
+--no-instrument=/bower_components --no-instrument=/test</code></pre>
+<p>Now we can run our coverage server:</p>
+<pre><code>$ cd test/coverage/web/server
+$ sh run.sh</code></pre>
+<p>When we navigate to <strong><a href="http://localhost:8080/jscoverage.html">http://localhost:8080/jscoverage.html</a></strong> we get a nice interface to see our coverage reports. </p>
+<p>Here is how it looks like:</p>
+<p><strong>Click on the images to see larger versions</strong>.</p>
+<p><a href="http://o2js.com/assets/coverage-000-large.png"><img src="http://o2js.com/assets/coverage-000.png"></a></p>
+<p><a href="http://o2js.com/assets/coverage-001-large.png"><img src="http://o2js.com/assets/coverage-001.png"></a></p>
+<p><a href="http://o2js.com/assets/coverage-002-large.png"><img src="http://o2js.com/assets/coverage-002.png"></a></p>
+<p><a href="http://o2js.com/assets/coverage-003-large.png"><img src="http://o2js.com/assets/coverage-003.png"></a></p>
+<p><a href="http://o2js.com/assets/coverage-004-large.png"><img src="http://o2js.com/assets/coverage-004.png"></a></p>
+<p>Now that we have created coverage reports for our <strong><a href="http://requirejs.org/docs/whyamd.html">AMD</a></strong> modules, the next step is to create the same for our <strong><a href="http://nodejs.org/">Node.JS</a></strong> tests. </p>
+<blockquote>
+<p>Since we are using <strong>[vows.js]</strong> for our <strong><a href="http://nodejs.org/">Node.JS</a></strong> tests, we will use <strong><a href="https://github.com/visionmedia/node-jscoverage">node-jscoverage</a></strong>. <strong><a href="http://vowsjs.org/">vows.js</a></strong> runs code coverage if it detects <a href="https://github.com/visionmedia/node-jscoverage">node-jscoverage</a> installed on the system.</p>
+</blockquote>
+<h5>Adding Coverage to <strong><a href="http://nodejs.org/">Node.JS</a></strong> Modules</h5>
+<p>Let’s first add a submodule for <a href="https://github.com/visionmedia/node-jscoverage">node-jscoverage</a>:</p>
+<pre><code>$ git submodule add https:<span class="comment">//github.com/visionmedia/node-jscoverage.git \</span>
+externals/node-jscoverage</code></pre>
+<p>Then compile it:   </p>
+<pre><code>$ cd externals/node-jscoverage/
+$ ./configure &amp;&amp; make &amp;&amp; make install</code></pre>
+<p>You will also need to install <strong><a href="http://vowsjs.org/">vows.js</a></strong> globally, if you haven&#39;t already done so:</p>
+<pre><code>$ npm install -g vows</code></pre>
+<p>Then create a <strong>test/bin/node/cover.sh</strong>:</p>
+<pre><code># test/bin/node/cover.sh
+cd ../../..
+rm -rf instrumented/src/o2
+rm -rf instrumented/test/node
+jscoverage test/node instrumented/test/node
+jscoverage src/o2 instrumented/src/o2
+vows instrumented/test/node/*.js --cover-html
+mv coverage.html reports/coverage/node/coverage.html</code></pre>
+<p>So when we run <strong>cover.sh</strong>…</p>
+<pre><code>$ cd test/bin/node
+$ sh cover.sh</code></pre>
+<p>we will get a coverage report similar to these:</p>
+<p><strong>Click on the images for larger versions</strong>.</p>
+<p><a href="http://o2js.com/assets/node-cover-001-large.png"><img src="http://o2js.com/assets/node-cover-001.png" alt=""></a></p>
+<p><a href="http://o2js.com/assets/node-cover-001-large.png"><img src="http://o2js.com/assets/node-cover-002.png" alt=""></a></p>
+<p><a href="http://o2js.com/assets/node-cover-001-large.png"><img src="http://o2js.com/assets/node-cover-003.png" alt=""></a></p>
+<h4>Hey, You Can Use <strong><a href="http://bower.io/">Bower</a></strong> For <strong><a href="https://github.com/">GitHub</a></strong> Repositories Too</h4>
+<p>Actually, we don’t need to create <strong>git submodules</strong> for <a href="http://tntim96.github.io/JSCover/">JsCover</a> and <a href="https://github.com/visionmedia/node-jscoverage">node-jscoverage</a> either.</p>
+<p>Let’s add them to our bower dependencies in out <strong>bower.json</strong> instead:</p>
+<pre><code>{
+  "name": "o2.js",
+  "version": "2.0.1",
+  "homepage": "http://o2js.com/",
+  "authors": [
+    "Volkan Özçelik &lt;volkan@o2js.com>"
+  ],
+  "description": "o2.js JavaScript Framework",
+  "keywords": [
+    "o2.js",
+    "modules",
+    "amd",
+    "node.js",
+    "framework"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "2.1.9",
+    "blanket": "1.1.5",
+    "jasmine": "2.0.0",
+    "node-jscoverage": "https://github.com/visionmedia/node-jscoverage.git",
+    "jscover": "https://github.com/tntim96/JSCover.git"
+  }
+}</code></pre>
+<p>And when we do a <code>bower install</code>, we will have <strong>node-jscoverage</strong> and <strong>jscover</strong> projects inside our <strong>bower_components</strong> folder.</p>
+<p>Here is the console output after running <code>bower install</code>:</p>
+<pre><code>$ bower install
+bower node-jscoverage<span class="comment">#*     not-cached #*</span>
+bower node-jscoverage<span class="comment">#*        resolve #*</span>
+bower jscover<span class="comment">#*             not-cached #*</span>
+bower jscover<span class="comment">#*                resolve #*</span>
+bower blanket<span class="comment">#1.1.5             cached #1.1.5</span>
+bower blanket<span class="comment">#1.1.5           validate #1.1.5</span>
+bower node-jscoverage<span class="comment">#*       checkout master</span>
+bower jscover<span class="comment">#*               checkout v2.0.1</span>
+bower node-jscoverage<span class="comment">#*       resolved </span>
+bower jscover<span class="comment">#*               resolved </span>
+bower blanket<span class="comment">#1.1.5            install blanket#1.1.5</span>
+bower node-jscoverage<span class="comment">#*        install node-jscoverage#36b3ba5d82</span>
+bower jscover<span class="comment">#*                install jscover#2.0.1</span>
+
+blanket<span class="comment">#1.1.5 bower_components/blanket</span>
+
+node-jscoverage<span class="comment">#36b3ba5d82 bower_components/node-jscoverage</span>
+
+jscover<span class="comment">#2.0.1 bower_components/jscover</span></code></pre>
+<p>The next step will be removing the <strong>git submodules</strong> since we don’t need them anymore.</p>
+<pre><code>$ rm .gitmodules
+$ touch .gitmodules
+$ git rm --cached externals/jscover
+$ git rm --cached externals/node-jscoverage
+$ rm -rf externals</code></pre>
+<blockquote>
+<p>And voila! <a href="http://en.wikipedia.org/wiki/All_your_base_are_belong_to_us">All our dependencies are</a> managed by <strong><a href="http://bower.io/">bower</a></strong>, yay!</p>
+</blockquote>
+<p>Now that all of our coverage reports are set, we can proceed with analyzing our cross-module dependencies:</p>
+<h4>Generating Dependency Graphs</h4>
+<p>Visualizing our framework&#39;s modular dependency graph is a valuable tool; especially when you want to refactor your project.</p>
+<p>For dependency tree generation, we will be using a tool called <strong><a href="https://npmjs.org/package/dependo">dependo</a></strong>.</p>
+<p>Let&#39;s install <strong><a href="https://npmjs.org/package/dependo">dependo</a></strong> first:</p>
+<pre><code>$ npm install -g dependo</code></pre>
+<p>And then create a dependency report for our <strong>AMD</strong> modules:</p>
+<pre><code>$ dependo amd &gt; documentation/dependency-report.html</code></pre>
+<p>When we open <strong>documentation/dependency.html</strong> we will see a really simple dependency graph.</p>
+<p><a href="http://o2js.com/assets/dependo.png"><img src="http://o2js.com/assets/dependo.png" alt=""></a></p>
+<p>As our framework evolves, regularly checking this dependency graph will also prove itself to be extremely useful.</p>
+<blockquote>
+<p>As we are on the topic of dependencies, there is also a very useful tool called <strong><a href="https://david-dm.org/">david</a></strong>, which you can use to track which of your project&#39;s dependencies are drifting out of date.</p>
+</blockquote>
+<h3><strong>GruntFile.js</strong> in its Final Form</h3>
+<p>Here is our <strong>GruntFile.js</strong>, after having made all those changes:</p>
+<pre><code>module.exports = <span class="keyword">function</span>(grunt) {
+    <span class="string">'use strict'</span>;
+
+    grunt.initConfig({
+        jshint: {
+            options: {
+                jshintrc: <span class="string">'.jshintrc'</span>
+            },
+            src: [<span class="string">'Gruntfile.js'</span>, <span class="string">'src/**/*.js'</span>]
+        },
+        connect: {
+            test: {
+                options: {
+                    port: <span class="number">8080</span>
+                }
+            }
+        },
+        jasmine: {
+            taskName: {
+                src: <span class="string">'amd/**/*.js'</span>,
+                options: {
+                    specs: <span class="string">'test/web/*_test.js'</span>,
+                    host: <span class="string">'http://127.0.0.1:8080/'</span>,
+                    template: <span class="keyword">require</span>(<span class="string">'grunt-template-jasmine-requirejs'</span>),
+                    templateOptions: {
+                        requireConfig: {
+                        }
+                    }
+                }
+            }
+        },
+        complexity: {
+            generic: {
+                src: [<span class="string">'src/**/*.js'</span>],
+                options: {
+                    jsLintXML: <span class="string">'report.xml'</span>, <span class="comment">// create XML JSLint-like report</span>
+                    checkstyleXML: <span class="string">'checkstyle.xml'</span>, <span class="comment">// create checkstyle report</span>
+                    errorsOnly: <span class="keyword">false</span>, <span class="comment">// show only maintainability errors</span>
+                    cyclomatic: <span class="number">3</span>,
+                    halstead: <span class="number">8</span>,
+                    maintainability: <span class="number">100</span>
+                }
+            }
+        },
+        exec: {
+            clean: {
+                command: <span class="string">'find amd/o2/string/ -maxdepth 1 -type f -delete;'</span> +
+                  <span class="string">'find amd/o2/ajax/ -maxdepth 1 -type f -delete;'</span> +
+                  <span class="string">'find amd/o2/ajax/node_modules/o2.string -maxdepth 1 '</span> +
+                  <span class="string">'-type f -delete;'</span>,
+                stdout: <span class="keyword">true</span>,
+                stderr: <span class="keyword">true</span>
+            },
+            amdify: {
+                command: <span class="string">'r.js -convert src/o2 amd/o2;'</span>,
+                stdout: <span class="keyword">true</span>,
+                stderr: <span class="keyword">true</span>
+            },
+            <span class="string">'test'</span>: {
+                command: <span class="string">'npm test'</span>,
+                stdout: <span class="keyword">true</span>,
+                stderr: <span class="keyword">true</span>
+            }
+        },
+        pkg: grunt.file.readJSON(<span class="string">'package.json'</span>),
+        yuidoc: {
+            compile: {
+                name: <span class="string">'&lt;%= pkg.name %>'</span>,
+                description: <span class="string">'&lt;%= pkg.description %>'</span>,
+                version: <span class="string">'&lt;%= pkg.version %>'</span>,
+                url: <span class="string">'&lt;%= pkg.homepage %>'</span>,
+                logo: <span class="string">'../assets/logo.png'</span>,
+
+                options: {
+                    paths: <span class="string">'src/o2'</span>,
+                    outdir: <span class="string">'documentation'</span>
+                }
+            }
+        }
+    });
+
+    grunt.loadNpmTasks(<span class="string">'grunt-contrib-jshint'</span>);
+    grunt.loadNpmTasks(<span class="string">'grunt-contrib-connect'</span>);
+    grunt.loadNpmTasks(<span class="string">'grunt-contrib-jasmine'</span>);
+    grunt.loadNpmTasks(<span class="string">'grunt-complexity'</span>);
+    grunt.loadNpmTasks(<span class="string">'grunt-exec'</span>);
+    grunt.loadNpmTasks(<span class="string">'grunt-contrib-yuidoc'</span>);
+
+    grunt.registerTask(<span class="string">'default'</span>, [<span class="string">'jshint'</span>]);
+    grunt.registerTask(<span class="string">'lint'</span>, [<span class="string">'jshint'</span>]);
+    grunt.registerTask(<span class="string">'test'</span>, [<span class="string">'connect:test'</span>, <span class="string">'jasmine'</span>]);
+    grunt.registerTask(<span class="string">'publish'</span>, [
+        <span class="string">'exec:clean'</span>,
+        <span class="string">'exec:amdify'</span>,
+        <span class="string">'lint'</span>,
+        <span class="string">'complexity'</span>
+    ]);
+    grunt.registerTask(<span class="string">'testAll'</span>, [<span class="string">'exec:test'</span>, <span class="string">'test'</span>]);
+    grunt.registerTask(<span class="string">'doc'</span>, [<span class="string">'yuidoc'</span>]);
+};</code></pre>
+<h4>Actually, This is <strong>Not</strong> A Dummy Project</h4>
+<p>The astute reader might have realized that the <strong>o2.string</strong> and <strong>o2.ajax</strong> modules that we have discussed here are not throwaway files.  </p>
+<blockquote>
+<p>I will be importing functionality <a href="https://github.com/v0lkan/o2.js/tree/dev/draft">from the old <strong>o2.js</strong> code</a>, writing more meaningful tests, creating <strong>README</strong> files and documentation etc. – this is just the beginning.</p>
+</blockquote>
+<h3>Summary</h3>
+<p>In this tutorial, </p>
+<ul>
+<li>We have learned why creating, and maintaining a <strong>JavaScript</strong> framework is not an easy process;</li>
+<li>We have created two simple <strong>modules</strong>, and established a <strong>dependency relationship</strong> between them;</li>
+<li>We have created a meaningful <strong>directory structure</strong> for our code base;</li>
+<li>We have learned how to publish our modules to <strong>npm</strong>;</li>
+<li>We have learned how to handle <strong>inter-modular</strong>, and <strong>intra-modular</strong> dependencies;</li>
+<li>We have also seen how to configure <strong>external</strong> dependencies that we will be using as third-party libraries;</li>
+<li>We have learned how to integrate our project to <strong>GitHub</strong>;</li>
+<li>We have learned how to convert <strong>Common.JS</strong> modules to <strong>AMD</strong> modules;</li>
+<li>We have seen why <strong>Grunt is awesome</strong>;</li>
+<li>We have learned how to <strong>lint</strong>, <strong>document</strong>, and <strong>test</strong> our files;</li>
+<li>We have integrated our tests with a <strong>CI Server</strong>;</li>
+<li>We have analyzed our project&#39;s <strong>code complexity</strong>, and <strong>dependency tree</strong>.</li>
+</ul>
+<p>While this may be an overkill for a simple project, as your code base grows in depth and breadth, it will prove itself to be useful.</p>
+<h3>Read the Source Luke</h3>
+<p>The source code of what we have examined so far can be downloaded <a href="https://github.com/v0lkan/o2.js/tree/5bcdfdf06d0914dda32fd10ba73e9a18d21afba3">from this GitHub history snapshot</a> – Enjoy.</p>
+<h3>Next Up?</h3>
+<p>As we&#39;ve covered the baseline, and highlighted important pieces, the next step would be creating a module that serves an actual purpose. </p>
+<p>I&#39;ll start by porting <a href="https://github.com/v0lkan/o2.js/tree/90f0fe19452903e85b5d6153467f7e8ba96223e0/draft/o2/string">the current o2.js <strong>string</strong> and <strong>ajax</strong> utility methods</a> into their own modules, and share the important parts of this shift in separate blog posts.</p>
+<p>…</p>
+<p>Do you have process-management, testing, integration, and deployment  tricks that work for you?
+As always, I&#39;d love to have your comments and suggestions.</p>
+
+  <blockquote>
+    Do you have something to say? Have I missed anything?<br>
+    Send your comments and suggestions to <a href="mailto:volkan@o2js.com">volkan@o2js.com</a>.
+  </blockquote>
+  <div class="byline">
+    by <a href="http://volkan.io/">Volkan Özçelik</a> on 12.01.13
+  </div>
+</div>
+
+
+
+
+
+<div class="menu right">
+    
+      <a href="procrastiworking" class="btn btn-grey">&laquo; older post</a>
+    
+
+    
+      <a href="an-all-in-one-guide-to-writing-efficient-javascript" class="btn btn-grey">newer post &raquo;</a>
+    
+</div>
+
+
+
+    </div>
+    <header class="aboutme">
+        <div class="legend">
+            <h1><a href="http://volkan.io/">Volkan Özçelik</a></h1>
+
+            <p><strong>Chase Me</strong></p>
+            <ul>
+            <li>Technical Lead @ <a href="http://cisco.com/">Cisco</a></li>
+            <li><a href="https://twitter.com/linkibol">@linkibol</a></li>
+            <li><a href="https://github.com/v0lkan">github.com/v0lkan</a></li>
+            <li><a href="https://speakerdeck.com/volkan">speakerdeck.com/volkan</a></li>
+            <li><a href="https://linkedin.com/in/volkanozcelik">linkedin.com/in/volkanozcelik</a></li>
+            </ul>
+
+            <p><strong>o2.js</strong></p>
+
+            <ul>
+            <li><a href="https://github.com/o2js">Read the Source, Luke</a></li>
+            </ul>
+        </div>
+        <p class="interviewz">
+            Psttt&hellip;
+            Wanna ace that interview?<br>
+            Then you have some reading to do:<br>
+            <a style="text-align:center;display:block;margin-top:1em"
+            href="http://o2js.com/interview-questions"
+            title="JavaScript Interview Questions">»» Get the Only Reference
+            on <strong>JavaScript Engineering Interviews</strong>
+            You Will <em>Ever</em> Need, Now!
+            ««</a>
+        </p>
+    </header>
+<script>
+    (function(window, document) {
+        'use strict';
+
+        var isScrolled = false,
+            isProcessed = false,
+
+            AD_SHOW_DELAY = 3000,
+            AD_SHOW_INIT_TOP_THRESHOLD = 50,
+            AD_CONTAINER_CLASS = 'interviewz',
+            AD_CONTAINER_HOVER_CLASS = 'interviewz hovered',
+
+            // A modern-ish RAF polyfill.
+            tick = window.requestAnimationFrame ||
+            window.mozRequestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            window.msRequestAnimationFrame ||
+            window.oRequestAnimationFrame;
+
+            if (!tick) {return;}
+
+            window.addEventListener('scroll', function() {
+                isScrolled = true;
+            })
+
+            function loop() {
+                if (isProcessed) {return;}
+
+                tick(loop);
+
+                if (!isScrolled) {return;}
+
+                var top = Math.max(
+                    document.body.scrollTop,
+                    document.documentElement.scrollTop
+                );
+
+                if (top < AD_SHOW_INIT_TOP_THRESHOLD) {return;}
+
+                isProcessed = true;
+
+                setTimeout(function(){
+                    var container = document.getElementsByClassName(
+                        AD_CONTAINER_CLASS
+                    )[0];
+
+                    container.className = AD_CONTAINER_HOVER_CLASS;
+                }, AD_SHOW_DELAY);
+
+                window.onscroll = function(){};
+            }
+
+            loop();
+    }(this, this.document));
+</script>
+</body>
+</html>

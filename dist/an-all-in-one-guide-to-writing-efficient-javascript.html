@@ -1,0 +1,2982 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <title>o2.js - A Coherent Solution to You JavaScript Dilemma | An All-in-One Guide to Writing Efficient JavaScript  </title>
+
+    <meta name="description" content="o2js.com; a coherent solution to your JavaScript dilemma.">
+    <meta name="author" content="Volkan Özçelik">
+    <meta name="viewport" content="width=device-width" />
+
+<link href="//cloud.webtype.com/css/7aac64b3-a02e-43cb-9465-10369d68dd33.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/style.css" rel="stylesheet" />
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-56512-12', 'o2js.com');
+        ga('send', 'pageview');
+    </script>
+</head>
+<body class="wf-active posts" style="background:url(/bg)">
+    <div class="container">
+        <p style="text-align:center">Feeling Lost? <a href="http://o2js.com/o2js-com-v2---a-new-hope?#topic-list" class="topics" title="the big index of articles written so far&hellip;"><strong>Start Here &raquo;&raquo;</strong></a></p>
+
+        
+<h2 class="title span8"><a href="/an-all-in-one-guide-to-writing-efficient-javascript">An All-in-One Guide to Writing Efficient JavaScript </a></h2>
+<div class="span8">
+  <blockquote>
+<p>The rules and guidelines outlined here are taken direcly from the current snapshot of <a href="https://github.com/v0lkan/o2.js/blob/master/CONVENTIONS.md"><strong>o2.js JavaScript Conventions</strong> dev branch</a>.</p>
+<p>Since the original document may change over time, <a href="https://github.com/v0lkan/o2.js"><em>fork <strong>o2.js</strong> on GitHub</em> to get the most up-to-date version of this guide</a> .</p>
+</blockquote>
+<pre><code>        ___       _
+  ____ |__ \     (_)____
+ / __ \__/ /    / / ___/
+/ /_/ / __/_   / (__  )    A Coherent Solution
+\____/____(_)_/ /____/  to Your JavaScript Dilemma ;)
+           /___/</code></pre>
+<h2>Bottom Line Up Front</h2>
+<p>Just carve this into your mind if you forget everything else you read in this document:</p>
+<blockquote>
+<p>You should write your code that it can be read as good book.</p>
+</blockquote>
+<hr>
+<h2>Introduction</h2>
+<p>This document includes <strong>JavaScript</strong> usage and naming conventions, best practices, and recommendations.</p>
+<p>These conventions and recommendations are constantly being used within <strong>o2.js</strong> source code, and examples.</p>
+<p>If there&#39;s a particular <strong>JavaScript</strong> usage that&#39;s not mentioned in this document:</p>
+<ul>
+<li>Either it should be proposed as an <em>exceptional case</em> and added to this document;</li>
+<li>Or the code should be <strong>re-factored</strong> to adhere <strong>o2.js</strong> <strong>JavaScript</strong> conventions.</li>
+</ul>
+<blockquote>
+<p>This document is, in particular, the basis for <strong>o2.js</strong> coding standards. In general, however, it <em>can</em> be used as a <em>guideline</em> for <em>any</em> large-scale client-heavy <strong>JavaScript</strong> project.</p>
+</blockquote>
+<hr>
+<h2>Why Do We Need Conventions?</h2>
+<p><strong>Coding Conventions</strong> is a must-have for any large-scale long-lived software project.</p>
+<blockquote>
+<p><em>Nearly %80 of the development time</em> in large-scale software projects go to <strong>maintenance</strong>, <strong>patching</strong>, and <strong>rewriting</strong> the codebase.</p>
+</blockquote>
+<p>During their lifetime, these large-scale software projects are coded and maintained by more than a single individual, and everyone&#39;s coding style and preferences differ.</p>
+<p>In this essence, <strong>coding conventions</strong> constitute a <strong>shared language</strong> between the developer team. They increase the readability of the code, and make the code less error-prone.</p>
+<hr>
+<h2>o2.js <strong>JavaScript</strong> Coding Standards</h2>
+<p>This section includes the main code conventions, standards, and guidelines used within <strong>o2.js</strong> source files.</p>
+<h3>Maintain Existing Coding Style</h3>
+<p>This is easier to state, and harder to adhere:</p>
+<ul>
+<li>Keep your coding habits and behaviors aside;</li>
+<li>Don&#39;t be a <strong><a href="http://c2.com/cgi/wiki?CowboyCoding">cowboy coder</a></strong>;</li>
+<li>All code should look like a single person typed it, no matter how many people contributed.</li>
+</ul>
+<h3>Provide Tests for the Codebase</h3>
+<p>Any module developed <strong>SHOULD</strong> include some form of unit, reference, implementation or functional testing. Use case demos <strong>DO NOT QUALIFY</strong> as &quot;tests&quot;.</p>
+<blockquote>
+<p>Any code checked in <strong>SHOULD</strong> have <strong>documentation</strong> and <strong>unit tests</strong> to be accepted.</p>
+</blockquote>
+<p>Integrate your <strong>unit tests</strong> to a <strong><a href="http://en.wikipedia.org/wiki/Continuous_integration">CI Server</a></strong>.</p>
+<blockquote>
+<p><strong>o2.js</strong> uses <a href="https://travis-ci.org/">Travis</a> as its <strong>continuous integration</strong> system. After each <code>git push</code>, all <strong>unit tests</strong> and other <strong>custom tasks</strong> are run and validated. – This ensures <strong>o2.js</strong> code to be always in good shape.</p>
+</blockquote>
+<h3>Code Cleanliness</h3>
+<p>The code should be kept clean. There should <strong>not</strong> be excessive logs, debug lines, print statements, or alerts.</p>
+<p>There should <strong>not</strong> be commented out code.</p>
+<blockquote>
+<p>The whole point of using a <em>version control system</em> is to eliminate the need of leaving commented out code in the source code. Instead of leaving the code commented out, one should utilize the version control system&#39;s <em>diff&amp;merge</em> utility.</p>
+</blockquote>
+<p>If there is a code piece that you long to keep, save it in an external file <strong>outside</strong> the project folder.</p>
+<h3>Line Length</h3>
+<p>To sustain code readability, limit the line length to <strong>80 characters</strong>. If the line (<em>including the indentation</em>) exceeds <strong>80 characters</strong>, continue from the next line.</p>
+<h3>Indentation</h3>
+<ul>
+<li>Code blocks are indented with <strong>4 spaces</strong>.</li>
+<li>The IDE should be set up to print <strong>4 spaces</strong> when pressing the <code>&lt;TAB&gt;</code> key (<em>i.e., use &quot;soft tabs&quot;</em>).</li>
+<li>Never mix spaces and tabs.</li>
+</ul>
+<h3>End of File</h3>
+<p>Place an empty newline at the end of the file.</p>
+<h4>Indent…</h4>
+<ul>
+<li>Statements within <strong>blocks</strong>.</li>
+</ul>
+<pre><code><span class="keyword">while</span> (node) {
+    <span class="keyword">if</span> (node.nodeType !== kTextNode) {
+        <span class="keyword">return</span> node;
+    }
+
+    node = node.nextSibling;
+}</code></pre>
+<ul>
+<li>Statements within a <strong>function</strong> body:</li>
+</ul>
+<pre><code>me.getNextById = <span class="keyword">function</span>(target, id) {
+    target = $(target);
+
+    <span class="keyword">if</span> (!target) {
+        <span class="keyword">return</span> <span class="keyword">null</span>;
+    }
+
+    <span class="keyword">var</span> node = target.nextSibling;
+
+    <span class="keyword">if</span> (!node) {
+        <span class="keyword">return</span> <span class="keyword">null</span>;
+    }
+
+    <span class="keyword">var</span> kTextNode = me.nodeType.TEXT;
+
+    <span class="keyword">while</span> (node) {
+        <span class="keyword">if</span> (node.id &amp;&amp; node.id == id) {
+            <span class="keyword">return</span> node;
+        }
+
+        <span class="comment">// Get the next node.</span>
+        node = node.nextSibling;
+    }
+
+    <span class="keyword">return</span> <span class="keyword">null</span>;
+};</code></pre>
+<ul>
+<li>Statements within a <strong>switch</strong> body.</li>
+</ul>
+<pre><code><span class="keyword">switch</span> (className) {
+    <span class="keyword">case</span> ccc.LOG:
+        <span class="keyword">try</span> {
+           process(text);
+        } <span class="keyword">catch</span> (ignore1) {
+            log(ignore1);
+        }
+
+        <span class="keyword">break</span>;
+    <span class="keyword">case</span> ccc.INFO:
+        <span class="keyword">try</span> {
+            console.info(text);
+        } <span class="keyword">catch</span> (ignore2) {
+            log(ignore2);
+        }
+
+        <span class="keyword">break</span>;
+
+        ...
+}</code></pre>
+<ul>
+<li>Statements within a <strong>case</strong> body.</li>
+</ul>
+<pre><code>...
+
+<span class="keyword">case</span> ccc.WARN:
+    <span class="keyword">try</span> {
+        console.warn(text);
+    } <span class="keyword">catch</span> (ignore3) {
+        log(ignore3);
+    }
+
+    <span class="keyword">break</span>;
+<span class="keyword">case</span> ccc.ERROR:
+    <span class="keyword">try</span> {
+        console.error(text);
+    } <span class="keyword">catch</span> (ignore4) {
+        log(ignore4);
+    }
+
+    <span class="keyword">break</span>;
+<span class="keyword">default</span>:
+    <span class="keyword">try</span> {
+        process(text);
+    } <span class="keyword">catch</span> (ignore5) {
+        log(ignore5);
+    }
+
+    <span class="keyword">break</span>;</code></pre>
+<ul>
+<li>Statements <strong>inside</strong> a <em>closure</em>:</li>
+</ul>
+<blockquote>
+<p>Technically speaking, <em>any function</em> is also a <em>closure</em>; therefore statements inside <strong>any function</strong> should be indented one level with respect to that <em>function</em>&#39;s body.</p>
+</blockquote>
+<pre><code>me.eventHandler.preventDefault = window.event ? <span class="keyword">function</span>() {
+    window.event.returnValue = <span class="keyword">false</span>;
+
+    <span class="keyword">return</span> <span class="keyword">false</span>;
+} : <span class="keyword">function</span>(e) {
+    <span class="keyword">if</span> (!e) {
+        <span class="keyword">return</span>;
+    }
+
+    <span class="keyword">if</span> (e.preventDefault) {
+        e.preventDefault();
+    }
+
+    <span class="keyword">return</span> <span class="keyword">false</span>;
+};
+
+me.eventHandler.preventDefault(evt);</code></pre>
+<ul>
+<li>Parts of the statements that are folded to the next line because they exceed the <strong>80 characters</strong> line length limit.</li>
+</ul>
+<pre><code>application.renderController.repaintUserInfo(messageId, userId,
+    options, callback); <span class="comment">//&lt;-- 1x indented.</span></code></pre>
+<ul>
+<li>Variable declarations.</li>
+</ul>
+<pre><code><span class="keyword">function</span> test() {
+    <span class="keyword">var</span> x = <span class="number">10</span>,
+        y = <span class="number">20</span>,
+        z, t;
+
+    ...
+}</code></pre>
+<blockquote>
+<p><code>var</code> statements should always be in the beginning of their respective scope (<strong>function</strong>). Same goes for <code>const</code> and <code>let</code> from <a href="http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts">ECMAScript 6</a>.</p>
+</blockquote>
+<h4>Triple indent…</h4>
+<ul>
+<li>Method parameters that are folded to the next line, and <strong>triple indented</strong> if they exceed the <strong>80 characters</strong> line length limit.</li>
+</ul>
+<blockquote>
+<p>This will clearly indicate that those parameters are <strong>not</strong> a part of the function&#39;s body.</p>
+</blockquote>
+<pre><code><span class="keyword">var</span> instantChatMessageView = {
+
+    <span class="comment">/*
+     *
+     */</span>
+    render: <span class="keyword">function</span>(conversation, chatListItem, message,
+                timeStamp, messageId, userId) { <span class="comment">// &lt;-- 3x indented.</span>
+        prepareChatListItem(chatListItem, message,
+            (<span class="keyword">new</span> Date()).getTime()); <span class="comment">// &lt;-- 1x indented.</span>
+
+        conversation.appendChild(chatListItem);
+
+        application.RenderController.repaintUserInfo(messageId,
+            userId); <span class="comment">// &lt;-- 1x indented.</span>
+
+        scrollToBottom(conversation);
+    }
+};</code></pre>
+<p>The above code may alternatively be written as follows:</p>
+<pre><code><span class="keyword">var</span> instantChatMessageView = {
+
+    <span class="comment">/*
+     *
+     */</span>
+    render: <span class="keyword">function</span>(
+        conversation, chatListItem, message, timeStamp, messageId, userId, foo,
+        bar, baz, bat <span class="comment">// 1x indent wrapped parameters.</span>
+     ) { <span class="comment">// &lt;-- No indentation.</span>
+        prepareChatListItem(
+            chatListItem, message, (<span class="keyword">new</span> Date()).getTime() <span class="comment">// &lt;-- 1x indent.</span>
+        ); <span class="comment">// &lt;-- No indentation.</span>
+
+        conversation.appendChild(chatListItem);
+
+        application.RenderController.repaintUserInfo(
+            messageId, userId <span class="comment">// &lt;-- 1x indent.</span>
+        ); <span class="comment">//&lt;-- No indentation.</span>
+
+        scrollToBottom(conversation);
+    }
+};</code></pre>
+<ul>
+<li>Similarly the conditional or expressional sections (i.e., the parts that are evaluated) of <code>if</code>, <code>else</code>, <code>while</code>, <code>for</code>, <code>switch</code> statements are folded to the next line and triple indent if they exceed the <strong>80 characters</strong> line length limit.</li>
+</ul>
+<pre><code>...
+
+<span class="keyword">if</span>(src.nodeName.toLowerCase() === kTextarea &amp;&amp;
+            src.getAttribute(kDataInput)) { <span class="comment">//&lt;-- 3x indented.</span>
+    <span class="keyword">self</span> = mentionsInputs[i];
+    delegateClickAction(<span class="keyword">self</span>);
+
+    <span class="keyword">return</span>;
+}
+
+...</code></pre>
+<pre><code><span class="keyword">if</span> (filterDelegate.apply(target, filterArgs)) {
+    counter++;
+
+    <span class="keyword">if</span> (!isNaN(returnSingleItemAt) &amp;&amp;
+                returnSingleItemAt === counter) {
+        <span class="keyword">return</span> target;
+    }
+
+    result.push(target);
+
+    <span class="keyword">if</span> (!isNaN(itemsCountCap) &amp;&amp;
+                itemsCountCap &lt;= counter) {
+        <span class="keyword">break</span>;
+    }
+}</code></pre>
+<p>The above code example may alternatively be written as follows:</p>
+<pre><code>...
+
+<span class="keyword">if</span>(
+    src.nodeName.toLowerCase() === kTextarea &amp;&amp;
+    src.getAttribute(kDataInput)
+) {
+    <span class="keyword">self</span> = mentionsInputs[i];
+    delegateClickAction(<span class="keyword">self</span>);
+
+    <span class="keyword">return</span>;
+}
+
+...</code></pre>
+<pre><code><span class="keyword">if</span> (filterDelegate.apply(target, filterArgs)) {
+    counter++;
+
+    <span class="keyword">if</span> (
+        !isNaN(returnSingleItemAt) &amp;&amp;
+        returnSingleItemAt === counter
+    ) {
+        <span class="keyword">return</span> target;
+    }
+
+    result.push(target);
+
+    <span class="keyword">if</span> (
+        !isNaN(itemsCountCap) &amp;&amp;
+        itemsCountCap &lt;= counter
+    ) {
+        <span class="keyword">break</span>;
+    }
+}</code></pre>
+<ul>
+<li>If the variable declaration involves a function call, and that function call need to be wrapped to the next line.</li>
+</ul>
+<pre><code><span class="comment">// Incorrect.</span>
+<span class="keyword">var</span> followButton = view.dom.findActionElement(
+        placePageView.<span class="variable">$el</span>, <span class="string">'place-follow'</span>),
+    unfollowButton = view.dom.findActionElement(
+        placePageView.<span class="variable">$el</span>, <span class="string">'place-unfollow'</span>);
+
+<span class="comment">// Correct.</span>
+<span class="keyword">var</span> followButton = view.dom.findActionElement(
+            placePageView.<span class="variable">$el</span>, <span class="string">'place-follow'</span>),<span class="comment">// &lt;-- Triple indent.</span>
+    unfollowButton = view.dom.findActionElement(
+            placePageView.<span class="variable">$el</span>, <span class="string">'place-unfollow'</span>);<span class="comment">// &lt;-- Triple indent.</span>
+
+<span class="comment">// Use single indent if the assignment is **not** a declaration.</span>
+
+theCopy[key] = me.CollectionHelper.copy(value,
+    shouldDeepCopy); <span class="comment">// &lt;-- Single indent.</span></code></pre>
+<p>The above code may also be written as follows:</p>
+<pre><code><span class="keyword">var</span> followButton = view.dom.findActionElement(
+        placePageView.<span class="variable">$el</span>, <span class="string">'place-follow'</span> <span class="comment">// &lt;-- 2x indent.</span>
+    ),<span class="comment">// &lt;-- 1x indent.</span>
+    unfollowButton = view.dom.findActionElement(
+        placePageView.<span class="variable">$el</span>, <span class="string">'place-unfollow'</span> <span class="comment">// &lt;-- 2x indent.</span>
+    );<span class="comment">// &lt;-- 1x indent.</span>
+
+theCopy[key] = me.CollectionHelper.copy(
+    value, shouldDeepCopy <span class="comment">// &lt;-- 1x indent.</span>
+); <span class="comment">// &lt;-- Zero indent.</span></code></pre>
+<h3>Indenting Chained Methods</h3>
+<p>Use indentation when making long method chains.</p>
+<pre><code><span class="comment">// Bad.</span>
+$(<span class="string">'#items'</span>).find(<span class="string">'.selected'</span>).highlight().end().find(<span class="string">'.open'</span>).updateCount();
+
+<span class="comment">// Good.</span>
+$(<span class="string">'#items'</span>)
+  .find(<span class="string">'.selected'</span>)
+    .highlight()
+    .end()
+  .find(<span class="string">'.open'</span>)
+    .updateCount();</code></pre>
+<h3>Object Literals</h3>
+<p>Use <code>attrName: value</code> format. Keep each attribute value pair on its own line.</p>
+<pre><code><span class="comment">// Incorrect.</span>
+<span class="keyword">var</span> ingredientDictionary = {potato: <span class="number">10</span>, pepper: <span class="number">11</span>, cucumber: <span class="number">12</span>};
+
+<span class="comment">// Incorrect.</span>
+<span class="keyword">var</span> ingredientDictionary = {
+    potato : <span class="number">10</span>,
+    pepper : <span class="number">11</span>,
+    cucumber : <span class="number">12</span>
+};
+
+<span class="comment">// Correct.</span>
+<span class="keyword">var</span> ingredientDictionary = {
+    potato: <span class="number">10</span>,
+    peper: <span class="number">11</span>,
+    cucumber: <span class="number">12</span>
+};</code></pre>
+<p><strong>Exception</strong>:</p>
+<p>Group related items on their own line, if it increases readability.</p>
+<pre><code><span class="keyword">var</span> xssEncodeNoAmpMap = [
+    {regExp: /<span class="string">"/g, replace: '"</span><span class="string">'},
+    {regExp: /&lt;/g, replace: '</span>&lt;<span class="string">'},
+    {regExp: />/g, replace: '</span>><span class="string">'},
+    {regExp: /\'/g, replace: '</span><span class="string">''</span>}
+],</code></pre>
+<p><strong>Exception</strong>:</p>
+<p>Using an object literal as a <strong>parameter object</strong>:</p>
+<pre><code>replacementHelper.replace(testData, {regExp: /\&#39;/g, replace: &#39;&#39;&#39;});</code></pre>
+<p><strong>Exception</strong>:</p>
+<p>Returning a <strong>parameter object</strong>:</p>
+<pre><code><span class="keyword">return</span> {foo: <span class="string">"bar"</span>, baz: <span class="string">"bat"</span>];</code></pre>
+<h3>Method Length</h3>
+<p>Ideally each method should have <strong>at most 10 lines of code</strong>. Any method that has more than 10 lines of code should be split into sub-methods.</p>
+<p>Sometimes, for performance reasons, or for structural reasons, refactoring a method into smaller methods might not be possible. In that case <em>use your own judgement</em>.</p>
+<blockquote>
+<p>Split larger methods into smaller sub-methods, whenever you can.</p>
+</blockquote>
+<h3>Aligning Code</h3>
+<p>Do not align <code>:</code> and <code>=</code> keys.</p>
+<p>Although this may create a more readable code, the code looks bloated, and it might be more prone to merge conflicts. The aesthetics, and the productivity gain you get out of this is <em>marginal</em>, if any.</p>
+<pre><code><span class="comment">//Incorrect.</span>
+<span class="keyword">var</span> veggies = {
+    tomato    : <span class="number">1</span>,
+    cucumber  : <span class="number">2</span>,
+    waterMelon: <span class="number">3</span>,
+    melon     : <span class="number">4</span>
+};
+
+<span class="comment">//Correct.</span>
+<span class="keyword">var</span> veggies = {
+    tomato: <span class="number">1</span>,
+    cucumber: <span class="number">2</span>,
+    waterMelon: <span class="number">3</span>,
+    melon: <span class="number">4</span>
+};
+
+<span class="comment">// Incorrect.</span>
+foo     = getFoo();
+bazinga = getBazinga();
+magnet  = getMagnet();
+
+<span class="comment">// Correct.</span>
+foo = getFoo();
+bazinga = getBazinga();
+magnet = getMagnet();</code></pre>
+<h3>Blank Lines</h3>
+<p>Blank lines may be used for separating  code lines or line groups semantically for readability.</p>
+<blockquote>
+<p>Leave <strong>at most</strong> one blank line.</p>
+</blockquote>
+<p>Insert <strong>one</strong> blank line…</p>
+<ul>
+<li><strong>Before</strong> <em>throw</em>, <em>break</em>, and <em>return</em> statements:</li>
+</ul>
+<pre><code><span class="keyword">if</span> (!url) {
+    stuff();
+
+    <span class="keyword">return</span> <span class="keyword">null</span>;
+}</code></pre>
+<p><strong>Exception</strong>:</p>
+<p>If the <em>return</em>, <em>throw</em>, <em>break</em>… statement is the <strong>only</strong> statement within its block, then do not insert a blank line.</p>
+<pre><code><span class="keyword">if</span> (!url) {<span class="keyword">return</span>;}</code></pre>
+<ul>
+<li><strong>After</strong> function declarations:</li>
+</ul>
+<pre><code>me.eventHandler.stopPropagation = <span class="keyword">function</span>(e) {
+    <span class="keyword">if</span> (!e) {<span class="keyword">return</span>;}
+
+    e.stopPropagation();
+};
+
+me.eventHandler.stopPropagation(evt);</code></pre>
+<ul>
+<li><strong>After</strong> inline functions:</li>
+</ul>
+<pre><code><span class="keyword">function</span> isArray(obj) {
+    <span class="keyword">return</span> is(obj, config.constants.ecmaScriptType.<span class="keyword">ARRAY</span>);
+}
+
+<span class="keyword">function</span> is(obj, type) {
+    <span class="keyword">var</span> objectNameStartIndex = <span class="number">8</span>,
+        trimLastBraceIndex = -<span class="number">1</span>,
+        klass = Object.prototype.toString.call(obj).slice(
+            objectNameStartIndex, trimLastBraceIndex
+        );
+
+    <span class="keyword">return</span> (obj !== undefined) &amp;&amp; (obj !== <span class="keyword">null</span>) &amp;&amp; (klass === type);
+}</code></pre>
+<ul>
+<li><strong>Between</strong> two <code>if</code> blocks:</li>
+</ul>
+<pre><code><span class="keyword">var</span> i;
+
+<span class="keyword">if</span> (!ar) {<span class="keyword">return</span> -<span class="number">1</span>;}
+
+<span class="keyword">if</span> (isArray(ar)) {
+    <span class="keyword">for</span> (i = <span class="number">0</span>, len = ar.length; i &lt; len; i++) {
+        <span class="keyword">if</span> (elm == ar[i]) {<span class="keyword">return</span> i;}
+    }
+
+    <span class="keyword">return</span> -<span class="number">1</span>;
+}</code></pre>
+<ul>
+<li><strong>After</strong> variable declarations:</li>
+</ul>
+<pre><code><span class="keyword">var</span> nodeName = <span class="string">'div'</span>;
+
+<span class="keyword">if</span> (config.isUsingConsole &amp;&amp; config.outputElement) {
+
+    <span class="keyword">return</span> <span class="keyword">function</span>(value, className) {
+        println(value, className);
+
+        <span class="keyword">var</span> debugContent = document.createElement(nodeName);
+
+        debugContent.className = className;
+        debugContent.innerHTML = value;
+
+        config.outputElement.appendChild(debugContent);
+    };
+
+    ...</code></pre>
+<ul>
+<li><strong>After</strong> variable assignments:</li>
+</ul>
+<pre><code><span class="keyword">var</span> test = <span class="keyword">null</span>;
+
+<span class="keyword">if</span> (someCondition()) {
+    test = getTestValue();
+
+    doStuff();
+}
+
+<span class="comment">// Incorrect.</span>
+<span class="keyword">for</span> (key in base) {
+    <span class="keyword">if</span> (base.hasOwnProperty(key)) {
+        value = base[key];
+        <span class="keyword">if</span> (typeof value === kFunction) {
+            child[key] = value;
+        }
+    }
+}
+
+<span class="comment">// Correct.</span>
+<span class="keyword">for</span> (key in base) {
+    <span class="keyword">if</span> (base.hasOwnProperty(key)) {
+        value = base[key];
+
+        <span class="keyword">if</span> (typeof value === kFunction) {
+            child[key] = value;
+        }
+    }
+}</code></pre>
+<ul>
+<li><strong>Before</strong> a <code>try/catch/finally</code> construct:</li>
+</ul>
+<pre><code><span class="keyword">function</span> processCallbacks(xhr, callbacks) {
+    doStuff();
+
+    <span class="keyword">try</span> {
+        <span class="keyword">if</span> (isSuccess) {
+            oncomplete(xhr.responseText, xhr.responseXML, xhr);
+
+            <span class="keyword">return</span>;
+        }
+
+        onerror(xhr.status, xhr.statusText, xhr);
+    } <span class="keyword">catch</span> (ex) {
+        onexception(xhr, ex);
+    } finally {
+        finalizeXhr(xhr);
+    }
+}</code></pre>
+<p><strong>Exception</strong>:</p>
+<p>Do not insert a blank line if that try/catch/finally is the only thing inside the block:</p>
+<pre><code><span class="keyword">function</span> processCallbacks(xhr, callbacks) {
+    <span class="keyword">try</span> {
+        <span class="keyword">if</span> (isSuccess) {
+            oncomplete(xhr.responseText, xhr.responseXML, xhr);
+
+            <span class="keyword">return</span>;
+        }
+
+        onerror(xhr.status, xhr.statusText, xhr);
+    } <span class="keyword">catch</span> (ex) {
+        onexception(xhr, ex);
+    } finally {
+        finalizeXhr(xhr);
+    }
+}</code></pre>
+<ul>
+<li><strong>Before</strong> <em>any</em> kind of <em>comment</em>:</li>
+</ul>
+<pre><code>...
+
+}
+
+<span class="comment">/*
+ * Processes callbacks and finalizes the `Xhr`.
+ *
+ *<span class="phpdoc"> @param</span> {XmlHttpRequest} xhr - the current `Xhr` instance.
+ *<span class="phpdoc"> @param</span> {Object} callbacks - **oncomplete**, **onerror** and **onexception**
+ * callbacks.
+ */</span>
+<span class="keyword">function</span> processCallbacks(xhr, callbacks) {
+
+...
+
+<span class="comment">//</span>
+parameters = parameters || {};
+callbacks = callbacks || {};
+isSync = !!isSync;
+
+<span class="keyword">var</span> isAsync = !isSync,
+    kRandom = config.constants.prefix.RANDOM,
+       kGet = config.constants.verb.GET,
+       isPost = verb != kGet,
+       parametrizedQuery, query, postQuery, guid;
+
+<span class="comment">// name1=value1&amp;name2=value2&amp;name3=value3</span>
+parametrizedQuery = generateParametrizeQueryString(parameters);
+
+<span class="comment">// &amp;name1=value1&amp;name2=value2&amp;name3=value3 (for GET requests)</span>
+query = isPost ? <span class="string">''</span> : [<span class="string">'&amp;'</span>, parametrizedQuery].join(<span class="string">''</span>);
+
+<span class="comment">// name1=value1&amp;name2=value2&amp;name3=value3 (for POST requests)</span>
+postQuery = isPost ? parametrizedQuery : <span class="string">''</span>;
+
+<span class="comment">// A unique string to prevent caching.</span>
+guid = generateGuid();
+
+<span class="comment">// http://example.com + ?rnd= + {guid} + &amp;name1=value1</span>
+url = concat(url, kRandom, guid, query);
+
+<span class="comment">// Create a cross-browser `XmlHttpRequest` insatance.</span>
+<span class="keyword">var</span> xhr = createXhr();
+
+<span class="comment">// Open the connection.</span>
+xhr.open(verb, url, isAsync);
+
+<span class="comment">// Add headers.</span>
+addCommonRequestHeaders(xhr);
+
+<span class="keyword">if</span> (isPost) {
+
+    <span class="comment">// Add more headers.</span>
+    addPostRequestHeaders(xhr);
+}
+
+<span class="comment">// Register callbacks.</span>
+registerCallbacks(xhr, callbacks);
+
+<span class="comment">// Send the request.</span>
+<span class="keyword">try</span> {
+    xhr.send(postQuery);
+} <span class="keyword">catch</span> (<span class="keyword">exception</span>) {
+    callbacks.onexception(xhr, <span class="keyword">exception</span>);
+}
+
+<span class="keyword">if</span> (isSync) {
+
+    <span class="comment">// If the request is sync, process response immediately.</span>
+    processCallbacks(xhr, callbacks);
+}
+
+<span class="keyword">return</span> xhr;</code></pre>
+<p><strong>DO NOT</strong> insert blank lines…</p>
+<ul>
+<li><strong>After</strong> the beginning of and <strong>before</strong> the ending of <code>function</code>, <code>try</code>, <code>catch</code>, <code>finally</code>, <code>switch</code>, <code>if</code>, <code>else</code>, <code>case</code>, <code>do</code>, and <code>while</code> blocks:</li>
+</ul>
+<pre><code><span class="comment">// Incorrect.</span>
+<span class="keyword">if</span> (condition) {
+
+    stuff();
+    someOtherStuff();
+
+} <span class="keyword">else</span> {
+
+    anotherStuff();
+
+}
+
+<span class="comment">// Correct.</span>
+<span class="keyword">if</span> (condition) {
+    stuff();
+    someOtherStuff();
+} <span class="keyword">else</span> {
+    anotherStuff();
+}</code></pre>
+<h3>Trailing Spaces And File Endings</h3>
+<ul>
+<li>Trim trailing spaces in every source file.</li>
+<li>Put an extra blank line at the end of each source file.</li>
+</ul>
+<h3>Brace Positioning</h3>
+<p>The brace positions should be as follows:</p>
+<ul>
+<li><strong>Same line</strong>, in blocks (<em>C-Style</em>).</li>
+</ul>
+<pre><code><span class="keyword">for</span> (<span class="keyword">var</span> key in ar) {
+    <span class="keyword">if</span> (ar.hasOwnProperty(key)) {
+        value = ar[key];
+
+        <span class="keyword">if</span> (shouldDeepCopy &amp;&amp; ( typeof value == <span class="string">'object'</span>)) {
+            theCopy[key] = me.CollectionHelper.copy(value,
+                shouldDeepCopy);
+
+            <span class="keyword">continue</span>;
+        }
+
+        theCopy[key] = value;
+    }
+}</code></pre>
+<ul>
+<li><strong>Same line</strong>, in function declarations (<em>C-Style</em>).</li>
+</ul>
+<pre><code>removeElementByValue: <span class="keyword">function</span> (collection, name, value,
+            isRecursive) {
+    <span class="keyword">var</span> item = <span class="keyword">null</span>;
+    <span class="keyword">var</span> isNested = !!isRecursive;
+
+    <span class="keyword">var</span> removeElementByValue = o2.CollectionHelper.removeElementByValue;
+
+    ...</code></pre>
+<ul>
+<li><strong>Same line</strong>, in switch statements (<em>C-Style</em>).</li>
+</ul>
+<pre><code><span class="keyword">switch</span> (className) {
+    <span class="keyword">case</span> ccc.LOG:
+        <span class="keyword">try</span> {
+            process(text);
+        } <span class="keyword">catch</span> (ignore1) {
+            log(ignore1);
+        }
+
+        <span class="keyword">break</span>;
+    <span class="keyword">case</span> ccc.INFO:
+        <span class="keyword">try</span> {
+            console.info(text);
+        } <span class="keyword">catch</span> (ignore2) {
+            log(ignore2);
+        }
+
+        <span class="keyword">break</span>;
+
+        ...</code></pre>
+<h3>Spaces</h3>
+<p>The spacing should be as follows:</p>
+<ul>
+<li>Commas: <strong>before</strong>: 0, <strong>after</strong>: 1</li>
+<li>Parentheses: <strong>before</strong>: 0, <strong>after</strong>: 0</li>
+<li>Semicolons in for statements: <strong>before</strong>: 0, <strong>after</strong>: 1</li>
+<li>Arithmetic operators: <strong>before</strong>: 1, <strong>after</strong>: 1</li>
+<li>Relational operators: <strong>before</strong>: 1, <strong>after</strong>: 1</li>
+<li>Unary (<em>++, --</em>) operators: <strong>before</strong>: 0, <strong>after</strong>: 0</li>
+<li>Assignments (<strong>=</strong>): <strong>before</strong>: 1, <strong>after</strong>: 1</li>
+<li>Conditional operators (<strong>&amp;&amp;, ||</strong>): before: 1, after: 1</li>
+<li>Key-value (<em>{&#39;a&#39;:&#39;b&#39;}</em>) operators: <strong>before</strong>: 0, <strong>after</strong>: 1</li>
+<li>Inside a line comment: <strong>after</strong>: 1</li>
+</ul>
+<pre><code><span class="comment">//This is incorrect.</span>
+
+<span class="comment">// This is correct with a space.</span>
+
+<span class="comment">//TODO: This is incorrect.</span>
+
+<span class="comment">// TODO: This is correct.</span></code></pre>
+<ul>
+<li>Put one blank space after <code>switch/if/else/try/catch/finally/for/while/do</code> keywords:</li>
+</ul>
+<pre><code><span class="keyword">switch</span> (state) {
+    ...
+}
+
+<span class="keyword">if</span> (foo) {
+    ...
+}
+
+<span class="keyword">try</span> {
+
+}
+
+<span class="keyword">for</span> (;;) {
+
+}
+
+<span class="keyword">if</span> (foo) {
+    ...
+} <span class="keyword">else</span> <span class="keyword">if</span> {
+    ...
+} <span class="keyword">else</span> {
+    ...
+}
+
+<span class="keyword">while</span> (statement) {
+
+}
+
+<span class="keyword">do</span> {
+
+} <span class="keyword">while</span> (statement);</code></pre>
+<ul>
+<li>Anonymous Functions</li>
+</ul>
+<p>Do not insert space before the <code>(</code> of anonymous functions:</p>
+<pre><code><span class="comment">// Incorrect.</span>
+<span class="keyword">var</span> test = <span class="keyword">function</span> () {
+};
+
+<span class="comment">// Correct.</span>
+<span class="keyword">var</span> test = <span class="keyword">function</span>() {
+};</code></pre>
+<ul>
+<li>Empty Function (<em>noop</em>), and Empty Object</li>
+</ul>
+<p>It is okay to have <code>{</code>, and <code>}</code> on the same line.</p>
+<pre><code><span class="keyword">function</span> noop() {}
+
+<span class="keyword">var</span> nil = <span class="keyword">function</span>() {};
+
+<span class="keyword">var</span> obj = {};</code></pre>
+<p>It is <strong>NOT</strong> okay to put <code>}</code> on the same line in any other empty blocks (<code>try/catch/finally/if/else</code>):</p>
+<pre><code><span class="comment">// Incorrect.</span>
+<span class="keyword">try</span> {
+    doStuff();
+} <span class="keyword">catch</span> (e) {}
+finally {}
+
+<span class="comment">// Correct.</span>
+<span class="keyword">try</span> {
+    doStuff();
+} <span class="keyword">catch</span> (e) {
+} finally {
+}
+
+<span class="comment">// Even better.</span>
+<span class="keyword">try</span> (statement) {
+    doStuff();
+} <span class="keyword">catch</span> (e) {
+    log(e);
+} finally {
+    log(<span class="string">'finally'</span>);
+}</code></pre>
+<ul>
+<li>Negation: <strong>after</strong>: 0</li>
+</ul>
+<pre><code><span class="comment">// Incorrect.</span>
+<span class="keyword">if</span> (! stuff &amp;&amp; ! otherStuff) {
+    doAction();
+}
+
+<span class="comment">// Correct.</span>
+<span class="keyword">if</span> (!stuff &amp;&amp; !otherStuff) {
+    doAction();
+}</code></pre>
+<h3>New Lines</h3>
+<ul>
+<li><strong>DO NOT</strong> insert a new line <em>before</em> else statement.</li>
+<li><strong>DO NOT</strong> insert a new line <em>before</em> if and else-if statement.</li>
+<li><strong>DO NOT</strong> insert a new line <em>before</em> catch statement.</li>
+<li><strong>DO NOT</strong> insert a new line <em>before</em> finally statement.</li>
+<li><strong>DO NOT</strong> insert a new line <em>before</em> while in a do statement.</li>
+<li><strong>DO</strong> insert a new line <em>before</em> <code>name: value</code> pairs.</li>
+<li><strong>DO</strong> separate <em>logical code fragments</em> from each other <em>with a new line</em>.</li>
+</ul>
+<p>Example:</p>
+<pre><code><span class="comment">// Functions</span>
+
+<span class="keyword">function</span> foo() {
+
+    ...
+
+    <span class="keyword">do</span> {
+        stuff();
+    } <span class="keyword">while</span>(<span class="keyword">true</span>);
+
+    <span class="keyword">try</span> {
+        alert(<span class="string">'hello'</span>);
+    } <span class="keyword">catch</span> (e) {
+        ...
+    } finally {
+        ...
+    }
+
+}
+
+<span class="keyword">function</span> bar(a) {
+    <span class="keyword">if</span> (<span class="keyword">true</span>) {
+        <span class="keyword">return</span>;
+    }
+
+    <span class="comment">// # If-Else</span>
+
+    <span class="keyword">if</span> (<span class="keyword">false</span>) {
+        alert(<span class="string">'hello'</span>);
+    } <span class="keyword">else</span> <span class="keyword">if</span> (a > <span class="number">0</span>) {
+        alert(a);
+    } <span class="keyword">else</span> {
+        alert(<span class="number">0</span>);
+    }
+
+}
+
+<span class="comment">// # Switch-Case</span>
+
+<span class="keyword">switch</span> (a) {
+    <span class="keyword">case</span> <span class="number">1</span>:
+        alert(<span class="string">'1'</span>);
+
+        <span class="keyword">break</span>;
+    <span class="keyword">case</span> <span class="number">2</span>:
+
+        <span class="keyword">break</span>;
+    <span class="keyword">default</span>:
+        alert(<span class="string">'none'</span>);
+}
+
+<span class="comment">// # Closures</span>
+
+(<span class="keyword">function</span> fooInGroup(a, b) {
+
+}(a, b));
+
+<span class="comment">// # Associative Objects</span>
+
+<span class="keyword">var</span> associative = {
+   name1: <span class="string">'value1'</span>,
+   name2: <span class="string">'value2'</span>,
+   name3: <span class="number">10</span>,
+
+   <span class="comment">// "float" is a keyword and thus it's escaped.</span>
+   <span class="string">'float'</span>: <span class="string">'left'</span>
+};</code></pre>
+<h3>Always Use <code>var</code></h3>
+<p>Variables in <strong>JavaScript</strong> either have <strong>global scope</strong> or <strong>function scope</strong>, and using  the <code>var</code> keyword is vital to keeping them straight.</p>
+<p>When declaring a variable for use either as a global variable or as a function-level variable, always prefix the declaration with the <code>var</code> keyword.</p>
+<h3>Feature-Detect Rather Than Browser-Detect</h3>
+<p><strong>DO NOT</strong> write your code to detect browser versions and to take different action based on the user agent being used. This, most of the time, is a very bad practice (there are <strong>rarely</strong>, if ever, any exceptions to this).</p>
+<blockquote>
+<p>Any code which even looks at the global <code>navigator</code> object is a suspect.</p>
+</blockquote>
+<p>The better approach is to use <strong>feature detection</strong>. That is, before using any advanced feature that an older browser may not support, check to see if function the or property exists first, then use it.</p>
+<h3><code>eval</code> is <strong>evil</strong></h3>
+<p>The <code>eval()</code> function in <strong>JavaScript</strong> is a way to run arbitrary code at run-time.</p>
+<p>In almost all cases, <code>eval</code> should never be used. If it exists in your code, there is almost always a more correct way to accomplish what you are doing.</p>
+<p>Note that using <code>Function</code> constructor is also a form of <code>eval</code> and should be avoided.</p>
+<h3>Feel free to use <code>undefined</code></h3>
+<p>In <strong>JavaScript</strong>, it is possible to override the <code>undefined</code> variable unintentionally, that&#39;s why some of the libraries pass <code>undefined</code> as a parameter to their factory method. You don&#39;t need to, and here&#39;s why:</p>
+<ul>
+<li>No one is &quot;that&quot; dumb to override <code>undefined</code>;</li>
+<li>Using &quot;strict mode&quot; prevents overriding <code>undefined</code> at all;</li>
+<li>And <strong><a href="http://jshint.com/">JSHint</a></strong> will detect such an issue and <a href="http://jslinterrors.com/">will raise an error</a>.</li>
+</ul>
+<h3><strong>Object</strong> and <strong>Array</strong> Creation</h3>
+<p>Use literal notations. It takes less space and it&#39;s slightly faster:</p>
+<pre><code><span class="comment">// Incorrect.</span>
+<span class="keyword">var</span> obj = <span class="keyword">new</span> Object();
+<span class="keyword">var</span> ar = <span class="keyword">new</span> <span class="keyword">Array</span>();
+
+<span class="comment">// Correct:</span>
+<span class="keyword">var</span> obj = {};
+<span class="keyword">var</span> ar = [];</code></pre>
+<h3>Strings</h3>
+<p>Always use single quotes ( <code>&#39;</code> ) for string literals.</p>
+<p>Single quotes play well with <strong>HTML</strong> inside strings, and always using the same quoting scheme makes searching for strings easier.</p>
+<pre><code>&#39;this is correct&#39;;
+
+&quot;this is NOT correct&quot;;</code></pre>
+<h3>Private Methods and Properties</h3>
+<p>First of all <a href="http://o2js.com/2011/04/24/the-module-pattern/">show love to the <strong>module pattern</strong></a> any function and variable local to the module, is, in deed, private to your module.</p>
+<p>In case that you need to expose your private methods (<em>to be used in unit tests, for example</em>) put them in a <strong>privates</strong> namespace.</p>
+<pre><code><span class="comment">// Not this.</span>
+exports._findSamurai = <span class="keyword">function</span>() {
+
+};
+
+<span class="comment">// This is even worse.</span>
+exports.__findSamurai__ = <span class="keyword">function</span>() {
+
+};
+
+<span class="comment">// Prefer the following, instead.</span>
+
+<span class="keyword">var</span> privates = {
+    findSamurai: <span class="keyword">function</span>() {
+        ...
+    }
+};
+
+exports.privates = privates;</code></pre>
+<h3>Saving A Reference to <code>this</code></h3>
+<p>Use <code>that</code>.</p>
+<pre><code><span class="keyword">function</span> scopeTest() {
+    <span class="keyword">var</span> that = <span class="keyword">this</span>;
+
+    ajax.get(<span class="keyword">function</span>() {
+        that.doStuff();
+    });
+}</code></pre>
+<p>Or even better, use a <strong>proxy function</strong>:</p>
+<pre><code><span class="keyword">var</span> bind = <span class="keyword">require</span>(<span class="string">'./node_modules/o2.method'</span>).bind;
+
+<span class="keyword">function</span> scopeTest() {
+    ajax.get(bind(<span class="keyword">function</span>() {
+        <span class="keyword">this</span>.doStuff();
+    }, <span class="keyword">this</span>);
+}</code></pre>
+<h3>Accessor Methods</h3>
+<p>Accessor methods for properties are <strong>NOT</strong> required.</p>
+<pre><code><span class="comment">// Bad.</span>
+<span class="keyword">var</span> age = ninja.getAge();
+
+<span class="comment">// Even worse.</span>
+<span class="keyword">var</span> age = ninja.age();
+
+<span class="comment">// Good.</span>
+<span class="keyword">var</span> age = ninja.age;</code></pre>
+<p>The only time you need an accessor is when you want to disable getting, or setting the member:</p>
+<pre><code><span class="keyword">var</span> age;
+
+exports.setAge = <span class="keyword">function</span>(newAge) {
+    age = newAge;
+};
+
+<span class="comment">// There is no way to get the private static `age` variable inside this module.</span>
+<span class="comment">// We explicitly disable that by providing a public **setter** only.</span></code></pre>
+<h3>Prototypal Inheritance</h3>
+<p>Assign methods to the prototype object, instead of overwriting the prototype with a new object. Overwriting the prototype makes inheritance impossible:</p>
+<blockquote>
+<p>By resetting the prototype you also overwrite the base!</p>
+</blockquote>
+<p>function Jedi() {
+    process(&#39;new jedi&#39;);
+}</p>
+<p>// Bad.
+Jedi.prototype = {
+    fight: function fight() {
+        process(&#39;fighting&#39;);
+    }
+};</p>
+<p>// Good.
+Jedi.prototype.fight = function fight() {
+    process(&#39;fighting&#39;);
+};</p>
+<h3>Modules</h3>
+<ul>
+<li><strong>o2.js</strong> modules are separate <strong><a href="http://npmjs.org/">NPM</a></strong> modules.</li>
+<li>Each module lives in its own folder under the <em>*src</em> directory.</li>
+<li>Each module has a <strong>core.js</strong> file which is also the <strong>main entry point</strong> to the module.</li>
+<li>If a module has a wide spectrum of functionality, each functional group might be split into its own file too.</li>
+<li>File names are all <strong>lowercase</strong>.</li>
+</ul>
+<blockquote>
+<p>These <strong><a href="http://npmjs.org/">NPM</a></strong> modules are also converted to <a href="http://requirejs.org/docs/commonjs.html">CommonJS</a> module during publish process.</p>
+<p>This is done with executing <code>grunt publish</code> from the console.</p>
+<p>See <strong>Gruntfile.js</strong> in the <strong>project root directory</strong> for details.</p>
+</blockquote>
+<h3>Comments</h3>
+<h4>Documentation Comments</h4>
+<ul>
+<li><p>You don&#39;t need to put your names, or aliases in the comments. That&#39;s the task of the version control system.</p>
+</li>
+<li><p>For documentation comments, each root module is regarded as a <strong>static</strong> class.</p>
+</li>
+<li><p>Use <a href="http://yui.github.io/yuidoc/">YUIDoc syntax</a> for documenting modules, functions, objects, and structs.</p>
+</li>
+</ul>
+<p>Read <a href="http://o2js.com/documentation">o2.js documentation</a> for examples of this.</p>
+<ul>
+<li>References to method parameters shall be bold:</li>
+</ul>
+<pre><code>* @throws <span class="keyword">Exception</span> <span class="keyword">if</span> **fn** callback is not defined.</code></pre>
+<ul>
+<li><strong>JavaScript</strong> objects should be enclosed in back ticks (`…`):</li>
+</ul>
+<pre><code>* @param {DomNode} node - the DOM object (<span class="keyword">or</span> its `String` equivalent).</code></pre>
+<p><strong>Exception</strong>:</p>
+<p>Words like &quot;<em>string</em>&quot;, &quot;<em>array</em>&quot;, &quot;<em>object</em>&quot; might sometimes be used to indicate a generic class of entities (<em>i.e., <strong>string</strong> versus <strong>String</strong></em>). In those cases, since the emphasis is not on the word, we do not treat them as keywords.</p>
+<blockquote>
+<p>If the &quot;<em>string/array/etc.</em>&quot; in the documentation is not a parameter to a method, or a return value from the method, then it&#39;s generally not necessary to enclose it in backticks.</p>
+</blockquote>
+<p>Correct:</p>
+<pre><code><span class="comment">/*
+ * The **res** folder contains all external resources used by the application such
+ * as **images**, **layout files**, **strings**, **menus**, and any other
+ * **auxiliary** information.
+ * …
+ */</span></code></pre>
+<p>Correct:</p>
+<pre><code>* @param {Object} context - Might be a `String`, <span class="keyword">or</span> an `<span class="keyword">Array</span>`.
+*
+* @<span class="keyword">return</span> {Boolean} A <span class="keyword">new</span> `Object` that contains the configuration.</code></pre>
+<h4>Block-level and Inline Comments</h4>
+<ul>
+<li><p>Use <strong>only</strong> line comments ( <code>//</code> ) for in-line comments.</p>
+</li>
+<li><p>Use C-style comments (<code>/**/</code>) <strong>only</strong> for <em>documentation</em>.</p>
+</li>
+<li><p>Do not use C-style comments (<code>/*…*/</code>) inside functions.</p>
+</li>
+<li><p>Place single line comments on a newline above the subject of the comment; and put an empty line before the comment.</p>
+</li>
+</ul>
+<p>This is correct:</p>
+<pre><code><span class="comment">// Cache the global function.</span>
+<span class="keyword">var</span> fnDo = doStuff;</code></pre>
+<p>This is not:</p>
+<pre><code><span class="keyword">var</span> fnDo = doStuff; <span class="comment">// Cache the global function.</span></code></pre>
+<p>This is even worse:</p>
+<pre><code><span class="keyword">var</span> fnDo = doStuff;
+<span class="comment">// Cache the global function.</span></code></pre>
+<ul>
+<li><strong>Always</strong> end comments with a period (.)</li>
+</ul>
+<p>This will force you construct meaningful sentences in your comments.</p>
+<p><strong>Exception</strong>:</p>
+<p>Comments that denote certain code sections don&#39;t end with a period. They should also be in the &quot;<em>Title Case</em>&quot;.</p>
+<p>Correct:</p>
+<pre><code><span class="comment">// # Data Abstraction Methods</span></code></pre>
+<p>Incorrect:</p>
+<pre><code><span class="comment">// # Data Abstraction Methods.</span></code></pre>
+<ul>
+<li>Use <strong>C-Style</strong> comments for documentation, line comments for inline comments only.</li>
+</ul>
+<p>add example -- and move these stylistic comment things to their own section.
+they don&#39;t belong here since this section describes a more philosophical approach.</p>
+<h4>Task Comments</h4>
+<p>Prefixing your comments with <strong>FIXME</strong> or <strong>TODO</strong> helps other developers quickly understand if you&#39;re pointing out a problem that needs to be revisited, or if you&#39;re suggesting a solution to the problem that needs to be implemented. These are different than regular comments because they are actionable.</p>
+<h4>When to Comment</h4>
+<p>You <strong>MUST</strong> comment critical or tricky parts of the code, or important changes you&#39;ve made to the code, or anything that&#39;s not easy to grasp at a first glance.</p>
+<blockquote>
+<p>Keep in mind that using, or having a need to use, lots of inline comments may be an indicator that you need to split your code into subroutines.</p>
+</blockquote>
+<p>Feel free to <strong>write descriptive comments</strong>; your production <strong>shall</strong> be <em>minified</em> and <em>obfuscated</em> anyway; and therefore your comments will not have  any negative impact on <em>performance</em> or <em>file size</em>.</p>
+<p>Use <strong>full sentences</strong> in both <strong>documentation</strong> and <strong>inline</strong> comments. Start each comment with a <em>Capital<strong> letter, and end it with a </strong>period*</em> as you would do in a normal sentence.</p>
+<p>Incorrect:</p>
+<pre><code><span class="comment">// sync request -- process response</span>
+processCallbacks(xhr, callbacks);</code></pre>
+<p>Correct:</p>
+<pre><code><span class="comment">// If the request is sync, then process the response immediately.</span>
+processCallbacks(xhr, callbacks);</code></pre>
+<h3>Variable and Method Naming</h3>
+<ul>
+<li>Use meaningful variable (and function) names:</li>
+</ul>
+<pre><code><span class="comment">// Incorrect.</span>
+<span class="keyword">var</span> kSixteen = <span class="number">16</span>;
+
+<span class="comment">// Better.</span>
+<span class="keyword">var</span> kNumberOfBits = <span class="number">16</span>;</code></pre>
+<ul>
+<li>Use <strong>long and descriptive</strong> variable (<em>and function</em>) names.</li>
+</ul>
+<blockquote>
+<p>Using abbreviated names doesn&#39;t make sense in almost any practical situation, and there are <a href="https://github.com/gruntjs/grunt-contrib-uglify">minifiers</a> for this.</p>
+</blockquote>
+<p>Trying to determine what a variable contains, or what a method does, should be as straightforward as possible.</p>
+<p>It is an all too common practice to use abbreviations, single letters or seemingly random names for variables, functions and class names.</p>
+<pre><code><span class="comment">// Incorrect.</span>
+usrAvail = <span class="keyword">true</span>;
+
+<span class="comment">// Better.</span>
+isUserAvailable = <span class="keyword">true</span>;</code></pre>
+<ul>
+<li>Assign aliases for complex conditionals. Consider <a href="http://martinfowler.com/refactoring/catalog/replaceTempWithQuery.html">replacing temp with query</a> in your variable assignments.</li>
+</ul>
+<p>For instance…</p>
+<pre><code><span class="keyword">if</span> (person.getGender() === kMale &amp;&amp; person.getAge() >= kValidAge &amp;&amp;
+            person.getNationality() !== kDefaultNationality ||
+            person.getGender() === kFemale &amp;&amp; person.getAge &lt; kValidAge &amp;&amp;
+            person.getNationality() === kDefaultNationality) {
+    doStuff();
+}</code></pre>
+<p>Can be better expressed as:</p>
+<pre><code><span class="keyword">var</span> isMaleAlienWithValidAge = person.getGender() === kMale &amp;&amp;
+    person.getAge() >= kValidAge &amp;&amp;
+    person.getNationality() !== kDefaultNationality;
+
+<span class="keyword">var</span> isFemaleCitizenWithInvalidAge = person.getGender() === kFemale &amp;&amp;
+    person.getAge &lt; kValidAge &amp;&amp;
+    person.getNationality() === kDefaultNationality;
+
+<span class="keyword">if</span> (isMaleAlienWithValidAge || isFemaleCitizenWithInvalidAge) {
+    doStuff();
+}</code></pre>
+<p>Or even better:</p>
+<pre><code><span class="keyword">function</span> isEligibleToEnterTheParty(person) {
+    <span class="keyword">var</span> isMaleAlienWithValidAge = person.getGender() === kMale &amp;&amp;
+        person.getAge() >= kValidAge &amp;&amp;
+        person.getNationality() !== kDefaultNationality;
+
+    <span class="keyword">var</span> isFemaleCitizenWithInvalidAge = person.getGender() ===
+        kFemale &amp;&amp;
+        person.getAge &lt; kValidAge &amp;&amp;
+        person.getNationality() === kDefaultNationality;
+
+    <span class="keyword">return</span> isMaleAlienWithValidAge || isFemaleCitizenWithInvalidAge;
+}
+
+<span class="keyword">if</span> (isEligibleToEnterTheParty(person)) {
+    doStuff();
+}</code></pre>
+<ul>
+<li><p>Establish a naming convention based on <strong>real names</strong> that mean something.</p>
+</li>
+<li><p>Avoid any abbreviations unless they are part of your target industry&#39;s every-day lingo.</p>
+</li>
+<li><p>In method names, try to use a name that describes what the method <strong>really does</strong>.</p>
+</li>
+<li><p>Variables and classes should be <strong>nouns</strong> or <strong>noun phrases</strong>.</p>
+</li>
+<li><p>Class names are like <strong>collective nouns</strong>.</p>
+</li>
+<li><p>Variable names are like <strong>proper nouns</strong>.</p>
+</li>
+<li><p>Procedure names should be <strong>verbs</strong> or <strong>verb phrases</strong>.</p>
+</li>
+<li><p>Booleans should be <strong>adjectives</strong>.</p>
+</li>
+<li><p>For compound names, retain conventional English syntax.</p>
+</li>
+<li><p>Try to make names <strong>pronounceable</strong>.</p>
+</li>
+<li><p><strong>Try to be obvious</strong>.</p>
+</li>
+</ul>
+<h3>Method Parameters</h3>
+<ul>
+<li><strong>DO NOT</strong> override parameters.</li>
+</ul>
+<pre><code><span class="comment">// Incorrect.</span>
+<span class="keyword">function</span> doStuff(target) {
+    target = $(target); <span class="comment">//&lt;-- target parameter has been overridden.</span>
+}
+
+<span class="comment">// Correct.</span>
+<span class="keyword">function</span> doStuff(targetElm) {
+    <span class="keyword">var</span> target = $(targetElm); <span class="comment">// &lt;-- safer: Original targetElm</span>
+                               <span class="comment">//            has not changed.</span>
+}</code></pre>
+<ul>
+<li>Choose readable variable names:</li>
+</ul>
+<pre><code><span class="comment">// WTF?!</span>
+<span class="keyword">var</span> b001 = (lo == l0) ? (I1 == <span class="number">11</span>) : (lOl != <span class="number">101</span>);</code></pre>
+<ul>
+<li>Use short enough and long enough variable names in each scope of code.</li>
+</ul>
+<blockquote>
+<p>As a rule of thumb, length may be 1 char for loop counters, 1 word for condition/loop variables, 1-2 words for methods, 2-3 words for classes, 3-4 words for globals.</p>
+</blockquote>
+<ul>
+<li><p>A variable name must define the exact explanation of its content.</p>
+</li>
+<li><p>A variable or a method that has an &quot;and&quot; or &quot;or&quot; in it, is a <strong>code smell</strong> that the method is doing too much.</p>
+</li>
+</ul>
+<pre><code><span class="comment">// Smelly.</span>
+createModuleAndInitializeContext();
+
+<span class="comment">// Better.</span>
+createModules();
+initializeContext();
+
+<span class="comment">// Smelly.</span>
+<span class="keyword">var</span> content = getSelectionOrDefaultValue();
+
+<span class="comment">// Better.</span>
+<span class="keyword">var</span> selection = getSelection(),
+    value = selection || getDefaultValue();</code></pre>
+<ul>
+<li><p>Don&#39;t use non-ASCII chars in variable names.</p>
+</li>
+<li><p><strong>Do not use <a href="http://en.wikipedia.org/wiki/Hungarian_notation">Hungarian Notation</a></strong>.</p>
+</li>
+</ul>
+<pre><code><span class="comment">// Incorrect:</span>
+<span class="keyword">var</span> dblIncome = <span class="number">100.12</span>;
+
+<span class="comment">// Correct -- no prefix:</span>
+<span class="keyword">var</span> income = <span class="number">100.12</span>;</code></pre>
+<p>This is true for <strong>DOM</strong> node aliases too.</p>
+<pre><code><span class="comment">// Incorrect.</span>
+<span class="keyword">var</span> txtLogin = document.getElementById(<span class="string">'loginInput'</span>);
+<span class="keyword">var</span> btnAction = document.getElementById(<span class="string">'submitForm'</span>);
+<span class="keyword">var</span> optCountry = document.getElementById(<span class="string">'countrySelection'</span>);
+
+<span class="comment">// Correct.</span>
+<span class="keyword">var</span> loginText = document.getElementById(<span class="string">'loginInput'</span>);
+<span class="keyword">var</span> actionButton = document.getElementById(<span class="string">'submitForm'</span>);
+<span class="keyword">var</span> countrySelection = document.getElementById(<span class="string">'countrySelection'</span>);</code></pre>
+<ul>
+<li>Use <strong>verbs</strong> for <strong>method names</strong>.</li>
+</ul>
+<p>Use meaningful names for methods. The name must specify the exact action of the method and must start with a verb. (<em>e.g., </em>createPasswordHash**)</p>
+<ul>
+<li>Use meaningful names for method parameters.</li>
+</ul>
+<p>You should be able to understand what the parameter is for without documentation. And this should <strong>NOT</strong> be an excuse for not having properly documented code.</p>
+<ul>
+<li><p>Use <strong>nouns</strong> for <strong>members</strong>, <strong>constants</strong> and <strong>variables</strong>.</p>
+</li>
+<li><p>Use <strong>is</strong>, <strong>has</strong>, <strong>should</strong>… prefixes for methods that return a <strong>boolean</strong>.</p>
+</li>
+</ul>
+<pre><code><span class="comment">// # Incorrect</span>
+
+    <span class="comment">// Status is a "noun".</span>
+    <span class="keyword">if</span> (statusToState(user.status) == kLoggedIn) {
+
+        <span class="comment">// User is a "noun".</span>
+        userLogin();
+    }
+
+    <span class="keyword">if</span> (loggedIn()) {
+
+        <span class="comment">// Stuff is a "noun".</span>
+        stuff();
+    }
+
+    <span class="comment">// this method returns a boolean.</span>
+    <span class="keyword">if</span> (goToNextPage()) {
+
+        <span class="comment">// next is a "noun".</span>
+        nextPage();
+    }
+
+    <span class="keyword">if</span> (stage.active) {
+        raiseTheCurtain();
+    }
+
+<span class="comment">// # Correct</span>
+
+    <span class="keyword">if</span> (mapUserStatusToState(user.status) == kLoggedIn) {
+        logUserIn();
+    }
+
+    <span class="keyword">if</span> (isLoggedIn()) {
+        doStuff();
+    }
+
+    <span class="keyword">if</span> (shouldGoToNextPage()) {
+        goToNextPage();
+    }
+
+    <span class="comment">// The same rule applies to both methods, members, and variables.</span>
+    <span class="keyword">if</span> (stage.isActive) {
+        raiseTheCurtain();
+    }</code></pre>
+<ul>
+<li>Avoid double negatives.</li>
+</ul>
+<pre><code><span class="comment">// Bad.</span>
+isNotError, isNotFound are unaccept
+
+<span class="comment">// Good</span>
+isError, isFound, accept</code></pre>
+<ul>
+<li>Use <strong>singular</strong> names for <strong>namespaces</strong>.</li>
+</ul>
+<pre><code><span class="comment">// "member", not "members"</span>
+<span class="keyword">var</span> kFullName = config.constants.member.FULL_NAME;</code></pre>
+<p><strong>Exception</strong>:</p>
+<p>One exception to this rule is the use of <strong>constants</strong> (<em>as above</em>), and <strong>enums</strong>, in order to differentiate them from <em>constant</em> and <em>enum</em> keywords.</p>
+<ul>
+<li>Use <strong>plural</strong> names for <strong>collections</strong>.</li>
+</ul>
+<pre><code><span class="comment">// "members", not "member".</span>
+<span class="keyword">var</span> members = getOnlineMembers();</code></pre>
+<pre><code><span class="comment">// Any variable that refers to a **Dictionary** or a **Collection** is plural.</span>
+<span class="keyword">var</span> suites = <span class="keyword">new</span> foo.bar.baz.SuiteCollection();
+
+suites.add(<span class="keyword">new</span> Bat());
+
+<span class="comment">// If the variable is a single representative of that **Dictionary/Collection**,</span>
+<span class="comment">// then it is singular.</span>
+<span class="keyword">var</span> suite = suiteFactory.create();</code></pre>
+<ul>
+<li>Use <strong>camelCase</strong> for <strong>method names</strong> and <strong>member names</strong>, use <strong>ALL_CAPS</strong> for <strong>constants</strong>.</li>
+</ul>
+<pre><code><span class="keyword">function</span> getUserInfo(){}
+
+<span class="keyword">function</span> renderNewLoginForm(){}
+
+<span class="keyword">var</span> config = {
+    constants: {
+        memberRegistrationStatus: {
+            REGISTERED: <span class="number">3</span>,
+            WAITING_APPROVAL: <span class="number">1</span>,
+            NOT_INITIALIZED: <span class="number">0</span>
+        }
+    }
+};</code></pre>
+<ul>
+<li>Use <strong>camelCase</strong> for <strong>acronyms</strong>.</li>
+</ul>
+<pre><code><span class="comment">// Incorrect.</span>
+config.constants.methodName.WCF.INSERT;
+
+<span class="comment">// Correct.</span>
+config.constants.methodName.wcf.INSERT;
+
+<span class="comment">// Incorrect.</span>
+getDOMNode();
+
+<span class="comment">// Correct.</span>
+getDomNode();
+
+<span class="comment">// Incorrect.</span>
+stringHelper.HTMLEncode();
+
+<span class="comment">// Correct.</span>
+stringHelper.htmlEncode();</code></pre>
+<ul>
+<li>Use <strong>lowercase</strong> for <strong>event handler</strong> references.</li>
+</ul>
+<pre><code><span class="comment">// Incorrect.</span>
+<span class="keyword">var</span> onComplete = globalCompletionCallback || o2.nill;
+
+<span class="comment">// Correct.</span>
+<span class="keyword">var</span> oncomplete = globalCompletionCallback || o2.nill;</code></pre>
+<ul>
+<li>Use <strong>PascalCase</strong> for constructors, <strong>camelCase</strong> for static <strong>object literals</strong>.</li>
+</ul>
+<pre><code>
+<span class="comment">// Incorrect.</span>
+o2.ConnectionPool = {
+    isActive: <span class="keyword">function</span>() {}
+};
+
+log(o2.ConnectionPool.isActive());
+
+<span class="comment">// Correct.</span>
+o2.connectionPool = {
+    isActive: <span class="keyword">function</span>() {}
+};
+
+log(o2.connectionPool.isActive());
+
+<span class="comment">// Incorrect</span>
+o2.connectionPool = <span class="keyword">function</span>(state) {
+    <span class="keyword">this</span>.state = state;
+};
+
+<span class="keyword">var</span> pool = <span class="keyword">new</span> o2.connectionPool();
+
+<span class="comment">// Correct.</span>
+o2.ConnectionPool = <span class="keyword">function</span>(state) {
+    <span class="keyword">this</span>.state = state;
+};
+
+<span class="keyword">var</span> pool = <span class="keyword">new</span> o2.ConnectionPool();</code></pre>
+<ul>
+<li>Use <strong>lowercase</strong> for <strong>module</strong> names, <strong>camelCase</strong> for <strong>namespaces</strong>.</li>
+</ul>
+<pre><code><span class="comment">// 'excellentmodulename' all lowercase.</span>
+<span class="keyword">var</span> excellentModule = import(<span class="string">'o2.excellentmodulename'</span>);
+
+<span class="comment">// Namespaces are camelCase.</span>
+<span class="keyword">var</span> dataTypes = excllentModule.config.constants.applicationState.dataTypes;</code></pre>
+<ul>
+<li><p><strong>Be consistent</strong> in naming your methods; do not give different names to two methods which are essentially doing the same thing.</p>
+</li>
+<li><p>Abbreviations and acronyms <strong>SHOULD NOT</strong> be UPPERCASE when used as a name.</p>
+</li>
+</ul>
+<pre><code>getInnerHtml(), getXml(), XmlDocument</code></pre>
+<p><strong>Summary</strong>:</p>
+<pre><code>variables, objects, functions      : camelCase ( getStatusRecord() )
+<span class="keyword">private</span> variables, <span class="keyword">private</span> methods : camelCase
+<span class="keyword">public</span> variables, <span class="keyword">public</span> methods   : camelCase
+enums <span class="keyword">and</span> <span class="keyword">global</span> constants         : ALL_CAPS
+local/<span class="keyword">global</span> constants             : prefix with k ( kPipeTimeout )
+Parameters                         : camelCase
+Objects <span class="keyword">and</span> Constructors           : PascalCase
+Modules/Packages/Namespaces        : lowercase
+Methods                            : camelCase</code></pre>
+<p>Some more examples:</p>
+<pre><code><span class="comment">// Local constant.</span>
+<span class="keyword">var</span> kActiveProvider = enums.providerType.TWITTER;
+
+<span class="comment">// Do not start functions other than constructors with UpperCase.</span>
+<span class="keyword">function</span> user(){}
+
+<span class="comment">// Incorrect.</span>
+<span class="keyword">var</span> john = <span class="keyword">new</span> user();
+
+<span class="keyword">function</span> User(){}
+
+<span class="comment">// Correct.</span>
+<span class="keyword">var</span> john = <span class="keyword">new</span> User();
+
+<span class="comment">// Incorrect.</span>
+<span class="keyword">function</span> GetAccountDetails() {
+    ...
+}
+
+<span class="comment">// Correct.</span>
+<span class="keyword">function</span> getAccountDetails() {
+    ...
+}</code></pre>
+<h3>Avoid Using <code>continue</code> Statement</h3>
+<p>Avoid using <code>continue</code> statement. It tends to obscure the control flow of the function.</p>
+<pre><code><span class="comment">// Incorrect.</span>
+<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; len, i++) {
+    <span class="keyword">if</span> (i === maxLength) {
+        doAction();
+
+        <span class="keyword">continue</span>;
+    }
+
+    doStuff();
+}
+
+<span class="comment">// Correct.</span>
+<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; len, i++) {
+    <span class="keyword">if</span> (i === maxLength) {
+        doAction();
+    } <span class="keyword">else</span> {
+        doStuff();
+    }
+}</code></pre>
+<h3>Return Early, Return Often</h3>
+<p>Early returns promote code readability with negligible performance impact, if any.</p>
+<p>Instead of this…</p>
+<pre><code><span class="keyword">function</span> returnLate(foo) {
+    <span class="keyword">var</span> ret;
+
+    <span class="keyword">if</span> (foo) {
+        ret = <span class="string">'foo'</span>;
+    } <span class="keyword">else</span> {
+        ret = <span class="string">'bar'</span>;
+    }
+
+    <span class="keyword">return</span> ret;
+}</code></pre>
+<p>do this:</p>
+<pre><code><span class="keyword">function</span> returnEarly(foo) {
+    <span class="keyword">if</span> (foo) {
+        <span class="keyword">return</span> <span class="string">'foo'</span>;
+    }
+
+    <span class="keyword">return</span> <span class="string">'bar'</span>;
+}</code></pre>
+<h3>Group Related Statements Together Using Parentheses (<code>(…)</code>)</h3>
+<p>Although <code>&amp;&amp;</code> has precedence over <code>||</code>, mixing them together without grouping may decrease readability.</p>
+<pre><code><span class="comment">// Incorrect.</span>
+<span class="keyword">return</span> obj !== undefined &amp;&amp; obj !== <span class="keyword">null</span> &amp;&amp; klass === type;
+
+<span class="comment">// Correct.</span>
+<span class="keyword">return</span> (obj !== undefined) &amp;&amp; (obj !== <span class="keyword">null</span>) &amp;&amp; (klass === type);</code></pre>
+<h3>Variable Initialization</h3>
+<ul>
+<li><strong>Do not</strong> assign default values to variables that are initialized later in the code.</li>
+</ul>
+<pre><code><span class="comment">// Incorrect.</span>
+
+    <span class="keyword">var</span> cache = [];
+
+    ...
+
+    cache = o2.<span class="keyword">Array</span>.copy(jsonResponse.<span class="keyword">list</span>);
+
+<span class="comment">// Correct.</span>
+
+    <span class="keyword">var</span> cache;
+
+    ...
+
+    cache = o2.<span class="keyword">Array</span>.copy(jsonResponse.<span class="keyword">list</span>);</code></pre>
+<ul>
+<li>Use a single <code>var</code> statement for variable declarations; write initialized variables first, then uninitialized variables. Keep uninitialized variables in a <strong>single line</strong>.</li>
+</ul>
+<pre><code><span class="keyword">var</span> kArguments = <span class="string">'Arguments'</span>,
+    now = (<span class="keyword">new</span> Date()).getTime(),
+    i, j, counter;</code></pre>
+<p>Also, declare unassigned variables last. This is helpful when later on you might need to assign a variable depending on one of the previous assigned variables.</p>
+<ul>
+<li>Do Not Align Equals For Anything</li>
+</ul>
+<pre><code><span class="comment">// Incorrect.</span>
+
+    <span class="comment">/*
+     * EcmaScript Types
+     */</span>
+    <span class="keyword">var</span> kArguments = <span class="string">'Arguments'</span>;
+    <span class="keyword">var</span> kArray     = <span class="string">'Array'</span>;
+    <span class="keyword">var</span> kBoolean   = <span class="string">'Boolean'</span>;
+    <span class="keyword">var</span> kDate      = <span class="string">'Date'</span>;
+    <span class="keyword">var</span> kFunction  = <span class="string">'Function'</span>;
+    <span class="keyword">var</span> kNumber    = <span class="string">'Number'</span>;
+    <span class="keyword">var</span> kObject    = <span class="string">'Object'</span>;
+    <span class="keyword">var</span> kRegExp    = <span class="string">'RegExp'</span>;
+    <span class="keyword">var</span> kString    = <span class="string">'String'</span>;
+
+<span class="comment">// Correct.</span>
+
+    <span class="comment">/*
+     * EcmaScript Types
+     */</span>
+    <span class="keyword">var</span> kArguments = <span class="string">'Arguments'</span>,
+        kArray = <span class="string">'Array'</span>,
+        kBoolean = <span class="string">'Boolean'</span>,
+        kDate = <span class="string">'Date'</span>,
+        kFunction = <span class="string">'Function'</span>,
+        kNumber = <span class="string">'Number'</span>,
+        kObject = <span class="string">'Object'</span>,
+        kRegExp = <span class="string">'RegExp'</span>,
+        kString = <span class="string">'String'</span>;</code></pre>
+<ul>
+<li>Declare logically and functionally related variables and methods close to each other.</li>
+</ul>
+<blockquote>
+<p>Related chunks of code should be grouped together.</p>
+</blockquote>
+<h3>Avoid &quot;Yoda Conditions&quot;</h3>
+<blockquote>
+<p><a href="http://en.wikipedia.org/wiki/Yoda">Yoda</a> was a great teacher except for his word sequence.</p>
+</blockquote>
+<p><strong>Yoda conditions</strong> is basically using <code>if (constant === variable)</code> instead of <code>if(variable == constant)</code>. Because it&#39;s like saying &quot;Much to learn, you still have.&quot;</p>
+<p>The main reason of using <strong>Yoda conditions</strong>, is to avoid mistaken left hand side assignments like <code>if (value = 42)</code> (instead of <code>if (value == 42)</code>). However, <a href="http://jshint.com/">JSHint</a> already checks your code against these (and many other) errors.</p>
+<p>So you need not make your code harder to read. Avoid Yoda conditions and integrate <a href="http://jshint.com/">JSHint</a> into your build process – that&#39;s enough.</p>
+<p>Instead of this…</p>
+<pre><code><span class="comment">// "If connected is result's status" (harder to read and follow).</span>
+<span class="keyword">if</span> (CONNECTED === result.status) {
+    ...
+}
+~~
+
+<span class="keyword">do</span> <span class="keyword">this</span>:
+
+<span class="comment">// "If result's status is connected" (much easier).</span>
+<span class="keyword">if</span> (result.status === CONNECTED) {
+    ...
+}</code></pre>
+<h3>Avoid <strong>&quot;Stringly Typed&quot;</strong> Code</h3>
+<p>Your code should not needlessly rely on <strong>String</strong>s, when there are programmer and refactor friendly options are available:</p>
+<p>Pass numeric literals, or enums as method parameters, rather than strings.</p>
+<blockquote>
+<p>Excessively <strong>stringly typed</strong> code is usually a pain to understand, and detonates at production with errors that <a href="http://jshint.com/">JSHint</a> would normally find.</p>
+</blockquote>
+<p>It is also darn hard to refactor a <strong>stringly typed</strong> codebase.</p>
+<p>A starting point may be creating constants for commonly used string literals and use those constants instead of the strings themselves.</p>
+<h3>Always Use Strict Comparison</h3>
+<p>Strongly-typed languages such as Java and C# consider two values to be equal if and only if they are equal both by <em>value</em> and by <em>type</em>. <strong>JavaScript</strong> equality operator (<code>==</code>), however, enables <em>type coercion</em> when comparing different types. Although the rules of coercion are deterministic and strictly defined, the issue creates some <a href="http://o2js.com/2011/04/27/to-equal-or-not-to-equal-thats-the-problem/">confusion</a>, to say the least.</p>
+<pre><code><span class="comment">// This evaluates to `false`.</span>
+<span class="string">'Samurai'</span> == <span class="keyword">false</span>;
+
+<span class="comment">// This evaluates to `false`, too.</span>
+<span class="string">'Samurai'</span> == <span class="keyword">true</span>;</code></pre>
+<p>To avoid confusion and logic errors, always use strict equality and inequality operators.</p>
+<pre><code><span class="comment">// Incorrect.</span>
+<span class="keyword">if</span> (a == b &amp;&amp; c != d) {
+    doStuff();
+}
+
+<span class="comment">// Correct.</span>
+<span class="keyword">if</span> (a === b &amp;&amp; c !== d) {
+    doStuff();
+}</code></pre>
+<p><strong>Exception</strong>:</p>
+<p>You can use <code>==</code> to compare for &quot;null or undefined&quot;.</p>
+<pre><code><span class="comment">// This works.</span>
+<span class="keyword">if</span> (a === <span class="keyword">null</span> &amp;&amp; a === undefined) {
+    doStuff();
+}
+
+<span class="comment">// This is equivalent, and better.</span>
+<span class="keyword">if</span> (a == <span class="keyword">null</span>) {
+    doStuff();
+}</code></pre>
+<h3>Prefer Delegation Over <code>switch\case</code></h3>
+<p>Instead of this…</p>
+<pre><code>switch (state) {
+    case &#39;alpha&#39;:
+        doAlphaStuff();
+
+        break;
+    case &#39;beta:
+        doBetaStuff();
+
+        break;
+    default:
+        doDefaultStuff();
+        break;
+}</code></pre>
+<p>do this:</p>
+<pre><code><span class="keyword">var</span> cases = {
+    alpha: <span class="keyword">function</span>() {
+        ...
+    },
+
+    beta: <span class="keyword">function</span>() {
+        ...
+    },
+
+    fallback: <span class="keyword">function</span>() {
+        ...
+    }
+};
+
+<span class="keyword">if</span> (cases[type]) {
+    cases[type]();
+} <span class="keyword">else</span> {
+    cases.fallback();
+}</code></pre>
+<p>This will promote code reuse; and it will be optimized for speed in modern browsers, too.</p>
+<h3>File, Folder and Path Naming</h3>
+<p>Use <strong>lowercase</strong> for <em>files</em>, <em>folders</em> and <em>paths</em>.</p>
+<pre><code><span class="comment">// Incorrect.</span>
+/wwwRoot/Script/mainController.js
+
+<span class="comment">// Correct.</span>
+/wwwroot/script/maincontroller.js</code></pre>
+<h3>File Headers</h3>
+<p>Each file (<em>module</em>) should have a descriptive header.</p>
+<p>The <em>module</em> header should also be in <a href="http://yui.github.io/yuidoc/">YUIDoc Format</a>:</p>
+<pre><code><span class="string">'use strict'</span>;
+
+<span class="comment">/*
+ *  This program is distributed under the terms of the MIT license.
+ *  Please see the **LICENSE.md** file for details.
+ */</span>
+
+<span class="comment">/**
+ *  An `XMLHttpRequest` helper module.
+ *
+ *<span class="phpdoc"> @module</span> o2.ajax
+ *<span class="phpdoc"> @requires</span> o2.string
+ */</span></code></pre>
+<h3>Show Love to Your Curly Braces</h3>
+<ul>
+<li>Use curly braces, even when they are not strictly necessary.</li>
+</ul>
+<pre><code><span class="comment">// It's not clear which 'if' belongs to which 'else'.</span>
+<span class="keyword">if</span> (b1) <span class="keyword">if</span> (b2) foo(); <span class="keyword">else</span> bar();
+
+<span class="comment">// This is better.</span>
+<span class="keyword">if</span> (b1) {
+    <span class="keyword">if</span> (b2) {
+        foo();
+    } <span class="keyword">else</span> {
+        bar();
+    }
+}
+
+<span class="comment">// Incorrect.</span>
+<span class="keyword">function</span> method() {
+    <span class="keyword">for</span>(int i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)
+        <span class="keyword">if</span> (i != <span class="number">0</span>)
+            foo();
+}
+
+<span class="comment">// Correct.</span>
+<span class="keyword">function</span> method() {
+    <span class="keyword">for</span> (int i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) {
+        <span class="keyword">if</span> (i != <span class="number">0</span>) {
+            foo();
+        }
+    }
+}</code></pre>
+<ul>
+<li>Put statements&#39; curly braces to a new line, even if the block is empty.</li>
+</ul>
+<blockquote>
+<p>Ideally you should put <strong>audit logs</strong> inside those empty blocks.</p>
+</blockquote>
+<pre><code><span class="comment">// Incorrect.</span>
+<span class="keyword">try</span> {
+    process(text);
+} <span class="keyword">catch</span> (ignore1) {}
+
+<span class="comment">// Correct.</span>
+<span class="keyword">try</span> {
+    process(text);
+} <span class="keyword">catch</span> (ignore1) {
+}
+
+<span class="comment">// Much better.</span>
+<span class="keyword">try</span> {
+    process(text);
+} <span class="keyword">catch</span> (ignore1) {
+    log(ignore1);
+}</code></pre>
+<p><strong>Exception</strong>:</p>
+<p>Keep <code>return</code>s from <a href="http://c2.com/cgi/wiki?GuardClause">guard clauses</a> on the same line.</p>
+<pre><code><span class="comment">// Incorrect.</span>
+<span class="keyword">function</span> transform(text) {
+    <span class="keyword">if</span> (!text) {<span class="keyword">return</span> <span class="keyword">false</span>;}
+
+    <span class="keyword">if</span> (typeof text !== <span class="string">'string'</span>) {<span class="keyword">return</span> <span class="keyword">false</span>;}
+
+    <span class="keyword">return</span> text.toUpperCase();
+}
+
+<span class="comment">// Correct.</span>
+<span class="keyword">function</span> transform(text) {
+    <span class="keyword">if</span> (!text) {<span class="keyword">return</span> <span class="keyword">false</span>;}
+
+    <span class="keyword">if</span> (typeof text !== <span class="string">'string'</span>) {<span class="keyword">return</span> <span class="keyword">false</span>;}
+
+    <span class="keyword">return</span> text.toUpperCase();
+}</code></pre>
+<h3>Function Headers</h3>
+<p>Each function declaration should have a documentation header. If the function is publicly accessible it should have a <a href="http://yui.github.io/yuidoc/">YUIDoc</a> header; if the function is private to the module it should also have a header.</p>
+<pre><code><span class="comment">// # Private Function</span>
+
+<span class="comment">/*
+ * Checks whether two nodes are equal to one another.
+ */</span>
+<span class="keyword">function</span> isNodeEquals(node, until) {
+    <span class="keyword">if</span> (!node) {<span class="keyword">return</span> <span class="keyword">false</span>;}
+
+    <span class="keyword">if</span> (!until) {<span class="keyword">return</span> <span class="keyword">false</span>;}
+
+    <span class="keyword">return</span> $(node) === $(until);
+}
+
+<span class="comment">// # Public Function</span>
+
+<span class="comment">/**
+ * An implementation of the `Observer.addObserver` method.
+ *
+ * Registers an `Observer`.
+ *
+ * This method is **protected**, in a sense that it's not
+ * meant to be called directly. {@link o2.ajaxcontroller} and
+ * {@link o2.jsonpcontroller} use it indirectly to register themselves.
+ *
+ *<span class="phpdoc"> @method</span> {protected static} o2.ajaxState.addObserver
+ *
+ *<span class="phpdoc"> @param</span> {Object} observer - the `Observer` to register.
+ */</span>
+exports.addObserver = def(me, <span class="string">'addObserver'</span>, <span class="keyword">function</span>(observer) {
+    <span class="keyword">if</span> (hasObserver(<span class="keyword">this</span>, observer)) {<span class="keyword">return</span>;}
+
+    <span class="keyword">var</span> observers = getObservers(<span class="keyword">this</span>);
+
+    observers.push({
+        object: observer,
+        meta: {
+            registrationTime: (<span class="keyword">new</span> Date()).getTime(),
+            timeout: (observer.timeout || <span class="keyword">null</span>)
+        }
+    });
+});</code></pre>
+<h3>Default Fallbacks</h3>
+<p>All <code>switch/case</code>s should have a <code>default:</code> exit point. That last fallback should at least have a log statement.</p>
+<blockquote>
+<p>Additionally, you should <a href="#prefer-delegation-over-switchcase">prefer delegation over switch/case</a>.</p>
+</blockquote>
+<p>All <code>if/else</code> chains should have an <code>else</code> in the end. That last else should at least have a log statement.</p>
+<pre><code><span class="keyword">if</span> (answer == <span class="string">'no'</span>) {
+    alert(<span class="string">'You said no'</span>);
+} <span class="keyword">else</span> <span class="keyword">if</span> (answer == <span class="string">'yes'</span>) {
+    alert(<span class="string">'You said yes'</span>);
+} <span class="keyword">else</span> {
+
+    <span class="comment">// This block should be here, even if we do not</span>
+    <span class="comment">// care about any outcome other than 'yes' or 'no'.</span>
+    assert(<span class="string">'I should not be here'</span>);
+}</code></pre>
+<blockquote>
+<p>The <code>if/else</code> chains can, too, be <a href="#prefer-delegation-over-switchcase">converted to a delegator</a>.</p>
+</blockquote>
+<p><strong>Exception</strong>:</p>
+<p>A single <code>if</code> statement may not be regarded as an if-else <em>&quot;chain&quot;</em>, so it&#39;s okay to leave single <code>if</code>s without an <code>else</code>.</p>
+<pre><code><span class="keyword">if</span> (controller.isLoadingTemplates()) {
+    <span class="keyword">return</span>;
+} <span class="comment">/*else {
+    log('controller has more templates');
+} -- not required -- */</span></code></pre>
+<h3>Boolean Comparisons</h3>
+<p><strong>DO NOT</strong> directly compare with <strong>true</strong>, or <strong>false</strong>.</p>
+<pre><code><span class="comment">// Incorrect.</span>
+<span class="keyword">while</span>(condition === <span class="keyword">false</span>)
+
+<span class="comment">// Incorrect.</span>
+<span class="keyword">while</span>(condition !== <span class="keyword">true</span>)
+
+<span class="comment">// You got the point.</span>
+<span class="keyword">while</span>(((condition === <span class="keyword">true</span>) === <span class="keyword">true</span>) === <span class="keyword">true</span>)
+
+<span class="comment">// Correct.</span>
+<span class="keyword">while</span>(condition)</code></pre>
+<h3>Variable Access</h3>
+<ul>
+<li><strong>DO NOT</strong> access the same variable more than once.</li>
+</ul>
+<pre><code>v[i] = ++c;  <span class="comment">// OK.</span>
+v[i] = ++i;  <span class="comment">// Incorrect. Misleading.</span>
+i = i + <span class="number">1</span>;   <span class="comment">// OK.</span>
+i = ++i + <span class="number">1</span>; <span class="comment">// Incorrect an unnecessary;</span>
+             <span class="comment">// i += 2 should have been better.</span></code></pre>
+<ul>
+<li>Aim to minimize the scope of variables. Use as little global variables, global configuration data, and global functions as possible. Use <strong>modules</strong> and <strong>namespaces</strong> to achieve that.</li>
+</ul>
+<h3>Statement Termination</h3>
+<ul>
+<li>Always terminate statements with a semicolon (<code>;</code>).</li>
+</ul>
+<pre><code><span class="comment">// Incorrect.</span>
+<span class="keyword">var</span> i = <span class="number">10</span>
+
+<span class="comment">// Correct.</span>
+<span class="keyword">var</span> i = <span class="number">10</span>;
+
+<span class="comment">// Incorrect.</span>
+<span class="keyword">var</span> test = <span class="keyword">function</span>() {
+}
+
+<span class="comment">// Correct.</span>
+<span class="keyword">var</span> test = <span class="keyword">function</span>() {
+};</code></pre>
+<hr>
+<h2>o2.js <strong>JavaScript</strong> Coding Best Practices</h2>
+<h3><strong><a href="http://jshint.com/">JSHint</a></strong> Your Code</h3>
+<p><strong><a href="http://jshint.com/">JSHint</a></strong> is a <strong>must-have</strong> great tool written in <strong>JavaScript</strong> that allows you to validate your <strong>JavaScript</strong> code against a set of best practises.</p>
+<blockquote>
+<p><a href="http://jshint.com/">JSHint</a> is a <em>less</em> opinionated, more flexible, <strong>JavaScript</strong> static code analysis tool, which is far more open future enhancements, suggestions, comments, and recommendations.</p>
+</blockquote>
+<p><a href="http://jshint.com/">JSHint</a> your code to prevent bugs and surprises creep into it.</p>
+<p>Automate the usage of <strong><a href="http://jshint.com/">JSHint</a></strong> by integrating, <strong><a href="http://jshint.com/">JSHint</a></strong> validation to your web application&#39;s build &amp; deployment cycle.</p>
+<p>The <strong><a href="http://jshint.com/">JSHint</a></strong> validation preferences used in <strong>o2.js</strong> are as follows:</p>
+<pre><code>{
+    <span class="string">"bitwise"</span>: <span class="keyword">false</span>,
+    <span class="string">"curly"</span>: <span class="keyword">true</span>,
+    <span class="string">"eqeqeq"</span>: <span class="keyword">true</span>,
+    <span class="string">"forin"</span>: <span class="keyword">true</span>,
+    <span class="string">"immed"</span>: <span class="keyword">true</span>,
+    <span class="string">"indent"</span>: <span class="number">4</span>,
+    <span class="string">"latedef"</span>: <span class="keyword">true</span>,
+    <span class="string">"newcap"</span>: <span class="keyword">true</span>,
+    <span class="string">"noarg"</span>: <span class="keyword">true</span>,
+    <span class="string">"noempty"</span>: <span class="keyword">true</span>,
+    <span class="string">"nomen"</span>: <span class="keyword">true</span>,
+    <span class="string">"nonew"</span>: <span class="keyword">true</span>,
+    <span class="string">"onevar"</span>: <span class="keyword">true</span>,
+    <span class="string">"plusplus"</span>: <span class="keyword">false</span>,
+    <span class="string">"quotmark"</span>: <span class="string">"single"</span>,
+    <span class="string">"regexp"</span>: <span class="keyword">true</span>,
+    <span class="string">"strict"</span>: <span class="keyword">true</span>,
+    <span class="string">"undef"</span>: <span class="keyword">true</span>,
+    <span class="string">"unused"</span>: <span class="keyword">true</span>,
+    <span class="string">"white"</span>: <span class="keyword">true</span>,
+    <span class="string">"trailing"</span>: <span class="keyword">true</span>,
+    <span class="string">"node"</span>: <span class="keyword">true</span>,
+    <span class="string">"maxlen"</span>: <span class="number">80</span>
+}</code></pre>
+<p>See also <a href="http://www.jshint.com/docs/">.jshintrc</a>.</p>
+<h3><strong>Event Handler</strong> Naming Convention</h3>
+<p>User <strong>handleTargetNameEventName</strong> format for event handlers.</p>
+<pre><code><span class="keyword">function</span> handleConfirmButtonClick(evt) {
+    ...
+}
+
+functions handleMasterContainerReadyStateChange(evt) {
+    ...
+}
+
+eventHandler.addEventListener(
+    item,
+    <span class="string">'readystatechange'</span>,
+    handleTesterReadyStateChange
+);
+
+eventHandler.addEventListener(
+    confirmButton,
+    <span class="string">'click'</span>,
+    handleConfirmButtonClick
+);</code></pre>
+<p>The same convention is true for custom events, too.</p>
+<pre><code>DemoWidget.on(&#39;init&#39;, handleDemoWidgetInit);</code></pre>
+<p>or…</p>
+<pre><code>DemoWidget.on(&#39;init&#39;, widgetCallback.handleDemoWidgetInit);</code></pre>
+<p>When used as function pointers event handlers start with <strong>on</strong>, and they should be <strong>all lowercase</strong>.</p>
+<pre><code><span class="keyword">var</span> ondocumentmousedown = EventCallback.handleDocumentMouseDown;
+
+...
+
+ondocumentmousedown.apply(<span class="keyword">this</span>, [evt]);</code></pre>
+<p>Any custom event of an object also starts with <strong>on</strong> on and is <strong>all lowercase</strong>.</p>
+<pre><code><span class="keyword">var</span> Selectable = <span class="keyword">function</span>(params) {
+    ... stuff ...
+
+    <span class="comment">// We register the handler on constructor.</span>
+    <span class="comment">// Note that the assigned method name (this.onselectionchange)</span>
+    <span class="comment">// and the parameter name (params.onselectionchange)</span>
+    <span class="comment">// are both all lowercase.</span>
+    <span class="keyword">this</span>.onselectionchange = params.onselectionchange;
+};
+
+Selectable.prototype.doSomeAction = <span class="keyword">function</span>() {
+    ...
+
+    <span class="comment">// Also note that we send the even source and additional event</span>
+    <span class="comment">// arguments to the event handling delegate as parameters.</span>
+    <span class="comment">// This is also a nice convention to stick with.</span>
+    <span class="keyword">this</span>.onselectionchange.apply(<span class="keyword">this</span>, [source, eventArgs]);
+};
+
+<span class="comment">// Note that we still use **handleEventName** when we attach the</span>
+<span class="comment">// event handler to an **instance** of this object.</span>
+<span class="keyword">var</span> venueSelection = <span class="keyword">new</span> Selectable({container : <span class="string">'venueListDiv'</span>});
+venueSelection.onselectionchange =
+    WidgetCallback.handleVenueSelection;</code></pre>
+<p>The same is true for <strong>AJAX/JSONP/CORS…</strong> callbacks.</p>
+<pre><code><span class="comment">// "user deletion" is an "action", not an "object", so its callback is</span>
+<span class="comment">// handleUserDeleteSuccess and NOT userDelete_success</span>
+jsonp.get(<span class="string">'/server/api/v1'</span>, {params}, ApiCallback.handleUserDeleteSuccess);</code></pre>
+<h3>Store Your Code in Meaningful Folder Structures</h3>
+<p>The naming conventions should also apply to your folders. Split up your code in <strong>logical groups</strong> and store it in folders that describe <strong>what they contain</strong>.</p>
+<p>This will make it much easier to keep your code-tree organized and scale it to thousands of files without hindering your ability to get to specific files quickly.</p>
+<ul>
+<li><p>Group your source files in <strong>logical groups</strong>.</p>
+</li>
+<li><p>Keep your folder names <strong>consistent</strong> throughout the project.</p>
+</li>
+<li><p>Use your naming convention recursively inside of your sub-folders.</p>
+</li>
+</ul>
+<h3>Show Love To the <strong><a href="http://o2js.com/2011/04/24/the-module-pattern/">Module Pattern</a></strong></h3>
+<p><a href="http://o2js.com/2011/04/24/the-module-pattern/">Modules</a> are simply self-executing function literals. They create their own <em>private</em> <strong>static</strong> context, and encapsulate the business logic inside. This will (<em>in theory</em>) enable developers safely write their own code, without affecting the code that others have been developing.</p>
+<blockquote>
+<p><strong>o2.js</strong> sources are <strong><a href="http://requirejs.org/docs/commonjs.html">CommonJS</a></strong> modules, which are converted to <strong><a href="http://requirejs.org/docs/whyamd.html">AMD</a></strong> modules for client-side use.</p>
+</blockquote>
+<h3>Do Not Pollute The Global Namespace</h3>
+<p><strong>Avoid using public variables and public functions at all costs</strong>.</p>
+<p>Global variables and functions are rarely, if ever, required.</p>
+<p>Using globals cause naming conflicts between <strong>JavaScript</strong> source files and cause code  to break unexpectedly. For this reason, it is a good practice to encapsulate functionality within <strong><a href="http://requirejs.org/docs/whyamd.html">modules</a></strong>.</p>
+<h3><strong>Avoid</strong> <em>sync</em> AJAX Calls</h3>
+<p>When making <strong>AJAX</strong> requests, you may choose either async or sync mode.</p>
+<p>Async mode runs the request in the background while other browser activities can continue to process.</p>
+<p>Sync mode will wait for the request to return before continuing.</p>
+<p><strong>Requests made with sync mode should be avoided</strong>. These requests will cause the browser to lock up for the user until the request returns. In cases where the server is busy and the response takes a while, the user&#39;s browser will not allow anything else to be done. In cases where a response is never properly received, the browser may continue to block until the request is timed out.</p>
+<p>If you think that your situation requires sync mode, it is most likely time to re-think your design. Very few (if any) situations actually require AJAX requests in sync mode.</p>
+<h3>Show Love to <strong><a href="http://www.json.org/">JSON</a></strong></h3>
+<p><strong><a href="http://www.json.org/">JSON</a></strong> (<strong>JavaScript</strong> Object Notation) is compact and efficient data format, and is language-neutral.</p>
+<p>When storing data structures as plain text or sending/retrieving data structures via AJAX, use <strong><a href="http://www.json.org/">JSON</a></strong> (instead of XML or other formats) whenever possible.</p>
+<h3>Use Namespaces and Break Code Into Modules</h3>
+<blockquote>
+<p>Modules, <em>modules</em>, <strong>modules</strong>.
+<strong>NOT</strong>
+functions, <em>functions</em>, <strong>functions</strong>!</p>
+</blockquote>
+<h3>Avoid &quot;God Objects&quot; And &quot;God Methods&quot;</h3>
+<p>Each method <strong>SHOULD</strong> have one, and only one, clearly defined task. If a method is doing more than one thing, it should be <strong>divided</strong> into <strong>subroutines</strong>.</p>
+<p>Program your functions atomically. Aim to reduce <a href="http://en.wikipedia.org/wiki/Cyclomatic_complexity">cyclomatic complexity</a>.</p>
+<p>While writing a method the following should be taken into consideration:</p>
+<ul>
+<li>The accepted input ranges, and data types;</li>
+<li>Return values and their meanings;</li>
+<li>Error conditions, exceptional cases, and how they are handled;</li>
+<li>And whether the method has any <a href="http://en.wikipedia.org/wiki/Functional_programming#Pure_functions">side effects</a>.</li>
+</ul>
+<blockquote>
+<p>A function with no side effects is a function that always returns the same value given the same arguments, and never changes the internal global state (<em>MODEL</em>), or the application&#39;s look &amp; feel (<em>VIEW</em>). It takes some arguments, returns a value based on these arguments, and do not monkey around with anything else.</p>
+</blockquote>
+<h3>Strive for <strong>Harmony</strong> and <strong>Symmetry</strong> in Your Code</h3>
+<p>This is hard to demonstrate as it&#39;s more of a conceptual thing.</p>
+<p>Let us try to explain it with a few bullet points:</p>
+<ul>
+<li>It should be easy to identify a method name, which folder a module resides in;</li>
+<li>It should take no more than a few seconds to identify where to write a piece of code;</li>
+<li>If a module registers an object, that very same module should unregister it.</li>
+</ul>
+<p>This intuition can only be gained in time, with patience and tireless practice.</p>
+<blockquote>
+<p>Use the force, and find harmony you will.</p>
+</blockquote>
+<h3><strong>DO NOT</strong> Rely on Type Information While Naming Variables</h3>
+<p>Strive <strong>NOT TO</strong> include type information in variables.</p>
+<p>Variables should be understandable by their behavior (<em>semantics</em>), <strong>NOT</strong> by their type.</p>
+<p>Incorrect:</p>
+<pre><code><span class="keyword">var</span> eventType = framework.EventType;
+<span class="keyword">var</span> kAddBuddyEventType = eventType.ADD_BUDDY;
+
+<span class="keyword">var</span> itemArrayList = <span class="keyword">new</span> ArrayList();
+
+o2.events.mouse.MouseEventHandler;</code></pre>
+<p>Correct:</p>
+<pre><code><span class="keyword">var</span> eventType = framework.EventType;
+
+<span class="comment">// `kAddBuddy` "is an" eventType, no need to repeat that information. Be DRY.</span>
+<span class="keyword">var</span> kAddBuddy = eventType.ADD_BUDDY;
+
+<span class="comment">// `items` "is an" array list, no need to repeat the information. Be DRY.</span>
+<span class="keyword">var</span> items = <span class="keyword">new</span> ArrayList();
+
+<span class="comment">// Type of the event handler is implied in the module name, or namespace. Be DRY.</span>
+o2.events.mouse.Handler;</code></pre>
+<p>Similarly don&#39;t start variables with <code>o_</code>, <code>obj_</code>, <code>m_</code> etc.</p>
+<blockquote>
+<p>A variable does not need tags which states it is a… well… &quot;variable&quot;.</p>
+</blockquote>
+<p><strong>Exception</strong>:</p>
+<p>If there are two similar variables, we may want to include type information instead of renaming those variables, as in the following case:</p>
+<pre><code><span class="keyword">var</span> kDomLoaded = <span class="string">'domloaded'</span>;
+<span class="keyword">var</span> kDomLoadedRegExp = /domloaded/g;
+
+<span class="keyword">var</span> kUsername = <span class="string">'user name'</span>;
+<span class="keyword">var</span> kUsernameFieldId = <span class="string">'txtUsername'</span>;</code></pre>
+<p>Also, if adding type information conveys an additional meaning which decreases ambiguity, clarifies meaning, and makes the code <em>easier to follow</em>, then it&#39;s okay to include type information in variable names. – So, <strong>use your own judgement</strong>.</p>
+<p>Variable names for UI elements are generally good examples for this.</p>
+<pre><code><span class="comment">// It's not clear what "cancel" refers to. A method, or a boolean flag?</span>
+<span class="keyword">var</span> cancel = document.getElementById(<span class="string">'btnCancel'</span>);
+
+<span class="comment">// This is better: more explanatory, and easier to follow.</span>
+<span class="keyword">var</span> cancelButton = document.getElementById(<span class="string">'btnCancel'</span>);</code></pre>
+<p><strong>Exception</strong>:</p>
+<p>Classes/constructors <strong>MAY</strong> be named based on their inheritance pattern, with the base class to the right of the name.</p>
+<p>Instances of these classes/constructors <strong>SHOULD NOT</strong> have the type information in them.</p>
+<pre><code><span class="comment">// Acceptable.</span>
+EventHandler;
+UiEventHandler;
+MouseEventHandler;
+
+<span class="comment">// Incorrect.</span>
+<span class="keyword">var</span> uiEventHandler = <span class="keyword">new</span> UiEventHandler();
+
+<span class="comment">// Correct.</span>
+<span class="keyword">var</span> handler = <span class="keyword">new</span> UiEventHandler();</code></pre>
+<h3>Always Respect Type</h3>
+<p><strong>JavaScript</strong> is a dynamically typed language, which can be your best friend or worst enemy, so <strong>always respect type</strong>.</p>
+<p>Always use equality with type ( <code>===</code> and <code>!==</code> ) when comparing variables and statements.</p>
+<p>If you know the type of an input variable beforehand explicitly cast it before using it.</p>
+<p>Here&#39;s an example:</p>
+<pre><code><span class="keyword">var</span> userCount = document.getElementById(<span class="string">'uc'</span>).value;</code></pre>
+<pre><code><span class="comment">// 1. Defensively parse the value using parseInt</span>
+<span class="comment">// 2. use === for comparison.</span>
+<span class="keyword">if</span> (parseInt(userCount, <span class="number">10</span>) === MAX_ALLOWED_USER_COUNT) {
+    doStuff();
+}
+
+<span class="comment">// Or...</span>
+
+<span class="comment">// The unary operator + will convert its rigth-side operand into a number.</span>
+<span class="keyword">if</span> (+userCount === MAX_ALLOWED_USER_COUNT) {
+    doStuff();
+}</code></pre>
+<h3><strong>DO NOT</strong> Mix <strong>HTML</strong> and <strong>JavaScript</strong></h3>
+<p>Use a template engine. Don&#39;t mix <strong>HTML</strong> markup within <strong>JavaScript</strong> code.</p>
+<h3><strong>DO NOT</strong> Use Inline <strong>JavaScript</strong> Events</h3>
+<p>Using inline <strong>JavaScript</strong> events along with a server-side template (like <em><a href="http://www.smarty.net/">smarty</a></em>, for instance), is a dangerous mix that may leave your code prone to &quot;<strong>script injection</strong>&quot; attacks.</p>
+<p><strong>Event overriding</strong> is yet another reason to avoid using inline <strong>JavaScript</strong> (i.e., <code>onclick=&quot;&quot;</code>s):</p>
+<p>The way inline event handlers work is called <strong>&quot;DOM Level 0 Events&quot;</strong> (<code>&lt;a href=&quot;javascript:void()&quot; onclick=&quot;foo();return false&quot;&gt;...&lt;/a&gt;</code> ... yuck!).</p>
+<p>The issue with <em>DOM Level 0</em> events is that you can only assign a single event handler to a node. – With <a href="http://en.wikipedia.org/wiki/Unobtrusive_JavaScript">unobtrusive <strong>JavaScript</strong></a> and <a href="http://www.alistapart.com/articles/behavioralseparation">behavioral separation</a>, however, you actually assign event handlers to a higher level (<strong>DOM Level 2</strong> to be exact). This allows for multiple event handlers to be assigned to one event.</p>
+<blockquote>
+<p><a href="http://www.alistapart.com/articles/behavioralseparation">Behavioral separation</a>, is actually far more than that, but that&#39;s the topic of another story.</p>
+</blockquote>
+<p>One of the big powers of <strong>JavaScript</strong> is that it can be isolated in a separate file. Much like CSS, this means you can apply one collection of functions to every page of the site, and if you need to change the functionality, you can do that in one document rather than going through and replacing each <strong>onclick</strong> event on every single template.</p>
+<blockquote>
+<p>Don&#39;t be a lazy <code>b****</code>, and <strong>decouple</strong> your <strong>JavaScript</strong>!</p>
+</blockquote>
+<p> <strong>Coupling is bad</strong>, and we know it.</p>
+<ul>
+<li>We <strong>decouple</strong> our data access from our views;</li>
+<li>And we <strong>decouple</strong> our services from each other.</li>
+</ul>
+<p>We try to keep coupling to a minimum in every piece of code we write…</p>
+<p>This should be same for <strong>JavaScript</strong>, too.</p>
+<p>Coupling of our <strong>JavaScript</strong> to markup prevents you from changing your markup without addressing your <strong>JavaScript</strong> as well.</p>
+<p>In short;</p>
+<ul>
+<li>Separate <strong>CSS</strong> from <strong>HTML</strong> (no <code>&lt;style&gt;&lt;/style&gt;</code> tags, no <code>style=&quot;&quot;</code> attributes).</li>
+<li>Separate <strong>JavaScript</strong> from <strong>HTML</strong> (no <code>&lt;script&gt;...&lt;/script&gt;</code>s, no <code>onclick=&quot;&quot;</code>s, no <code>onkeydown=&quot;&quot;</code>s, or God forbid, no <code>href=javascript:&quot;</code>s ...)</li>
+<li>Separate <strong>HTML</strong> from <strong>JavaScript</strong> (no <strong>HTML tag soup</strong> within <strong>JavaScript</strong>; use <strong>templates</strong> instead).</li>
+<li>Separate <strong>PHP</strong> (<em>or the server-side language of your choice</em>) from <strong>JavaScript</strong> (<strong>PHP</strong> should not spit out thousands of lines of server-generated <strong>JavaScript</strong>).</li>
+</ul>
+<h3>Use Event Delegation</h3>
+<p><strong>DO NOT</strong> register every single click event, on every single object.</p>
+<p>When there are large numbers of objects, which the application has to listen and respond to, hanging around, adding an event handler to each and every single one of those objects will have a <strong>huge</strong> impact on <strong>performance</strong> and <strong>memory utilization</strong>.</p>
+<p>Use <a href="http://icant.co.uk/sandbox/eventdelegation/">event delegation</a> instead.</p>
+<p><a href="http://icant.co.uk/sandbox/eventdelegation/">Event delegation</a> is <strong>faster</strong>, <strong>scalable</strong>, and <strong>easier to maintain</strong>.</p>
+<h3>Use Event-Driven Programming</h3>
+<p>Use <a href="http://en.wikipedia.org/wiki/Event-driven_programming">event-driven programming</a>. Web apps will <strong>always</strong> be event driven.</p>
+<p>You&#39;re either responding to a <strong>user event</strong>, or a <strong>system event</strong>.</p>
+<p>Architect and program your components as such.</p>
+<h3>Avoid <strong>Magic Strings</strong> And <strong>Magic Numbers</strong> Like Plague</h3>
+<p>Use <strong>symbolic constants</strong> for <strong>numeric literals</strong> and <strong>string literals</strong>.</p>
+<p>The below example is problematic.</p>
+<pre><code><span class="keyword">var</span> j = <span class="number">0</span>;
+
+<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>, len=<span class="number">52</span>, i&lt;len; i++){
+    j = i + getRandomInt(<span class="number">53</span> - i) - <span class="number">1</span>;
+
+    swapDeck(i, j);
+}</code></pre>
+<p>Here&#39;s why:</p>
+<p>What if we wish to use a deck size of 114 (2 decks). You can say that we can find/replace all &quot;52&quot;si with &quot;114&quot;s and we&#39;re done. But even a mass find/replace will not be able to catch the number 53 in the 3<sup>rd</sup> line, and it will pop-up as a logic error which we will hardly be able to find out.</p>
+<blockquote>
+<p>The <strong>rule-of-thumb</strong> should be to store anything that&#39;s prone to change (<strong>numbers</strong>, <strong>parameters</strong>, <strong>strings</strong>) in either symbolic constants or in <strong>shared static public configuration &quot;struct&quot;s</strong> as constant members.</p>
+</blockquote>
+<p>Here&#39;s the correct way of doing the above deck shuffling:</p>
+<pre><code><span class="keyword">var</span> kDeckSize = <span class="number">52</span>,
+    i, j;
+
+<span class="keyword">for</span> (i=<span class="number">0</span>, len=kDeckSize, i&lt;len; i++){
+    j = i + getRandomInt(kDeckSize + <span class="number">1</span> - i) - <span class="number">1</span>;
+
+    swapDeck(i, j);
+}</code></pre>
+<p>Moreover, if there&#39;s a relation between two symbolic constants, this relation should be <strong>explicitly indicated</strong>.</p>
+<pre><code><span class="keyword">var</span> kMaxItems = <span class="number">32</span>,
+    kHighWaterRank = (<span class="number">3</span> * kMaxItems) / <span class="number">4</span>; <span class="comment">//instead of 24.</span></code></pre>
+<h3>Use <strong>Event Constants</strong></h3>
+<p>Related to the above item, instead of using string literals for registering events.</p>
+<p>Instead of this…</p>
+<pre><code>listen(document, <span class="string">'click'</span>, <span class="keyword">function</span>(evt)) {
+    ...
+});</code></pre>
+<p>prefer to use a event constant as follows:</p>
+<pre><code><span class="keyword">var</span> kClick = <span class="string">'click'</span>;
+
+... other initialization ...
+
+listen(document, kClick, <span class="keyword">function</span>(evt) {
+
+});</code></pre>
+<p><strong>Event constants</strong> provide an easy way to refer to specific event types. Using a constant instead of the String value helps us identify typographical errors more quickly. If we misspell a constant name in our code, the <strong>JavaScript </strong>parser will catch the mistake.</p>
+<p>On the other hand, if we misspell the event String as in <code>listen(document, ‘click1‘, function(evt) {</code>, the event handler will be registered for a type of event that will never be dispatched (*i.e., &quot;click1&quot;). And we’ll spend hours of your development time, trying to debug what went wrong.</p>
+<p>In addition to that, assigning commonly-used strings to constants will help in <strong>minification</strong> and <strong>obfuscation</strong> of our <strong>JavaScript</strong> code.</p>
+<h3>Decouple Objects and Minimize Variable Scope</h3>
+<p>Objects and methods should have as little information about each other as possible. That&#39;s the major motivator behind <strong>object-oriented programming</strong>.</p>
+<p>Minimize variable scopes. Use the <a href="http://o2js.com/2011/04/24/the-module-pattern/">module pattern</a>.</p>
+<blockquote>
+<p>The larger the scope of the variables, the harder it is to maintain the code.</p>
+</blockquote>
+<p><em>Avoid</em> global variables and global methods at all costs.</p>
+<h3>Replace <strong>Temporary Variables</strong> with <strong>Query Methods</strong></h3>
+<p>Chaining temp variables with query functions, <strong>reduces</strong> the number of variables used in the code, and <strong>decreases</strong> the possibility to make an error.</p>
+<blockquote>
+<p>This usage might have a slight performance impact, which can be overcome by <a href="http://o2js.com/2011/05/03/javascript-function-kung-fu/">memoization</a>.</p>
+</blockquote>
+<p>Compare this…</p>
+<pre><code><span class="keyword">var</span> basePrice = quantity * itemPrice;
+
+...
+
+<span class="comment">// base price can be overridden anywhere in the code.</span>
+
+<span class="keyword">if</span> (basePrice > <span class="number">1000</span>) {
+    <span class="keyword">return</span> basePrice * <span class="number">0.95</span>;
+} <span class="keyword">else</span> {
+    <span class="keyword">return</span> basePrice * <span class="number">0.98</span>;
+}</code></pre>
+<p>Against this:</p>
+<pre><code><span class="keyword">function</span> getBasePrice(){
+    <span class="keyword">return</span> quantity * itemPrice;
+}
+
+<span class="comment">// There's no risk in overriding the base price.</span>
+
+...
+
+<span class="keyword">if</span> (getBasePrice() > <span class="number">1000</span>) {
+    <span class="keyword">return</span> getBasePrice() * <span class="number">0.95</span>;
+} <span class="keyword">else</span> {
+    <span class="keyword">return</span> getBasePrice() * <span class="number">0.98</span>;
+}</code></pre>
+<h3>Keep it <strong>DRY</strong></h3>
+<blockquote>
+<p>Every piece of knowledge must have a single, unambiguous, authoritative representation within a system.</p>
+</blockquote>
+<p>Don&#39;t Repeat Yourself (DRY) is a principle of software development aimed at reducing repetition of information of all kinds.</p>
+<p>The principle has been formulated by Andy Hunt and Dave Thomas in their book <a href="http://pragprog.com/the-pragmatic-programmer">The Pragmatic Programmer</a>.</p>
+<p>When the <strong>DRY</strong> principle is applied successfully, a modification of any single element of a system does not require a change in other logically-unrelated elements. Additionally, elements that are logically related all change predictably and uniformly, and are thus kept in sync. This also means <a href="http://msdn.microsoft.com/en-us/magazine/cc947917.aspx">favoring <strong>high cohesion</strong> over <strong>low coupling</strong></a>.</p>
+<h3>Program Defensively</h3>
+<p>Adhere <a href="http://en.wikipedia.org/wiki/Defensive_programming">defensive programming</a> best-practices.</p>
+<p>All functions should work according to a given <a href="http://en.wikipedia.org/wiki/Design_by_Contract">contract</a>.</p>
+<p>Their <strong>in/out parameters</strong>, expected and unexpected <strong>value ranges</strong>, <strong>side-effects</strong>, <strong>error</strong> and <strong>exception</strong> situations etc. <strong>SHALL</strong> be designed <strong>before</strong> writing the code.</p>
+<p>Use <a href="http://c2.com/cgi/wiki?GuardClause">guard-clauses</a> to avoid unexpected conditions.</p>
+<blockquote>
+<p>Return early, return often.</p>
+</blockquote>
+<h3><strong>Exception</strong>s Are For &quot;<strong>Exceptional</strong>&quot; Cases</h3>
+<p>Exceptions are expensive. Using a nested structure of <code>try/catch</code>s will increase the depth of the execution scope, which may slow down your code.</p>
+<p>Throw exceptions only in exceptional cases. If you know what&#39;s going on (&quot;operation completed&quot;, &quot;connection error&quot;, &quot;end of stream&quot;... etc) use return codes instead of throwing exceptions.</p>
+<p>Besides, hiding surprises inside <code>try { stuff() } catch (ignore){ }</code> kind of constructs, will result in logic errors that are hard to find.</p>
+<blockquote>
+<p><code>try/catch</code> !== <strong>CYA</strong></p>
+</blockquote>
+<p>Use <code>try/catch</code>s only if there&#39;s something out of your control (a plugin, a custom user code that&#39;s late-bound and delegated, a queue structure where all the items should be processed even if some of the items do generate errors).</p>
+<p>These cases are rare and <strong>exceptional</strong>.</p>
+<blockquote>
+<p>Functions shall not throw exceptions; they should return meaningful error-codes instead.</p>
+</blockquote>
+<h4><strong>DO NOT</strong> Manage Your Business Logic With Exceptions</h4>
+<p>This is a corollary to the above topic.</p>
+<p>Don&#39;t manage business logic with exceptions. Use <strong>conditional statements</strong> instead.</p>
+<blockquote>
+<p>Each <code>try/catch</code> block comes with it&#39;s own scope of execution. And increasing the depth of execution scope will make your application slower. If a control can be done with if-else statement clearly (e.g., null control, divide by zero control), don&#39;t use exceptions because it reduces performance and readability.</p>
+</blockquote>
+<h3>Avoid <code>try/catch</code> Within a Loop</h3>
+<p>This is a corollary to the former topic</p>
+<pre><code><span class="comment">// Bad.</span>
+<span class="keyword">while</span>(check()) {
+    <span class="keyword">try</span> {
+        foo();
+    } <span class="keyword">catch</span> (e) {
+        log(e);
+    }
+}
+
+<span class="comment">// Better.</span>
+<span class="keyword">try</span> {
+    <span class="keyword">while</span>(check()) {
+        foo();
+    }
+} <span class="keyword">catch</span> (e) {
+    log(e);
+}
+
+<span class="comment">// Best</span>
+<span class="keyword">var</span> result;
+<span class="keyword">while</span>(check()) {
+    result = foo();
+
+    <span class="keyword">if</span> (!result) {
+        log(result);
+
+        <span class="keyword">break</span>;
+    }
+}</code></pre>
+<h4><strong>DO NOT</strong> Ignore Exceptions</h4>
+<p>Don&#39;t absorb exceptions with no logging and operation. That is to say, <strong>do not</strong> use something similar to this:</p>
+<pre><code><span class="keyword">try</span> {
+    doStuff();
+} <span class="keyword">catch</span> (ignore) {
+    <span class="comment">// Do nothing, just ignore.</span>
+}</code></pre>
+<p>Instead do this:</p>
+<pre><code><span class="keyword">try</span> {
+    doStuff();
+} <span class="keyword">catch</span> (ignore) {
+    log(ignore);
+}</code></pre>
+<p>There are <em>very</em> rare exceptions to this.</p>
+<p>Here is a code from <strong>o2.ajax.js</strong> that does not log an exception on purpose:</p>
+<pre><code><span class="comment">// In the below code sample, the flow exits after</span>
+<span class="comment">// the first successful initialization of the `request` object.</span>
+
+<span class="keyword">while</span> (progIds.length > <span class="number">0</span>) {
+    progId = progIds.shift();
+
+    <span class="keyword">try</span> {
+        request = <span class="keyword">new</span> ActiveXObject(progId);
+
+        <span class="keyword">break</span>;
+    } <span class="keyword">catch</span> (ignore) {
+    }
+}
+
+<span class="keyword">if</span> (!request) {
+    <span class="keyword">throw</span> kNoXhr;
+}</code></pre>
+<p>99% of the time, your code is not <em>that</em> exceptional.</p>
+<p><strong>Log your exceptions whenever you can</strong>.</p>
+<p>Ignoring exceptions will save that moment but will create a chaos for maintainability later.</p>
+<blockquote>
+<p>When you do use <code>try/catch</code> blocks, remember to log the errors in <code>catch</code> and clean up state and resources in <code>finally</code>.</p>
+</blockquote>
+<h4><strong>DO NOT</strong> Use <code>try/catch</code> Within Loops</h4>
+<p>This is a corollary to the above topic. Exception handling inside a loop is not recommended for most cases. Surround the loop with a <code>try</code> block instead.</p>
+<p>So instead of this…</p>
+<pre><code><span class="keyword">while</span>(condition) {
+    <span class="keyword">try</span> {
+        stuff();
+    } <span class="keyword">catch</span> (e) {
+        log(e);
+    }
+}</code></pre>
+<p>do this:</p>
+<pre><code><span class="keyword">try</span> {
+    <span class="keyword">while</span>(condition) {
+        stuff();
+    }
+} <span class="keyword">catch</span> (e) {
+    log(e);
+}</code></pre>
+<h4>Clearly Document Exceptional Cases</h4>
+<p>Produce enough <a href="http://yui.github.io/yuidoc/">documentation</a> for your exceptions. Giving a <strong>number/code</strong> for each different exception message is a good practice for <strong>ease of maintenance</strong>.</p>
+<h4>Good Boys Clean Their Mess</h4>
+<p>When you use exceptions always clean up resources and perform this in <code>finally</code> blocks.</p>
+<p>Summary:</p>
+<ul>
+<li><code>try { } catch { }</code> is an expensive construct in <strong>JavaScript</strong>.</li>
+<li><em>DO NOT</em> use <code>try/catch</code>s within loops.</li>
+<li><em>DO NOT</em> use nested <code>try/catch</code>es: Use one try-catch
+at the topmost level.</li>
+<li><strong>AVOID</strong> using <code>try/catch</code>es unless it&#39;s absolutely necessary.</li>
+<li>Always <strong>clean up</strong> &amp; <strong>deallocate</strong> your resources &amp; <strong>reset</strong> your state
+in the <code>finally</code> block.</li>
+</ul>
+<h3>Use The Force Wisely</h3>
+<p><strong>JavaScript</strong> is for <strong>enhancing</strong> existing functionality.</p>
+<p><a href="ttp://en.wikipedia.org/wiki/Progressive_enhancement">Enhance progressively</a>, and ensure tha your application is usable at all times.</p>
+<hr>
+<h2>Performance and Memory Considerations</h2>
+<p>Here are certain performance considerations, and guidelines to keep in mind when designing a highly interactive, mostly single-page, client-heavy, long-lasting (i.e., users will be on the same page for more than several hours) web application:</p>
+<h3>Key Performance Indicators</h3>
+<p>While coding try to <strong>minimize</strong> the following:</p>
+<ul>
+<li><strong>Vertical complexity</strong> (<em>i.e., how deeply nested the code is</em>)</li>
+<li><strong>Horizontal complexity</strong> (<em>i.e., the number of lines per module/method</em>)</li>
+<li><strong>Token count</strong></li>
+<li><strong>Variable count</strong></li>
+<li><strong>Loop count</strong></li>
+<li><strong>Conditional count</strong> (i.e., if/else/switch count)</li>
+<li><strong>Variable scope</strong></li>
+</ul>
+<h3>Consider Using <strong>Plain Old JavaScript</strong> Methods Whenever Possible</h3>
+<p><code>for(...)</code> is around 3 times faster than, take for example, jQuery&#39;s <code>$(this).each</code> (depending of the selector complexity, and the
+collection size). There&#39;s no faster selector than <code>document.getElementById()</code>. <code>Function.call</code> and <code>Function.apply</code> are definitely faster than Prototype.js&#39;s <code>bind</code> method.</p>
+<p>The fact that you have a framework at hand, does not mean you should excessively use it. Know (and learn) adequate <strong>JavaScript</strong>, to use native methods in performance-and-memory-critical parts of your code.</p>
+<h3>Use <code>Array.prototype.slice</code> to copy an Array</h3>
+<pre><code><span class="comment">// Bad</span>
+<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; len; i++) {
+  itemsCopy[i] = items[i];
+}
+
+<span class="comment">// Good</span>
+itemsCopy = items.slice();</code></pre>
+<p>Same is true to convert an Array-like object to an <code>Array</code>.</p>
+<pre><code><span class="keyword">function</span> trigger() {
+  <span class="keyword">var</span> args = <span class="keyword">Array</span>.prototype.slice.call(arguments);
+  ...
+}</code></pre>
+<h3>Use <code>Array.prototype.join</code> for string concatenation</h3>
+<p>This is an optimization targeted for <strong>IE</strong> only, <a href="http://jsperf.com/string-vs-array-concat/2">other user agents perform faster</a> using good old string concatenation too. Even newer versions of IE and do array joins faster than adding strings together. And other browsers are pretty fast with array joins as well, so there is nothing to lose.</p>
+<p>Here is an example of using <code>Array.prototype.join</code> to concatenate <code>String</code>s.</p>
+<pre><code><span class="keyword">function</span> inbox(messages) {
+  items = [];
+
+  <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; length; i++) {
+    items[i] = messages[i].message;
+  }
+
+  <span class="keyword">return</span> [<span class="string">'&lt;ul>&lt;li>'</span>, items.join(<span class="string">'&lt;/li>&lt;li>'</span>), <span class="string">'&lt;/li>&lt;/ul>'</span>].join(<span class="string">''</span>);
+}</code></pre>
+<h3>Minimize <strong>Scope Chain</strong> And <strong>Namespace Lookup</strong></h3>
+<p>Instead of this…</p>
+<pre><code><span class="keyword">var</span> lSide = collection.subcollection.items.all.left,
+    rSide = collection.subcollection.items.all.right;</code></pre>
+<p>do this:</p>
+<pre><code><span class="comment">// Each dot is an additional namespace lookup.</span>
+<span class="keyword">var</span> all = collection.subcollection.items.all,
+    lSide = all.left,
+    rSide = all.right;</code></pre>
+<p>Things get worse, if the <strong>collection</strong> variable above is a <strong>DOM Node</strong> and the assignments are repeated in a <code>for</code> loop (both of which are not uncommon situations).</p>
+<h3>Use <strong>Function Pointers</strong></h3>
+<p>Instead of this…</p>
+<pre><code><span class="keyword">function</span> iterateOverMe(){
+    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">1000</span>; i++) {
+        lorem.ipsum.dolor.sit(i);
+    }
+}</code></pre>
+<p>this is much faster:</p>
+<pre><code><span class="keyword">function</span> iterateOverMe() {
+    <span class="keyword">var</span> sit = lorem.ipsum.dolor.sit;
+
+    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">1000</span>; i++) {
+        sit(i);
+    }
+}</code></pre>
+<p>As a side note, the first time a <strong>function</strong> is declared is more expensive than its consecutive declarations, because the initial declaration both involves <strong>namespace lookup</strong> and <strong>creation</strong>; while the latter only involves <strong>creation</strong>.</p>
+<pre><code><span class="comment">//namespace lookup &amp; creation;</span>
+<span class="keyword">var</span> fnPtr = lorem.ipsum.dolor.sit;
+
+<span class="comment">//second decleration is faster -- just namespace lookup.</span>
+<span class="keyword">var</span> fnPtr2 = lorem.ipsum.dolor.sit;</code></pre>
+<p>The more you reduce namespace lookups, the faster your code will be.</p>
+<h3>Add Complex DOM Subtrees Offline</h3>
+<p>Instead of this…</p>
+<pre><code>function tableTest() {
+    var numRows = 10,
+        numCells = 5,
+        tableEl, rowEl, cellEl;
+
+    tableEl = document.createElement('TABLE');
+    tableEl = document.body.appendChild(tableEl);
+
+    for (i = 0; i &lt; numRows; i++) {
+        rowEl = document.createElement('TR');
+
+        for (j = 0; j &lt; numCells;j++) {
+            cellEl = document.createElement('TD');
+            cellEl.appendChild(
+            document.createTextNode('[row '+i+' cell '+j+ ']''));
+            rowEl.appendChild(cellEl);
+        }
+
+        tableEl.appendChild(rowEl);
+    }
+}</code></pre>
+<p>this is much faster:</p>
+<pre><code><span class="keyword">function</span> tableTest() {
+    <span class="keyword">var</span> numRows = <span class="number">10</span>,
+        numCells = <span class="number">5</span>,
+        tableEl, rowEl, cellEl;
+
+    tableEl = document.createElement(<span class="string">'TABLE'</span>);
+
+    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; numRows; i++) {
+        rowEl = document.createElement(<span class="string">'TR'</span>);
+
+        <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; numCells; j++) {
+            cellEl = document.createElement(<span class="string">'TD'</span>);
+            cellEl.appendChild(document.createTextNode(
+            [row +i+<span class="string">' cell '</span>+j+ <span class="string">']'</span>));
+            rowEl.appendChild(cellEl);
+        }
+
+        tableEl.appendChild(rowEl);
+    }
+
+    tableEl = document.body.appendChild(tableEl);
+}</code></pre>
+<h3>Edit Complex DOM Subtrees Offline</h3>
+<p>Instead of this…</p>
+<pre><code><span class="keyword">function</span> subTrees() {
+    <span class="keyword">var</span> ul = document.getElementById(<span class="string">'myUL'</span>);
+
+    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">200</span>; i++) {
+        ul.appendChild(document.createElement(<span class="string">'LI'</span>));
+    }
+}</code></pre>
+<p>this is much faster:</p>
+<pre><code><span class="keyword">function</span> subTrees(){
+    <span class="keyword">var</span> ul = document.getElementById(<span class="string">'myUL'</span>);
+    <span class="keyword">var</span> li = document.createElement(<span class="string">'LI'</span>);
+    <span class="keyword">var</span> parentNode = ul.parentNode;
+
+    parentNode.removeChild(ul);
+
+    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">200</span>; i++) {
+        ul.appendChild(li.cloneNode(<span class="keyword">true</span>));
+    }
+
+    parentNode.appendChild(ul);
+}</code></pre>
+<h3>Cache the DOM Collection Length</h3>
+<p>Instead of this…</p>
+<pre><code><span class="keyword">function</span> nodeJam(){
+    nodes = document.getElementsByTagName(<span class="string">'P'</span>);
+
+    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; nodes.length; i++) {
+        nodes[i].innerHTML += <span class="string">'test'</span>;
+    }
+}</code></pre>
+<p>this is faster:</p>
+<pre><code><span class="keyword">function</span> nodeJam(){
+    nodes = document.getElementsByTagName(<span class="string">'P'</span>);
+
+    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>, len = nodes.length; i &lt; len; i++) {
+        nodes[i].innerHTML += <span class="string">'test'</span>;
+    }
+}</code></pre>
+<h3>Use <a href="http://o2js.com/2011/05/03/javascript-function-kung-fu/">Memoization</a> for Computation-Intensive Functions</h3>
+<p>If your functions are deterministic, you can use <a href="http://o2js.com/2011/05/03/javascript-function-kung-fu/">memoization</a>, so that you don&#39;t need to do the same computations over and over again.</p>
+<h3>Cache Frequently Used Global Methods And Objects For Speed</h3>
+<p>Last, but not the least, <strong>always cache</strong> global methods and object that you use within loops.</p>
+<p>So instead of this:</p>
+<pre><code><span class="keyword">function</span> loopMePlease(){
+    <span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;<span class="number">1000</span>; i++) {
+        doStuff();
+
+        <span class="keyword">if</span> (n===<span class="number">12</span>) {
+            someBlock();
+        } <span class="keyword">else</span> <span class="keyword">if</span> (n===<span class="number">26</span>) {
+            someOtherBlock();
+        }
+    }
+}</code></pre>
+<p>This is faster:</p>
+<pre><code><span class="keyword">function</span> loopMePlease(){
+
+    <span class="comment">// Cache the global function.</span>
+    <span class="keyword">var</span> fnDo = doStuff;
+
+    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;<span class="number">1000</span>; i++){
+        fnDo();
+
+        <span class="comment">// Also, a switch/case is (negligibly) faster</span>
+        <span class="comment">// than an if-else chain</span>
+        <span class="keyword">switch</span> (n) {
+            <span class="keyword">case</span> <span class="number">12</span>:
+                someBlock();
+                <span class="keyword">break</span>;
+            <span class="keyword">case</span> <span class="number">26</span>:
+                someOtherBlock();
+                <span class="keyword">break</span>;
+        }
+    }
+}</code></pre>
+<p>Also it&#39;s a good practice to <strong>cache DOM object collections</strong>, because executing the same selectors over and over again to reach the same collection is resource intensive.</p>
+<blockquote>
+<p>The less you mess up with DOM, the better.</p>
+</blockquote>
+<p>Instead of this…</p>
+<pre><code>select(<span class="string">'div > li > a'</span>).show();
+select(<span class="string">'div > li > a'</span>).addClass(<span class="string">'test'</span>);
+select(<span class="string">'div > li > a'</span>).click(<span class="keyword">function</span>(){});</code></pre>
+<p>this is much faster:</p>
+<pre><code><span class="keyword">var</span> collection = select(<span class="string">'div > li > a'</span>);
+
+collection
+    .show();
+    .addClass(<span class="string">'test'</span>);
+    .click(<span class="keyword">function</span>(){});</code></pre>
+<h3>Always Test Your Assumptions</h3>
+<p>This final remark is the most important of all:</p>
+<p>Back in old days, it was preferred to use <code>Array.prototype.join</code> to build a template. And <a href="http://jsperf.com/string-concat-vs-array-join-10000/15">it&#39;s not true for modern user agents</a> right now.</p>
+<p>There are many examples similar to this.</p>
+<blockquote>
+<p>Always question your intuition; benchmark your assumption in several different platforms and take the most optimal solution.</p>
+</blockquote>
+<p>Moreover, micro optimizations like might not be your actual performance bottleneck at all.</p>
+<hr>
+<h2>Code Smells</h2>
+<p>Constantly follow these indicators, as they often show the quality (or lack thereof) of the code you&#39;re writing.</p>
+<h3>Comments</h3>
+<p>There&#39;s a slight difference between comments that are explaining what&#39;s being done and comments that are overly confusing.</p>
+<p>Comments should answer the question <strong>&quot;why?&quot;</strong>, not the question <strong>&quot;what?&quot;</strong> or <strong>how?</strong>.</p>
+<p>If the number of &quot;caveat&quot; comments inside a code block is increasing, it may show that the code block is becoming more complicated.</p>
+<p>If possible, the code should be refactored, so that those &quot;caveat&quot; comments are not necessary anymore.</p>
+<p>Instead of explaining when to use comments, it would be better to show when not to use comments.</p>
+<ul>
+<li>Comments are <strong>NOT</strong> for stating the obvious.</li>
+</ul>
+<p>Don&#39;t do this:</p>
+<pre><code><span class="comment">// Set the value of cache.</span>
+cache = value;</code></pre>
+<p>Another example of stating the obvious:</p>
+<pre><code><span class="keyword">while</span>(doStuff()) {
+    <span class="comment">// Do nothing.</span>
+    ;
+}</code></pre>
+<ul>
+<li>Comments are <strong>NOT</strong> for helping reader learn the language.</li>
+</ul>
+<p>Don&#39;t do this:</p>
+<pre><code><span class="comment">// Iterate through collection.</span>
+<span class="keyword">for</span>(<span class="keyword">var</span> key in collection) {
+
+    <span class="comment">// Checks if the collection really has a property `key`.</span>
+    <span class="keyword">if</span>(collection.hasOwnProperty(key)) {
+
+        <span class="comment">// Store the value into the cache.</span>
+        cache[key] = collection[key];
+    }
+}</code></pre>
+<p><strong>JavaScript</strong> is the common denominator between the reader and the author. There are many references the reader can refer to to learn <strong>JavaScript</strong> – Let them do that. Assume that the reader knows <strong>JavaScript</strong> and let the code clearly describe <strong>HOW</strong>.</p>
+<p>Use of comments is often a form of religion; people are very opinionated about them in one way or another. [Robert Martin][robert-martin] expresses his opinion in <a href="http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882">Clean Code</a> by saying:</p>
+<blockquote>
+<p>The proper use of comments is to compensate for our failure to express yourself in code. Note that I used the word failure. I meant it. <strong>Comments are always failures</strong>.</p>
+</blockquote>
+<p>Robert Martin had previous described comments as <strong>apologies</strong> for <strong>making the code unmaintainable</strong>.</p>
+<ul>
+<li>Any comment is better than no comment at all</li>
+</ul>
+<p>None the less comments <strong>are</strong> an integral part of the code, so they are really important.</p>
+<p>A commentless code library will be useless in a short time with high probability. Even though there are approaches that suggest self-explanatory code over documentation, you should use both (self-explanatory code AND documentation).</p>
+<ul>
+<li>Use comments &quot;as required&quot;.</li>
+</ul>
+<p>Unnecessarily over-commenting in each line will reduce readability. Whereas lack of commenting will increase maintenance time.</p>
+<ul>
+<li><p>Write comments (e.g., <strong><a href="http://yui.github.io/yuidoc/">YUIDoc</a></strong> declaration) for all public methods.</p>
+</li>
+<li><p>Comment <strong>HACKS</strong> and <strong>TODO</strong>&#39;s while you are writing the code.</p>
+</li>
+</ul>
+<p>Document &quot;gotcha&quot;s and &quot;todo&quot;s instantly when detected. These items may be remembered for that instant but may not for tomorrow when not documented.</p>
+<blockquote>
+<p>Do you remember what you ate for lunch 3 days ago? So don&#39;t be lazy and write those inline comments.</p>
+</blockquote>
+<h3>Excessively Long Method Names</h3>
+<p>Explanatory method names are good.</p>
+<p>Keeping everything constant, a shorter method name is easier to read and understand. Method names should be shortened, without losing their meanings. Method names should be shorter enough, but not too sort.</p>
+<p>Besides a very long method name may be the indicator of a <strong>God Function</strong>, which should be avoided anyway.</p>
+<p>If your function is named <code>doThisAndThatAndSomethingElse</code>, most probably you can split it into <code>doThis</code>, <code>doThat</code>, and <code>doSomethingElse</code> parts.</p>
+<h3>Methods Having Too Much Parameters</h3>
+<ul>
+<li>The more parameters a method has, the more complex it is.</li>
+<li>The more complex a method is, the more possible that it has more than one functionality.</li>
+<li>The more functionality a method has, the closer it is to a <strong>God Function</strong>.</li>
+</ul>
+<p>And God Functions are <strong>bad</strong>.</p>
+<p>If a method has too much parameters:</p>
+<ul>
+<li>Either reduce the number of method parameters,</li>
+<li>Or merge those parameters into a configuration object.</li>
+</ul>
+<h3>Code Repetition (Copy &amp; Paste Code)</h3>
+<p>Seeing the same code over and over again is a clear indication of low code quality.</p>
+<p>Repeating code, should be consolidated in <strong>helper methods</strong>. If the code is duplicated in different modules, then <strong>a new helper module</strong> should be created and both of the modules should the the new module&#39;s helper method instead.</p>
+<h3>Conditional Complexity</h3>
+<p>If the code has a lot of <code>if/else</code> chains, nested <code>for</code>s <code>switch</code>es etc and it makes it harder to read the code; then it&#39;s time to <strong>refactor</strong> it.</p>
+<h3>Codes Doing &quot;almost&quot; the Same Thing</h3>
+<p>Codes doing almost the same thing should be regarded as code repetition, and should be <strong>refactored</strong> accordingly.</p>
+<h3>A Very Large Module / Function</h3>
+<p>If a module has grown too large, then it&#39;s most probably doing more than it&#39;s supposed to do.</p>
+<p>If you have a swiss army knife module, then it&#39;s time to split it into sub-modules to make your code more manageable and less error prone.</p>
+<h3>Function And Variables That Are Not Telling What They Do</h3>
+<p>Or worse, functions that are giving a message that&#39;s totally unrelated to what they do.</p>
+<blockquote>
+<p>Let&#39;s say we have a fictitious &quot;executeIframeAjaxProxy&quot; method which neither uses an iframe, nor makes an ajax call, and is not a proxy to something. It&#39;s not uncommon to see these badly-named methods, if the project is more than a few years old.</p>
+</blockquote>
+<p>Those methods should immediately be <em>*renamed</em>, in order to relieve the frustration that the next poor developer working on the code will have. Otherwise she&#39;ll be spending hours of valuable development time to figure out what the code does, or worse she&#39;ll be using the code with incorrect assumptions out of hassle.</p>
+<p>If a method has a misleading name, <strong>rename it</strong>.</p>
+<h3>Incoherent Naming</h3>
+<blockquote>
+<p>Don&#39;t look at the thesaurus, and use a different synonym of &quot;get&quot; each time you use a getter method. You are not a linguist, you are a &quot;developer&quot;. And part of your job is to give <strong>boring</strong> and <strong>consistent</strong> names to your methods.</p>
+</blockquote>
+<p>Have a standard terminology in naming your methods and adhere to it.</p>
+<p>Do not give different names to similar-behaving functions.</p>
+<p>Here are a few examples:</p>
+<ul>
+<li><strong>createFoo</strong>: Deterministic outcome.</li>
+<li><strong>generateFoo</strong>: Probabilistic outcome.</li>
+<li><strong>renderFoo</strong>: A complex visual change, usually involving some extra logic, or a rountrip to the server, to decide what to render.</li>
+<li><strong>showFoo/hideFoo</strong>: a simpler visual change</li>
+<li><strong>processFoo/doFoo</strong>: a batch (Façade) method that does several sub-tasks together.</li>
+<li><strong>getFoo</strong>: gets a (usually primitive) value.</li>
+<li><strong>setFoo</strong>: sets a (usually primitive) value.</li>
+<li><strong>computeFoo</strong>: Something is computed.</li>
+<li><strong>findFoo</strong>: Something is being looked up.</li>
+<li><strong>initializeFoo</strong>: Something is created/conceptualized/established.</li>
+</ul>
+<h3>Dead Code</h3>
+<p>If there&#39;s a code that&#39;s not working and not used anywhere; it should be removed from the code-base immediately. <strong>Fear is the enemy of code stability</strong>.</p>
+<h3>Speculative Generalization</h3>
+<blockquote>
+<p>Optimization without measurement is merely a waste of time.</p>
+</blockquote>
+<p>First create a running prototype. Then test, optimize and benchmark your code <strong>over and over again</strong>.</p>
+<h3>&quot;I Did It, and It Worked&quot; Style Of Approach</h3>
+<p>If you&#39;ve solved a problem, you should clearly understand <strong>why</strong> and <strong>how</strong> you did it.</p>
+<blockquote>
+<p>For instance if a parameter is happening to be &quot;null&quot; then adding an &quot;if not null&quot; control is equivalent to sweeping the dust under the rug.</p>
+</blockquote>
+<p>If the parameter is null or undefined, then you should find out <strong>&quot;why&quot;</strong> it&#39;s that way.</p>
+<p>If you devise a solution without going to the bottom of the problem; sooner or later your so-called &quot;solution&quot; will stab you in the back.</p>
+<h3>Temporary Variables</h3>
+<p>The more temporary variables in the code, the harder to manage it. Temporary variables should be replaced with query methods when possible.</p>
+<h3>Global Variables</h3>
+<p>The more the number of global state variables in the code, the more dependent the modules are. And dependency means error-prone, and hard-to-manage code.</p>
+<h3>Data Clusters</h3>
+<p>If you observe certain kind of data, variables, method etc, loosely lumping together in various parts of the code; then may be its better to take them and create a separate class.</p>
+<h3>Cross-Module-Intimacy</h3>
+<p>Modules should now the least information possible about each other. Modules&#39; public interface should be kept at a minimum.</p>
+<p><strong>If you don&#39;t have a reason to keep a method public, than you had better make that method private.</strong></p>
+<h3>Attribute Envy</h3>
+<p>If some methods of module A calls a lot of methods from module B, then may be those methods of module A should actually belong to module B. Consider a refactoring.</p>
+<h3>Lazy Class</h3>
+<p>Any newly added class, adds to the complexity of the project. If a class is unable to hold its weight, i.e., it&#39;s not used enough, then it should be merged with other classes.</p>
+<h3>Shotgun Surgery</h3>
+<p>If adding a single line of code, or extracting a single method requires changes in tens of unrelated methods and classes then the code needs some serious refactoring.</p>
+<h3>Incomplete Library Class</h3>
+<p>The method should belong to a library, but it&#39;s currently the private method of an unrelated class. This is a <strong>clear invitation to code repetition</strong> in other classes.</p>
+<p>The method should be taken out of the class and put into a library.</p>
+<h3>Existence of Incomplete Code Blocks</h3>
+<p><strong>Never check-in incomplete/untested code</strong>.</p>
+<p>The source code in the repository, at any given time, <strong>SHOULD NOT</strong> contain any build errors, syntax errors, runtime errors, or logic errors.</p>
+<p>This is only possible if <strong>DO NOT</strong> check-in garbage code.</p>
+<blockquote>
+<p>The source code repository is not your FTP backup place.</p>
+</blockquote>
+<p>Only check in the code that you&#39;ve <strong>tested</strong> (yes testing is <em>your</em> responsibility) and you are %100 sure that it works.</p>
+<p>Keep in mind that the checked in code should be &quot;ready for release&quot; <strong>at any time</strong>.</p>
+<h3>Code Grouping</h3>
+<p>When you see groups of code (usually denoted with a comment just before them), it&#39;s a smell that these code chunks belong to their own functions.</p>
+<p>Instead of this…</p>
+<pre><code><span class="comment">// get list of forums</span>
+<span class="keyword">var</span> forums = [];
+r = getForumsSync();
+<span class="keyword">while</span> (r.hasMore()) {
+    forums.push(r.next());
+}
+
+<span class="comment">// load the templates</span>
+loadTemplate(<span class="string">'header'</span>);
+loadTemplate(<span class="string">'forum_list'</span>, forums);
+loadTemplate(<span class="string">'footer'</span>);</code></pre>
+<p>do this:</p>
+<pre><code><span class="keyword">function</span> prepareForumList() {
+    <span class="keyword">var</span> forums = [];
+
+    r = getForumsSync();
+
+    <span class="keyword">while</span> (r.hasMore()) {
+        forums.push(r.next());
+    }
+
+    <span class="keyword">return</span> forums;
+}
+
+<span class="keyword">function</span> loadTemplates(forums) {
+    loadTemplate(<span class="string">'header'</span>);
+    loadTemplate(<span class="string">'forum_list'</span>, forums);
+    loadTemplate(<span class="string">'footer'</span>);
+}
+
+loadTemplates(prepareForumList());</code></pre>
+<hr>
+<h2>Conflicting Situations</h2>
+<p>Even the strictest set of rules and coventions may be vague under certain boundary conditions. Although coding has a lot of science and rules behind it, it is also a form of <em>art</em>.</p>
+<p>To take this one step further, we&#39;ll consider code more like a <em>poem</em>, than a <em>newspaper article</em>. <strong>Use your own judgement</strong> for the vague boundary cases. It&#39;s your <strong>art</strong>, more than anybody else&#39;s.</p>
+<h2>Other Conventions and Guidelines to Check Out</h2>
+<p>Here are a few well laid out <strong>JavaScript</strong> guidelines that you might want to have a look at:</p>
+<ul>
+<li><a href="https://github.com/rwaldron/idiomatic.js/">idiomatic.js</a></li>
+<li><a href="http://contribute.jquery.org/style-guide/js/">jQuery <strong>JavaScript</strong> Style Guide</a></li>
+<li><a href="https://github.com/airbnb/javascript">AirBnB <strong>JavaScript</strong> Style Guide</a></li>
+<li><a href="http://dojotoolkit.org/community/styleGuide">DoJo <strong>JavaScript</strong> Style Guide</a></li>
+<li><a href="http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml">Google <strong>JavaScript</strong> Style Guide</a></li>
+<li><a href="http://taitems.github.io/Front-End-Development-Guidelines/">Tait Brown&#39;s Front-End Dev Guidelines</a></li>
+<li><a href="http://sideeffect.kr/popularconvention/#javascript">Popular <strong>JavaScript</strong> Conventions on <strong>GitHub</strong></a></li>
+<li><a href="http://aloha-editor.org/guides/style_guide.html">Aloha Editor Style Guide</a></li>
+<li><a href="https://github.com/madrobby/pragmatic.js">Pragmatic.js Code Style Guidelines</a></li>
+</ul>
+<hr>
+<h2>References and Further Reading</h2>
+<ul>
+<li><a href="http://o2js.com/"><strong>o2js.com</strong> – a Coherent Solution to your <strong>JavaScript</strong> Dilemma</a></li>
+<li><a href="http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742"><strong>JavaScript</strong> the Good Parts</a></li>
+<li><a href="http://www.amazon.com/JavaScript-Patterns-Stoyan-Stefanov/dp/0596806752"><strong>JavaScript</strong> Patterns</a></li>
+<li><a href="http://www.amazon.com/JavaScript-Design-Patterns-Recipes-Problem-Solution/dp/159059908X">Pro <strong>JavaScript</strong> Patterns</a></li>
+<li><a href="http://www.amazon.com/Pro-JavaScript-Techniques-John-Resig/dp/1590597273">Pro <strong>JavaScript</strong> Techniques</a></li>
+<li><a href="http://www.amazon.com/High-Performance-Web-Sites-Essential/dp/0596529309">High Performance Web Site Essentials</a></li>
+<li><a href="http://www.amazon.com/Maintainable-JavaScript-Nicholas-C-Zakas/dp/1449327680">Maintainable <strong>JavaScript</strong></a></li>
+<li><a href="http://www.amazon.com/JavaScript-Web-Applications-Alex-MacCaw/dp/144930351X"><strong>JavaScript</strong> Web Applications</a></li>
+<li><a href="http://www.amazon.com/Smashing-Node-js-JavaScript-Everywhere-Magazine/dp/1119962595">Smashing Node.JS</a></li>
+<li><a href="http://www.amazon.com/Secrets-JavaScript-Ninja-John-Resig/dp/193398869X">The Secrets of the <strong>JavaScript</strong> Ninja</a></li>
+<li><a href="http://humanjavascript.com/">Human <strong>JavaScript</strong></a></li>
+<li><a href="http://superherojs.com/">SuperHero JS</a></li>
+<li><a href="http://jsbooks.revolunet.com/"><strong>JavaScript</strong> Books</a></li>
+<li><a href="https://travis-ci.org/">Travis</a></li>
+<li><a href="http://jshint.com/">JSHint</a></li>
+<li><a href="http://jslinterrors.com/">Lint Errrors</a></li>
+<li><a href="http://o2js.com/2011/04/24/the-module-pattern/"><strong>JavaScript</strong> Module Pattern</a></li>
+<li><a href="http://npmjs.org/">NPM</a></li>
+<li><a href="http://yui.github.io/yuidoc/">YUIDoc</a></li>
+<li><a href="http://www.alistapart.com/articles/behavioralseparation">Behavioral Separation</a></li>
+<li><a href="http://icant.co.uk/sandbox/eventdelegation/"><strong>JavaScript</strong> Event Delegation</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Event-driven_programming">Event-Driven Programming</a></li>
+<li><a href="http://o2js.com/2011/05/03/javascript-function-kung-fu/"><strong>JavaScript</strong> Function Kung-Fu</a></li>
+<li><a href="http://pragprog.com/the-pragmatic-programmer">The Pragmatic Programmer</a></li>
+<li><a href="http://msdn.microsoft.com/en-us/magazine/cc947917.aspx">Cohesion and Coupling</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Defensive_programming">Defensive Programming</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Design_by_Contract">Design By Contract</a></li>
+<li><a href="ttp://en.wikipedia.org/wiki/Progressive_enhancement">Progressive Enhancement</a></li>
+<li><a href="http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882">Clean Code</a></li>
+</ul>
+<hr>
+<p>That&#39;s the end of this conventions document.</p>
+<p><a href="https://github.com/v0lkan/o2.js/blob/master/CONTRIBUTE.md">Feel free to contribute</a>.</p>
+
+  <blockquote>
+    Do you have something to say? Have I missed anything?<br>
+    Send your comments and suggestions to <a href="mailto:volkan@o2js.com">volkan@o2js.com</a>.
+  </blockquote>
+  <div class="byline">
+    by <a href="http://volkan.io/">Volkan Özçelik</a> on 12.08.13
+  </div>
+</div>
+
+
+
+
+
+<div class="menu right">
+    
+      <a href="lets-make-a-javascript-framework-boilerplate" class="btn btn-grey">&laquo; older post</a>
+    
+
+    
+      <a href="show-love-to-requestanimationframe" class="btn btn-grey">newer post &raquo;</a>
+    
+</div>
+
+
+
+    </div>
+    <header class="aboutme">
+        <div class="legend">
+            <h1><a href="http://volkan.io/">Volkan Özçelik</a></h1>
+
+            <p><strong>Chase Me</strong></p>
+            <ul>
+            <li>Technical Lead @ <a href="http://cisco.com/">Cisco</a></li>
+            <li><a href="https://twitter.com/linkibol">@linkibol</a></li>
+            <li><a href="https://github.com/v0lkan">github.com/v0lkan</a></li>
+            <li><a href="https://speakerdeck.com/volkan">speakerdeck.com/volkan</a></li>
+            <li><a href="https://linkedin.com/in/volkanozcelik">linkedin.com/in/volkanozcelik</a></li>
+            </ul>
+
+            <p><strong>o2.js</strong></p>
+
+            <ul>
+            <li><a href="https://github.com/o2js">Read the Source, Luke</a></li>
+            </ul>
+        </div>
+        <p class="interviewz">
+            Psttt&hellip;
+            Wanna ace that interview?<br>
+            Then you have some reading to do:<br>
+            <a style="text-align:center;display:block;margin-top:1em"
+            href="http://o2js.com/interview-questions"
+            title="JavaScript Interview Questions">»» Get the Only Reference
+            on <strong>JavaScript Engineering Interviews</strong>
+            You Will <em>Ever</em> Need, Now!
+            ««</a>
+        </p>
+    </header>
+<script>
+    (function(window, document) {
+        'use strict';
+
+        var isScrolled = false,
+            isProcessed = false,
+
+            AD_SHOW_DELAY = 3000,
+            AD_SHOW_INIT_TOP_THRESHOLD = 50,
+            AD_CONTAINER_CLASS = 'interviewz',
+            AD_CONTAINER_HOVER_CLASS = 'interviewz hovered',
+
+            // A modern-ish RAF polyfill.
+            tick = window.requestAnimationFrame ||
+            window.mozRequestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            window.msRequestAnimationFrame ||
+            window.oRequestAnimationFrame;
+
+            if (!tick) {return;}
+
+            window.addEventListener('scroll', function() {
+                isScrolled = true;
+            })
+
+            function loop() {
+                if (isProcessed) {return;}
+
+                tick(loop);
+
+                if (!isScrolled) {return;}
+
+                var top = Math.max(
+                    document.body.scrollTop,
+                    document.documentElement.scrollTop
+                );
+
+                if (top < AD_SHOW_INIT_TOP_THRESHOLD) {return;}
+
+                isProcessed = true;
+
+                setTimeout(function(){
+                    var container = document.getElementsByClassName(
+                        AD_CONTAINER_CLASS
+                    )[0];
+
+                    container.className = AD_CONTAINER_HOVER_CLASS;
+                }, AD_SHOW_DELAY);
+
+                window.onscroll = function(){};
+            }
+
+            loop();
+    }(this, this.document));
+</script>
+</body>
+</html>

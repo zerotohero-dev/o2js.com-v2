@@ -1,0 +1,291 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Volkan Özçelik</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta name="description" content="o2.js">
+        <meta name="keywords" content="Volkan, Volkan Özçelik, developer, public speaker, front end, back end, devops, full stack, performance nerd, scalability freak, JavaScript">
+
+        <link href="//cloud.webtype.com/css/1fa83ac3-90eb-426f-8d4c-496c082fce54.css" rel="stylesheet" type="text/css">
+
+        <style>
+            body {
+                font-family: "Georgia Pro", Georgia, serif;
+                line-height: 1.85em;
+                color: #000;
+                background: #F7FBFF url('images/assets/square_bg.png');
+                /*
+                square_bg.png
+                bpattern.png
+                gplay.png
+                ps-neutral.png
+                retina_wood.png
+                tileable-wood.png
+                */
+            }
+
+            /*#Main {
+                xopacity: 0.85;
+            }*/
+
+            h1, h2 {
+                font-family:"MVB Calliope", Georgia, serif;
+                font-size: 3.25em;
+                line-height: 1.2em;
+                letter-spacing:-0.025em;
+                font-weight:normal;
+                margin: 1em 0.3em 0.1em 0.8em;
+
+            }
+
+            h3 {
+                font-family:"MVB Calliope", Georgia, serif;
+                font-size: 2.25em;
+                line-height: 1.2em;
+                letter-spacing:-0.025em;
+                font-weight:normal;
+                margin: 1em 0.3em 0.1em 0.8em;
+                text-align: center;
+            }
+
+            p {
+                font-size: 1.2em;
+                line-height: 1.75em;
+                margin: 0 1em 1.5em 2em;
+            }
+
+            a {color: #003DF5;}
+            a:hover {text-decoration: none;}
+            a strong {color: #003DF5;}
+            a:hover, a:hover strong {color: #003DF5 !important;}
+
+            blockquote {
+                font-style:italic;
+                border-left:2px #FFCC33 solid;
+                line-height:1.55em;padding-left:1em;
+                font-size: 1em;
+            }
+
+            ul, dl {
+                margin: 0 0 2.5em 2em;
+            }
+
+            li, dt, dd {
+                display: block;
+                font-size: 1.2em;
+                line-height: 1.25em;
+                margin: 0 0 1em 0;
+            }
+
+            li a, dt a {
+                display: block;
+            }
+
+            dt {margin: 1em 0 0 0;}
+            dd {
+                margin:0.5em 0 0 2em;
+                font-style: italic;
+                font-size:1em;
+                line-height:1.8em;
+
+            }
+
+            aside {
+                width: 19.5em;
+                height: 19.5em;
+                margin: 0 auto;
+                border-radius: 50%;
+                overflow: hidden;
+                display:block;
+                -webkit-box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.58);
+                -moz-box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.58);
+                box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.58);
+                border: 1px #999999 solid;
+            }
+            aside {
+                margin: -1em auto;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: -2em;
+            }
+            aside img {display: block;width: 100%;}
+
+            header p  {
+                margin: 0.1em 0 2em 0;
+                font-size: 1.2em;
+            }
+
+            .flex-container {
+                display: -webkit-flex;
+                display: flex;
+
+                -webkit-flex-direction: row;
+                flex-direction: row;
+
+                -webkit-flex-wrap: wrap;
+                flex-wrap: wrap;
+
+                -webkit-justify-content: center;
+                justify-content: center;
+
+                -webkit-align-content: flex-start;
+                align-content: flex-start;
+
+                -webkit-align-items: stretch;
+                align-items: stretch;
+            }
+
+            .flex-item-main {
+                margin-top: 2em;
+                margin-bottom: 6em;
+
+                -webkit-flex-grow: 1;
+                flex-grow: 1;
+
+                -webkit-flex-shrink: 0;
+                flex-shrink: 0;
+
+                -webkit-flex-basis: 750px;
+                flex-basis: 750px;
+
+                max-width: 750px;
+
+                background: #fff;
+
+                -webkit-transform: matrix(1, -0.015, 0, 1, 0, 0) translate3d(0,0,1px);
+                -o-transform: matrix(1, -0.085, 0, 1, 0, 0) translate3d(0,0,1px);
+                -moz-transform: matrix(1, -0.015, 0, 1, 0, 0) translate3d(0,0,1px);
+                -ms-transform: matrix(1, -0.015, 0, 1, 0, 0) translate3d(0,0,1px);
+                transform: matrix(1, -0.015, 0, 1, 0, 0) translate3d(0,0,1px);
+            }
+
+            .flex-item-main {
+                -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.1) inset;
+                -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.1) inset;
+                 box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.1) inset;
+            }
+
+            .flex-item-aside {
+                margin-top: 2em;
+
+                -webkit-flex-grow: 1;
+                flex-grow: 1;
+
+                -webkit-flex-shrink: 0;
+                flex-shrink: 0;
+
+                -webkit-flex-basis: 350px;
+                flex-basis: 350px;
+
+                max-width:400px;
+            }
+
+            @media (max-width: 800px) {
+                body {margin:0;}
+
+                .flex-container {
+                    -webkit-align-contents: column;
+                    align-contents: column;
+                }
+            
+                .flex-item-main {
+                    -webkit-flex-basis: 98%;
+                    flex-basis: 98%;
+
+                    margin-left:0;
+                    margin-right:0;
+                }
+
+                .flex-item-aside {
+                    -webkit-flex-basis: 98%;
+                    flex-basis: 98%;
+                }
+            }
+        </style>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-56512-13', 'volkan.io');
+          ga('send', 'pageview');
+        </script>
+</head>
+<body class="flex-container">
+    <article id="Main" class="flex-item-main">
+        <header>
+            <h1>Hi! I’m Volkan Özçelik</h1>
+        </header>
+
+        <section>
+            <h2>Quick Links</h2>
+
+            <ul>
+                <li><a href="https://o2js.com/interview-questions"><strong>Ace</strong> your <strong>JavaScript Interviews</strong> (<em>ebook</em>) »»</a></li>
+                <li><a href="https://bytesized.tv/">Watch the <strong>Byte-Sized JavaScript</strong> screencast »»</a></li>
+                <li><a href="https://github.com/jsbites">Browse the source code of <strong>Byte-Sized JavaScript</strong> »»</a></li>
+                <li><a href="https://speakerdeck.com/volkan">View the slide decks of my <strong>talks</strong> »»</a></li>
+                <li><a href="https://github.com/v0lkan/talks">Get the source code of my <strong>talks</strong> »»</a></li>
+                <li><a href="https://github.com/v0lkan">Check out my <strong>GitHub</strong> Profile »»</a></li>
+                <li><a href="https://linkedin.com/in/volkanozcelik">Get in touch with me on <strong>LinkedIn</strong> »»</a></li>
+                <li><a href="http://twitter.com/linkibol">Follow me on <strong>Twitter</strong> »»</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>About</h2>
+
+            <blockquote>
+            <p>Long story short,  <a href="https://bytesized.tv/">keep an eye on <strong>Byte-Sized TV</strong></a>.<br>
+            You will se <strong>a lot</strong> there!</p>
+            </blockquote>
+
+            <p>This place used to be where I write about
+            <strong>technology</strong>, <strong>hacking</strong>,
+            <strong>geekery</strong>,
+            “the” <strong>cloud</strong>, and <strong>productivity</strong>.</p>
+
+            <p>I say “<em>used to be</em>” and I’ll come to that shortly; just bear with me.</p>
+
+            <p>Technology is <strong>evolving</strong> at an ever-increasing pace. And
+            when it comes to consuming technical content, I started to believe that
+            a more interactive audio-visual environment is much helplful than
+            simply scanning the text and missing the important parts.</p>
+
+            <p>I have found that it is <strong>much easier</strong> to think like the author
+            (<em>or the content creator</em>), when you actually <strong>hear</strong> them:
+            This way, you understand <strong>why</strong> she gives special emphasis to
+            certain parts in the document.</p>
+
+            <p>Without audiovisual feedback, it is easy to <strong>miss</strong> the entire point.</p>
+
+            <blockquote>
+            <p>I am <strong>not</strong> saying <em>‘blogs are dead’</em>;<br>
+            I am just saying that <strong>blogs are evolving</strong>.<br>
+            And I wanted to be a part of that evolution.<br>
+            So I’ve decided to create videocasts of all the content I <em>had</em> in here.<br>
+            <a href="https://bytesized.tv">I’ll be covering them one by one on <strong>Byte-Sized TV</strong></a>.</p>
+            </blockquote>
+
+            <p>To motivate myself even further, I’ve also made another <strong>radical</strong> decision:<br>
+            <strong>I’ve deleted all the articles that I host here</strong>.</p>
+
+            <blockquote><p><a href="https://web.archive.org/web/20130624151559/http://o2js.com/"
+            >You can still reach them via the internet archives</a> though.<br>
+            Those articles will remain in the infinite memory of the Internet gods,
+            forever <strong>;)</strong>.</p></blockquote>
+
+            <p>Yes, times have changed, and we’ve started to
+            prefer to consume audiovisual content to reading books. —
+            I find this, kind of, <em>sad</em>; yet, it’s a side effect
+            of our progressive evolution. — Maybe books will become more
+            <strong>visual</strong>, and more <strong>interactive</strong>
+            in the near future; who knows.
+            </p>
+        </section>
+    </article>
+    <footer>
+    </footer>
+</body>
+</html>
