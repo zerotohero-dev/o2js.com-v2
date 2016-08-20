@@ -5,48 +5,38 @@
     <description>o2.js; a coherent solution to your JavaScript dilemma.</description>
     <link>http://o2js.com/</link>
     <atom:link href="http://o2js.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 09 Oct 2015 13:51:33 +0000</pubDate>
-    <lastBuildDate>Fri, 09 Oct 2015 13:51:33 +0000</lastBuildDate>
+    <pubDate>Sun, 07 Aug 2016 23:32:11 +0000</pubDate>
+    <lastBuildDate>Sun, 07 Aug 2016 23:32:11 +0000</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>I Confess, I'm a Lousy Side Projector</title>
-        <description>&lt;p&gt;&lt;a href=&quot;/images/side-projects.png&quot;&gt;&lt;img src=&quot;/images/side-projects.png&quot; title=&quot;Well… This pretty much describes me.&quot; class=&quot;centered&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+        <description>&lt;p&gt;&lt;a href=&quot;https://o2js.com/images/side-projects.png&quot;&gt;&lt;img src=&quot;https://o2js.com/images/side-projects.png&quot; title=&quot;Well… This pretty much describes me.&quot; class=&quot;centered&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;My friends consider me a &lt;strong&gt;hacker&lt;/strong&gt; and a &lt;strong&gt;side projector&lt;/strong&gt;. And I create
-&lt;strong&gt;side projects&lt;/strong&gt; of various sizes.&lt;/p&gt;
+  &lt;p&gt;My friends consider me a &lt;strong&gt;hacker&lt;/strong&gt; and a &lt;strong&gt;side projector&lt;/strong&gt;. And I create &lt;strong&gt;side projects&lt;/strong&gt; of various sizes.&lt;/p&gt;
 
-  &lt;p&gt;I share most of these projects publicly on &lt;a href=&quot;https://github.com/v0lkan/&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+  &lt;p&gt;I share most of these projects on &lt;a href=&quot;https://github.com/v0lkan/&quot; title=&quot;Github: Volkan&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 
   &lt;p&gt;Most of these projects are &lt;strong&gt;half complete&lt;/strong&gt;, to say the least.&lt;/p&gt;
 
-  &lt;p&gt;I recently realized that I was losing track of them. So, to no to lose
-track of things, I decided to write them down.&lt;/p&gt;
+  &lt;p&gt;I recently realized that I was losing track of them. So, to no to lose track of things, I decided to write them down.&lt;/p&gt;
 
-  &lt;p&gt;I will regularly be updating this page so that I can keep an eye on things.
-I also set up a monthly calendar reminder for that so that I won’t forget it.&lt;/p&gt;
+  &lt;p&gt;I will regularly be updating this page so that I can keep an eye on things. I also set up a monthly calendar reminder for that so that I won’t forget it.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
-&lt;p&gt;When you have limited time, you can only put so much on your plate; this creates
-an instant anxiety and a feeling of guilt. You feel like you are not being
-committed to what you have promised to yourself.&lt;/p&gt;
+&lt;p&gt;When you have limited time, you can only put so much on your plate; this creates an instant anxiety and a feeling of guilt. You feel like you are not being committed to what you have promised to yourself.&lt;/p&gt;
 
-&lt;p&gt;To overcome this anxiety or this &lt;strong&gt;paralysis by analysis&lt;/strong&gt; state of mind, you’ll
-have to &lt;strong&gt;sort out your priorities&lt;/strong&gt;. And in order to sort them out, you should know
-what is occupying your time in the first place —
-You cannot optimize without measuring.&lt;/p&gt;
+&lt;p&gt;To overcome this anxiety or this &lt;strong&gt;paralysis by analysis&lt;/strong&gt; state of mind, you’ll have to &lt;strong&gt;sort out your priorities&lt;/strong&gt;. And to sort them out, you should know what is occupying your time in the first place — You cannot optimize without measuring.&lt;/p&gt;
 
 &lt;h2 id=&quot;the-methodology&quot;&gt;The Methodology&lt;/h2&gt;
 
-&lt;p&gt;To solve my “&lt;em&gt;Oh God, what should I be doing next to make the best use of my time?!&lt;/em&gt;”
-problem, I grouped my projects into different buckets, and sorted them.&lt;/p&gt;
+&lt;p&gt;To solve my “&lt;em&gt;Oh God, what should I be doing next to make the best use of my time?!&lt;/em&gt;” problem, I grouped my projects into different buckets and sorted them.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;To clarify terminology, when I say “project”, I look at it from a &lt;strong&gt;&lt;a href=&quot;https://www.wikiwand.com/en/Getting_Things_Done&quot;&gt;GTD&lt;/a&gt;&lt;/strong&gt;
-perspective:&lt;/p&gt;
+  &lt;p&gt;To clarify terminology, when I say “project”, I look at it from a &lt;strong&gt;&lt;a href=&quot;https://www.wikiwand.com/en/Getting_Things_Done&quot; title=&quot;GTD&quot;&gt;GTD&lt;/a&gt;&lt;/strong&gt; perspective:&lt;/p&gt;
 
   &lt;p&gt;Anything that takes more than one step to accomplish is a &lt;strong&gt;project&lt;/strong&gt; for me.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -56,7 +46,7 @@ perspective:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;In Progress&lt;/strong&gt;:
     &lt;ul&gt;
-      &lt;li&gt;These are the thing that I’m exerting a great deal of efforts.&lt;/li&gt;
+      &lt;li&gt;These are the thing that I’m exerting a lot of efforts.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Almost Done&lt;/strong&gt;:
@@ -73,25 +63,19 @@ take more &lt;strong&gt;in progress&lt;/strong&gt; items.&lt;/li&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Ice Box&lt;/strong&gt;:
     &lt;ul&gt;
-      &lt;li&gt;These are the things that I probably won’t be touching for
-a long time. — They either provide little value, or there are wiser ways to
-allocate my time to more productive things.&lt;/li&gt;
+      &lt;li&gt;These are the things that I probably won’t be touching for a long time. — They either provide little value, or there are wiser ways to allocate my time to more productive things.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Any item in the bucket can jump into any other bucket at any time depending on
-my current goals, plans, and interests.&lt;/p&gt;
+&lt;p&gt;Any item in the bucket can jump into any other bucket at any time depending on my current goals, plans, and interests.&lt;/p&gt;
 
-&lt;p&gt;So, without further ado, here’s some of the side projects that I’m working on
-and their current states right now:&lt;/p&gt;
+&lt;p&gt;So, without further ado, here’s some of the side projects that I’m working on and their current states right now:&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Note that most of these are &lt;strong&gt;open source&lt;/strong&gt;, if you feel like you can add
-value to any of them.&lt;/p&gt;
+  &lt;p&gt;Note that most of these are &lt;strong&gt;open source&lt;/strong&gt;; feel free to fork them.&lt;/p&gt;
 
-  &lt;p&gt;Feel free to fork them and &lt;a href=&quot;&amp;#109;&amp;#097;&amp;#105;&amp;#108;&amp;#116;&amp;#111;:&amp;#109;&amp;#101;&amp;#064;&amp;#118;&amp;#111;&amp;#108;&amp;#107;&amp;#097;&amp;#110;&amp;#046;&amp;#105;&amp;#111;&quot;&gt;feel free to send me an email&lt;/a&gt; for
-your comments and suggestions.&lt;/p&gt;
+  &lt;p&gt;Also, &lt;a href=&quot;&amp;#109;&amp;#097;&amp;#105;&amp;#108;&amp;#116;&amp;#111;:&amp;#109;&amp;#101;&amp;#064;&amp;#118;&amp;#111;&amp;#108;&amp;#107;&amp;#097;&amp;#110;&amp;#046;&amp;#105;&amp;#111;&quot; title=&quot;Ping Me&quot;&gt;feel free to send me an email&lt;/a&gt; for your comments and suggestions.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h2 id=&quot;in-progres&quot;&gt;In Progres&lt;/h2&gt;
@@ -100,92 +84,94 @@ your comments and suggestions.&lt;/p&gt;
   &lt;p&gt;These are actively being developed; adding new features, fixing bugs, etc.&lt;/p&gt;
 &lt;/blockquote&gt;
 
+&lt;h3 id=&quot;writing-a-book-about-javascript-on-the-edge&quot;&gt;Writing a Book About &lt;strong&gt;JavaScript on the Edge&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;TL;DR:&lt;/strong&gt;&lt;/p&gt;
+
+  &lt;p&gt;I’m writing a book, &lt;a href=&quot;https://leanpub.com/js-next&quot; title=&quot;JavaScript on the Edge&quot;&gt;you can go to the books website&lt;/a&gt; to register your interest.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I was first thinking of writing a series of articles on this topic. As it turned out, the sheer amount of these yet-to-be-written articles was enough to fill the chapters of a book.&lt;/p&gt;
+
+&lt;p&gt;Then I said, “&lt;em&gt;Why not write a book instead?&lt;/em&gt;”&lt;/p&gt;
+
+&lt;p&gt;A benefit from this approach is the fact that writing a book requires discipline. It forces you to be on the topic; whereas while writing articles on a blog, you can segue from the main storyline. — &lt;strong&gt;Focus&lt;/strong&gt; is good.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;You can present the topics in a much more organized and story-like way in a book.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Writing a book, however, requires a huge block of &lt;strong&gt;time&lt;/strong&gt; and &lt;strong&gt;Jedi concentration&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;As I was limited in these resources, I steered away from the idea of yet another book for a while.&lt;/p&gt;
+
+&lt;p&gt;I still don’t have time, yet I’m motivated enough to make it. Which is what matters, because &lt;strong&gt;motivation makes time&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“&lt;em&gt;&lt;a href=&quot;https://leanpub.com/js-next&quot; title=&quot;JavaScript on the Edge&quot;&gt;JavaScript on the Edge&lt;/a&gt;&lt;/em&gt;” is a practical book about cutting edge &lt;strong&gt;JavaScript&lt;/strong&gt;:&lt;/p&gt;
+
+  &lt;p&gt;Instead of covering everything but the kitchen sink about the language, it focuses on the new:&lt;/p&gt;
+
+  &lt;p&gt;It will focus on the newly introduced features, modifications, and extensions.&lt;/p&gt;
+
+  &lt;p&gt;This book is not written up in the ivory towers. Hence, you won’t see much “&lt;em&gt;hypothetical&lt;/em&gt;” debate in it.&lt;/p&gt;
+
+  &lt;p&gt;It’s quite the contrary: If you love getting your hands dirty, and if you love being on the edge, then you’ll absolutely love this book.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://leanpub.com/js-next&quot; title=&quot;JavaScript on the Edge&quot;&gt;You can go to the books website&lt;/a&gt; to register your interest in the book.&lt;/p&gt;
+
+&lt;p&gt;When that book is done I have quite a few follow-up book-related ideas:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Converting current “&lt;em&gt;&lt;a href=&quot;http://o2js.com/interview-questions&quot;&gt;JavaScript Interview Questions&lt;/a&gt;&lt;/em&gt;” to markdown, and moving it to a place like &lt;a href=&quot;https://leanpub.com/&quot; title=&quot;Leanpub&quot;&gt;Leanpub&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;JavaScript Interview Questions Deluxe Edition that dives deeper into technical details. The book will have extra interview question and answer examples.&lt;/li&gt;
+  &lt;li&gt;A book about practical uses of &lt;strong&gt;JavaScript&lt;/strong&gt; &lt;strong&gt;patterns&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So there might be other books coming up too &lt;strong&gt;;)&lt;/strong&gt;&lt;/p&gt;
+
 &lt;h3 id=&quot;sif&quot;&gt;Sif&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/v0lkan/sif&quot;&gt;sif&lt;/a&gt;&lt;/strong&gt; is an intelligent curator that makes information meanigful and
-findable. — It is &lt;a href=&quot;https://github.com/v0lkan/sif&quot;&gt;a command line utility&lt;/a&gt; that I use to organize my links,
-basically.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/v0lkan/sif&quot; title=&quot;Sif&quot;&gt;sif&lt;/a&gt;&lt;/strong&gt; is an intelligent curator that makes information meaningful and findable. — It is &lt;a href=&quot;https://github.com/v0lkan/sif&quot; title=&quot;Sif&quot;&gt;a command line utility&lt;/a&gt; that I use to organize my links.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;Aside&lt;/strong&gt;&lt;/p&gt;
 
-  &lt;p&gt;It also happens that &lt;a href=&quot;http://www.wikiwand.com/en/Sif&quot;&gt;&lt;strong&gt;sif&lt;/strong&gt; is a Norse goddess&lt;/a&gt;.&lt;/p&gt;
+  &lt;p&gt;It also happens that &lt;a href=&quot;http://www.wikiwand.com/en/Sif&quot; title=&quot;Sif&quot;&gt;&lt;strong&gt;sif&lt;/strong&gt; is a Norse goddess&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;During my day-to-day work, I touch a substantial amount of links. I regularly
-collect, categorize, and &lt;strong&gt;sift&lt;/strong&gt; those links.&lt;/p&gt;
+&lt;p&gt;During my day-to-day work, I touch a substantial amount of links. I regularly collect, categorize, and &lt;strong&gt;sift&lt;/strong&gt; those links.&lt;/p&gt;
 
-&lt;p&gt;After collecting such links for a while I realized that it becomes harder to
-search your bookmarks after your browser’s bookmark index grows above a few
-tens of megabytes. I also realized that my browser slowed down after my bookmark
-index file grew above a certain threshold.&lt;/p&gt;
+&lt;p&gt;After collecting such links for a while, I realized that it becomes harder to search your bookmarks after your browser’s bookmark index grows above a few tens of megabytes. I also realized that my browser slowed down after my bookmark index file grew above a certain threshold.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;There are social bookmarking, and content sharing websites for this very purpose
-of organizing content. They, however are slow to respond when compared to something
-that you can run locally. And you have to be online to be able to sort and update
-your bookmarks.&lt;/p&gt;
+  &lt;p&gt;There are social bookmarking, and content sharing websites for this very purpose of organizing content. They, however, are slow to respond when compared to something that you can run locally. And you have to be online to be able to sort and update your bookmarks.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;A &lt;strong&gt;command-line interface&lt;/strong&gt; is the &lt;strong&gt;fastest&lt;/strong&gt; that you’ll ever get;
-and having a local copy of your index file is really helpful.&lt;/p&gt;
+&lt;p&gt;A &lt;strong&gt;command-line interface&lt;/strong&gt; is the &lt;strong&gt;fastest&lt;/strong&gt; that you’ll ever get, and having a local copy of your index file is helpful.&lt;/p&gt;
 
-&lt;p&gt;Besides, since it’s a plain text file, you can edit it with any editor: You
-won’t need a fancy application, or a web interface to sift through your links.&lt;/p&gt;
+&lt;p&gt;Besides, since it’s a plain text file, you can edit it with any editor: You won’t need a fancy application, or a web interface to sift through your links.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/v0lkan/sif&quot;&gt;You can visit sif’s &lt;strong&gt;GitHub repository&lt;/strong&gt; to learn more about it&lt;/a&gt;.
-Contributions are always welcome, of course &lt;strong&gt;;)&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;o2jscom-version-2&quot;&gt;&lt;strong&gt;o2js.com&lt;/strong&gt; Version 2&lt;/h3&gt;
-
-&lt;p&gt;It’s this very website that you are reading right now.&lt;/p&gt;
-
-&lt;p&gt;I’m &lt;strong&gt;converting&lt;/strong&gt; posts from the older site to here and &lt;strong&gt;rewriting&lt;/strong&gt; older
-articles that I have removed from the site in the light of the current changes
-in the technological ecosystem.&lt;/p&gt;
-
-&lt;p&gt;The tranformation of &lt;strong&gt;o2js.com v2&lt;/strong&gt; is an &lt;strong&gt;ongoing process&lt;/strong&gt;. And to
-complete it fast, obviously I should be adding more content to this blog faster.&lt;/p&gt;
-
-&lt;p&gt;The thing is, writing a good article is an excruciatingly slow process.&lt;/p&gt;
-
-&lt;p&gt;It is not an easy task: It requires at least a couple of hours’
-&lt;strong&gt;undivided attention&lt;/strong&gt;, and a couple of additional &lt;strong&gt;days&lt;/strong&gt; to refine it.&lt;/p&gt;
-
-&lt;p&gt;So, for me at least, writing more than one technical article per week would not be
-possible without compromising quality.&lt;/p&gt;
-
-&lt;p&gt;I am targeting &lt;strong&gt;one new article per month&lt;/strong&gt;, which realistically means that
-it will take  &lt;strong&gt;forever&lt;/strong&gt; to finish this project &lt;strong&gt;:)&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;If I can make more time, I will be focusing on this blog more.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Aside&lt;/strong&gt;&lt;/p&gt;
-
-  &lt;p&gt;There are tools and processes that I find helpful in managing my time
-to get things done fast. This is the topic of another article, I think &lt;strong&gt;;)&lt;/strong&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/v0lkan/sif&quot; title=&quot;Sif&quot;&gt;You can visit sif’s &lt;strong&gt;GitHub repository&lt;/strong&gt; to learn more about it&lt;/a&gt;. Contributions are always welcome, of course &lt;strong&gt;;)&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;learning-stuff&quot;&gt;Learning Stuff&lt;/h3&gt;
 
-&lt;p&gt;As an engineer, you have to learn new things to expand your horizon; and I &lt;strong&gt;love&lt;/strong&gt;
-learning new things. I don’t know you, and learning something or figuring out how
-different pieces come together to form a solution is euphoric for me.&lt;/p&gt;
+&lt;p&gt;As an engineer, you have to learn new things to expand your horizon; and I &lt;strong&gt;love&lt;/strong&gt; learning new things. I don’t know you, and learning something or figuring out how different pieces come together to form a solution is euphoric for me.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;Learning&lt;/strong&gt; is a &lt;strong&gt;lifestyle&lt;/strong&gt; — &lt;strong&gt;Learning&lt;/strong&gt; is &lt;strong&gt;happiness&lt;/strong&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Actually if &lt;strong&gt;learning&lt;/strong&gt; is not your &lt;strong&gt;lifestyle&lt;/strong&gt;, and you are  &lt;strong&gt;IT&lt;/strong&gt;, then
-maybe it’s then maybe you should have been working in another sector &lt;strong&gt;;)&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Actually if &lt;strong&gt;learning&lt;/strong&gt; is not your &lt;strong&gt;lifestyle&lt;/strong&gt;, and you are  &lt;strong&gt;IT&lt;/strong&gt;, then maybe it’s then maybe you should have been working in another sector &lt;strong&gt;;)&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;Here is the things in my current queue that I study the most:&lt;/p&gt;
+&lt;p&gt;Here are the things in my current queue that I study the most:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.elastic.co/&quot;&gt;Elastic Search&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.openstack.org/&quot;&gt;OpenStack&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/swift/&quot;&gt;Swift&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.elastic.co/&quot; title=&quot;ELK&quot;&gt;Elastic Search&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.openstack.org/&quot; title=&quot;OpenStack&quot;&gt;OpenStack&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/swift/&quot; title=&quot;Swift&quot;&gt;Swift&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;almost-done&quot;&gt;Almost Done&lt;/h2&gt;
@@ -198,33 +184,31 @@ maybe it’s then maybe you should have been working in another sector &lt;stron
 
 &lt;h3 id=&quot;javascript-interview-questions&quot;&gt;JavaScript Interview Questions&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://o2js.com/interview-questions&quot;&gt;JavaScript Interview Questions&lt;/a&gt;&lt;/strong&gt; is a book about
-&lt;strong&gt;JavaScript Engineering&lt;/strong&gt; interviews and tips and tricks on how to prepare
-for them. Readers say that “JavaScript Interview Questions” really
-helped them ace their interviews.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Aside&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Version one&lt;/strong&gt; of the book is complete. I am thinking about writing a second
-extended version for a while. In addition to that I’m also considering writing
-another — a more technical — ebook on &lt;strong&gt;Modern JavaScript Best Practices&lt;/strong&gt;.&lt;/p&gt;
+  &lt;p&gt;I’m planning to migrate this book to &lt;a href=&quot;https://leanpub.com/&quot; title=&quot;Leanpub&quot;&gt;Leanpub&lt;/a&gt; some time; it will be much easier to manage and update the book that way.&lt;/p&gt;
 
-&lt;p&gt;With two &lt;strong&gt;demanding&lt;/strong&gt; little monsters (&lt;em&gt;i.e., kids :)&lt;/em&gt;), however, I doubt it
-will be happening anytime soon &lt;strong&gt;:)&lt;/strong&gt;.&lt;/p&gt;
+  &lt;p&gt;Also, when it is published on &lt;a href=&quot;https://leanpub.com/&quot; title=&quot;Leanpub&quot;&gt;Leanpub&lt;/a&gt;, it will also be much easier to engage with the book’s audience.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://o2js.com/interview-questions&quot;&gt;JavaScript Interview Questions&lt;/a&gt;&lt;/strong&gt; is a book about &lt;strong&gt;JavaScript Engineering&lt;/strong&gt; interviews and tips and tricks on how to prepare for them. Readers say that “JavaScript Interview Questions” really helped them ace their interviews.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Version one&lt;/strong&gt; of the book is complete. I am thinking about writing a second extended version for a while. Besides that I’m also considering writing another — a more technical — ebook on &lt;strong&gt;Modern JavaScript Best Practices&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;With two &lt;strong&gt;demanding&lt;/strong&gt; little monsters (&lt;em&gt;i.e., kids :)&lt;/em&gt;). Yet, I doubt it will be happening anytime soon &lt;strong&gt;:)&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;volkanio&quot;&gt;volkan.io&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://volkan.io&quot;&gt;volkan.io&lt;/a&gt; is a website that I put my bio, and a summary of what
-I did so far, what I’m interested in, etc.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://volkan.io&quot;&gt;volkan.io&lt;/a&gt; is a website that I put my bio, and a summary of what I did so far, what I’m interested in, etc.&lt;/p&gt;
 
-&lt;p&gt;Maybe I’ll convert it to something more dynamic and shiny in the long run;
-the site as it’s current state is “good enough”.&lt;/p&gt;
+&lt;p&gt;Maybe I’ll convert it to something more dynamic and shiny in the long run; the site as it’s current state is “good enough”.&lt;/p&gt;
 
 &lt;h3 id=&quot;sensei&quot;&gt;Sensei&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/v0lkan/sensei&quot;&gt;Sensei&lt;/a&gt;&lt;/strong&gt; is a minimal &lt;a href=&quot;https://nodejs.org/&quot;&gt;Node.js&lt;/a&gt; wrapper around the
-&lt;a href=&quot;https://sensuapp.org/docs/latest/api-overview&quot;&gt;sensu api&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/v0lkan/sensei&quot; title=&quot;Sensei is a Sensu API Wrapper&quot;&gt;Sensei&lt;/a&gt;&lt;/strong&gt; is a minimal &lt;a href=&quot;https://nodejs.org/&quot; title=&quot;Node.JS&quot;&gt;Node.js&lt;/a&gt; wrapper around the &lt;a href=&quot;https://sensuapp.org/docs/latest/api-overview&quot; title=&quot;Sensu API&quot;&gt;sensu API&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;It works as its current state; however, there’s still a lot of room for
-improvement.&lt;/p&gt;
+&lt;p&gt;It works as its current state; however, there’s still a lot of room for improvement.&lt;/p&gt;
 
 &lt;h3 id=&quot;revolve&quot;&gt;Revolve&lt;/h3&gt;
 
@@ -236,8 +220,7 @@ improvement.&lt;/p&gt;
 
 &lt;h3 id=&quot;eagle-eye&quot;&gt;Eagle Eye&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/v0lkan/eagle-eye&quot;&gt;Eagle Eye&lt;/a&gt;&lt;/strong&gt; analyzes your &lt;strong&gt;npm&lt;/strong&gt; and &lt;strong&gt;bower&lt;/strong&gt; dependencies
-creates a report of which of them are out of date.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/v0lkan/eagle-eye&quot;&gt;Eagle Eye&lt;/a&gt;&lt;/strong&gt; analyzes your &lt;strong&gt;npm&lt;/strong&gt; and &lt;strong&gt;bower&lt;/strong&gt; dependencies creates a report of which of them are out of date.&lt;/p&gt;
 
 &lt;h3 id=&quot;steward&quot;&gt;Steward&lt;/h3&gt;
 
@@ -245,8 +228,7 @@ creates a report of which of them are out of date.&lt;/p&gt;
 
 &lt;p&gt;Then &lt;strong&gt;&lt;a href=&quot;https://github.com/v0lkan/steward&quot;&gt;steward&lt;/a&gt;&lt;/strong&gt; may be a solution for that &lt;strong&gt;;)&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;Steward continuously watches your desktop and emails you if anything changes
-on the screen.&lt;/p&gt;
+&lt;p&gt;Steward watches your desktop and emails you if anything changes on the screen.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/v0lkan/steward&quot;&gt;steward&lt;/a&gt;&lt;/strong&gt; Currently works on Mac computers only.&lt;/p&gt;
@@ -257,73 +239,68 @@ on the screen.&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;The &lt;strong&gt;backlog&lt;/strong&gt; contains candidates for the “next thing” to work on.&lt;/p&gt;
 
-  &lt;p&gt;Once I’m done with some of the things that I’m working on, I take items
-from here into my &lt;strong&gt;in progress&lt;/strong&gt; bucket.&lt;/p&gt;
+  &lt;p&gt;Once I’m done with some of the things that I’m working on, I take items from here into my &lt;strong&gt;in progress&lt;/strong&gt; bucket.&lt;/p&gt;
 
-  &lt;p&gt;The reverse is also true: If I feel like I have too much load in my
-&lt;strong&gt;in progress&lt;/strong&gt; bucket, I put some of those items into the &lt;strong&gt;backlog&lt;/strong&gt;.&lt;/p&gt;
+  &lt;p&gt;The reverse is also true: If I feel like I have too much load in my &lt;strong&gt;in progress&lt;/strong&gt; bucket, I put some of those items into the &lt;strong&gt;backlog&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;o2jscom-version-2&quot;&gt;&lt;strong&gt;o2js.com&lt;/strong&gt; Version 2&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Aside&lt;/strong&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;https://leanpub.com/js-next&quot; title=&quot;JavaScript on the Edge&quot;&gt;As I started writing another book&lt;/a&gt;, I realized that I’m not finding enough time to work on this; so I moved it to the backlog instead.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;It’s this very website that you are reading right now.&lt;/p&gt;
+
+&lt;p&gt;I’m &lt;strong&gt;converting&lt;/strong&gt; posts from the older site to here. I’m also &lt;strong&gt;rewriting&lt;/strong&gt; older articles that I have removed from the site in the light of the current changes in the technological ecosystem.&lt;/p&gt;
+
+&lt;p&gt;The transformation of &lt;strong&gt;o2js.com v2&lt;/strong&gt; is an &lt;strong&gt;ongoing process&lt;/strong&gt;. And to complete it fast, obviously I should be adding more content to this blog faster.&lt;/p&gt;
+
+&lt;p&gt;The thing is: Writing a good article is an excruciatingly &lt;strong&gt;slow&lt;/strong&gt; process.&lt;/p&gt;
+
+&lt;p&gt;It is not an easy task: It requires at least a couple of hours’ &lt;strong&gt;undivided attention&lt;/strong&gt;, and a couple of extra &lt;strong&gt;days&lt;/strong&gt; to refine it.&lt;/p&gt;
+
+&lt;p&gt;So, for me at least, writing more than one technical article per week would not be possible without compromising quality.&lt;/p&gt;
+
+&lt;p&gt;I am targeting &lt;strong&gt;one new article per month&lt;/strong&gt;, which realistically means that it will take  &lt;strong&gt;forever&lt;/strong&gt; to finish this project &lt;strong&gt;:)&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;If I can make more time, I will be focusing on this blog more.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Aside&lt;/strong&gt;&lt;/p&gt;
+
+  &lt;p&gt;There are tools and processes that I find helpful in managing my time to get things done fast.&lt;/p&gt;
+
+  &lt;p&gt;This is the topic of another article, I think &lt;strong&gt;;)&lt;/strong&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h3 id=&quot;ecmascript2015ifying-all-the-things&quot;&gt;&lt;strong&gt;EcmaScript2015&lt;/strong&gt;…ifying All The Things!&lt;/h3&gt;
 
-&lt;p&gt;This includes all the projects that I’ve been working on, and
-also all the articles that I’ve written so far.&lt;/p&gt;
+&lt;p&gt;This includes all the projects that I’ve been working on, and also all the articles that I’ve written so far.&lt;/p&gt;
 
-&lt;p&gt;I already use &lt;strong&gt;&lt;a href=&quot;http://es6-features.org/&quot;&gt;EcmaScript 2015&lt;/a&gt;&lt;/strong&gt; in my new articles and projects;
-however, the older ones still need to be converted.&lt;/p&gt;
+&lt;p&gt;I already use &lt;strong&gt;&lt;a href=&quot;http://es6-features.org/&quot;&gt;EcmaScript 2015&lt;/a&gt;&lt;/strong&gt; in my new articles and projects. Yet, the older ones still need to be converted.&lt;/p&gt;
 
-&lt;p&gt;This is a &lt;strong&gt;big&lt;/strong&gt; transformation that I have to do it gradually because if you’re
-not using &lt;strong&gt;&lt;a href=&quot;http://es6-features.org/&quot;&gt;es2015&lt;/a&gt;&lt;/strong&gt; right now, then you are already lagging behind.&lt;/p&gt;
-
-&lt;h3 id=&quot;board&quot;&gt;Board&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/v0lkan/board&quot;&gt;Board&lt;/a&gt;&lt;/strong&gt; is a minimalistic and highly-scalable dashboard and
-monitoring app.&lt;/p&gt;
-
-&lt;p&gt;Also, &lt;a href=&quot;http://volkan.io:4244/shuttle&quot;&gt;here’s a demo board&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;There are a lot of features to add; it’s currently ready as a minimally viable
-solution. — Feel free to &lt;a href=&quot;https://github.com/v0lkan/board&quot;&gt;fork it&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;I’m preparing a list of what cool features to implement next.&lt;/p&gt;
-
-&lt;p&gt;I’m also drafting a blog post about &lt;strong&gt;&lt;a href=&quot;https://github.com/v0lkan/board&quot;&gt;board&lt;/a&gt;&lt;/strong&gt;’s implementation details, which
-I will be sharing soon, hopefully.&lt;/p&gt;
-
-&lt;h3 id=&quot;tosspick&quot;&gt;Tosspick&lt;/h3&gt;
-
-&lt;p&gt;A fun mobile game that I’m actively working on. — It’s a new adventure
-for me since I have not done game programming before.&lt;/p&gt;
-
-&lt;p&gt;There’s nothing to show yet. And the project is &lt;strong&gt;not&lt;/strong&gt; open source.&lt;/p&gt;
-
-&lt;p&gt;Nonetheless, I’m learning &lt;strong&gt;a lot&lt;/strong&gt; in the meantime; and I hope to share
-them in further articles here.&lt;/p&gt;
+&lt;p&gt;This is a &lt;strong&gt;big&lt;/strong&gt; transformation that I have to do it gradually because if you’re not using &lt;strong&gt;&lt;a href=&quot;http://es6-features.org/&quot;&gt;es2015&lt;/a&gt;&lt;/strong&gt; right now, then you are already lagging behind.&lt;/p&gt;
 
 &lt;h3 id=&quot;pringles&quot;&gt;Pringles&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/v0lkan/pringles&quot;&gt;Pringles&lt;/a&gt;&lt;/strong&gt; generates static cached copies of dynamic
-&lt;strong&gt;AJAX&lt;/strong&gt;-enable web pages. It does this by running the page in a
-&lt;strong&gt;headless browser&lt;/strong&gt; and executing all the &lt;strong&gt;JavaScript&lt;/strong&gt; to produce the final
-result. So the result will be &lt;strong&gt;much more&lt;/strong&gt; than what a typical search engine
-would crawl.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/v0lkan/pringles&quot; title=&quot;Pringles&quot;&gt;Pringles&lt;/a&gt;&lt;/strong&gt; generates static cached copies of dynamic &lt;strong&gt;AJAX&lt;/strong&gt;-enable web pages. It does this by running the page in a &lt;strong&gt;headless browser&lt;/strong&gt; and executing all the &lt;strong&gt;JavaScript&lt;/strong&gt; to produce the final result. So the result will be &lt;strong&gt;much more&lt;/strong&gt; than what a typical search engine would crawl.&lt;/p&gt;
 
-&lt;p&gt;The project is ready as a proof-of-concept. I’ve tested it on
-&lt;a href=&quot;http://www.wikiwand.com/&quot;&gt;wikiwand&lt;/a&gt;, which is a dynamic website that does not display too
-much content when you crawl without executing the &lt;strong&gt;JavaScript&lt;/strong&gt; on it.&lt;/p&gt;
+&lt;p&gt;The project is ready as a proof-of-concept. I’ve tested it on &lt;a href=&quot;http://www.wikiwand.com/&quot; title=&quot;Wikiwand&quot;&gt;wikiwand&lt;/a&gt;, which is a dynamic website that does not display too much content when you crawl without executing the &lt;strong&gt;JavaScript&lt;/strong&gt; on it.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/v0lkan/pringles&quot;&gt;Pringles&lt;/a&gt; will be a part of &lt;a href=&quot;http://linkibol.com&quot;&gt;linkibol&lt;/a&gt;’s (&lt;em&gt;see below&lt;/em&gt;) indexer.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/v0lkan/pringles&quot; title=&quot;Pringles&quot;&gt;Pringles&lt;/a&gt; will be a part of [linkibol][linkibol]’s (&lt;em&gt;see below&lt;/em&gt;) indexer.&lt;/p&gt;
+
+&lt;p&gt;I will be using it for the later versions of &lt;code&gt;sif&lt;/code&gt;, along with some semantic processing logic, so that I can properly tag content.&lt;/p&gt;
 
 &lt;h3 id=&quot;jfdi&quot;&gt;JFDI&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/v0lkan/jfdi&quot;&gt;jfdi&lt;/a&gt;&lt;/strong&gt;, in a nutshell, is an &lt;strong&gt;CLI&lt;/strong&gt; to help you
-focus what goals you will achieve &lt;strong&gt;right now&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/v0lkan/jfdi&quot;&gt;jfdi&lt;/a&gt;&lt;/strong&gt;, in a nutshell, is a command line interface to help you focus what goals you will achieve &lt;strong&gt;right now&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;Why? Because we geeks live in the terminal.&lt;/p&gt;
 
-&lt;p&gt;And using something that’s already running and most of the time available in front
-of your eyes helps you &lt;strong&gt;overcome the inertia&lt;/strong&gt; of launching a separate application
-just to manage your goals.&lt;/p&gt;
+&lt;p&gt;And using something that’s already running and most of the time available in front of your eyes helps you &lt;strong&gt;overcome the inertia&lt;/strong&gt; of launching a separate application just to manage your goals.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/v0lkan/jfdi&quot;&gt;jfdi&lt;/a&gt;&lt;/strong&gt; is fast, and simple.&lt;/p&gt;
 
@@ -337,81 +314,56 @@ just to manage your goals.&lt;/p&gt;
   &lt;p&gt;That is to say, they &lt;strong&gt;won’t&lt;/strong&gt; be active for a &lt;strong&gt;long&lt;/strong&gt; time.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h3 id=&quot;linkibol&quot;&gt;Linkibol&lt;/h3&gt;
+&lt;h3 id=&quot;board&quot;&gt;Board&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://linkibol.com&quot;&gt;Linkibol&lt;/a&gt;&lt;/strong&gt; is an attempt to create a &lt;strong&gt;niche&lt;/strong&gt; and &lt;strong&gt;focused&lt;/strong&gt; search
-engine to crawl and index technical articles, tips, and resources.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Aside&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;The project is &lt;strong&gt;not&lt;/strong&gt; open source (&lt;em&gt;right now&lt;/em&gt;).&lt;/p&gt;
+  &lt;p&gt;After seen a few open source project on this topic, I’ve also decided to contribute to one of them instead of starting from scratch.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;One improvement to that would be using &lt;strong&gt;&lt;a href=&quot;https://github.com/v0lkan/pringles&quot;&gt;pringles&lt;/a&gt;&lt;/strong&gt; to generate better
-internal cached documents.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/v0lkan/board&quot; title=&quot;Board&quot;&gt;Board&lt;/a&gt;&lt;/strong&gt; is a minimalistic and highly-scalable dashboard and monitoring app.&lt;/p&gt;
 
-&lt;p&gt;I will also use &lt;strong&gt;&lt;a href=&quot;https://www.elastic.co/&quot;&gt;elastic search&lt;/a&gt;&lt;/strong&gt; (&lt;em&gt;&lt;a href=&quot;#learning-stuff&quot;&gt;see the learning
-section&lt;/a&gt;&lt;/em&gt;) to create more relevant search results. —
-Currently &lt;strong&gt;&lt;a href=&quot;http://linkibol.com&quot;&gt;linkibol&lt;/a&gt;&lt;/strong&gt; has a home-baked full text search engine.
-It works fine; however, &lt;a href=&quot;https://www.elastic.co/&quot;&gt;elastic search&lt;/a&gt; will provide much better results.&lt;/p&gt;
+&lt;p&gt;There are a lot of features to add; it’s currently ready as a minimally viable solution. — Feel free to &lt;a href=&quot;https://github.com/v0lkan/board&quot; title=&quot;Board&quot;&gt;fork it&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h3 id=&quot;writing-a-technical-book-on-modern-javascript&quot;&gt;Writing a Technical Book on Modern JavaScript&lt;/h3&gt;
+&lt;p&gt;I’m preparing a list of what cool features to implement next.&lt;/p&gt;
 
-&lt;p&gt;I have quite a few book ideas in my mind:&lt;/p&gt;
+&lt;p&gt;I’m also drafting a blog post about &lt;strong&gt;&lt;a href=&quot;https://github.com/v0lkan/board&quot; title=&quot;Board&quot;&gt;board&lt;/a&gt;&lt;/strong&gt;’s implementation details, which I will be sharing soon, hopefully.&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;JavaScript Interview Questions Deluxe Edition that dives deeper into technical
-details, and has additional interview question and answer examples.&lt;/li&gt;
-  &lt;li&gt;A book about modern &lt;strong&gt;JavaScript&lt;/strong&gt; essentials, which is &lt;em&gt;kind of&lt;/em&gt; a moving
-target &lt;strong&gt;;)&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;A book about practical uses of &lt;strong&gt;JavaScript&lt;/strong&gt; &lt;strong&gt;patterns&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h3 id=&quot;tosspick&quot;&gt;Tosspick&lt;/h3&gt;
 
-&lt;p&gt;Writing a book, however, requires a huge block of time and Jedi concentration.
-Unfortunately, I’m limited in those resources &lt;strong&gt;:)&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;A fun mobile game. — It’s a new adventure for me since I have not done game programming before.&lt;/p&gt;
 
-&lt;p&gt;So, instead of writing a new book, I’ll focus on writing more articles here:&lt;/p&gt;
+&lt;p&gt;There’s nothing to show yet. And the project is &lt;strong&gt;not&lt;/strong&gt; open source.&lt;/p&gt;
 
-&lt;p&gt;I’ll continue making this blog better.&lt;/p&gt;
+&lt;p&gt;Nonetheless, I’m learning &lt;strong&gt;a lot&lt;/strong&gt; in the meantime; and I hope to share them in further articles here.&lt;/p&gt;
 
 &lt;h3 id=&quot;snippets&quot;&gt;Snippets&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://github.com/v0lkan/snippets&quot;&gt;Snippets&lt;/a&gt;&lt;/strong&gt; is a project about gathering code snippets, and
-distributing them in shareable formats; at least it &lt;strong&gt;will be&lt;/strong&gt; when it gets
-completed.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://github.com/v0lkan/snippets&quot; title=&quot;Snippets&quot;&gt;Snippets&lt;/a&gt;&lt;/strong&gt; is a project about gathering code snippets, and distributing them in shareable formats; at least it &lt;strong&gt;will be&lt;/strong&gt; when it gets completed.&lt;/p&gt;
 
-&lt;p&gt;Currently it only has a few code snippets in it grouped into folders.&lt;/p&gt;
+&lt;p&gt;Currently, it only has a few code snippets in it grouped into folders.&lt;/p&gt;
 
-&lt;p&gt;Since there are alternative tools like &lt;a href=&quot;http://snipplr.com/&quot;&gt;snipplr&lt;/a&gt;, &lt;a href=&quot;https://gist.github.com/&quot;&gt;github gists&lt;/a&gt;,
-&lt;a href=&quot;http://bl.ocks.org/&quot;&gt;bl.ocks.org&lt;/a&gt;, &lt;a href=&quot;http://codepen.io/&quot;&gt;codepen&lt;/a&gt;, &lt;a href=&quot;http://code.runnable.com/&quot;&gt;runnable&lt;/a&gt;,
-&lt;a href=&quot;http://tributary.io/&quot;&gt;tributary&lt;/a&gt;, &lt;a href=&quot;http://www.smipple.net/&quot;&gt;smipple&lt;/a&gt;, &lt;a href=&quot;http://devsnippets.com/&quot;&gt;devsnippets&lt;/a&gt;,
-and many more, it will not provide much value to reinvent the wheel unless it
-makes something different or bettter.&lt;/p&gt;
+&lt;p&gt;Since there are alternative tools like &lt;a href=&quot;http://snipplr.com/&quot; title=&quot;Snipplr&quot;&gt;snipplr&lt;/a&gt;, &lt;a href=&quot;https://gist.github.com/&quot; title=&quot;Gists&quot;&gt;github gists&lt;/a&gt;, &lt;a href=&quot;http://bl.ocks.org/&quot; title=&quot;A simple viewer of code examples&quot;&gt;bl.ocks.org&lt;/a&gt;, &lt;a href=&quot;http://codepen.io/&quot; title=&quot;CodePen&quot;&gt;codepen&lt;/a&gt;, &lt;a href=&quot;http://code.runnable.com/&quot; title=&quot;Runnable.com&quot;&gt;runnable&lt;/a&gt;, &lt;a href=&quot;http://tributary.io/&quot; title=&quot;Tributary&quot;&gt;tributary&lt;/a&gt;, &lt;a href=&quot;http://www.smipple.net/&quot; title=&quot;Smipple&quot;&gt;smipple&lt;/a&gt;, &lt;a href=&quot;http://devsnippets.com/&quot; title=&quot;Dev Snippets&quot;&gt;devsnippets&lt;/a&gt;, and many more, it will not provide much value to reinvent the wheel unless it makes something different or bettter.&lt;/p&gt;
 
 &lt;h3 id=&quot;themes&quot;&gt;Themes&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/v0lkan/themes&quot;&gt;Themes&lt;/a&gt;&lt;/strong&gt; was a repository that I was going to gather customized IDE
-themes and color schemes for my own taste.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/v0lkan/themes&quot; title=&quot;Themes&quot;&gt;Themes&lt;/a&gt;&lt;/strong&gt; was a repository that I was going to gather customized IDE themes and color schemes for my taste.&lt;/p&gt;
 
-&lt;p&gt;I realized, however, that the more I change development environments and
-operating  systems (&lt;em&gt;and I do that &lt;strong&gt;a lot&lt;/strong&gt;&lt;/em&gt;) the more it was becoming harder
-to keep  things in sync.&lt;/p&gt;
+&lt;p&gt;I realized, however, that the more I change development environments and operating  systems (&lt;em&gt;and I do that &lt;strong&gt;a lot&lt;/strong&gt;&lt;/em&gt;) the more it was becoming harder to keep  things in sync.&lt;/p&gt;
 
-&lt;p&gt;Moreover, sometimes I had to write a colo rscheme from scratch just because I
-was not able to find a similar one that was supported in the IDE by default.&lt;/p&gt;
+&lt;p&gt;Moreover, sometimes I had to write a colorscheme from scratch just because I was not able to find a similar one that was supported in the IDE by default.&lt;/p&gt;
 
 &lt;p&gt;So I decided to &lt;strong&gt;let it go&lt;/strong&gt; too.&lt;/p&gt;
 
-&lt;p&gt;It’s better to use a well-supported color scheme, and typeface that’s available
-everywhere, instead of trying to re-adjust your setting every time you change
-your development environment.&lt;/p&gt;
+&lt;p&gt;It’s better to use a well-supported color scheme, and typeface that’s available everywhere, instead of trying to re-adjust your setting every time you change your development environment.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;For the interested I am currently using &lt;a href=&quot;https://github.com/chriskempson/tomorrow-theme&quot;&gt;Tomorrow Night&lt;/a&gt; theme,
-with &lt;a href=&quot;https://mozilla.github.io/Fira/&quot;&gt;Fira Mono&lt;/a&gt; as my typeface.&lt;/p&gt;
+  &lt;p&gt;For the interested I am currently using &lt;a href=&quot;https://github.com/chriskempson/tomorrow-theme&quot; title=&quot;Tomorrow Theme&quot;&gt;Tomorrow Night&lt;/a&gt; theme, with &lt;a href=&quot;https://mozilla.github.io/Fira/&quot; title=&quot;Fira Font&quot;&gt;Fira Mono&lt;/a&gt; as my typeface.&lt;/p&gt;
 
-  &lt;p&gt;1.1em is my line spacing, and 14px is the font size, on a 27-inch display
-with 2560×1440 resolution.&lt;/p&gt;
+  &lt;p&gt;1.1em is my line spacing, and 14px is the font size, on a 27-inch display with 2560×1440 resolution.&lt;/p&gt;
 
-  &lt;p&gt;I prefer 10-12px for smaller laptop displays. And those numbers seem to be
-increasing as years pass by &lt;strong&gt;;)&lt;/strong&gt;&lt;/p&gt;
+  &lt;p&gt;I prefer 10-12px for smaller laptop displays. And those numbers seem to be increasing as years pass by &lt;strong&gt;;)&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h3 id=&quot;o2js-javascript-framework&quot;&gt;&lt;strong&gt;o2.js&lt;/strong&gt; JavaScript Framework&lt;/h3&gt;
@@ -419,13 +371,12 @@ increasing as years pass by &lt;strong&gt;;)&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;The astute reader might have realized that there is a theme in here:&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;In order to get more stuff done; I had to let more stuff go.&lt;/p&gt;
+  &lt;p&gt;To get more stuff done; I had to let more stuff go.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Letting go of &lt;strong&gt;o2.js&lt;/strong&gt;, however, was one of the hardest of such decisions.
-Nevertheless it had to be done; and it was the correct decision.&lt;/p&gt;
+&lt;p&gt;Letting go of &lt;strong&gt;o2.js&lt;/strong&gt;, however, was one of the hardest of such decisions. Nevertheless, it had to be done; and it was the correct decision.&lt;/p&gt;
 
-&lt;p&gt;To explain why it’s hard, &lt;a href=&quot;http://www.musingsfrommars.org/2006/03/ajax-dhtml-library-scorecard.html&quot;&gt;let me take you back to 2006&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;To explain why it’s hard, &lt;a href=&quot;http://www.musingsfrommars.org/2006/03/ajax-dhtml-library-scorecard.html&quot; title=&quot;AJAX DHTML Scorecard&quot;&gt;let me take you back to 2006&lt;/a&gt;:&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Let us set the stage a bit:&lt;/p&gt;
@@ -434,40 +385,27 @@ Nevertheless it had to be done; and it was the correct decision.&lt;/p&gt;
 
   &lt;p&gt;&lt;strong&gt;Table-based layouts&lt;/strong&gt; were the &lt;strong&gt;recommended&lt;/strong&gt; way of building a web page;&lt;/p&gt;
 
-  &lt;p&gt;&lt;strong&gt;Google&lt;/strong&gt; was &lt;strong&gt;not&lt;/strong&gt; a dominant search engine yet; and &lt;strong&gt;Netscape Navigator
-4&lt;/strong&gt; was still a browser that you had to support along with &lt;strong&gt;Internet
-Explorer 5&lt;/strong&gt; because they were owning the majority of the market.&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;Google&lt;/strong&gt; was &lt;strong&gt;not&lt;/strong&gt; a dominant search engine yet, and &lt;strong&gt;Netscape Navigator 4&lt;/strong&gt; was still a browser that you had to support along with &lt;strong&gt;Internet Explorer 5&lt;/strong&gt; because they were owning the majority of the market.&lt;/p&gt;
 
-  &lt;p&gt;And &lt;strong&gt;Opera&lt;/strong&gt; was just about to make biggest worst business blunder by
-demanding its users to &lt;strong&gt;pay money&lt;/strong&gt; to remove ads from the browser.&lt;/p&gt;
+  &lt;p&gt;And &lt;strong&gt;Opera&lt;/strong&gt; was just about to make their worst business blunder by demanding its users to &lt;strong&gt;pay money&lt;/strong&gt; to remove ads from the browser.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;It all started with (&lt;em&gt;now obsolete&lt;/em&gt;) JavaScript framework &lt;strong&gt;sardalya&lt;/strong&gt; that
-I’d created back then.&lt;/p&gt;
+&lt;p&gt;It all started with (&lt;em&gt;now obsolete&lt;/em&gt;) JavaScript framework &lt;strong&gt;sardalya&lt;/strong&gt; that I’d created back then.&lt;/p&gt;
 
-&lt;p&gt;In one of those lovely days of 2006 &lt;a href=&quot;http://www.musingsfrommars.org/2006/03/ajax-dhtml-library-scorecard.html&quot;&gt;&lt;strong&gt;sardalya&lt;/strong&gt; got listed as one of the best
-frameworks around&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In one of those lovely days of 2006 &lt;a href=&quot;http://www.musingsfrommars.org/2006/03/ajax-dhtml-library-scorecard.html&quot; title=&quot;AJAX DHTML Scorecard&quot;&gt;&lt;strong&gt;sardalya&lt;/strong&gt; got listed as one of the best frameworks around&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;I was not aware that &lt;strong&gt;sardalya&lt;/strong&gt; was in such a good shape: I was using it for
-my day-to-day duties, and it was really improving my productivity however
-I was not aware that it was making others’ lifes better too. – Nope, there
-was no &lt;strong&gt;GitHub&lt;/strong&gt; back then either &lt;strong&gt;;)&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;I was not aware that &lt;strong&gt;sardalya&lt;/strong&gt; was in such a good shape: I was using it for my day-to-day duties, and it was improving my productivity however I was not aware that it was making others’ lifes better too. – Nope, there was no &lt;strong&gt;GitHub&lt;/strong&gt; back then either &lt;strong&gt;;)&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;It was the first time I felt I was having an impact that was bigger than myself.
-&lt;br /&gt;
-(&lt;em&gt;the second time I has such a feeling was &lt;a href=&quot;interview-questions&quot;&gt;when I wrote a book&lt;/a&gt;.&lt;/em&gt;)&lt;/p&gt;
+&lt;p&gt;It was the first time I felt I had an impact that was bigger than myself. &lt;br /&gt;
+(&lt;em&gt;the second time I had such a feeling was &lt;a href=&quot;interview-questions&quot;&gt;when I wrote a book&lt;/a&gt;.&lt;/em&gt;)&lt;/p&gt;
 
-&lt;p&gt;Having seen what &lt;strong&gt;sardalya&lt;/strong&gt; can turn out to be, and how everybody can benefit
-from it too, I decided to work further on it and make it &lt;strong&gt;even better&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Having seen what &lt;strong&gt;sardalya&lt;/strong&gt; can turn out to be, and how everybody can benefit from it too, I decided to work further on it and make it &lt;strong&gt;even better&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;…&lt;/p&gt;
 
 &lt;p&gt;For a couple of years, things went well.&lt;/p&gt;
 
-&lt;p&gt;On the long run, however, technology evolved and I had to phase
-out &lt;strong&gt;sardalya&lt;/strong&gt;. I decided to copy relevant and useful parts of it to create
-a brand new framework: &lt;strong&gt;&lt;a href=&quot;https://github.com/o2js&quot;&gt;o2.js&lt;/a&gt;&lt;/strong&gt; — a framework that was created from
-the ashes of &lt;strong&gt;sardalya&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;On the long run, however, technology evolved and I had to phase out &lt;strong&gt;sardalya&lt;/strong&gt;. I decided to copy relevant and useful parts of it to create a brand new framework: &lt;strong&gt;&lt;a href=&quot;https://github.com/o2js&quot; title=&quot;o2.js&quot;&gt;o2.js&lt;/a&gt;&lt;/strong&gt; — a framework that was created from the ashes of &lt;strong&gt;sardalya&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;Aside&lt;/strong&gt;&lt;/p&gt;
@@ -476,23 +414,19 @@ the ashes of &lt;strong&gt;sardalya&lt;/strong&gt;.&lt;/p&gt;
 
   &lt;p&gt;I think fast, act fast, and never hesitate to break things.&lt;/p&gt;
 
-  &lt;p&gt;Tearing things down entirely, burning bridges, and having a fresh and better
-start has been the general theme of my life so far.&lt;/p&gt;
+  &lt;p&gt;Tearing things down entirely, burning bridges, and having a fresh and better start has been the general theme of my life so far.&lt;/p&gt;
 
-  &lt;p&gt;Those transitions have often been painful, and have teached me &lt;strong&gt;a lot&lt;/strong&gt; that
-I could not have gained by attending to some biz school or reading a book.&lt;/p&gt;
+  &lt;p&gt;Those transitions have often been painful and have taught me &lt;strong&gt;a lot&lt;/strong&gt; that I could not have gained by attending to some biz school or reading a book.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;That was the beginning of an endless series of rewrites of the same framework
-(&lt;em&gt;o2.js&lt;/em&gt;).&lt;/p&gt;
+&lt;p&gt;That was the beginning of an endless series of rewrites of the same framework (&lt;em&gt;o2.js&lt;/em&gt;).&lt;/p&gt;
 
 &lt;p&gt;At each rewrite things were &lt;strong&gt;seemingly&lt;/strong&gt; getting better:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Code was becoming more stable.&lt;/li&gt;
+  &lt;li&gt;The code was becoming more stable.&lt;/li&gt;
   &lt;li&gt;New ideas were emerging.&lt;/li&gt;
-  &lt;li&gt;And I was happily integrating those ideas, adding bits
-and pieces to the framework…&lt;/li&gt;
+  &lt;li&gt;And I was happily integrating those ideas, adding bits and pieces to the framework…&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Then I suddenly came to a realization:&lt;/p&gt;
@@ -502,138 +436,98 @@ and pieces to the framework…&lt;/li&gt;
 
   &lt;p&gt;&lt;strong&gt;JavaScript&lt;/strong&gt;, too, was &lt;strong&gt;not&lt;/strong&gt; an exception to that.&lt;/p&gt;
 
-  &lt;p&gt;Cycles, and breakthroughs in the industry were getting more frequent.&lt;/p&gt;
+  &lt;p&gt;Cycles and breakthroughs in the industry were getting more frequent.&lt;/p&gt;
 
   &lt;p&gt;Ten years ago, there was something groundbreaking &lt;strong&gt;every one or two years&lt;/strong&gt;.&lt;/p&gt;
 
   &lt;p&gt;Now there was something new and groundbreaking &lt;strong&gt;every couple of months&lt;/strong&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;If you are one of the lucky (&lt;em&gt;unlucky?&lt;/em&gt;) people to have lived through the
-&lt;strong&gt;JavaScript&lt;/strong&gt; revolotion, and the &lt;strong&gt;browser wars&lt;/strong&gt;; if there was no &lt;strong&gt;Google&lt;/strong&gt;
-when you started hacking for the web, then you probably see the
-&lt;strong&gt;geometric accelleration&lt;/strong&gt; of the evolution of technology just like I do.&lt;/p&gt;
+&lt;p&gt;If you are one of the lucky (&lt;em&gt;unlucky?&lt;/em&gt;) people to have lived through the &lt;strong&gt;JavaScript&lt;/strong&gt; revolution, and the &lt;strong&gt;browser wars&lt;/strong&gt;; if there was no &lt;strong&gt;Google&lt;/strong&gt; when you started hacking for the web, then you probably see the &lt;strong&gt;geometric acceleration&lt;/strong&gt; of the evolution of technology just like I do.&lt;/p&gt;
 
 &lt;p&gt;…&lt;/p&gt;
 
-&lt;p&gt;Even if we skipped the rapid evolution of languages, frameworks, and technologies
-aside, &lt;strong&gt;&lt;a href=&quot;https://github.com/o2js&quot;&gt;o2.js&lt;/a&gt;&lt;/strong&gt; in an of itself was growing out of control:&lt;/p&gt;
+&lt;p&gt;Even if we skipped the rapid evolution of languages, frameworks, and technologies aside, &lt;strong&gt;&lt;a href=&quot;https://github.com/o2js&quot; title=&quot;o2.js&quot;&gt;o2.js&lt;/a&gt;&lt;/strong&gt; in an of itself was growing out of control:&lt;/p&gt;
 
 &lt;p&gt;It was turning into a &lt;strong&gt;monolith&lt;/strong&gt; that was trying to solve many things at once.&lt;/p&gt;
 
-&lt;p&gt;And the bigger the framework got, the harder it had become to &lt;strong&gt;document&lt;/strong&gt;,
-&lt;strong&gt;test&lt;/strong&gt;, and &lt;strong&gt;maintain&lt;/strong&gt; it.&lt;/p&gt;
+&lt;p&gt;And the bigger the framework got, the harder it had become to &lt;strong&gt;document&lt;/strong&gt;, &lt;strong&gt;test&lt;/strong&gt;, and &lt;strong&gt;maintain&lt;/strong&gt; it.&lt;/p&gt;
 
-&lt;p&gt;And when something new (&lt;em&gt;you name it: web components, HTML5 local storage,
-ServiceWorker, Node.JS, EcmaScript 2015…&lt;/em&gt;) emerged, I had to readjust the
-entire monolithical codebase to take the emergent technology into account.&lt;/p&gt;
+&lt;p&gt;And when something new (&lt;em&gt;you name it: web components, HTML5 local storage, ServiceWorker, Node.JS, EcmaScript 2015…&lt;/em&gt;) emerged, I had to readjust the entire monolithic codebase to take the emergent technology into account.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Soon I found myself in the world of generators, transpilers, workers,
-linters, parsers just to be able to support the framework’s day-to-day
-development.&lt;/p&gt;
+  &lt;p&gt;Soon I found myself in the world of generators, transpilers, workers, linters, parsers just to be able to support the framework’s day-to-day development.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;If &lt;strong&gt;&lt;a href=&quot;https://github.com/o2js&quot;&gt;o2.js&lt;/a&gt;&lt;/strong&gt; was a single module with a well defined purpose —
-such as a local storage helper, or an &lt;strong&gt;AMD&lt;/strong&gt; variant, or a &lt;strong&gt;Promise&lt;/strong&gt;
-implementation, or an animation library, etc. — things could have been easier.&lt;/p&gt;
+&lt;p&gt;If &lt;strong&gt;&lt;a href=&quot;https://github.com/o2js&quot; title=&quot;o2.js&quot;&gt;o2.js&lt;/a&gt;&lt;/strong&gt; was a single module with a well-defined purpose — such as a local storage helper, or an &lt;strong&gt;AMD&lt;/strong&gt; variant, or a &lt;strong&gt;Promise&lt;/strong&gt; implementation, or an animation library, etc. — things could have been easier.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;One thing that hit me like a full speed freight train was the fact that
-trying to solve many things at once was not the way to go.&lt;/p&gt;
+  &lt;p&gt;One thing that hit me like a full speed freight train was the fact that trying to solve many things at once was not the way to go.&lt;/p&gt;
 
-  &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://www.wikiwand.com/en/Unix_philosophy&quot;&gt;Unix philosophy&lt;/a&gt;&lt;/strong&gt; was time-tested and proven for a reason:&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://www.wikiwand.com/en/Unix_philosophy&quot; title=&quot;The Unix Philosophy&quot;&gt;Unix philosophy&lt;/a&gt;&lt;/strong&gt; was time-tested and proven for a reason:&lt;/p&gt;
 
-  &lt;p&gt;I should be doing one thing at a time; and doing that thing &lt;strong&gt;well&lt;/strong&gt;.&lt;/p&gt;
+  &lt;p&gt;I should be doing one thing at a time, and doing that thing &lt;strong&gt;well&lt;/strong&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Trying to manage a monolith that does all the things, in this rapid
-(r)evolution was exhausting, time-consuming, counter-productive
-and &lt;strong&gt;unsustainable&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Trying to manage a monolith that does all the things, in this rapid (r)evolution was exhausting, time-consuming, counter-productive and &lt;strong&gt;unsustainable&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;Long story short, effective today, I’m ceasing any active development on
-&lt;strong&gt;&lt;a href=&quot;https://github.com/o2js&quot;&gt;o2.js&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Long story short, effective today, I’m ceasing any active development on &lt;strong&gt;&lt;a href=&quot;https://github.com/o2js&quot; title=&quot;o2.js&quot;&gt;o2.js&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;I will still be using parts of its codebase to solve problems.&lt;/p&gt;
 
 &lt;p&gt;Those solutions, however, will be much more &lt;strong&gt;focused&lt;/strong&gt;:&lt;/p&gt;
 
-&lt;p&gt;They will have single, focused, and unique purposes; and they will be
-serving that purpose &lt;strong&gt;well&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;They will have single, focused, and unique purposes; and they will be serving that purpose &lt;strong&gt;well&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;writing-writing-style-guides&quot;&gt;Writing “Writing Style Guide”s&lt;/h3&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;This topic deserves a separate article on its own;
-I’ll start drafting it out here anyway &lt;strong&gt;:)&lt;/strong&gt;:&lt;/p&gt;
+  &lt;p&gt;This topic deserves a separate article on its own; I’ll start drafting it out here anyway &lt;strong&gt;:)&lt;/strong&gt;:&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;I had started creating a few style guides for both writing code, and also for
-technical writing. I was using them as a reference for coding conventions in
-my side projects, as well as a reference for stylistic conventions in my articles.&lt;/p&gt;
+&lt;p&gt;I had started creating a few style guides for both writing code, and also for technical writing. I was using them as a reference for coding conventions in my side projects, as well as a reference for stylistic conventions in my articles.&lt;/p&gt;
 
 &lt;p&gt;At this point, an obvious question you might ask is:&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Why write your own style guides instead of using some of the already
-established ones?&lt;/p&gt;
+  &lt;p&gt;Why write your own style guides instead of using some of the already established ones?&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Obviously people have been pondering on these issues a lot, so why not follow
-their piece of mind, instead of reinventing the wheel?&lt;/p&gt;
+&lt;p&gt;Obviously people have been pondering on these issues a lot, so why not follow their piece of mind, instead of reinventing the wheel?&lt;/p&gt;
 
-&lt;p&gt;And when I asked this to myself, I realized that the answer is really complicated
-and lies deep within: It’s because of my  obsession to control, categorize,
-organize everything.&lt;/p&gt;
+&lt;p&gt;And when I asked this to myself, I realized that the answer is complicated and it lies deep within: It’s because of my  obsession to control, categorize, organize everything.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;So even if my way of doing things is slightly different than the community
-guidelines, they were supposed to be signed in triplicate, sent in, sent back,
-queried, lost, found, subjected to public inquiry, lost again, and finally
-buried in soft peat for three months and recycled as firelighters.&lt;/p&gt;
+  &lt;p&gt;So even if my way of doing things is slightly different than the community guidelines, they were supposed to be signed in triplicate, sent in, sent back, queried, lost, found, subjected to public inquiry, lost again, and finally buried in soft peat for three months and recycled as firelighters.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Ir’s the same obsession with “the ideal programming font family” and “the
-ideal color scheme”. It is useful to a certain extent; yet it becomes detrimental
-when you start caring about those kinds of things too much. — So the resolution
-is again to &lt;strong&gt;let it go&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Ir’s the same obsession with “the ideal programming font family” and “the ideal color scheme”. It is useful to a certain extent, yet it becomes detrimental when you start caring about those kinds of things too much. — So the resolution is again to &lt;strong&gt;let it go&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;Keeping an eye on everything requires a great deal of &lt;strong&gt;attention&lt;/strong&gt;,
-&lt;strong&gt;concentration&lt;/strong&gt;, and &lt;strong&gt;bookkeeping&lt;/strong&gt;. You give permission to yourself to
-let go of things so that you could focus on more important stuff.&lt;/p&gt;
+&lt;p&gt;Keeping an eye on everything requires a great deal of &lt;strong&gt;attention&lt;/strong&gt;, &lt;strong&gt;concentration&lt;/strong&gt;, and &lt;strong&gt;bookkeeping&lt;/strong&gt;. You give permission to yourself to let go of things so that you could focus on more important stuff.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;&lt;a href=&quot;https://www.wikiwand.com/en/Vogon&quot;&gt;Resistance was futile&lt;/a&gt;. I &lt;strong&gt;had to&lt;/strong&gt; learn to let things go.&lt;/p&gt;
+  &lt;p&gt;&lt;a href=&quot;https://www.wikiwand.com/en/Vogon&quot; title=&quot;Vogon&quot;&gt;Resistance was futile&lt;/a&gt;. I &lt;strong&gt;had to&lt;/strong&gt; learn to let things go.&lt;/p&gt;
 
   &lt;p&gt;To clarify further:&lt;/p&gt;
 
-  &lt;p&gt;Spending time on anything just for the sake of self-satisfaction
-while that thing does not provide any real value “at all”
-is a time lost that could have been utilized in better ways.&lt;/p&gt;
+  &lt;p&gt;Spending time on anything just for the sake of self-satisfaction while that thing does not provide any real value “at all” is a time lost that could have been utilized in better ways.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Keeping everything “organized” was also my obsession (&lt;em&gt;as well as many geeks,
-with similar mindsets, I believe :)&lt;/em&gt;).&lt;/p&gt;
+&lt;p&gt;Keeping everything “organized” was also my obsession (&lt;em&gt;as well as many geeks, with similar mindsets, I believe :)&lt;/em&gt;).&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;I’ve realized that the more you learn to &lt;strong&gt;let things go&lt;/strong&gt;, the more
-&lt;strong&gt;productive&lt;/strong&gt; you become.&lt;/p&gt;
+  &lt;p&gt;I’ve realized that the more you learn to &lt;strong&gt;let things go&lt;/strong&gt;, the more &lt;strong&gt;productive&lt;/strong&gt; you become.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;It’s true not only for style guides but also for any kind of strict rule that
-you impose upon the way you do things.&lt;/p&gt;
+&lt;p&gt;It’s true not only for style guides but also for any strict rule that you impose upon the way you do things.&lt;/p&gt;
 
-&lt;p&gt;I have realized (&lt;strong&gt;ahem&lt;/strong&gt;… &lt;em&gt;after ten or so years&lt;/em&gt;) that it all boils down
-to &lt;strong&gt;consistency&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;I have realized (&lt;strong&gt;ahem&lt;/strong&gt;… &lt;em&gt;after ten or so years&lt;/em&gt;) that it all boils down to &lt;strong&gt;consistency&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;…&lt;/p&gt;
 
-&lt;p&gt;Documenting every miniscule detail about how to write an
-article, or how to author a piece of code is a &lt;strong&gt;futile effort&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Documenting every minuscule detail about how to write an article, or how to author a piece of code is a &lt;strong&gt;futile effort&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;And the more excruciatingly-detailed that guide becomes, the slower your writing
-will be because you will be trying harder and harder to conform every single
-bit and piece of rule written in the guideline.&lt;/p&gt;
+&lt;p&gt;And the more excruciatingly-detailed that guide becomes, the slower your writing will be because you will be trying harder and harder to conform every single rule written in the guideline.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Being &lt;strong&gt;consistent&lt;/strong&gt; is better than being &lt;strong&gt;conformant&lt;/strong&gt;.&lt;/p&gt;
@@ -644,42 +538,35 @@ bit and piece of rule written in the guideline.&lt;/p&gt;
 without giving enough value in return.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Besides, there are already very good style guides out there; it’d be wiser to
-stick with them. And about punctuation and grammar, there are resources
-like…&lt;/p&gt;
+&lt;p&gt;Besides, there are already very good style guides out there; it’d be wiser to stick with them. And about punctuation and grammar, there are resources like…;&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.thepunctuationguide.com/index.html&quot;&gt;The punctuation guide&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.grammarly.com/handbook/&quot;&gt;Grammarly Handbook&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.quickanddirtytips.com/grammar-girl&quot;&gt;Grammar Girl&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://grammar.ccc.commnet.edu/grammar/&quot;&gt;This little guide to grammar and writing&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://owl.english.purdue.edu/owl/section/1/&quot;&gt;This little OWL&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.dailywritingtips.com/&quot;&gt;Daily writing tips&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;And, the last but not the least, &lt;a href=&quot;http://www.grammar-monster.com/&quot;&gt;this grammar monster&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.thepunctuationguide.com/index.html&quot; title=&quot;The Punctuation Guide&quot;&gt;The punctuation guide&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.grammarly.com/handbook/&quot; title=&quot;Grammarly Handbook&quot;&gt;Grammarly Handbook&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.quickanddirtytips.com/grammar-girl&quot; title=&quot;Grammar Girl — Quick and Dirty Tips&quot;&gt;Grammar Girl&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://grammar.ccc.commnet.edu/grammar/&quot; title=&quot;CCC Grammar&quot;&gt;This little guide to grammar and writing&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://owl.english.purdue.edu/owl/section/1/&quot; title=&quot;O.W.L.&quot;&gt;This little OWL&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.dailywritingtips.com/&quot; title=&quot;Daily Writing Tips&quot;&gt;Daily writing tips&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;And, the last but not the least, &lt;a href=&quot;http://www.grammar-monster.com/&quot; title=&quot;Grammar Monster&quot;&gt;this grammar monster&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;For writing, I follow the above links (&lt;em&gt;in priority order&lt;/em&gt;) and do it
-my own way, if I disagree with them.&lt;/p&gt;
+&lt;p&gt;For writing, I follow the above links (&lt;em&gt;in priority order&lt;/em&gt;) and do it my way, if I disagree with them.&lt;/p&gt;
 
-&lt;p&gt;For code style &lt;a href=&quot;https://github.com/rwaldron/idiomatic.js/&quot;&gt;idiomatic JS&lt;/a&gt;, and I do it my own way if I
-am not aligned with anything in there.&lt;/p&gt;
+&lt;p&gt;For code style &lt;a href=&quot;https://github.com/rwaldron/idiomatic.js/&quot; title=&quot;Idiomatic JavaScript&quot;&gt;idiomatic JS&lt;/a&gt;, and, again, I do it my way if I am not aligned with anything in there.&lt;/p&gt;
 
 &lt;p&gt;…&lt;/p&gt;
 
-&lt;p&gt;In the end of the day, &lt;strong&gt;your writing is your style&lt;/strong&gt;; it is — kind of —
-your “signature”:&lt;/p&gt;
+&lt;p&gt;At the end of the day, &lt;strong&gt;your writing is your style&lt;/strong&gt;; it is — kind of — your “signature”:&lt;/p&gt;
 
 &lt;p&gt;The more you write, the more &lt;strong&gt;consistent&lt;/strong&gt; it will get.&lt;/p&gt;
 
-&lt;p&gt;And most of the guides listed above, are just “guidelines” as their name imply;
-they are recommendations because there cannot be one true way of writing.&lt;/p&gt;
+&lt;p&gt;And most of the guides listed above, are just “guidelines” as their name imply; they are recommendations because there cannot be one true way of writing.&lt;/p&gt;
 
 &lt;p&gt;As your personality changes, so does your signature.&lt;/p&gt;
 
-&lt;p&gt;This is true for your writing style too.&lt;/p&gt;
+&lt;p&gt;As your personality changes, your writing style changes too.&lt;/p&gt;
 
-&lt;p&gt;Trying to document something that constantly changes, ironically, will
-prevent it from changing.&lt;/p&gt;
+&lt;p&gt;Trying to document something that constantly changes, ironically, will prevent it from changing.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Standardizing things limits the way you explore your environment.&lt;/p&gt;
@@ -711,231 +598,371 @@ prevent it from changing.&lt;/p&gt;
     
       <item>
         <title>Writing Has Never Been Easier</title>
-        <description>&lt;p&gt;&lt;a href=&quot;/images/flowing_time.jpg&quot;&gt;&lt;img src=&quot;/images/flowing_time_sm.jpeg&quot; title=&quot;Time... It's all that matters.&quot; class=&quot;centered&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+        <description>&lt;p&gt;&lt;a href=&quot;https://o2js.com/images/flowing_time.jpg&quot;&gt;&lt;img src=&quot;https://o2js.com/images/flowing_time_sm.jpeg&quot; title=&quot;Time... It's all that matters.&quot; class=&quot;centered&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Until recently, I was using &lt;a href=&quot;https://github.com/v0lkan/o2js.com/tree/e91edd205580bdce95dc7e36a0adc46a06dab2ed&quot; title=&quot;A custom generator that uses MongoDB, and node.js --- just to create a static website.&quot;&gt;a custom generator&lt;/a&gt; for
-&lt;strong&gt;&lt;a href=&quot;http://o2js.com/&quot;&gt;o2js.com&lt;/a&gt;&lt;/strong&gt;, and it was doing its job pretty well.&lt;/p&gt;
+  &lt;p&gt;After experimenting with many different approaches, I’ve settled with my ideal writing workflow.&lt;/p&gt;
 
-  &lt;p&gt;There was a tiny problem, however:&lt;/p&gt;
+  &lt;p&gt;It took “&lt;em&gt;a lot&lt;/em&gt;” of trial and error, yet it’s simple enough to be a “&lt;em&gt;no brainer&lt;/em&gt;”.&lt;/p&gt;
 
-  &lt;p&gt;My workflow was too &lt;strong&gt;complicated&lt;/strong&gt;, to say the least:&lt;/p&gt;
+  &lt;p&gt;And that’s what matters the simpler it is, the easier it will be to internalize.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;i-fucking-love-writing&quot;&gt;I Fucking Love &lt;strong&gt;Writing&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;I write &lt;strong&gt;a lot&lt;/strong&gt;, and I love it: There’s an inherent satisfaction in sharing what you know with an audience.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;So far…&lt;/p&gt;
 
   &lt;ul&gt;
-    &lt;li&gt;&lt;strong&gt;(1)&lt;/strong&gt; I had to &lt;code&gt;ssh&lt;/code&gt; and start a remote server;&lt;/li&gt;
-    &lt;li&gt;Login that server’s website;&lt;/li&gt;
-    &lt;li&gt;Write my article(s);&lt;/li&gt;
-    &lt;li&gt;Stop the remote server;&lt;/li&gt;
-    &lt;li&gt;Run a &lt;em&gt;publish script&lt;/em&gt; on the server;&lt;/li&gt;
-    &lt;li&gt;Check the live published page;&lt;/li&gt;
-    &lt;li&gt;If I need to update the article, fix a typo etc., then &lt;strong&gt;GOTO (1)&lt;/strong&gt;.&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://o2js.com/interview-questions/&quot;&gt;I’ve written a book about JavaScript interviews&lt;/a&gt;,&lt;/li&gt;
+    &lt;li&gt;I’m in the process of writing &lt;a href=&quot;https://leanpub.com/js-next&quot;&gt;yet another one about the upcoming version of the language&lt;/a&gt;,&lt;/li&gt;
+    &lt;li&gt;I’ve &lt;a href=&quot;https://web.archive.org/web/20130624151559/http://o2js.com/&quot; title=&quot;o2js.com on the Wayback Machine&quot;&gt;written quite a few articles&lt;/a&gt; on this blog,&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://o2js.com/v1&quot; title=&quot;o2js.com — Articles Waiting to Be Converted&quot;&gt;Some of these articles are also waiting to be rewritten&lt;/a&gt;,&lt;/li&gt;
+    &lt;li&gt;I have done technical editing of several books,&lt;/li&gt;
+    &lt;li&gt;I’ve written a dozen of guest blog posts, authored technical articles…&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;When any of my articles got closer and closer to their final state, they went
-through this &lt;em&gt;vicious cycle&lt;/em&gt; over and over again. — It was like a
-never-ending nightmare:&lt;/p&gt;
+&lt;p&gt;And that’s just the tip of the iceberg.&lt;/p&gt;
+
+&lt;p&gt;There are literally &lt;strong&gt;hundreds of&lt;/strong&gt; drafts, sitting in my cloud drive, waiting to be finalized and &lt;strong&gt;published&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;If all these are not enough, &lt;a href=&quot;http://goinswriter.com/500-words/&quot; title=&quot;Write 500 words per day, every day&quot;&gt;I write at least 500 words every day&lt;/a&gt; too.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;There was always “one last thing” to be rewritten, “one last typo” to be
-fixed; and it meant to start the above sequence… as if it would never end.&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;Writing&lt;/strong&gt; frees my mind off of things, inspires me, and reveals ideas that I haven’t realized that I had.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;I don’t know you, and I feel like the above flow is &lt;strong&gt;exhaustive&lt;/strong&gt;!&lt;/p&gt;
+&lt;h2 id=&quot;the-problem&quot;&gt;The Problem&lt;/h2&gt;
 
-&lt;p&gt;…&lt;/p&gt;
+&lt;p&gt;When you write orders of magnitude more than an average Joe, your writing and publishing &lt;strong&gt;process&lt;/strong&gt; becomes really important.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.wikiwand.com/en/Writer%27s_block&quot; title=&quot;&amp;quot;Writer's block&amp;quot; is just one of the many problems a writer has to deal with.&quot;&gt;&lt;strong&gt;Writing&lt;/strong&gt;, in and of itself, is hard enough&lt;/a&gt;, there’s no need
-to make it kind of like a torture.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;To be as efficient, and as effective as possible, you’ll need to squeeze every bit of creative time you can.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;&lt;strong&gt;Writing should be fun&lt;/strong&gt;. And to make it fun, I’d prefer to…&lt;/p&gt;
+&lt;p&gt;A successful writing workflow is what makes this happen:&lt;/p&gt;
+
+&lt;p&gt;It makes you forget about the process and focus on what’s important (&lt;em&gt;i.e., writing&lt;/em&gt;).&lt;/p&gt;
+
+&lt;p&gt;The perfect workflow is the one that’s the &lt;strong&gt;easiest to habitualize&lt;/strong&gt;. And to easily habitualize something, you’ll want &lt;strong&gt;the least amount of friction&lt;/strong&gt; between you and the task you are going to do.&lt;/p&gt;
+
+&lt;p&gt;At the end of the day, &lt;a href=&quot;http://keysleft.com/&quot; title=&quot;How many keystrokes have you left?&quot;&gt;you have a limited amount of keystrokes left&lt;/a&gt;, and you should, to the best of your ability, &lt;strong&gt;make them count&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;My former writing setup was far from ideal for reducing friction.&lt;/p&gt;
+
+&lt;p&gt;That’s what I’ll be discussing next.&lt;/p&gt;
+
+&lt;h2 id=&quot;in-a-galaxy-far-far-away&quot;&gt;In a Galaxy Far Far Away…&lt;/h2&gt;
+
+&lt;p&gt;A long time ago, I was writing my articles with the help of my &lt;em&gt;home-baked&lt;/em&gt; &lt;a href=&quot;https://github.com/v0lkan/o2js.com/tree/e91edd205580bdce95dc7e36a0adc46a06dab2ed&quot; title=&quot;A custom generator that uses MongoDB, and node.js — just to create a static website.&quot;&gt;static blog generator&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;And for a while, it was good:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;I was using my own “&lt;em&gt;creation&lt;/em&gt;”.&lt;/p&gt;
+
+  &lt;p&gt;I knew it from inside out so that I could tweak it however I wanted.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In that regard, the generator was doing its job pretty well. There was a tiny problem, however:&lt;/p&gt;
+
+&lt;p&gt;My workflow was too &lt;strong&gt;complicated&lt;/strong&gt;, to say the least:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Open my favorite &lt;strong&gt;&lt;a href=&quot;http://daringfireball.net/projects/markdown/syntax&quot; title=&quot;Markdown ain't no WYSIWG --- It helps you focus on the content rather than formatting and design.&quot;&gt;markdown&lt;/a&gt;&lt;/strong&gt; editor;&lt;/li&gt;
-  &lt;li&gt;Have a &lt;strong&gt;preview&lt;/strong&gt; of the end result (&lt;em&gt;i.e., the blog&lt;/em&gt;) post as I type;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;(1)&lt;/strong&gt; I had to &lt;code&gt;ssh&lt;/code&gt; and start a remote server;&lt;/li&gt;
+  &lt;li&gt;Login that server’s website;&lt;/li&gt;
+  &lt;li&gt;Write my article(s);&lt;/li&gt;
+  &lt;li&gt;Stop the remote server;&lt;/li&gt;
+  &lt;li&gt;Run a &lt;em&gt;publish script&lt;/em&gt; on the server;&lt;/li&gt;
+  &lt;li&gt;Check the live published page;&lt;/li&gt;
+  &lt;li&gt;If I need to update the article, fix a typo, etc., then &lt;strong&gt;GOTO (1)&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;When any of my articles got closer and closer to their final state, they went through this &lt;em&gt;vicious cycle&lt;/em&gt; over and over again. — It was like a never-ending nightmare:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;There was always “one last thing” to be rewritten, “one last typo” to be fixed, and it meant to start the above sequence… as if it would never end.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I don’t know you, and that feels &lt;strong&gt;exhaustive&lt;/strong&gt;!&lt;/p&gt;
+
+&lt;h2 id=&quot;writing-should-be-fun&quot;&gt;Writing Should Be Fun&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;http://www.wikiwand.com/en/Writer%27s_block&quot; title=&quot;Writer's block&amp;quot; is just one of the many problems a writer has to deal with.&quot;&gt;&lt;strong&gt;Writing&lt;/strong&gt;, in and of itself, is hard enough&lt;/a&gt;, there’s no need to make it, kind of, like torture.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Writing should be fun. And to make it fun, I’d prefer to…&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Open my favorite editor;&lt;/li&gt;
+  &lt;li&gt;Have a &lt;strong&gt;preview&lt;/strong&gt; of the result (&lt;em&gt;i.e., the blog&lt;/em&gt;) post as I type;&lt;/li&gt;
   &lt;li&gt;And never bother publishing because the entire publish cycle is &lt;strong&gt;automated&lt;/strong&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Writing has to be as &lt;strong&gt;hassle-free&lt;/strong&gt;, as &lt;strong&gt;seamless&lt;/strong&gt;, and as &lt;strong&gt;frictionless&lt;/strong&gt;
-as possible.&lt;/p&gt;
+  &lt;p&gt;Writing has to be as &lt;strong&gt;hassle-free&lt;/strong&gt;, as &lt;strong&gt;seamless&lt;/strong&gt;, and as &lt;strong&gt;frictionless&lt;/strong&gt; as possible.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h2 id=&quot;to-reinvent-or-not-thats-the-problem&quot;&gt;To Reinvent or Not… That’s the Problem&lt;/h2&gt;
 
-&lt;p&gt;Since my existing setup was far from actualizing this dream, I decided to come
-up with a new workflow.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://blog.geekli.st/post/111932989787/grab-your-chisel-and-start-pounding-a-guest&quot; title=&quot;Grab Your Chisel and Start Pounding&quot;&gt;I’m an avid believer of “&lt;strong&gt;wheel reinvention&lt;/strong&gt;”&lt;/a&gt; because reinventing the wheel teaches you &lt;strong&gt;a lot&lt;/strong&gt;!&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://blog.geekli.st/post/111932989787/grab-your-chisel-and-start-pounding-a-guest&quot; title=&quot;Grab Your Chisel and Start Pounding&quot;&gt;I’m an avid believer of “&lt;strong&gt;wheel reinvention&lt;/strong&gt;”&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Hacking&lt;/strong&gt;, &lt;strong&gt;tweaking&lt;/strong&gt;, and &lt;strong&gt;replicating&lt;/strong&gt; existing solutions helps you see relationships between various components: Relationships that you thought never existed. This insight helps you come up with &lt;strong&gt;newer&lt;/strong&gt; and &lt;strong&gt;better&lt;/strong&gt; outcomes. This is &lt;em&gt;&lt;a href=&quot;http://www.wikiwand.com/en/Creativity&quot; title=&quot;Creativity --- Wikipedia&quot;&gt;the very definition of creativity&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;Reinventing the wheel teaches you &lt;strong&gt;a lot&lt;/strong&gt;!&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Hacking&lt;/strong&gt;, &lt;strong&gt;tweaking&lt;/strong&gt;, and &lt;strong&gt;replicating&lt;/strong&gt; existing solutions helps you see
-relationships between various components that you thought never existed. This
-insight helps you come up with &lt;strong&gt;newer&lt;/strong&gt; and &lt;strong&gt;better&lt;/strong&gt; outcomes. This,
-actually, is &lt;em&gt;&lt;a href=&quot;http://www.wikiwand.com/en/Creativity&quot; title=&quot;Creativity --- Wikipedia&quot;&gt;the very definition of creativity&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Since my existing setup was far from actualizing this dream, I decided to come up with a new workflow.&lt;/p&gt;
 
 &lt;h2 id=&quot;reinventing-the-blogging-workflow&quot;&gt;Reinventing the Blogging Workflow&lt;/h2&gt;
 
-&lt;p&gt;So the question is not whether to reinvent.&lt;/p&gt;
-
-&lt;p&gt;The question is:&lt;/p&gt;
-
-&lt;p&gt;“Is the &lt;strong&gt;&lt;a href=&quot;http://www.wikiwand.com/en/Opportunity_cost&quot; title=&quot;Opportunity Cost --- Wikipedia&quot;&gt;opportunity cost of the time I spend&lt;/a&gt;&lt;/strong&gt; reinventing
-a static blog engine worth it?”&lt;/p&gt;
-
-&lt;p&gt;Or, in other words: “Is there a more &lt;strong&gt;productive&lt;/strong&gt; way to occupy my time?”&lt;/p&gt;
-
-&lt;p&gt;Answering this question — and other similar questions — helped me to see
-what I was missing:&lt;/p&gt;
-
-&lt;p&gt;Instead of patching my hacky static content generator, I had to &lt;strong&gt;reinvent my
-workflow&lt;/strong&gt; from the bottom up.&lt;/p&gt;
+&lt;p&gt;The question was not whether to reinvent; it was:&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;In my current setup, I just keep on writing. And everything is synchronized.
-— It’s &lt;strong&gt;magical&lt;/strong&gt;.&lt;/p&gt;
+  &lt;p&gt;“Is the &lt;strong&gt;&lt;a href=&quot;http://www.wikiwand.com/en/Opportunity_cost&quot; title=&quot;Opportunity Cost --- Wikipedia&quot;&gt;opportunity cost of the time I spend&lt;/a&gt;&lt;/strong&gt; reinventing a static blog engine worth it?”&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Curious? Let’s begin.&lt;/p&gt;
+&lt;p&gt;Or, in other words: “&lt;em&gt;Is there a more productive way to occupy my time?&lt;/em&gt;”&lt;/p&gt;
+
+&lt;p&gt;Answering this &lt;em&gt;fundamental&lt;/em&gt; question helped me to see what I was missing:&lt;/p&gt;
+
+&lt;p&gt;Instead of patching my hacky static content generator, I had to &lt;strong&gt;reinvent my writing workflow&lt;/strong&gt; from the bottom up.&lt;/p&gt;
+
+&lt;p&gt;And so did I.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;In my current setup, I just keep on writing. And everything is synchronized. — It’s just like &lt;strong&gt;magic&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Curious? Let’s explore.&lt;/p&gt;
 
 &lt;h2 id=&quot;the-editor&quot;&gt;The &lt;strong&gt;Editor&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;I am quite happy using the &lt;strong&gt;&lt;a href=&quot;https://c9.io/&quot; title=&quot;Cloud9 IDE&quot;&gt;Cloud9 IDE&lt;/a&gt;&lt;/strong&gt; as my blogging editor.&lt;/p&gt;
+&lt;p&gt;Before I move on, here is some background information:&lt;/p&gt;
 
-&lt;p&gt;Before having this decision I’ve tried various editors including
-&lt;strong&gt;&lt;a href=&quot;https://ia.net/writer/mac&quot; title=&quot;A quintessential writing machine for Mac&quot;&gt;IA Writer&lt;/a&gt;&lt;/strong&gt;, and &lt;strong&gt;&lt;a href=&quot;http://www.ulyssesapp.com/&quot; title=&quot;Ulysses makes writing fun and productive.&quot;&gt;Ulysses&lt;/a&gt;&lt;/strong&gt;. They are both great editors;
-however, they impose an additional level of indirection, which I don’t need.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Using a single environment to do everything simplifies my workflow.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;What I need is &lt;strong&gt;focus&lt;/strong&gt;; and swapping between environments will make me lose
-that focus.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Aside&lt;/strong&gt;&lt;/p&gt;
-
-  &lt;p&gt;Admittedly, writing in &lt;strong&gt;IA Writer&lt;/strong&gt; is a delightful experience.&lt;/p&gt;
-
-  &lt;p&gt;One reason I’m stopping using is because I’m trying to move my life into the
-cloud; and when you are in the cloud, you cannot rely on native applications.
-— You’ll have to learn to be &lt;strong&gt;frugal&lt;/strong&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;In addition to the editor, if you identify yourself as a writer, or if your
-friends think that you write more than the average Joe, or if you feel like
-writing is a part of your life, then the least favor you can do to yourself is
-to &lt;strong&gt;&lt;a href=&quot;http://www.daskeyboard.com/&quot; title=&quot;One of the best.&quot;&gt;get a decent keyboard&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;jekyll-and-typograpy&quot;&gt;&lt;strong&gt;Jekyll&lt;/strong&gt; and Typograpy&lt;/h2&gt;
-
-&lt;p&gt;Mentally stable individuals do not take notice of proper typographic punctuation.
-I’m not one of them. — For example, when I encounter a street sign reading
-&lt;code&gt;John's Place&lt;/code&gt; instead of &lt;code&gt;John’s Place&lt;/code&gt;, I throw a tantrum.&lt;/p&gt;
-
-&lt;p&gt;Why is this such a big deal? Because &lt;strong&gt;typography matters&lt;/strong&gt;. — At least it
-matters to &lt;em&gt;me&lt;/em&gt;. And I know there are &lt;strong&gt;lucky&lt;/strong&gt; people out there who can live
-without caring about &lt;strong&gt;typography&lt;/strong&gt; too much &lt;strong&gt;:)&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Luckily, &lt;strong&gt;Jekyll&lt;/strong&gt; &lt;a href=&quot;http://kramdown.gettalong.org/rdoc/Kramdown/Options.html&quot; title=&quot;Kramdown&quot;&gt;supports typographic substitutions&lt;/a&gt; out
-of the box.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;I take the train (&lt;em&gt;Caltrain&lt;/em&gt;) to work, and I have a total of two hours commute time daily.&lt;/li&gt;
+  &lt;li&gt;I love to write during this time on my laptop (&lt;em&gt;indeed that’s one of the few productive things that I can do on the train&lt;/em&gt;).&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;http://uniquehazards.com/post/670577460/a-caltrain-showdown-verizon-vs-sprint&quot;&gt;LTE on Caltrain sucks&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;…&lt;/p&gt;
 
-&lt;p&gt;So the bottom line is, I’m using &lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Not your daddy's static site generator.&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt; as my blogging platform of
-choice; and using &lt;strong&gt;&lt;a href=&quot;https://c9.io/&quot; title=&quot;Cloud9 IDE&quot;&gt;Cloud9 IDE&lt;/a&gt;&lt;/strong&gt; both as and editor, and also to automate
-things, as we’ll soon see.&lt;/p&gt;
+&lt;p&gt;Where was I? Yes, &lt;strong&gt;editors&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;h2 id=&quot;creating-an-ssh-workspace&quot;&gt;Creating an &lt;strong&gt;SSH Workspace&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Your editor is an important part of the flow because… well… you spend the majority of your publishing time writing things on it.&lt;/p&gt;
 
-&lt;p&gt;One nice feature of &lt;strong&gt;&lt;a href=&quot;https://c9.io/&quot; title=&quot;Cloud9 IDE&quot;&gt;Cloud9 IDE&lt;/a&gt;&lt;/strong&gt; is &lt;strong&gt;SSH Workspaces&lt;/strong&gt;:&lt;/p&gt;
+&lt;h2 id=&quot;atomatom-is-my-precious&quot;&gt;&lt;strong&gt;&lt;a href=&quot;https://atom.io/&quot; title=&quot;Atom — The Editor&quot;&gt;Atom&lt;/a&gt;&lt;/strong&gt; Is My Precious&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;SSH Workspaces&lt;/strong&gt; let you edit the files on your server using a browser-based
-integrated development environment.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;After trying a lots editors, I settled on &lt;strong&gt;&lt;a href=&quot;https://atom.io/&quot; title=&quot;Atom — The Editor&quot;&gt;atom&lt;/a&gt;&lt;/strong&gt; as my editor of choice.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;Here’s how it looks like:&lt;/p&gt;
+&lt;p&gt;Here’s my current setup for &lt;strong&gt;&lt;a href=&quot;https://atom.io/&quot; title=&quot;Atom — The Editor&quot;&gt;atom&lt;/a&gt;&lt;/strong&gt;:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;/images/c9-large.png&quot;&gt;&lt;img src=&quot;/images/c9-sm.png&quot; title=&quot;Cloud9 IDE is hands down the BEST online IDE around.&quot; class=&quot;centered&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;I use &lt;strong&gt;&lt;a href=&quot;https://github.com/jenssegers/spacegray-monokai&quot;&gt;Spacegray Monokai&lt;/a&gt;&lt;/strong&gt; as my &lt;strong&gt;UI theme&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;I use &lt;strong&gt;&lt;a href=&quot;https://github.com/chriskempson/base16&quot;&gt;Base 16 Tomorrow Dark&lt;/a&gt;&lt;/strong&gt; as my &lt;strong&gt;syntax theme&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;I use &lt;strong&gt;&lt;a href=&quot;http://www.fsd.it/fonts/pragmatapro.htm&quot; title=&quot;Pragmata Font Family&quot;&gt;Essential PragmataPro&lt;/a&gt;&lt;/strong&gt;, &lt;strong&gt;14px&lt;/strong&gt;, with &lt;strong&gt;1.5&lt;/strong&gt; line spacing as my &lt;strong&gt;font&lt;/strong&gt;. — It’s a perfect monotype font with a price tag equal to a nice dinner out in the city. And yes, it’s &lt;strong&gt;totally worth it&lt;/strong&gt;; it maintains its clarity even in smaller sizes.&lt;/li&gt;
+  &lt;li&gt;I use the &lt;strong&gt;&lt;a href=&quot;https://atom.io/packages/typewriter&quot; title=&quot;Atom typewriter plugin&quot;&gt;typewriter plugin&lt;/a&gt;&lt;/strong&gt;, so I can write my stuff without getting distracted by the clutter.&lt;/li&gt;
+  &lt;li&gt;I use the &lt;strong&gt;&lt;a href=&quot;https://atom.io/packages/zen&quot; title=&quot;Zen: Distraction-Free Writing&quot;&gt;zen plugin&lt;/a&gt;&lt;/strong&gt; for &lt;em&gt;focused writing&lt;/em&gt; and &lt;em&gt;typewriter scrolling&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;I use the &lt;strong&gt;&lt;a href=&quot;https://atom.io/packages/minimap&quot; title=&quot;Minimap: A preview of the full source code.&quot;&gt;minimap plugin&lt;/a&gt;&lt;/strong&gt; to give a visual indicator of where I am in the text that I’m writing.&lt;/li&gt;
+  &lt;li&gt;I &lt;em&gt;soft wrap&lt;/em&gt; the text at &lt;strong&gt;80 characters&lt;/strong&gt; (&lt;em&gt;there’s a reason those &lt;a href=&quot;https://www.wikiwand.com/en/Punched_card&quot;&gt;punched cards&lt;/a&gt; had 80 holes in them — it turns out to be &lt;a href=&quot;http://baymard.com/blog/line-length-readability&quot;&gt;the ideal character length for a readable text&lt;/a&gt;&lt;/em&gt;).&lt;/li&gt;
+  &lt;li&gt;I also &lt;em&gt;hide the editor tabs&lt;/em&gt;, because I don’t need them.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Setting your own SSH workspace in &lt;strong&gt;Cloud9&lt;/strong&gt; is pretty straightforward.
-&lt;a href=&quot;https://docs.c9.io/v1.0/docs/running-your-own-ssh-workspace&quot; title=&quot;Cloud9 SSH&quot;&gt;&lt;strong&gt;Cloud9&lt;/strong&gt; documentation has a step-by-step instruction on how to do it&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;three-pane-layout&quot;&gt;Three Pane Layout&lt;/h2&gt;
 
-&lt;p&gt;After setting up my &lt;strong&gt;SSH workspace&lt;/strong&gt;, the next thing I did was to create a sample
-&lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Not your daddy's static site generator.&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt; website. &lt;a href=&quot;https://github.com/v0lkan/o2js.com-v2&quot; title=&quot;o2js.com new version&quot;&gt;You can view the source code at
-&lt;strong&gt;GitHub&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Additionally, I split my view in three:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;On the &lt;strong&gt;left&lt;/strong&gt;, I have the text that I’m writing,&lt;/li&gt;
+  &lt;li&gt;On the &lt;strong&gt;right&lt;/strong&gt;, I have a preview that automatically regenerates itself,&lt;/li&gt;
+  &lt;li&gt;And at the &lt;strong&gt;bottom&lt;/strong&gt;, I keep a separate copy of the text that I’m editing. — That’s helpful in case I want to search for a word, or edit some other part of the article, I don’t want to lose the editing point I’m at.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Here’s how the overall setup looks like (&lt;em&gt;tap the image for a larger view&lt;/em&gt;):&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://o2js.com/images/editor-setup-large.png&quot;&gt;&lt;img src=&quot;https://o2js.com/images/editor-setup-sm.png&quot; title=&quot;Here is how it looks like&quot; class=&quot;centered&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;post-processing&quot;&gt;Post-Processing&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;No writing is complete until it’s triple-reviewed.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Indeed, no writing is complete &lt;strong&gt;at all&lt;/strong&gt; because writing is an &lt;em&gt;ongoing&lt;/em&gt; &lt;strong&gt;process&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;[1]&lt;/strong&gt; You iterate and reiterate over the text to &lt;strong&gt;rephrase&lt;/strong&gt;, &lt;strong&gt;simplify&lt;/strong&gt;, and &lt;strong&gt;clarify&lt;/strong&gt; it.&lt;/li&gt;
+  &lt;li&gt;Then you review it once more for &lt;strong&gt;spelling errors&lt;/strong&gt; and &lt;strong&gt;grammatical mistakes&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Then you stay away from the text for a while. This helps you to &lt;strong&gt;clear&lt;/strong&gt; your mind off of it. This step is &lt;strong&gt;fundamental&lt;/strong&gt; for what’s coming next.&lt;/li&gt;
+  &lt;li&gt;After a while, you come back to your writing to reiterate for further &lt;strong&gt;simplification&lt;/strong&gt;, which takes us back to step &lt;strong&gt;[1]&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Especially when the language that you are writing is not your native language, the post-processing process can become harder.&lt;/p&gt;
+
+&lt;p&gt;To ease the pain of this process a bit, I use the &lt;strong&gt;&lt;a href=&quot;http://www.hemingwayapp.com/&quot; title=&quot;Hemingway: Makes your writing bold and clean.&quot;&gt;Hemingway Editor&lt;/a&gt;&lt;/strong&gt; and the &lt;strong&gt;&lt;a href=&quot;https://app.grammarly.com/&quot; title=&quot;Grammarly: Mistake-free writing.&quot;&gt;Grammarly&lt;/a&gt;&lt;/strong&gt; service — They are excellent tools that should be in any writer’s arsenal.&lt;/p&gt;
+
+&lt;h2 id=&quot;other-editors-that-ive-tried-and-failed&quot;&gt;Other Editors That I’ve Tried (&lt;em&gt;and Failed&lt;/em&gt;)&lt;/h2&gt;
+
+&lt;p&gt;With all these tweaks, &lt;strong&gt;&lt;a href=&quot;https://atom.io/&quot; title=&quot;Atom — The Editor&quot;&gt;atom&lt;/a&gt;&lt;/strong&gt; is an editor that I can type in for eternity.&lt;/p&gt;
+
+&lt;p&gt;Coming to this decision, however, was not easy:&lt;/p&gt;
+
+&lt;p&gt;I’ve tried a horde of editors including &lt;strong&gt;&lt;a href=&quot;http://www.ulyssesapp.com/&quot; title=&quot;Ulysses makes writing fun and productive.&quot;&gt;Ulysses&lt;/a&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;a href=&quot;https://ia.net/writer/mac&quot; title=&quot;A quintessential writing machine for Mac&quot;&gt;IA Writer&lt;/a&gt;&lt;/strong&gt;, and many more.&lt;/p&gt;
+
+&lt;p&gt;Next, I’ll look into a few of them, and describe why they were not a fit for me.&lt;/p&gt;
+
+&lt;h3 id=&quot;ulysses&quot;&gt;Ulysses&lt;/h3&gt;
+
+&lt;p&gt;The problem with &lt;em&gt;&lt;a href=&quot;http://www.ulyssesapp.com/&quot; title=&quot;Ulysses makes writing fun and productive.&quot;&gt;Ulysses&lt;/a&gt;&lt;/em&gt; was that it was not creating pure markdown, and it was messing with my formatting &lt;strong&gt;a lot&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;ia-writer&quot;&gt;IA Writer&lt;/h3&gt;
+
+&lt;p&gt;The problem with &lt;em&gt;&lt;a href=&quot;https://ia.net/writer/mac&quot; title=&quot;A quintessential writing machine for Mac&quot;&gt;IA Writer&lt;/a&gt;&lt;/em&gt; was the lack of a “&lt;em&gt;project workspace&lt;/em&gt;” concept:&lt;/p&gt;
+
+&lt;p&gt;I don’t write a single article all the time: Sometimes I jump through files, editing here and there and everywhere. That’s especially true if I’m dealing with the manuscripts of a book, for instance.&lt;/p&gt;
+
+&lt;p&gt;I’d like to get a &lt;em&gt;file tree&lt;/em&gt; handy &lt;strong&gt;when&lt;/strong&gt; I need it. And want it to be out of my sight when I’m not interested in it. — With atom, it’s as easy as typing &lt;strong&gt;CMD-K CMD-B&lt;/strong&gt; to toggle the file tree in an out of your way.&lt;/p&gt;
+
+&lt;h3 id=&quot;first-draft&quot;&gt;First Draft&lt;/h3&gt;
+
+&lt;p&gt;There one last editor that I’d like to mention: &lt;strong&gt;&lt;a href=&quot;http://www.96problems.com/first-draft/&quot;&gt;first draft&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;It is &lt;strong&gt;conceptually&lt;/strong&gt; a wonderful idea, with terrible execution:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The lack of performance renders the editor totally unusable for large articles.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Here’s why:&lt;/p&gt;
+
+&lt;p&gt;My average typing rate is around &lt;em&gt;70 words per minute&lt;/em&gt;, and when I try to write that fast in &lt;em&gt;&lt;a href=&quot;http://www.96problems.com/first-draft/&quot;&gt;first draft&lt;/a&gt;&lt;/em&gt;, the application lags &lt;strong&gt;several words&lt;/strong&gt; behind before it freezes to death.&lt;/p&gt;
+
+&lt;p&gt;This means that if I make a typo and hit &lt;strong&gt;backspace&lt;/strong&gt;, for instance, I’ll have to wait for a few seconds until the editor catches up.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;As of November 2015, &lt;em&gt;&lt;a href=&quot;http://www.96problems.com/first-draft/&quot;&gt;first draft&lt;/a&gt;&lt;/em&gt; is far from being product-quality. — If you plan to purchase it, keep that in mind.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;you-dont-cut-out-features-for-the-sake-of-usability&quot;&gt;You Don’t Cut Out Features for the Sake of &lt;strong&gt;Usability&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;Good UX&lt;/em&gt; is hiding features that the user may not need; it is &lt;strong&gt;not&lt;/strong&gt; removing critical features and calling it “&lt;em&gt;minimalism&lt;/em&gt;”.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;All these so called “&lt;em&gt;minimalistic&lt;/em&gt;” editors don’t give a damn about your needs as a pro user.&lt;/p&gt;
+
+&lt;p&gt;If writing is part of your life, then you’ll at least want your editor to give some additional options, even if they are hidden behind menus or configuration files.&lt;/p&gt;
+
+&lt;p&gt;Here are my top three needs in an editor:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;I cannot live without a three-way &lt;strong&gt;split view&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;I will &lt;strong&gt;absolutely&lt;/strong&gt; want to control the &lt;strong&gt;typography&lt;/strong&gt; and the &lt;strong&gt;color scheme&lt;/strong&gt; of my editor.&lt;/li&gt;
+  &lt;li&gt;I will want my &lt;em&gt;file tree&lt;/em&gt;, and a &lt;em&gt;tabbed interface&lt;/em&gt;, when I need it and get rid of them when I don’t (&lt;em&gt;with &lt;a href=&quot;https://atom.io/&quot; title=&quot;Atom — The Editor&quot;&gt;atom&lt;/a&gt; you can remove the tabs entirely from your view if you want to&lt;/em&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Some of these “&lt;em&gt;hassle-free writing applications&lt;/em&gt;” disallow you to change almost any setting, including the type of the font, the size of the font, the color scheme.&lt;/p&gt;
+
+&lt;p&gt;Want a split view? Forget about it. You will have to type in a single big virtual sheet of paper.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If you are lucky, you can get some kind of a monotype font, and a darker page.&lt;/p&gt;
+
+  &lt;p&gt;And that’s all there is as configurability gets.&lt;/p&gt;
+
+  &lt;p&gt;You would not even be able to change the font face or font size.&lt;/p&gt;
+
+  &lt;p&gt;That’s insane!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;‘nuff complaining. Let’s move on, shall we? Well, before that…&lt;/p&gt;
+
+&lt;h2 id=&quot;thinking-about-using-a-cloud-editor&quot;&gt;Thinking About Using a Cloud Editor?&lt;/h2&gt;
+
+&lt;p&gt;I would love to use a cloud-based editor such as &lt;strong&gt;&lt;a href=&quot;https://c9.io/&quot; title=&quot;Cloud9 IDE&quot;&gt;Cloud9 IDE&lt;/a&gt;&lt;/strong&gt; to make my workflow even more streamlined. With its &lt;strong&gt;&lt;a href=&quot;https://docs.c9.io/docs/running-your-own-ssh-workspace&quot;&gt;SSH Workspaces&lt;/a&gt;&lt;/strong&gt;, I would be working on my server, &lt;strong&gt;as if&lt;/strong&gt; the files are on my laptop.&lt;/p&gt;
+
+&lt;p&gt;There’s one &lt;em&gt;itsy bitsy&lt;/em&gt; problem, yet:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Mobile internet connectivity in the Silicon Valley sucks donkey’s toenails&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;It sucks to such extent that even the &lt;strong&gt;&lt;a href=&quot;https://c9.io/&quot; title=&quot;Cloud9 IDE&quot;&gt;Cloud9 IDE&lt;/a&gt;&lt;/strong&gt;’s offline mode can’t help you:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If you are &lt;strong&gt;on the go&lt;/strong&gt; in the Valley, you will need an actual editor that does not require Internet connectivity to initialize itself.&lt;/p&gt;
+
+  &lt;p&gt;In the valley, &lt;strong&gt;the cloud&lt;/strong&gt;, should be renamed as &lt;strong&gt;the fog&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I may retry cloudifying all my things three years from now maybe.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;I’m done with “&lt;em&gt;cloud editing&lt;/em&gt;” for now&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-clickety-clack&quot;&gt;The &lt;strong&gt;Clickety Clack&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;The least favor you can do to yourself as a writer is to get a &lt;strong&gt;&lt;a href=&quot;http://www.daskeyboard.com/&quot; title=&quot;One of the best.&quot;&gt;decent mechanical keyboard&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;And &lt;strong&gt;&lt;a href=&quot;http://www.daskeyboard.com/&quot; title=&quot;One of the best.&quot;&gt;Das Keyboard&lt;/a&gt;&lt;/strong&gt; is one of the best you’ll find – It’s worth every dime.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://o2js.com/images/das_keyboard.jpg&quot;&gt;&lt;img src=&quot;https://o2js.com/images/das_keyboard.jpg&quot; title=&quot;Das Keyboard: One of the best keyboards that you can get&quot; class=&quot;centered&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;jekyll-and-typography&quot;&gt;&lt;strong&gt;Jekyll&lt;/strong&gt; and Typography&lt;/h2&gt;
+
+&lt;p&gt;Mentally stable individuals do not take notice of proper typographic punctuation. I’m not one of them. — For example, when I encounter a street sign reading &lt;code&gt;John's Place&lt;/code&gt; instead of &lt;code&gt;John’s Place&lt;/code&gt;, I throw a tantrum.&lt;/p&gt;
+
+&lt;p&gt;Why is this such a big deal? Because &lt;strong&gt;typography matters&lt;/strong&gt;. — At least it matters to &lt;em&gt;me&lt;/em&gt;. And I know there are &lt;strong&gt;lucky&lt;/strong&gt; people out there who can live without caring about &lt;strong&gt;typography&lt;/strong&gt; too much &lt;strong&gt;:)&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Luckily, &lt;strong&gt;Jekyll&lt;/strong&gt; &lt;a href=&quot;http://kramdown.gettalong.org/rdoc/Kramdown/Options.html&quot; title=&quot;Kramdown&quot;&gt;supports typographic substitutions&lt;/a&gt; out of the box.&lt;/p&gt;
+
+&lt;p&gt;…&lt;/p&gt;
+
+&lt;p&gt;That made me decide that I’m using &lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Not your daddy's static site generator.&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt; as my blogging platform of choice and using &lt;strong&gt;&lt;a href=&quot;https://atom.io/&quot; title=&quot;Atom — The Editor&quot;&gt;atom&lt;/a&gt;&lt;/strong&gt; as my editor.&lt;/p&gt;
 
 &lt;h2 id=&quot;setting-up-jekyll&quot;&gt;Setting Up &lt;strong&gt;Jekyll&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://jekyllrb.com/&quot;&gt;&lt;img src=&quot;/images/jekyll.png&quot; title=&quot;Jekyll&quot; class=&quot;centered&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Not your daddy's static site generator.&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt; is a tool that helps generating static web content a
-breeze.&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Not your daddy's static site generator.&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt; is a tool that helps to generate static web content a breeze.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Not your daddy's static site generator.&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt; is especially a great fit for blogs: &lt;strong&gt;Blogs are first
-class citizens&lt;/strong&gt; in &lt;strong&gt;Jekyll&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Not your daddy's static site generator.&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt; is especially a great fit for blogs: &lt;strong&gt;Blogs are first class citizens&lt;/strong&gt; in &lt;strong&gt;Jekyll&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;To use &lt;strong&gt;Jekyll&lt;/strong&gt;, you will need to have &lt;strong&gt;&lt;a href=&quot;https://www.ruby-lang.org/en/downloads/&quot; title=&quot;Download Ruby&quot;&gt;Ruby&lt;/a&gt;&lt;/strong&gt; installed. If you
-don’t have &lt;strong&gt;Ruby&lt;/strong&gt; on your system, &lt;a href=&quot;https://www.ruby-lang.org/en/downloads/&quot; title=&quot;Download Ruby&quot;&gt;go ahead, and install the most recent one
-from rubylang.org&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To use &lt;strong&gt;Jekyll&lt;/strong&gt;, you will need to have &lt;strong&gt;&lt;a href=&quot;https://www.ruby-lang.org/en/downloads/&quot; title=&quot;Download Ruby&quot;&gt;Ruby&lt;/a&gt;&lt;/strong&gt; installed. If you don’t have &lt;strong&gt;Ruby&lt;/strong&gt; on your system, &lt;a href=&quot;https://www.ruby-lang.org/en/downloads/&quot; title=&quot;Download Ruby&quot;&gt;go ahead, and install the most recent one from rubylang.org&lt;/a&gt;.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;For the uber-nerds out there: You can install &lt;strong&gt;Ruby&lt;/strong&gt; via &lt;strong&gt;&lt;a href=&quot;https://github.com/sstephenson/rbenv&quot; title=&quot;A better way to install ruby.&quot;&gt;rbenv&lt;/a&gt;&lt;/strong&gt;
-too. &lt;a href=&quot;https://github.com/sstephenson/rbenv/wiki/Why-rbenv%3F&quot; title=&quot;Why rbenv?&quot;&gt;And there are good reasons to do so&lt;/a&gt;.&lt;/p&gt;
+  &lt;p&gt;For the uber-nerds out there: You can install &lt;strong&gt;Ruby&lt;/strong&gt; via &lt;strong&gt;&lt;a href=&quot;https://github.com/sstephenson/rbenv&quot; title=&quot;A better way to install ruby.&quot;&gt;rbenv&lt;/a&gt;&lt;/strong&gt; too. &lt;a href=&quot;https://github.com/sstephenson/rbenv/wiki/Why-rbenv%3F&quot; title=&quot;Why rbenv?&quot;&gt;And there are good reasons to do so&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Once &lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Not your daddy's static site generator.&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt; is properly set up, the only thing you have to do to
-write a blog post is to create a markdown file under &lt;strong&gt;_posts&lt;/strong&gt; folder:&lt;/p&gt;
+&lt;p&gt;Once &lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Not your daddy's static site generator.&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt; is properly set up, the only thing you have to do to write a blog post is to create a markdown file under &lt;strong&gt;_posts&lt;/strong&gt; folder:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;ls _posts/
 2015-02-10-writing-has-never-been-easier.md&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Since this is a new blog installation, and I’m writing a singl blog post here, we
-have only one file in the directory. Here’s the cotent of the file:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
-&lt;span class=&quot;l-Scalar-Plain&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;post&lt;/span&gt;
-&lt;span class=&quot;l-Scalar-Plain&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;Writing Has Never Been Easier&lt;/span&gt;
-&lt;span class=&quot;l-Scalar-Plain&quot;&gt;excerpt&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;Until recently, I was using a custom generator for o2js.com...&lt;/span&gt;
-&lt;span class=&quot;l-Scalar-Plain&quot;&gt;categories&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;productivity&lt;/span&gt;
-&lt;span class=&quot;l-Scalar-Plain&quot;&gt;tags&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;writing&lt;/span&gt;
-&lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;blogging&lt;/span&gt;
-&lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;jekyll&lt;/span&gt;
-&lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;workflow&lt;/span&gt;
-&lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;writing&lt;/span&gt;
-&lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;creativity&lt;/span&gt;
-&lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;reinvention&lt;/span&gt;
-&lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;reflow&lt;/span&gt;
-&lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;gtd&lt;/span&gt;
-&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
-
-&lt;span class=&quot;nn&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;Body of the article goes here ...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 &lt;blockquote&gt;
-  &lt;p&gt;I won’t explain how to set up a &lt;strong&gt;Jekyll&lt;/strong&gt; website in detail, as it is
-&lt;a href=&quot;http://jekyllrb.com/docs/home/&quot; title=&quot;Jekyll Documentation&quot;&gt;explained really well on their website&lt;/a&gt;. — Just follow
-the examples there and you’ll be a &lt;strong&gt;Jekyll&lt;/strong&gt; master in no time.&lt;/p&gt;
+  &lt;p&gt;I won’t explain how to set up a &lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Not your daddy's static site generator.&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt; website in detail, as it is &lt;a href=&quot;http://jekyllrb.com/docs/home/&quot; title=&quot;Jekyll Documentation&quot;&gt;explained well on their website&lt;/a&gt;. — Just follow the examples there and you’ll be a &lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Not your daddy's static site generator.&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt; master in no time.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Currently my new &lt;strong&gt;Jekyll&lt;/strong&gt; sites stays under &lt;strong&gt;/var/www/SRC&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;the-server-setup&quot;&gt;The Server Setup&lt;/h2&gt;
 
-&lt;p&gt;I know, it’s not the most ideal place to put source code into, yet it does the
-job &lt;strong&gt;;)&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Currently, my new &lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Not your daddy's static site generator.&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt; sites stays under &lt;strong&gt;/var/www/SRC&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;I know, it’s not an ideal place to put source code into, yet it does the job.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;For the security freak out there thinking that the source folder is accessible
-via internet: Well, yes; &lt;a href=&quot;https://github.com/v0lkan/o2js.com-v2&quot; title=&quot;o2js.com new version&quot;&gt;and the code is open source anyway&lt;/a&gt;,
-so it’s not a big deal. — And even if it is, we can always restrict access to
-that folder via &lt;strong&gt;nginx.conf&lt;/strong&gt;.&lt;/p&gt;
+  &lt;p&gt;For the security freaks out there thinking that the source folder is accessible via the Internet:&lt;/p&gt;
+
+  &lt;p&gt;Well, yes; &lt;a href=&quot;https://github.com/v0lkan/o2js.com-v2&quot; title=&quot;o2js.com new version&quot;&gt;and the code is open source anyway&lt;/a&gt;, so it’s not a big deal.&lt;/p&gt;
+
+  &lt;p&gt;And even if it is, we can always restrict access to that folder via &lt;strong&gt;nginx.conf&lt;/strong&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;While we’re at that, here’s how things are currently mapped in &lt;strong&gt;nginx.conf&lt;/strong&gt; for
-reference:&lt;/p&gt;
+&lt;p&gt;While we’re at that, here’s how things are currently mapped in &lt;strong&gt;nginx.conf&lt;/strong&gt; for reference:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-nginx&quot; data-lang=&quot;nginx&quot;&gt;&lt;span class=&quot;k&quot;&gt;server&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;kn&quot;&gt;access_log&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;off&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -979,14 +1006,6 @@ reference:&lt;/p&gt;
     &lt;span class=&quot;kn&quot;&gt;rewrite&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;^([^.]+)&lt;/span&gt;$ &lt;span class=&quot;nv&quot;&gt;$1.html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;installing-jekyll&quot;&gt;Installing &lt;strong&gt;Jekyll&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;p&gt;Installing &lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Not your daddy's static site generator.&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt; on Debian-based systems is really easy:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;sudo gem install jekyll&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;That’s it.&lt;/p&gt;
-
 &lt;h2 id=&quot;publishing-articles&quot;&gt;Publishing Articles&lt;/h2&gt;
 
 &lt;p&gt;Now let’s publish stuff:&lt;/p&gt;
@@ -1000,34 +1019,25 @@ rsync -a _site/ /var/www&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&
 
 &lt;p&gt;To automate things further I’ve created a little script:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// /var/www/SRC/o2js.com-v2/bin/index.js&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;watch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;chokidar&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;watch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;spawn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;child_process&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;spawn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;join&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;path&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
-&lt;span class=&quot;s1&quot;&gt;&amp;#39;use strict&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;GLOB&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;__dirname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;/path/to/posts/**/*.md&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;PUBLISH_CMD&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;publish.sh&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;chokidar&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;chokidar&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;spawn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;child_process&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;spawn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;lock&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;watch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;GLOB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;change&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;child&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;spawn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;PUBLISH_CMD&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
-&lt;span class=&quot;nx&quot;&gt;chokidar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;watch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;/var/www/SRC/&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ignored&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/[\/\\]\.|node_modules/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// on(&amp;#39;all&amp;#39;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;change&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;child&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stdout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;data&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;chunk&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;chunk&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;acquiring lock&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-            &lt;span class=&quot;nx&quot;&gt;lock&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-            &lt;span class=&quot;nx&quot;&gt;process&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;spawn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;sh&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;./publish.sh&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
-
-            &lt;span class=&quot;nx&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;close&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;child process exited with code &amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-                &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;releasing lock&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-                &lt;span class=&quot;nx&quot;&gt;lock&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      &lt;span class=&quot;nx&quot;&gt;child&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stderr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;data&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;chunk&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;chunk&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Where &lt;strong&gt;./publish.sh&lt;/strong&gt; is:&lt;/p&gt;
 
@@ -1036,100 +1046,67 @@ rsync -a _site/ /var/www&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&
 &lt;span class=&quot;nx&quot;&gt;jekyll&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;build&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;config&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;_config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;yml&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;nx&quot;&gt;rsync&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;_site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;/var/www&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;So when I run…&lt;/p&gt;
+&lt;h2 id=&quot;wait-my-files-are-not-in-the-server-yet&quot;&gt;Wait! My Files Are Not In The Server Yet&lt;/h2&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /var/www/SRC/o2js.com-v2/bin/&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-node index.js&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The publish script works properly on the server; however, I still have to move the changed files from my laptop the th server.&lt;/p&gt;
 
-&lt;p&gt;… any change that I make under the &lt;strong&gt;SRC&lt;/strong&gt; folder will publish and sync the
-documents with the live website.&lt;/p&gt;
+&lt;p&gt;I’d want to do that as hassle-free as possible.&lt;/p&gt;
 
-&lt;p&gt;I even use &lt;a href=&quot;https://chrome.google.com/webstore/detail/super-auto-refresh/kkhjakkgopekjlempoplnjclgedabddk?hl=en&quot; title=&quot;crx-refresh extension&quot;&gt;a nice little chrome extension&lt;/a&gt; to auto refresh the
-web page.&lt;/p&gt;
+&lt;p&gt;Luckily, it’s just a one-liner to do so:&lt;/p&gt;
 
-&lt;p&gt;Here’s my current blogging environment:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;/images/inception-lg.png&quot;&gt;&lt;img src=&quot;/images/inception-sm.png&quot; title=&quot;A screenshot of this blog, inside itself ;)&quot; class=&quot;centered&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;That’s a &lt;a href=&quot;https://c9.io/&quot; title=&quot;Cloud9 IDE&quot;&gt;web-based IDE&lt;/a&gt;;&lt;/li&gt;
-  &lt;li&gt;And a browser side-by-side.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I am testing this new approach as I am writing this blog post, and it works
-really well!&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The page is refreshing as I continue writing and saving;&lt;/li&gt;
-  &lt;li&gt;And I don’t have to worry about publishing my blog, because it’s being
-auto-published at every single change I make to it.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;everything-is-streamlined&quot;&gt;Everything is Streamlined!&lt;/h2&gt;
-
-&lt;p&gt;Now I don’t have an excuse not to write:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;# this requires an `IdentityFile &amp;quot;~/path/to/your/server.pem&amp;quot;` line in ~/.ssh/config&lt;/span&gt;
+rsync -a /Users/volkan/Desktop/o2js.com-v2/_posts/ &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+ubuntu@volkan.io:/var/www/o2js.com/SRC/o2js.com-v2/_posts/&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Writing is as easy as firing up an editor, and… well… actually
-writing &lt;strong&gt;:)&lt;/strong&gt;.&lt;/p&gt;
+  &lt;p&gt;Since the watcher script is also running, whenever I &lt;code&gt;rsync&lt;/code&gt; my changes to the server, they will be immediately published, and will be live in no time.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&quot;there-might-be-hiccups&quot;&gt;There Might Be Hiccups&lt;/h2&gt;
+&lt;p&gt;I even use &lt;a href=&quot;https://chrome.google.com/webstore/detail/super-auto-refresh/kkhjakkgopekjlempoplnjclgedabddk?hl=en&quot; title=&quot;crx-refresh extension&quot;&gt;a nice little chrome extension&lt;/a&gt; to auto-refresh the recent version of the article that I just published.&lt;/p&gt;
 
-&lt;p&gt;One problem with using a Cloud IDE is that sometimes things may go haywire. For
-&lt;strong&gt;&lt;a href=&quot;https://c9.io/&quot; title=&quot;Cloud9 IDE&quot;&gt;Cloud9 IDE&lt;/a&gt;&lt;/strong&gt; this was an exceptionally rare case, I once was not able to
-launch my workspace for several hours.&lt;/p&gt;
+&lt;h2 id=&quot;configuring-livereload&quot;&gt;Configuring LiveReload&lt;/h2&gt;
 
-&lt;p&gt;For these situations, you might want to mount your remote workspace to your
-local file system.&lt;/p&gt;
+&lt;p&gt;I also configured &lt;strong&gt;&lt;a href=&quot;http://livereload.com/&quot; title=&quot;A happy land where browsers don't need a refresh button.&quot;&gt;LiveReload&lt;/a&gt;&lt;/strong&gt; on my laptop to run this &lt;code&gt;rsync&lt;/code&gt; command whenever I save the articles’ markdown files.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://o2js.com/images/prepublish.png&quot;&gt;&lt;img src=&quot;https://o2js.com/images/prepublish.png&quot; title=&quot;Configuring LiveReload to run a custom command&quot; class=&quot;centered&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;everything-is-streamlined-now&quot;&gt;Everything is Streamlined Now&lt;/h2&gt;
+
+&lt;p&gt;This way everything will be automated:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;On a &lt;strong&gt;linux&lt;/strong&gt; system you can do this with &lt;strong&gt;SSHFS&lt;/strong&gt;, &lt;strong&gt;Samba&lt;/strong&gt;, or &lt;strong&gt;NFS&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;On Mac, if you are willing to spend a couple of bucks, &lt;strong&gt;&lt;a href=&quot;https://panic.com/transmit/&quot; title=&quot;Transmit&quot;&gt;Transmit&lt;/a&gt;&lt;/strong&gt;
-can remotely mount folders (&lt;em&gt;in addition to being an awesome file transfer
-client&lt;/em&gt;) for your.&lt;/li&gt;
+  &lt;li&gt;When I save the markdown file on my laptop,&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://livereload.com/&quot; title=&quot;A happy land where browsers don't need a refresh button.&quot;&gt;LiveReload&lt;/a&gt; will trigger an &lt;code&gt;rsync&lt;/code&gt; script that pushes the changed files to the server,&lt;/li&gt;
+  &lt;li&gt;A watcher on the server will detect this change and &lt;strong&gt;republish&lt;/strong&gt; the blog,&lt;/li&gt;
+  &lt;li&gt;After the publish process, the article will immediately go live,&lt;/li&gt;
+  &lt;li&gt;The web browser that I’m peeking at, on my laptop, will refresh itself, and then I’ll see the updated article.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Here’s how &lt;strong&gt;&lt;a href=&quot;https://panic.com/transmit/&quot; title=&quot;Transmit&quot;&gt;Transmit&lt;/a&gt;&lt;/strong&gt;’s folder mount looks like — You can locally
-edit your file in your favorite editor, and they will be updated on the server
-almost instantly:&lt;/p&gt;
+&lt;p&gt;And during this flow, I won’t have to tap a single button. All I will be doing is writing, and saving (&lt;em&gt;by typing &lt;strong&gt;CMD+S&lt;/strong&gt;, which is also typing &lt;strong&gt;:)&lt;/strong&gt;&lt;/em&gt;)&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;/images/transmit_lg.png&quot;&gt;&lt;img src=&quot;/images/transmit.png&quot; title=&quot;Transmit can mount remote drives as if they were local.&quot; class=&quot;centered&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Now writing is as easy as firing up an editor, and… well… writing.&lt;/p&gt;
 
-&lt;p&gt;Also, unfortunately &lt;strong&gt;Cloud 9 IDE&lt;/strong&gt; does not work on tablets. — So if you want
-to edit your blog on a tablet, you might want to use an editor that supports
-that too.&lt;/p&gt;
+&lt;h2 id=&quot;bonus-setup-for-the-ipad&quot;&gt;Bonus: Setup for the &lt;strong&gt;iPad&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;For &lt;strong&gt;iPad&lt;/strong&gt;, I use a combination of &lt;strong&gt;&lt;a href=&quot;https://panic.com/dietcoda/&quot; title=&quot;Diet Coda&quot;&gt;Diet Coda&lt;/a&gt;&lt;/strong&gt;,
-&lt;strong&gt;&lt;a href=&quot;http://www.textasticapp.com/&quot; title=&quot;Textastic&quot;&gt;Textastic&lt;/a&gt;&lt;/strong&gt;, and &lt;strong&gt;&lt;a href=&quot;https://panic.com/prompt/&quot; title=&quot;Prompt&quot;&gt;Prompt&lt;/a&gt;&lt;/strong&gt; to achieve that.&lt;/p&gt;
+&lt;p&gt;Writing on the tablet is not easy.&lt;/p&gt;
 
-&lt;p&gt;Also if you are using your &lt;strong&gt;iPad&lt;/strong&gt; to update your blog post remotely you migh
-want to give an editor that supports that too.&lt;/p&gt;
+&lt;p&gt;I use it as a last resort, and honestly I don’t write too much on the tablet.&lt;/p&gt;
 
-&lt;h2 id=&quot;next-up&quot;&gt;Next Up&lt;/h2&gt;
+&lt;p&gt;When I find myself have to write on iPad, I use a combination of&lt;/p&gt;
 
-&lt;p&gt;I will gradually move the entire &lt;strong&gt;&lt;a href=&quot;http://o2js.com/&quot; title=&quot;o2.js --- A coherent solution to your JavaScript dilemma.&quot;&gt;o2js.com&lt;/a&gt;&lt;/strong&gt; over here, and I’ll also
-improve this current theme, while keeping a focus on &lt;strong&gt;simplicity&lt;/strong&gt; and
-&lt;strong&gt;clarity&lt;/strong&gt;.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://panic.com/dietcoda/&quot; title=&quot;Diet Coda&quot;&gt;Diet Coda&lt;/a&gt;&lt;/strong&gt;,&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;http://www.textasticapp.com/&quot; title=&quot;Textastic&quot;&gt;Textastic&lt;/a&gt;&lt;/strong&gt;,&lt;/li&gt;
+  &lt;li&gt;And &lt;strong&gt;&lt;a href=&quot;https://panic.com/prompt/&quot; title=&quot;Prompt&quot;&gt;Prompt&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h2 id=&quot;read-the-source-luke&quot;&gt;Read the Source, Luke&lt;/h2&gt;
-
-&lt;p&gt;You can see the source code of this blog, as the time of this writing, &lt;a href=&quot;https://github.com/v0lkan/o2js.com-v2/tree/9a338741493f9188437096343fa8ba3b08a80678&quot; title=&quot;git-snap&quot;&gt;at
-this &lt;strong&gt;GitHub&lt;/strong&gt; history snapshopt&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;They get the job done pretty well.&lt;/p&gt;
 
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
 
-&lt;p&gt;That was a quick overview of my &lt;strong&gt;newer&lt;/strong&gt; and &lt;strong&gt;better&lt;/strong&gt; blog publishing
-workflow.&lt;/p&gt;
+&lt;p&gt;That was a quick overview of how I came up with a &lt;strong&gt;newer&lt;/strong&gt; and &lt;strong&gt;better&lt;/strong&gt; writing workflow.&lt;/p&gt;
 
-&lt;p&gt;I really made my life easier.&lt;/p&gt;
-
-&lt;p&gt;Hope you find that useful too.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Oh, btw, I started using &lt;strong&gt;flexbox&lt;/strong&gt; too.&lt;br /&gt;
-Since all major browsers support it, I have no excuse not to use it.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;This new flow made my writing life easier; hope you find it useful too.&lt;/p&gt;
 
 &lt;p&gt;Until next time…&lt;/p&gt;
 
@@ -1140,8 +1117,6 @@ Since all major browsers support it, I have no excuse not to use it.&lt;/p&gt;
         <link>http://o2js.com/productivity/writing-has-never-been-easier</link>
         <guid isPermaLink="true">http://o2js.com/productivity/writing-has-never-been-easier</guid>
         
-        <category>blogging</category>
-        
         <category>creativity</category>
         
         <category>gtd</category>
@@ -1150,7 +1125,9 @@ Since all major browsers support it, I have no excuse not to use it.&lt;/p&gt;
         
         <category>reflow</category>
         
-        <category>reinvention</category>
+        <category>livereload</category>
+        
+        <category>remote snychronization</category>
         
         <category>workflow</category>
         
